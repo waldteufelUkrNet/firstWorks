@@ -1,0 +1,30 @@
+<form class="depositPopup__form">
+  <div class="depositPopup__paySystem-wrapper">
+    <div class="depositPopup__card-label">выберите тип карты:</div>
+    <select class="depositPopup__card-select" name="paySystem">
+      <option value="VISA">VISA</option>
+      <option value="MasterCard">MasterCard</option>
+      <option value="MIR">MIR</option>
+    </select>
+  </div>
+  <div class="depositPopup__amount-wrapper">
+    <input class="depositPopup__amount" type="text" placeholder="введите сумму" name="currencyValue" onkeydown="return checkNumber(event.key)" onkeyup="checkAmount(this)">
+    <select class="depositPopup__currency-select" name="currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="RUB">RUB</option>
+    </select>
+  </div>
+  <label class="depositPopup__checkbox-wrapper">
+    <input type="checkbox" name="age18+" onchange="removeCheckingErrorMessage(this)">
+    <span>
+      Мне исполнилось 18 лет. Я ознакомлен с рисками и принимаю
+      <a href="#">Условия и Соглашения</a>
+      компании.
+    </span>
+  </label>
+  <div class="depositPopup__validation-error">Поле суммы не может быть пустым</div>
+  <div class="depositPopup__validation-error">Подтвердите Ваш возраст и согласие с условиями</div>
+  <div class="depositPopup__validation-error depositPopup__validation-error_from-server"></div>
+  <button class="depositPopup__deposit-btn" type="button">оплатить</button>
+</form>

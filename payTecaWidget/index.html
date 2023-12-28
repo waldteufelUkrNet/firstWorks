@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- https://payteca.com/payment/method/view?id=20&als=itez&currency=usd -->
+<!-- file:///H:/work_area/payTecaWidget/index.html?client_id=mLHIqaJBEF7xozpRnpJqLXlHJVpUFU9GlWfYjyxQ&order_id=&user_id=&amount=12&currency=840&description=12 -->
+<!-- https://pay.itez.com/?from_amount=11100&from_currency=USD&lang=RU&partner_operation_id=62853&partner_token=69a55069-fc37-4153-b40d-ff0242e865f3&target_element=widget-container&timestamp=1602790506&to_account=18r9HbqStyBpoHC1817TF5WYm5vsUPUYsW&signature=82cc95aa38d7ceb4dd2f37a03959d0a5737b29fec0667998411f118bb0fb641adfb70e5a6afcc64e29a0acdd96ca0b98576c9263420f4c875d090857468a0c40&_sw=1920&_sh=1080&parentDomain=payteca.com&parentHref=https://payteca.com -->
+
+<!--
+Що треба робити: перехопити get-запит і зробити перед ним post-запит
+Варіанти на попробувати:
+1. event.preventDefault();
+   fetch(POST)
+   згенерувати коректний get-запит і запустити його
+
+2. event.preventDefault();
+   fetch(POST)
+   прибрати event.preventDefault();
+   емуляція кліку на submit
+
+3. event.preventDefault();
+   fetch(POST)
+   submitBtn.onclick = function(event) {}   // перезатерти event.preventDefault();
+   емуляція кліку на submit
+
+4. event.preventDefault();
+   fetch(POST)
+   form.submit();
+-->
+
+  <form action="https://payteca.com/payment/method/widget/" method="get" class="form-inline" style="border: 1px solid #ffa31945;padding: 30px;">
+    <div class="moneyBoxLine">
+      <input type="hidden" name="client_id" value="mLHIqaJBEF7xozpRnpJqLXlHJVpUFU9GlWfYjyxQ" />
+      <input type="hidden" name="order_id" value="" />
+      <input type="hidden" name="user_id" value="" />
+      <input name="amount" class="money form-control" type="text" value="" placeholder="Введите сумму" required />
+      <select name="currency" class="type widgetPrMoney form-control">
+        <option value="840">USD</option>
+        <option value="643">RUB</option>
+        <option value="980">UAH</option>
+        <option value="978">EUR</option>
+      </select>
+      <input name="description" class="comment form-control" type="text" value="" placeholder="Внесите данные описания платежа" required />
+      <input type="submit" value="ПОДТВЕРДИТЬ" class="btn btn-danger"/>
+      <p class="copy">
+      <span>
+        <b>
+          <a href="https://new.payteca.com">&copy;&nbsp;PayTeca&#x3a; удобный платежный агрегатор</a>
+        </b>
+      </span>
+      <br/>
+      </p>
+    </div>
+  </form>
+
+  <script>
+    let form             = document.querySelector('form[action^="https://payteca.com"]'),
+        amountInput      = form.querySelector('input[name="amount"]'),
+        descriptionInput = form.querySelector('input[name="description"]'),
+        submitBtn        = form.querySelector('input[type="submit"]');
+    // submitBtn.onclick = function(event) {
+    //   event.preventDefault();
+    //   console.log("event");
+
+    //   setTimeout( ()=>{
+    //     submitBtn.onclick = function(event) {};
+    //     submitBtn.click();
+    //   },3000 );
+    // }
+
+    submitBtn.onclick = function(event) {
+      event.preventDefault();
+
+      // event.preventDefault() вбиває валідацію форми, треба валідувати самим
+      if( !amountInput.value || !descriptionInput.value ) return;
+
+      // формуєш потрібні тобі дані
+      let data = {
+        amount       : amountInput.value,
+        description  : descriptionInput.value,
+        clientId     : form.querySelector('input[name="client_id"]').value,
+        orderId      : form.querySelector('input[name="order_id"]').value,
+        userId       : form.querySelector('input[name="user_id"]').value,
+        currencyType : form.querySelector('select[name="currency"]').value
+      }
+
+      // робиш POST-посилку даних, якщо будеш переписувати на ajax, то на onsuccess не забудь поставити form.submit();
+      let response = fetch('your/path/to/handler', {
+        method  : 'POST',
+        body    : JSON.stringify(data),
+        // тут заголовки, якщо вони тобі треба
+        headers : {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+      });
+      response.then(
+        result => {
+          if (result.ok) {
+            // якщо усе добре - викликаєш цей метод
+            form.submit();
+          } else {
+            // тут твій код при помилці відправки даних
+          }
+        },
+        error => {
+          // тут твій код при помилці відправки даних
+        }
+      );
+    }
+
+  </script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</body>
+</html>

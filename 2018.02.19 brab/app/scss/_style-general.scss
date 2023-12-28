@@ -1,0 +1,58 @@
+/* ↓↓↓ GENERAL STYLES ↓↓↓ */
+* {
+	box-sizing: border-box;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.header,
+.section,
+.footer {
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.sity-holder {
+	max-width: 770px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto;
+	grid-column-gap: 30px;
+	.sity-holder__sity {
+		font-family: ptsr;
+		text-align: center;
+		color: #656565;
+		margin: 0 auto;
+		.sity-holder__h3 {
+			font-size: 20px;
+			line-height: 26px;
+		}
+		.sity-holder__p {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		&:nth-of-type(odd) {
+			max-width: 170px;
+		}
+		&:nth-of-type(even) {
+			max-width: 370px;
+		}
+	}
+	@media only screen and (min-width: 576px) {
+		grid-template-columns: auto auto auto;
+		.sity-holder__sity {
+			margin: 0;
+		}
+	}
+}
+/* ↑↑↑ /GENERAL STYLES ↑↑↑ */

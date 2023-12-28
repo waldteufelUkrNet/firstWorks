@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="main.js"></script>
+    <title>Simple JS Test</title>
+  </head>
+  <body>
+
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      h1, h3, h5 {
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        background-color: steelblue;
+        padding: 20px;
+      }
+
+      .headerWrapper {
+        display: flex;
+      }
+
+      h3 {
+        line-height: 1em;
+        font-size: 1.7em;
+        padding: 10px;
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      h3 button {
+        position: absolute;
+        font-size: .7em;
+        top: 50%;
+        left: calc(100% + 20px);
+        transform: translate(0, -50%);
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+
+      h5 {
+        padding-bottom: 20px;
+      }
+
+      .keysTableWrapper {
+        max-width: 1800px;
+        margin: 0 15px 50px;
+        display: grid;
+        grid-template-columns: repeat(1, 50px 150px auto);
+        border: 1px solid lightgreen;
+      }
+
+      @media(min-width: 768px) {
+        .keysTableWrapper {
+          grid-template-columns: repeat(2, 50px 150px auto);
+        }
+      }
+
+      @media(min-width: 1300px) {
+        .keysTableWrapper {
+          grid-template-columns: repeat(4, 50px 150px auto);
+        }
+      }
+
+      @media(min-width: 1800px) {
+        .keysTableWrapper {
+          margin: 0 auto 50px;
+        }
+      }
+
+      .keysTableWrapper div {
+        height: 40px;
+        border: 1px solid lightgreen;
+        padding: 10px;
+      }
+
+      .keyButtonWrapper {
+        display: flex;
+        position: relative;
+      }
+      .keyCopyButton {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translate(0,-50%);
+        font-size: .7em;
+        padding: 6px 12px;
+        cursor: pointer;
+        width: calc(100% - 10px);
+        font-size: 1em;
+      }
+
+      form {
+        max-width: 1800px;
+        margin: 0 15px 30px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: column;
+        grid-gap: 10px 0;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      form label span {
+        display: inline-block;
+        width: 200px;
+      }
+
+      @media(min-width: 1800px) {
+        form {
+          margin: 0 auto 50px;
+        }
+      }
+
+      form input {
+        height: 40px;
+        font-size: 1em;
+        padding: 6px 12px;
+        margin-right: 10px;
+      }
+    </style>
+
+    <h1>Motorola DP2400e & DP2600e</h1>
+
+    <div class="headerWrapper">
+      <h3>
+        <span>Генератор ключів</span>
+        <button id="keygen" type='button'>згенерувати</button>
+      </h3>
+    </div>
+    <h5>(ключі повинні бути 10-ти знакові у HEX-форматі (цифри + букви A-F, букви великі))</h5>
+
+    <div class="keysTableWrapper" id="keysTable"></div>
+
+    <div class="headerWrapper">
+      <h3>
+        <span>Генератор частот</span>
+        <button id="wavegen" type='button'>згенерувати</button>
+      </h3>
+    </div>
+    <h5>(частоти в межах 146 - 160 МГц)</h5>
+
+    <form>
+      <label>
+        <span>початок діапазону:</span>
+        <input type="text" name="startValue" value="146.00100" data-val_range="146.001, 159.009" onkeydown="return checkPushedKey(event.key)">
+      </label>
+      <label>
+        <span>кінець діапазону:</span>
+        <input type="text" name="finishValue" value="159.00900" data-val_range="146.001, 159.009" onkeydown="return checkPushedKey(event.key)">
+      </label>
+      <label>
+        <input type="radio" name="separator" value="," checked="true">
+        <span>кома</span>
+      </label>
+      <label>
+        <input type="radio" name="separator" value=".">
+        <span>крапка</span>
+      </label>
+    </form>
+
+    <div class="keysTableWrapper" id="wavesTable"></div>
+
+    <script type="text/javascript">
+'use strict';
+////////////////////////////////////////////////////////////////////////////////
+/* ↓↓↓ EVENT LISTENERS ↓↓↓ */
+  document.addEventListener('click', clickHandler);
+  document.addEventListener('input', inputHandler);
+/* ↑↑↑ /EVENT LISTENERS ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+/* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
+  /**
+   * clickHandler активує обробники на подію click
+   * @param {Object} event об'єкт події
+   */
+  function clickHandler(event) {
+    if ( event.target.closest('#keygen') ) {
+      renderTable('keys');
+    }
+    if ( event.target.closest('#wavegen') ) {
+      renderTable('waves');
+    }
+    if ( event.target.closest('.keyCopyButton') ) {
+      copyCellValue(event);
+    }
+  }
+
+  /**
+   * inputHandler активує обробники на подію input
+   * @param {Object} event об'єкт події
+   */
+  function inputHandler(event) {
+    if ( event.target.closest('[name="startValue"]')
+        || event.target.closest('[name="finishValue"]')) {
+      checkWavesInput(event);
+    }
+  }
+
+  /**
+   * generateKeys генерує масив з 16-ма ключами у форматі HEX
+   * @return {Array} масив з ключами шифрування
+   */
+  function generateKeys() {
+    const symbols = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+    let key = '';
+    let keys = [];
+
+    for (let i = 0; i < 16; i++) {
+      for (let j = 0; j < 10; j ++) {
+        key += symbols[randomInteger(0,15)];
+      }
+
+      keys.push(key);
+      key = '';
+    }
+
+    return keys;
+  }
+
+  /**
+   * generateWaves генерує масив з 16-ма хвилями
+   * @return {Array} масив з хвилями
+   */
+  function generateWaves() {
+    let startValue  = document.querySelector('form [name="startValue"]').value,
+        finishValue = document.querySelector('form [name="finishValue"]').value,
+        separators  = document.querySelectorAll('form [name="separator"]'),
+        separator;
+
+    if(separators[0].checked) {
+      separator = separators[0].value;
+    } else {
+      separator = separators[1].value;
+    }
+
+    let startValueNum  = +startValue * 1000,
+        finishValueNum = +finishValue * 1000, 
+        wave  = '',
+        waves = [];
+
+    for (let i = 0; i < 16; i++) {
+      wave = (randomInteger(startValueNum, finishValueNum) / 1000).toString();
+      let waveAsArr = wave.split('.');
+      wave = waveAsArr[0] + separator + waveAsArr[1];
+
+      while (wave.length < 9) {
+        wave += '0';
+      }
+      waves.push(wave);
+    }
+
+    if ( !checkWavesForUnic(waves) ) {
+      generateWaves();
+    }
+
+    return waves;
+  }
+
+  /**
+   * checkWavesForUnic перевіряє хвилі на унікальність
+   * @param {Array} waves масив з 16-ма хвилями
+   * @return {Boolean} результат перевірки
+   */
+  function checkWavesForUnic(waves) {
+    for (let i = 0; i < waves.length; i++) {
+      for (let j = i+1; j < waves.length; j++) {
+        if (waves[i] == waves[j]) return false;
+      }
+    }
+    return true;
+  }
+
+  /**
+   * renderTable рендерить тиблиці
+   * @param {String} name ідентифікатор таблиць
+   */
+  function renderTable(name) {
+    let html = '';
+
+    let values, table;
+
+    if (name == 'keys') {
+      values = generateKeys();
+      table  = document.getElementById('keysTable');
+        
+    } else if (name == 'waves') {
+      values = generateWaves();
+      table  = document.getElementById('wavesTable');
+    }
+
+    table.innerHTML = '';
+
+    for (let i = 0; i < values.length; i++) {
+      let n = i+1;
+      let string = '<div class="keyNumber">' + n + '</div>\
+                    <div class="keyValue">' + values[i] + '</div>\
+                    <div class="keyButtonWrapper">\
+                      <button class="keyCopyButton">скопіювати</button>\
+                    </div>';
+      html += string;
+    }
+    table.innerHTML = html;
+  }
+
+  /**
+   * copyCellValue проводить валідацію інпутів
+   * @param {Object} event об'єкт події
+   */
+  function copyCellValue(event) {
+    let value = event.target.closest('.keyButtonWrapper')
+                            .previousElementSibling.innerHTML;
+    navigator.clipboard.writeText(value);
+  }
+
+  /**
+   * checkWavesInput проводить валідацію інпутів
+   * @param {Object} event об'єкт події
+   */
+  function checkWavesInput(event) {
+    let input = event.target,
+        value = +input.value,
+        range = input.dataset.val_range.split(','),
+        minValue = +range[0],
+        maxValue = +range[1];
+
+    if (value > maxValue) {
+      input.value = maxValue + '00'
+    }
+
+    if (value > 100 && value < minValue) {
+      input.value = minValue + '00'
+    }
+
+    let str = value.toString();
+
+    if (str.length > 9) {
+      input.value = str.slice(0,9);
+    }
+
+    if ( str.includes('.') && value < minValue) {
+      input.value = minValue + '00'
+    }
+  }
+
+  /**
+   * randomInteger повертає цілі числа із заданого діапазону
+   * @param {Number} min нижня межа діапазону
+   * @param {Number} max верхня межа діапазону
+   * @return {Number} результат випадковості
+   */
+  function randomInteger(min, max) {
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
+  }
+
+  /**
+   * checkPushedKey фільтрує клавіші при натисканні
+   * @param {String} key значення натисненої кнопки
+   * @return {Boolean} результат перевірки
+   */
+  function checkPushedKey(key) {
+    console.log(typeof key);
+    return (key >= '0' && key <= '9')
+           || key == 'ArrowLeft' || key == 'ArrowRight'
+           || key == 'Delete' || key == 'Backspace'
+           || key == '.';
+  }
+/* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+    </script>
+
+  </body>
+</html>

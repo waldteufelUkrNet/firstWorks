@@ -1,0 +1,283 @@
+@media only screen and (min-width: 320px) {
+	.form {
+		width: 270px;
+		position: relative;
+		font-family: b;
+		&__header {
+			font-size: 25px;
+			text-align: center;
+			padding: 20px 0 10px;
+			text-shadow: 0 0 3px white;
+		}
+		input,
+		.form__code {
+			height: 40px;
+			border-radius: 20px;
+			border: 1px solid black;
+			margin-bottom: 6px;
+			padding-left: 15px;
+			padding-top: 6px;
+			font-family: b;
+			font-size: 22px;
+			text-transform: uppercase;
+			outline: none;
+			&::placeholder {
+				font-family: b;
+				color: black;
+				opacity: 1;
+			}
+		}
+		&__fname,
+		&__lname,
+		&__email {
+			width: 100%;
+		}
+		&__code {
+			font-family: b;
+			width: 130px;
+			margin-right: 10px;
+			&::placeholder {
+				font-family: b;
+			}
+		}
+		&__code select {
+			font-family: b;
+		}
+		&__phone {
+			width: 126px;
+		}
+		&__btn {
+			font-family: b;
+			height: 48px;
+			width: 100%;
+			border-radius: 24px;
+			border: none;
+			background: linear-gradient(to right, #ff0505, #6d0000);
+			color: white;
+			cursor: pointer;
+			font-size: 22px;
+			padding-top: 6px;
+		}
+		&__info {
+			display: block;
+			text-align: center;
+			font-size: 16px;
+			letter-spacing: 0.5px;
+			padding: 10px 0;
+		}
+		&__private {
+			cursor: pointer;
+			color: DodgerBlue;
+			text-shadow: none;
+			border-bottom: 1px dotted DodgerBlue;
+		}
+	}
+}
+@media only screen and (min-width: 576px) {
+	.form {
+		width: 340px;
+		position: relative;
+		&__header {
+			font-size: 25px;
+			text-align: center;
+			padding: 20px 0 10px;
+		}
+		input,
+		.form__code {
+			height: 40px;
+			border-radius: 20px;
+			border: 1px solid black;
+			margin-bottom: 6px;
+			padding-left: 20px;
+			font-size: 22px;
+			text-transform: uppercase;
+			&::placeholder {
+				color: black;
+				opacity: 1;
+			}
+		}
+		&__fname,
+		&__lname,
+		&__email {
+			width: 100%;
+		}
+		&__code {
+			width: 165px;
+			margin-right: 10px;
+		}
+		&__phone {
+			width: 161px;
+		}
+		&__btn {
+			height: 48px;
+			width: 100%;
+			border-radius: 24px;
+			border: none;
+			background: linear-gradient(to right, #ff0505, #6d0000);
+			color: white;
+			cursor: pointer;
+			font-family: b;
+			font-size: 22px;
+		}
+		&__info {
+			font-size: 18px;
+		}
+	}
+}
+@media only screen and (min-width: 992px) {
+	.form {
+		width: 400px;
+		position: relative;
+		&__header {
+			font-size: 30px;
+			text-align: center;
+			padding: 30px 0 20px;
+		}
+		input,
+		.form__code {
+			height: 48px;
+			border-radius: 24px;
+			border: 2px solid black;
+			margin-bottom: 10px;
+			padding-left: 20px;
+			font-size: 18px;
+			text-transform: uppercase;
+			&::placeholder {
+				color: black;
+				opacity: 1;
+			}
+		}
+		&__fname,
+		&__lname,
+		&__email {
+			width: 100%;
+		}
+		&__code {
+			width: 195px;
+			margin-right: 10px;
+		}
+		&__phone {
+			width: 191px;
+		}
+		&__btn {
+			height: 48px;
+			width: 100%;
+			border-radius: 24px;
+			border: none;
+			background: linear-gradient(to right, #ff0505, #6d0000);
+			color: white;
+			cursor: pointer;
+			font-family: b;
+			font-size: 18px;
+		}
+		&__info {
+			font-size: 22px;
+		}
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.form {
+		width: 500px;
+		position: relative;
+		&__header {
+			font-size: 40px;
+			text-align: center;
+			padding: 30px 0 20px;
+		}
+		input,
+		.form__code {
+			height: 56px;
+			border-radius: 28px;
+			border: 3px solid black;
+			margin-bottom: 18px;
+			padding-left: 30px;
+			font-size: 24px;
+			text-transform: uppercase;
+			&::placeholder {
+				color: black;
+				opacity: 1;
+			}
+		}
+		&__fname,
+		&__lname,
+		&__email {
+			width: 100%;
+		}
+		&__code {
+			width: 245px;
+			margin-right: 10px;
+
+		}
+		&__phone {
+			width: 241px;
+		}
+		&__btn {
+			height: 56px;
+			width: 100%;
+			border-radius: 28px;
+			border: none;
+			background: linear-gradient(to right, #ff0505, #6d0000);
+			color: white;
+			cursor: pointer;
+			font-size: 24px;
+		}
+	}
+}
+@media only screen and (min-width: 1920px) {
+	.form {
+		width: 630px;
+		position: relative;
+		z-index: 1111;
+		&__header {
+			font-size: 48px;
+			text-align: center;
+			padding: 40px 0 32px;
+		}
+		input,
+		.form__code {
+			font-family: b;
+			height: 84px;
+			border-radius: 42px;
+			border: 6px solid black;
+			margin-bottom: 30px;
+			padding-left: 30px;
+			font-size: 36px;
+			text-transform: uppercase;
+			&::placeholder {
+				font-family: b;
+				color: black;
+				opacity: 1;
+			}
+		}
+		&__fname,
+		&__lname,
+		&__email {
+			width: 100%;
+		}
+		&__code {
+			width: 305px;
+			margin-right: 20px;
+		}
+		&__code select {
+			font-family: b;
+			appearance:none;
+		}
+		&__phone {
+			width: 301px;
+		}
+		&__btn {
+			height: 84px;
+			width: 100%;
+			border-radius: 42px;
+			border: none;
+			background: linear-gradient(to right, #ff0505, #6d0000);
+			color: white;
+			cursor: pointer;
+			font-family: b;
+			font-size: 36px;
+		}
+		&__info {
+			font-size: 36px;
+		}
+	}
+}

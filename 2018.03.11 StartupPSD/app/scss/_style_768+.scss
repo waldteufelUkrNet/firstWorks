@@ -1,0 +1,116 @@
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.header-wrapper {
+		.header {
+			grid-template-columns: auto auto;
+			justify-content: space-between;
+			.logo {
+				text-align: left;
+			}
+			.navigation {
+				position: relative;
+				top: 0;
+				width: auto;
+				height: auto;
+				background-color: transparent;
+				padding-top: 0;
+				.nav-list {
+					.nav-list-item {
+						display: inline-block;
+						margin-left: 32px;
+						text-align: left;
+						.nav-list-link {
+							font-size: 14px;
+							letter-spacing: 0;
+							left: 0px;
+						  opacity: 1;
+						}
+					}
+				}
+			}
+			.nav-btn {
+				display: none;
+			}
+		}
+	}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 2 services ↓↓↓ */
+		.s2-wrapper {
+			.services {
+				.services-card-holder {
+					grid-template-columns: auto auto auto;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 2 services ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 about ↓↓↓ */
+		.s3-wrapper {
+			.about {
+				.about-column-text {
+					column-count: 2;
+					text-align: left;
+				}
+				.about-slick-wrapper {
+					width: 563px;
+					.about-slick {
+						width: 600px;
+  					.slick-next {
+  						right: 22px;
+  					}
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 3 about ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 works ↓↓↓ */
+		.s4-wrapper {
+			.works {
+				padding-bottom: 96px;
+				.work-card-holder {
+					grid-template-columns: auto auto;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 4 works ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 partners ↓↓↓ */
+		.s7-wrapper {
+			.partners {
+				padding-bottom: 0px;
+				.partners-holder {
+					grid-template-columns: auto auto auto auto auto;
+					grid-template-rows: 100px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 7 partners ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 form ↓↓↓ */
+		.s8-wrapper {
+			.form {
+				.section-grid {
+					display: grid;
+					grid-template-columns: 1fr 2fr;
+					grid-template-rows: 300px;
+					.contacts {
+						justify-content: left;
+						grid-template-columns: 1fr;
+					}
+					.form-grid {
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 8 form ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

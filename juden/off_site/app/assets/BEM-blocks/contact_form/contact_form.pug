@@ -1,0 +1,24 @@
+// ↓↓↓ BEM-blocks: contact-form (start) ↓↓↓
+
+style
+  include contact_form.css
+
+.contact-form__wrapper
+  form.contact-form(action='#', name='form', method='post')
+    .contact-form__inner
+      .contact-form__left
+        input.contact-form__input#input-id(type='text', placeholder='Имя или ID клиента', name='id')
+        .contact-form__info-field#input-id-warning Заполните поле!
+        input.contact-form__input#input-email(type='text', placeholder='E-mail', name='email')
+        .contact-form__info-field#input-email-warning Введите корректный адрес!
+        input.contact-form__input#input-phone(type='text', placeholder='Контактный телефон', name='phone')
+        .contact-form__info-field#input-phone-warning Введите корректный телефон!
+      .contact-form__right
+        textarea.contact-form__textarea(placeholder='Сообщение', name='message')
+        .contact-form__info-field#input-message-warning Напишите нам сообщение!
+    button.contact-form__btn.page-btn(type='submit') ОТПРАВИТЬ
+
+script
+  include ../minjs/contact_form/contact_form.js
+
+// ↑↑↑ BEM-blocks: contact-form (end) ↑↑↑

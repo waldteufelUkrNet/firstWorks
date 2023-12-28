@@ -1,0 +1,135 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Trade in your own way: currency pairs, stocks, indices, commodities and cryptocurrency.")
+
+    title About company
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/linecons.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/about_company.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1(data-parallax="scroll" data-image-src="assets/img/about_company_bg.jpg")
+          .section1__text-wrapper
+            h1.wow.fadeInUp.section1__header ABOUT COMPANY
+            p.wow.fadeInUp.section1__text
+              span(style='font-weight: 900') Mission and purpose E-Tokens Trade
+              |
+              |
+              span - it is to provide you, as a trader, the safest, most convenient and generally the best way to trade. Our pricing and execution modules guarantee the use of the most advanced and advanced technologies. Thanks to our partnership with the Reuters news provider, we get real-time streams of accurate data, and our terms and conditions clearly state the difference between the real-time market price and the price of options. We provide expiration schedules at any particular moment to ensure the trader’s peace of mind, so that there are no problematic issues on the part of the trader.
+            p.wow.fadeInUp.section1__text Stability is paramount to our company. We make every effort to ensure uninterrupted services, safe and easy trade, financial viability and strict compliance with the law.
+            p.wow.fadeInUp.section1__text We hope your relationship with
+              |
+              |
+              span(style='font-weight: 900') E-Tokens Trade
+              |
+              | will be long-term, and we will do our best to make it profitable!
+          .section1__logo-wrapper
+            img.wow.fadeInUp.section1__logo(src="assets/img/veryBigLogo.png", alt="veryBigLogo.png")
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__left-column
+            h1.section2__left-column-header E-Tokens Trade
+              br
+              |
+              | Platform
+              br
+              |
+              | Benefits:
+
+            ul.accordion
+              li.accordion__list-item
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |EASY TRADE
+                .inner.accordion__content Web interface, no download required. Simple trading is easy to understand with clear explanations.
+              li
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |VARIOUS PRODUCTS
+                .inner.accordion__content User friendly trading. Safe - the risk / reward ratio is clearly indicated in the option.
+              li
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |CRYPT DEPOSITS
+                .inner.accordion__content Quick and easy deposits with BTC.
+              li
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |HIGHLY ENABLE FEEDS
+                .inner.accordion__content Constant development of highly profitable feeds in modern conditions.
+
+          .section2__right-column
+            img(src="assets/img/cow_with_pc.jpg", alt="cow_with_pc.jpg")
+
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          //- p.wow.fadeInUp.section3__text
+          //- p.wow.fadeInUp.section3__identation
+          p.wow.fadeInUp.section3__text
+            span(style='font-family:rb') E-Tokens Trade
+            |
+            | undertakes to provide the highest quality and unique trading platform that can be used by private investors around the world. E-Tokens Trade employees are ready to provide the necessary assistance to traders, and professional brokers provide traders with guidance at every step of the way.
+          p.wow.fadeInUp.section3__text
+            span(style='font-family:rb') Etokenstrade.com
+            |
+            | - It is the leading platform for trading binary options today. Now that binary options have become more popular than ever, E-Tokens Trade provides traders with excellent working conditions in terms of security, availability of various functions, ease of use, provision of tools and training.
+          p.wow.fadeInUp.section3__text Client funds are held in a separate account. Cash is used only for trading options through our website on behalf of a client and is never spent on any other purpose. Our obligations and risks are managed by professionals, and we guarantee the payment of your profits according to our conditions.
+          p.wow.fadeInUp.section3__text E-Tokens Trade and partner organizations have professional forex brokers experts in the field of financial derivatives and risk management. In addition, we cooperate with payment systems. We deal in all aspects of binary options trading, so you get the best trading experience at any time.
+      // /SECTION 3
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    script(src='assets/js/about_company.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

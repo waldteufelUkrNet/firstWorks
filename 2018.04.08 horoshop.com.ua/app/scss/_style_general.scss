@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.s1-wrapper {
+	background-color: #f9f7ee;
+}

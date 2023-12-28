@@ -1,0 +1,116 @@
+/* ↓↓↓ for 1200px and more ↓↓↓ */
+@media only screen and (min-width: 1200px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.header-wrapper {
+		.header {
+			.logo {
+				margin: 30px auto 0;
+			}
+			.navigation {
+				ul {
+					li {
+						a {
+							padding: 15px;
+						}
+					}
+				}
+			}
+			.search-field {
+				margin: 36px 0 0 15px;
+			}
+		}
+	}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.s1-wrapper {
+			.section1 {
+				.tablets {
+					width: 668px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+		.s2-wrapper {
+			.section2 {
+				.features-holder {
+					padding: 80px 0 0 0;
+					display: grid;
+					grid-template-columns: auto auto auto;
+					justify-content: space-between;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 ↓↓↓ */
+		.s3-wrapper {
+			.section3 {
+				.fact-holder {
+					grid-template-columns: auto auto auto auto;
+					justify-content: space-between;
+				}				
+			}
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.s4-wrapper {
+			.section4 {
+				p {
+					left: 0;
+				}
+				a {
+					&:first-of-type {
+						right: 162px;
+					}
+					&:last-of-type {
+						right: 2px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.s5-wrapper {
+			.section5 {
+				.slick1 {
+					width: 1200px;
+					left: -15px;
+					.slick1-item {
+						margin: 0 15px;	
+					}
+				}	
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.s6-wrapper {
+			.section6 {
+				max-width: 1200px;
+				.slick2 {
+					width: 1120px;
+					.slick2-item {
+						margin: 0 15px;
+					}
+					.slick-prev {
+						left: -30px;
+					}
+			    .slick-next {
+			    	right: -30px;
+			    }
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+	}
+}

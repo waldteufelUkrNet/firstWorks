@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customers - waldteufel@ukr.net</title>
+    <link rel="icon" href="img/wehrwolf.jpg">
+    <!-- css-libs (font awesome, slick, wow ...)-->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- js-libs (font awesome, slick, wow ...)-->
+    <script src="js/jquery3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script defer="" src="js/fontawesome-all.min.js"></script>
+    <!-- project stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <script src="js/layout.js" defer=""></script>
+    <!-- page stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/customers.css">
+    <script src="js/customers.js" defer=""></script>
+  </head>
+  <body>
+    <!-- HEADER-->
+    <!-- ↓↓↓ BEM-blocks: header (start) ↓↓↓-->
+    <div class="header-wrapper">
+      <header class="header">
+        <!-- NAVIGATION-->
+        <nav class="navigation"><a class="company-logo" href="index.html">© New Trade Company</a>
+          <ul class="nav-ul-1">
+            <li><span id="nav-datetimer"></span></li>
+            <li><a href="#"><img src="img/calender.png" alt="img/calender.png" style="height: 36px"></a></li>
+            <li><a href="#"><img src="img/messageBell.png" alt="img/messageBell.png"></a></li>
+          </ul>
+          <ul class="nav-ul-2">
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#"><img src="img/ru.png" alt="img/ru.png" style="height: 28px"></a></li>
+            <li><a href="#"><img src="img/en.png" alt="img/en.png" style="height: 28px"></a></li>
+          </ul>
+        </nav>
+        <!-- /NAVIGATION-->
+      </header>
+    </div>
+    <!-- ↑↑↑ BEM-blocks: header (end) ↑↑↑-->
+    <!-- /HEADER-->
+    <!-- MAIN SECTION-->
+    <main class="main">
+      <!-- ASIDE MENU-->
+      <aside class="aside">
+        <!-- ↓↓↓ BEM-blocks: accordion (start) ↓↓↓-->
+        <div class="accordion-wrapper">
+          <ul class="accordion">
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-users"></i>Сustomers</a></li>
+            <li><a href="#"><i class="fas fa-bookmark"></i>Tickets</a></li>
+            <li><a href="#"><i class="far fa-bookmark"></i>Transactions</a></li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-link"></i>Communications<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Новое уведомление</a></li>
+                <li><a href="#">История уведомлений</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="far fa-copy"></i>Orders</a></li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-chart-line"></i>Analytics<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Analytics1</a></li>
+                <li><a href="#">Analytics2</a></li>
+                <li><a href="#">Analytics3</a></li>
+              </ul>
+            </li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="far fa-file-alt"></i>Logs<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Logs1</a></li>
+                <li><a href="#">Logs2</a></li>
+                <li><a href="#">Logs3</a></li>
+              </ul>
+            </li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-cogs"></i>Settings<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Settings Тестовая таблица</a></li>
+                <li><a href="#">Settings2</a></li>
+                <li><a class="toggle" href="javascript:void(0);">Admin<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+                  <ul class="inner">
+                    <li><a href="#">Регистрация сотрудника</a></li>
+                    <li><a href="#">Смена пароля сотруднику</a></li>
+                    <li><a href="#">Admin3</a></li>
+                    <li><a href="#">Admin4</a></li>
+                    <li><a href="#"><i class="fas fa-briefcase"></i>Employees</a></li>
+                    <li><a href="#"><i class="far fa-flag"></i>Company</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- ↑↑↑ BEM-blocks: accordion (end) ↑↑↑-->
+      </aside>
+      <!-- /ASIDE MENU-->
+      <!-- ↓↓↓ WORK AREA (start) ↓↓↓-->
+      <div class="work-area">
+        <!-- this input is for localStorage testing-->
+        <input id="tableMarker" type="hidden" value="c1">
+        <!-- this input is for table sorting-->
+        <input id="tableSort" type="hidden">
+        <!-- ↓↓↓ OPTION PANEL (start) ↓↓↓-->
+        <div class="option-panel">
+          <div class="option-panel__search-wrapper">
+            <div class="option-panel__buttons-wrapper"><a class="option-panel__button" id="option-panel-filters" href="#">фильтры</a><a class="option-panel__button" id="option-panel-columns" href="#">колонки</a><a class="option-panel__button" id="option-panel-export" href="#">экспорт</a><a class="option-panel__refresh-button" id="option-panel-refresh" href="#"><i class="fas fa-sync-alt"></i></a></div>
+            <div class="option-panel__search-filters-wrapper">
+              <label id="search">
+                <input id="searchId" placeholder="поиск по Id" type="text"><span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+              </label>
+              <label id="searchE">
+                <input id="searchEmail" placeholder="поиск по E-mail" type="text"><span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+              </label>
+              <label id="searchN">
+                <input id="searchName" placeholder="поиск по Имени" type="text"><span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+              </label>
+              <label id="searchP">
+                <input id="searchPhone" placeholder="поиск по телефону" type="text"><span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+              </label>
+            </div>
+          </div>
+          <div class="option-panel__filters-wrapper" id="filters-wrapper">
+            <div class="option-panel__divider"></div>
+            <div class="filters-label-wrapper">
+              <label><span>По статусу верификации:</span>
+                <select id="VerificationStatusSelect">
+                  <option value="0">Все</option>
+                  <option value="1">без верефикации</option>
+                  <option value="2">частичная верефикация</option>
+                  <option value="3">полная верефикация</option>
+                </select>
+              </label>
+              <label><span>Активность:</span>
+                <select id="IsActiveSelect">
+                  <option value="0">Все</option>
+                  <option value="1">активен</option>
+                  <option value="2">не активен</option>
+                </select>
+              </label>
+              <label><span>Возможность торговли:</span>
+                <select id="IsTradingSelect">
+                  <option value="0">Все</option>
+                  <option value="1">есть доступ</option>
+                  <option value="2">нет доступа</option>
+                </select>
+              </label>
+              <label><span>Компании:</span>
+                <select id="CompanySelect" data-multichoice="true">
+                  <option>Все</option>
+                  <option>Крипто-Биткоин</option>
+                  <option>Нигма2</option>
+                  <option>Клик на миллион</option>
+                  <option>развод-лохов.ру</option>
+                  <option>кидалово.ком</option>
+                </select>
+              </label>
+              <label><span>Аккаунты:</span>
+                <select id="AccountSelect">
+                  <option>Все</option>
+                  <option>Демо</option>
+                  <option>Реальный</option>
+                </select>
+              </label>
+              <label><span>Страны:</span>
+                <select id="CountrySelect">
+                  <option>Все</option>
+                  <option>Страна0</option>
+                  <option>Страна1</option>
+                  <option>Страна2</option>
+                  <option>Страна3</option>
+                  <option>Страна4</option>
+                  <option>Страна5</option>
+                  <option>Страна6</option>
+                  <option>Страна7</option>
+                  <option>Страна8</option>
+                  <option>Страна9</option>
+                  <option>Страна10</option>
+                  <option>Страна11</option>
+                  <option>Страна12</option>
+                  <option>Страна13</option>
+                  <option>Страна14</option>
+                  <option>Страна15</option>
+                  <option>Страна16</option>
+                  <option>Страна17</option>
+                  <option>Страна18</option>
+                  <option>Страна19</option>
+                  <option>Страна20</option>
+                  <option>Страна21</option>
+                  <option>Страна22</option>
+                  <option>Страна23</option>
+                  <option>Страна24</option>
+                  <option>Страна25</option>
+                  <option>Страна26</option>
+                  <option>Страна27</option>
+                  <option>Страна28</option>
+                  <option>Страна29</option>
+                </select>
+              </label>
+              <label><span>Статусы:</span>
+                <select id="statusSelect" data-multichoice="true">
+                  <option>Все</option>
+                  <option>Статус1</option>
+                  <option>Статус2</option>
+                  <option>Статус3</option>
+                  <option>Статус4</option>
+                  <option>Статус5</option>
+                  <option>Статус6</option>
+                  <option>Статус7</option>
+                  <option>Статус8</option>
+                </select>
+              </label>
+              <div><span>Период:</span>
+                <div class="search-buttons-wrapper">
+                  <div class="datapicker-holder">с
+                    <input class="datepicker" id="date-start" type="text" onkeydown="return false" onkeypress="return false">
+                    по
+                    <input class="datepicker" id="date-end" type="text" onkeydown="return false" onkeypress="return false"><span class="enter-btn" id="dataPieckerBtn"><i class="far fa-check-circle"></i></span>
+                  </div>
+                </div>
+              </div>
+              <label><span>Спец.Статусы:</span>
+                <select id="specStatusesSelect">
+                  <option>Все</option>
+                  <option>Специальный статус 1</option>
+                  <option>Специальный статус 2</option>
+                </select>
+              </label>
+              <label><span>Сотрудники:</span>
+                <div class="search-buttons-wrapper">
+                  <div class="employer-holder">
+                    <datalist id="employerSelect">
+                      <option value="Все">Все</option>
+                      <option value="Толик Мудрый">Толик Мудрый</option>
+                      <option value="Коля Толковый">Коля Толковый</option>
+                      <option value="Таня Улыбаха">Таня Улыбаха</option>
+                      <option value="Женя Крахобор">Женя Крахобор</option>
+                      <option value="Петя Пасочник">Петя Пасочник</option>
+                    </datalist>
+                    <input list="employerSelect"><span class="enter-btn" id="empInput"><i class="far fa-check-circle"></i></span>
+                  </div>
+                </div>
+              </label>
+              <label><span>Строки:</span>
+                <select id="pageCount">
+                  <option>5</option>
+                  <option>25</option>
+                  <option>50</option>
+                  <option>100</option>
+                </select>
+              </label>
+              <label><span>Передать клиентов сотруднику:</span>
+                <div class="search-buttons-wrapper">
+                  <div class="employerList-holder">
+                    <datalist id="EmployersList">
+                      <option id="sel1" value="Толик Мудрый" onclick="OpenModal(1)">Толик Мудрый</option>
+                      <option id="sel2" value="Коля Толковый" onclick="OpenModal(2)">Коля Толковый</option>
+                      <option id="sel3" value="Таня Улыбаха" onclick="OpenModal(3)">Таня Улыбаха</option>
+                      <option id="sel4" value="Женя Крахобор" onclick="OpenModal(4)">Женя Крахобор</option>
+                      <option id="sel5" value="Петя Пасочник" onclick="OpenModal(5)">Петя Пасочник</option>
+                    </datalist>
+                    <input list="EmployersList"><span class="enter-btn"><i class="far fa-check-circle"></i></span>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="option-panel__columns-wrapper" id="columns-wrapper">
+            <div class="option-panel__divider"></div>
+            <div class="column-label-wrapper">
+              <label>
+                <input type="checkbox"><span>Id</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>E-mail</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>ФИО</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Телефон</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Брокер</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Верификация</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Страна</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Активность</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Доступ к торгам</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Дата регистрации</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Баланс</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Бонусы</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Дата последней активности</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Тип аккаунта</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Компания</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Статус</span><span></span>
+              </label>
+              <label>
+                <input type="checkbox"><span>Специальный Статус</span><span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="filter-markers-panel">
+          <h5 class="filter-markers-panel-header">Выбранные фильтры:</h5>
+          <btn id="clear-filters-btn">сбросить все фильтры</btn>
+        </div>
+        <!-- ↑↑↑ /OPTION PANEL (end) ↑↑↑-->
+        <!-- ↓↓↓ TABLE (start) ↓↓↓-->
+        <div class="table-scroll-wrapper">
+          <div class="table-wrapper">
+            <div class="topscroll">
+              <div class="fake"></div>
+            </div>
+            <table class="customers-table" id="thumbObj">
+              <thead id="customers-table-tr">
+                <tr>
+                  <th>
+                    <button class="table-sort-btn" style="display: none"></button>
+                    <input onchange="SelectCust(this)" type="checkbox" id="checkAll"><span class="badges" id="checkedAmount"></span>
+                  </th>
+                  <th>Id
+                    <button class="table-sort-btn_active table-sort-btn" data-column-number="0"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>E-mail
+                    <button class="table-sort-btn" data-column-number="1"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>ФИО
+                    <button class="table-sort-btn" data-column-number="2"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Телефон
+                    <button class="table-sort-btn" data-column-number="3"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Брокер
+                    <button class="table-sort-btn" data-column-number="4"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Верификация
+                    <button class="table-sort-btn" data-column-number="5"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Страна
+                    <button class="table-sort-btn" data-column-number="6"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Активность
+                    <button class="table-sort-btn" data-column-number="7"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Доступ к торгам
+                    <button class="table-sort-btn" data-column-number="8"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Дата регистрации
+                    <button class="table-sort-btn" data-column-number="9"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Баланс
+                    <button class="table-sort-btn" data-column-number="10"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Бонусы
+                    <button class="table-sort-btn" data-column-number="11"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Дата последней активности
+                    <button class="table-sort-btn" data-column-number="12"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Тип аккаунта
+                    <button class="table-sort-btn" data-column-number="13"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Компания
+                    <button class="table-sort-btn" data-column-number="14"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Статус
+                    <button class="table-sort-btn" data-column-number="15"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th>Специальный Статус
+                    <button class="table-sort-btn" data-column-number="16"><i class="fas fa-chevron-down"></i></button>
+                  </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody class="customers-table__tbody" id="customers-table-body">
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">1</a></td>
+                  <td>testmail1@gmail.com</td>
+                  <td>Вася Пупкин</td>
+                  <td>9999999990</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна0</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Платежеспособный</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">2</a></td>
+                  <td>testmail2@gmail1.com</td>
+                  <td>Маша Залупкіна</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">3</a></td>
+                  <td>testmail3@gmail1.com</td>
+                  <td>Петя Пасочник</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">4</a></td>
+                  <td>testmail4@gmail1.com</td>
+                  <td>Танюха Улибаха</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">5</a></td>
+                  <td>testmail5@gmail1.com</td>
+                  <td>Мойша Ибрагімович</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">7</a></td>
+                  <td>фпуте777@gmail.com</td>
+                  <td>Джеймс Бонд</td>
+                  <td>777777777</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">8</a></td>
+                  <td>testmail34@gmail1.com</td>
+                  <td>Степан Степанович</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">9</a></td>
+                  <td>testmail3457@gmail1.com</td>
+                  <td>Зульфія Зульфікаровна</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">10</a></td>
+                  <td>testmail08@gmail1.com</td>
+                  <td>Хасан Затулін</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">11</a></td>
+                  <td>testmail835@gmail.com</td>
+                  <td>Блядюля Тимошенко</td>
+                  <td>9999999990</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна0</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Платежеспособный</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">12</a></td>
+                  <td>testmail7634@gmail1.com</td>
+                  <td>Святий Петро</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">13</a></td>
+                  <td>testmail35@gmail1.com</td>
+                  <td>Робін Гуд</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">14</a></td>
+                  <td>testmail9245@gmail1.com</td>
+                  <td>Адольф Шикльгрубер</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input onchange="SelectCust(this)" type="checkbox">
+                    <input id="cust1" name="idCustomers" type="hidden">
+                  </td>
+                  <td><a href="#">15</a></td>
+                  <td>testmail55@gmail1.com</td>
+                  <td>Глаша Доярка</td>
+                  <td>9999999991</td>
+                  <td>Толик Мудрый</td>
+                  <td>не верефицирован</td>
+                  <td>Страна1</td>
+                  <td>активен</td>
+                  <td>есть доступ</td>
+                  <td>4/24/2018 12:18:37 PM</td>
+                  <td>250.033333</td>
+                  <td>100.001</td>
+                  <td>4/25/2018 12:18:37 PM</td>
+                  <td>Реальный</td>
+                  <td>Крипто-Биткоин</td>
+                  <td>Жадина-говядина</td>
+                  <td>Специальный статус 1</td>
+                  <td>
+                    <input id="Button1" value="button" type="button">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- ↑↑↑ /TABLE (end) ↑↑↑--><br>
+        <p style="font-family:rb; text-align: justify;">RobotoBold<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.</p><br>
+        <p style="font-family:rcl; text-align: justify;">RobotoCondensedLight<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.</p><br>
+      </div>
+      <!-- ↑↑↑ /WORK AREA (end) ↑↑↑-->
+    </main>
+    <!-- /MAIN SECTION-->
+    <!-- FOOTER-->
+    <div class="footer-wrapper">
+      <footer class="footer"></footer>
+    </div>
+    <!-- /FOOTER-->
+  </body>
+</html>

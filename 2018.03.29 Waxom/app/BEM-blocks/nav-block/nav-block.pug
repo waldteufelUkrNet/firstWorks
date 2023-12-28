@@ -1,0 +1,24 @@
+script
+  include nav-block.js
+nav.navigation
+
+  .navigation__logo-block
+    include ../logo-block/_logo-block.pug
+
+  ul.navigation__list
+    li.navigation__list-item: a.navigation__link(href='#') Home
+    li.navigation__list-item: a.navigation__link(href='#') About Us
+    li.navigation__list-item: a.navigation__link(href='#') Portfolio
+    li.navigation__list-item: a.navigation__link(href='#') Features
+    li.navigation__list-item: a.navigation__link(href='#') Blog
+    li.navigation__list-item: a.navigation__link(href='#') Pricing
+    li.navigation__list-item: a.navigation__link(href='#') Shortcodes
+    li.navigation__list-item: a.navigation__link(href='#') Contact
+
+  ul.navigation__icons
+    li: a(href='#'): img(src="img/icon-card.png" alt="icon-card.png")
+    li: include ../search-block/search-block.pug
+  button.navigation__nav-btn.navigation__nav-btn_open(type='button')
+    i.fas.fa-bars
+  button.navigation__nav-btn.navigation__nav-btn_close(type='button')
+    i.fas.fa-times

@@ -1,0 +1,341 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title message sender - waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='js/jquery3.3.1.min.js')
+    script(defer='', src='js/fontawesome-all.min.js')
+
+    // project stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/layout.css')
+    script(src='js/layout.js', defer='')
+
+    // page stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/message_sender.css')
+    script(src='js/message-sender.js', defer='')
+
+  body
+    // HEADER
+    include BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // ASIDE MENU
+      aside.aside
+        include BEM-blocks/accordion/accordion.pug
+      // /ASIDE MENU
+
+      // ↓↓↓ WORK AREA (start) ↓↓↓
+      .work-area
+        h1.message-sender__form-header Write multimessage
+        form.message-sender(method='get')
+          .message-sender__checkbox-wrapper
+            .message-sender__checkbox-item
+              .message-sender__checkbox-btns-holder
+                h5.message-sender__checkbox-item-header Sales
+                button.message-sender__checkbox-btns.message-sender__checkbox-btns-check check all
+                button.message-sender__checkbox-btns.message-sender__checkbox-btns-uncheck uncheck all
+              .message-sender__checkbox-holder
+                ul.message-sender__checkbox-list
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Аарон')
+                    |  Аарон
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Мойша')
+                    |  Мойша
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='ІзраЇль')
+                    |  Ізраїль
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Авель')
+                    |  Авель
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Авраам')
+                    |  Авраам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Давид')
+                    |  Давид
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Єремія')
+                    |  Єремія
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Захарія')
+                    |  Захарія
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Мануїл')
+                    |  Мануїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Хірам')
+                    |  Хірам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Моїсей')
+                    |  Моїсей
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Натан')
+                    |  Натан
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Томас')
+                    |  Томас
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Соломон')
+                    |  Соломон
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ной')
+                    |  Ной
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Адам')
+                    |  Адам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Савелій')
+                    |  Савелій
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Гавриїл')
+                    |  Гавриїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ісая')
+                    |  Ісая
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Йосип')
+                    |  Йосип
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ісаак')
+                    |  Ісаак
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Самуїл')
+                    |  Самуїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Савватій')
+                    |  Савватій
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Зеєв')
+                    |  Зеєв
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Яків')
+                    |  Яків
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ованес')
+                    |  Ованес
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Єлисей')
+                    |  Єлисей
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Менахем')
+                    |  Менахем
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Іуда')
+                    |  Іуда
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Веніамін')
+                    |  Веніамін
+            .message-sender__checkbox-item
+              .message-sender__checkbox-btns-holder
+                h5.message-sender__checkbox-item-header Retentions
+                button.message-sender__checkbox-btns.message-sender__checkbox-btns-check check all
+                button.message-sender__checkbox-btns.message-sender__checkbox-btns-uncheck uncheck all
+              .message-sender__checkbox-holder
+                ul.message-sender__checkbox-list
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Аарон')
+                    |  Аарон
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Мойша')
+                    |  Мойша
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='ІзраЇль')
+                    |  Ізраїль
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Авель')
+                    |  Авель
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Авраам')
+                    |  Авраам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Давид')
+                    |  Давид
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Єремія')
+                    |  Єремія
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Захарія')
+                    |  Захарія
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Мануїл')
+                    |  Мануїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Хірам')
+                    |  Хірам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Моїсей')
+                    |  Моїсей
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Натан')
+                    |  Натан
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Томас')
+                    |  Томас
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Соломон')
+                    |  Соломон
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ной')
+                    |  Ной
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Адам')
+                    |  Адам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Савелій')
+                    |  Савелій
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Гавриїл')
+                    |  Гавриїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ісая')
+                    |  Ісая
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Йосип')
+                    |  Йосип
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ісаак')
+                    |  Ісаак
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Самуїл')
+                    |  Самуїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Савватій')
+                    |  Савватій
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Зеєв')
+                    |  Зеєв
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Яків')
+                    |  Яків
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ованес')
+                    |  Ованес
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Єлисей')
+                    |  Єлисей
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Менахем')
+                    |  Менахем
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Іуда')
+                    |  Іуда
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Веніамін')
+                    |  Веніамін
+            .message-sender__checkbox-item
+              .message-sender__checkbox-btns-holder
+                h5.message-sender__checkbox-item-header Others
+                button.message-sender__checkbox-btns.message-sender__checkbox-btns-check check all
+                button.message-sender__checkbox-btns.message-sender__checkbox-btns-uncheck uncheck all
+              .message-sender__checkbox-holder
+                ul.message-sender__checkbox-list
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Аарон')
+                    |  Аарон
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Мойша')
+                    |  Мойша
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='ІзраЇль')
+                    |  Ізраїль
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Авель')
+                    |  Авель
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Авраам')
+                    |  Авраам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Давид')
+                    |  Давид
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Єремія')
+                    |  Єремія
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Захарія')
+                    |  Захарія
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Мануїл')
+                    |  Мануїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Хірам')
+                    |  Хірам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Моїсей')
+                    |  Моїсей
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Натан')
+                    |  Натан
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Томас')
+                    |  Томас
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Соломон')
+                    |  Соломон
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ной')
+                    |  Ной
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Адам')
+                    |  Адам
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Савелій')
+                    |  Савелій
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Гавриїл')
+                    |  Гавриїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ісая')
+                    |  Ісая
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Йосип')
+                    |  Йосип
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ісаак')
+                    |  Ісаак
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Самуїл')
+                    |  Самуїл
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Савватій')
+                    |  Савватій
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Зеєв')
+                    |  Зеєв
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Яків')
+                    |  Яків
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Ованес')
+                    |  Ованес
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Єлисей')
+                    |  Єлисей
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Менахем')
+                    |  Менахем
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Іуда')
+                    |  Іуда
+                  li: label
+                    input.message-sender__checkbox(type='checkbox' name='message-recipient' value='Веніамін')
+                    |  Веніамін
+          .message-sender__message-wrapper
+            input.message-sender__subject(type='text' placeholder='subject' name='subject')
+            textarea.message-sender__message-body(name='message')
+          .message-sender__form-btns-wrapper
+            button.message-sender__reset(type='reset') reset all
+            button.message-sender__submit(type='submit') submit
+      // ↑↑↑ /WORK AREA (end) ↑↑↑
+    // /MAIN SECTION
+
+    // FOOTER
+    .footer-wrapper
+      footer.footer
+    // /FOOTER

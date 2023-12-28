@@ -1,0 +1,25 @@
+.search-block{ 
+  width: 26px;
+  height: 26px;
+  position: relative;
+
+  &__field {
+    opacity: 0;
+    width: 0px;
+    height: 26px;
+    position: absolute; z-index: 2211;
+    right: 26px; top: 0px;
+    outline: none;
+  }
+  &__btn {//border: 1px solid red;
+    width: 26px;
+    height: 26px;
+    padding: 0px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 0px; top: 0px;
+    outline: none;
+  }
+}

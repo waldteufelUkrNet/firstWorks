@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title Contacts
+
+    link(rel='icon', href='assets/img/logo-small.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/contacts.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header CONTACTS
+          .section1__grid
+            .section1__left-column: img(src="assets/img/logo.png", alt="logo-.png")
+            .section1__right__column
+              h5.section1__subheader OPERATIONAL OFFICE
+              p.section1__p1 PlatinumTrade LTD.
+              p.section1__p2 Suite 246, Commercial Business Center, BOX 1470, Beachmont, Kingstown, Saint Vincent and the Grenadines.
+              p.section1__p2
+                |
+                span.bold-text PLATINUMTRADE.ORG
+                |
+                | IS A TRADEMARK OF PlatinumTrade LTD.
+
+      // /SECTION 1
+
+      include assets/BEM-blocks/contacts/contacts_en.pug
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          h1.section2__header CONNECT WITH US
+          h5.section2__subheader PlatinumTrade has a highly professional support service. You can also contact us by the phone numbers listed above.
+
+          include assets/BEM-blocks/contact_form/contact_form_en.pug
+
+      // /SECTION 2
+      include assets/BEM-blocks/slick_money/slick_money.pug
+      include assets/BEM-blocks/notification_of_risks/notification_of_risks_en.pug
+    // /MAIN SECTION
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

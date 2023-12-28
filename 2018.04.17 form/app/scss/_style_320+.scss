@@ -1,0 +1,160 @@
+/* ↓↓↓ for 320px and more ↓↓↓ */
+@media only screen and (min-width: 320px) {
+
+  .form-wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ↓↓↓ background video ↓↓↓ */
+  #form-video {
+    max-width: 1920px;
+    min-width: 100vw;
+    //width: auto;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  /* ↑↑↑ /background video ↑↑↑ */
+
+  /* ↓↓↓ form ↓↓↓ */
+  .login-form {
+    min-width: 290px;
+    max-width: 360px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    font-family: rm;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(243,237,20,.51);
+    animation: form-bgc-rainbow 32s ease infinite;
+    &__elem {
+      height: 30px;
+      line-height: 30px;
+      display: block;
+      width: 100%;
+      margin: 0 auto 10px;
+      font-family: rm;
+      font-size: 16px;
+      color: black;
+      padding-left: 10px;
+    }
+    &__elem::placeholder {
+      font-family: rm;
+      font-size: 16px;
+      color: black;
+      opacity: 1;
+    }
+    input {
+      border: 1px solid grey;
+      outline: none;
+    }
+    input:required:valid {
+      border-color: green;
+    }
+    input:invalid:not(:placeholder-shown) {
+      border-color: red;
+    }
+    &__remember {
+      height: 20px;
+      margin: 0 0 10px 0;
+      width: auto;
+      display: inline-block;
+    }
+    &__submit-btn {
+      width: 70%;
+      height: 40px;
+      background-color: rgba(138,43,226, 0);
+      background: linear-gradient(CornflowerBlue, BlueViolet);
+      border: none;
+      border-radius: 6px;
+      font-family: rm;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      margin-top: 10px;
+      transition: .5s background-color;
+      &:hover {
+        background-color: rgba(138,43,226,1);
+      }
+      &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 300%;
+        position: absolute;
+        top: -100%; left: -201%;
+        background-color: white;
+        transform: rotate(45deg);
+        animation: submit-btn-line 4s ease infinite;
+      }
+    }
+    &__forgot-password {
+      display: inline;
+      color: LightGreen;
+      border-bottom: 1px dotted LightGreen;
+      &:hover {
+        color: BlueViolet;
+      }
+    }
+  }
+
+  @keyframes submit-btn-line {
+    from {left: -201%;}
+    to {left: 201%;}
+  }
+
+  @keyframes form-bgc-rainbow {
+    0% {background-color: rgba(255,0,0,.5);}
+    12.5% {background-color: rgba(255,165,0,.5);}
+    25% {background-color: rgba(243,237,20,.51);}
+    37.5% {background-color: rgba(255,255,0,.5);}
+    50% {background-color: rgba(0,128,0,.5);}
+    62.5% {background-color: rgba(0,0,255,.5);}
+    75% {background-color: rgba(75,0,130,.5);}
+    87.5% {background-color: rgba(238,130,238,.5);}
+    100% {background-color: rgba(255,0,0,.5);}
+  }
+
+  /* ↓↓↓ /animated checkbox ↓↓↓ */
+  label {
+    width: 32px;
+    height: 26px;
+    display: block;
+    position: relative;
+    &:after {
+      content: "Remember me";
+      font-family: rm;
+      font-size: 16px;
+      color: black;
+      text-shadow: 0 0 3px white;
+      width: 200px;
+      position: absolute;
+      top: 50%; left: calc(100% + 10px);
+      transform: translate(0, -50%);
+    }
+  }
+  input[type="checkbox"] + span {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/switch.png) no-repeat;
+    cursor: pointer;
+   }
+  input[type="checkbox"]:checked + span {
+    background-position: 0 -26px; 
+  }
+  /* ↑↑↑ /animated checkbox ↑↑↑ */
+  /* ↑↑↑ /form ↑↑↑ */
+
+}

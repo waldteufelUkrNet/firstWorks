@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waldteufel@ukr.net</title>
+    <link rel="icon" href="img/wehrwolf.jpg">
+    <!-- css-libs (slick, animate ...)-->
+    <link rel="stylesheet" type="text/css" href="css/libs.min.css">
+    <!-- js-libs (font awesome, slick, wow ...)-->
+    <script defer="" src="js/libs.min.js"></script>
+    <!-- own stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/js.js" defer=""></script>
+  </head>
+  <body>
+    <!-- MAIN SECTION-->
+    <main class="main">
+      <!-- TABLE-->
+      <div class="table-wrapper">
+        <table class="some-table" id="some-table">
+          <button class="some-table__btn">більше</button>
+          <thead>
+            <tr>
+              <th>П.І.Б.
+                <button class="some-table__sort-btn" data-value="0"><i class="fas fa-chevron-down"></i></button>
+              </th>
+              <th>дата народження
+                <button class="some-table__sort-btn" data-value="1"><i class="fas fa-chevron-down"></i></button>
+              </th>
+              <th>м. народження
+                <button class="some-table__sort-btn" data-value="2"><i class="fas fa-chevron-down"></i></button>
+              </th>
+              <th>професія
+                <button class="some-table__sort-btn" data-value="3"><i class="fas fa-chevron-down"></i></button>
+              </th>
+              <th>зарплатня
+                <button class="some-table__sort-btn" data-value="4"><i class="fas fa-chevron-down"></i></button>
+              </th>
+            </tr>
+            <tr>
+              <th>1.</th>
+              <th>2.</th>
+              <th>3.</th>
+              <th>4.</th>
+              <th>5.</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td>footer cell</td>
+              <td>footer cell</td>
+              <td>footer cell</td>
+              <td>footer cell</td>
+              <td>footer cell</td>
+            </tr>
+          </tfoot>
+          <tbody class="some-table__tbody">
+            <tr>
+              <td>Іваненко І.І.</td>
+              <td>1984.03.31</td>
+              <td>Конотоп</td>
+              <td>столяр</td>
+              <td>5600</td>
+            </tr>
+            <tr>
+              <td>Петренко П.П.</td>
+              <td>1978.05.12</td>
+              <td>Ямпіль</td>
+              <td>муляр</td>
+              <td>7211</td>
+            </tr>
+            <tr>
+              <td>Карпенко К.К.</td>
+              <td>1986.09.26</td>
+              <td>Шостка</td>
+              <td>тесля</td>
+              <td>5399</td>
+            </tr>
+            <tr>
+              <td>Клименко К.К.</td>
+              <td>1990.02.28</td>
+              <td>Новгород-Сіверський</td>
+              <td>стельмах</td>
+              <td>4732</td>
+            </tr>
+            <tr>
+              <td>Сидоренко С.С.</td>
+              <td>2000.04.30</td>
+              <td>Ромни</td>
+              <td>бондар</td>
+              <td>8364</td>
+            </tr>
+            <tr>
+              <td>Миколаєнко М.М.</td>
+              <td>1964.01.15</td>
+              <td>Недригайлів</td>
+              <td>гонтар</td>
+              <td>1212</td>
+            </tr>
+            <tr>
+              <td>Остапенко О.О.</td>
+              <td>1988.10.05</td>
+              <td>Липова Долина</td>
+              <td>швець</td>
+              <td>6443</td>
+            </tr>
+            <tr>
+              <td>Андрієнко А.А.</td>
+              <td>1977.10.05</td>
+              <td>Ворожба</td>
+              <td>кравець</td>
+              <td>8425</td>
+            </tr>
+            <tr>
+              <td>Семенченко С.С.</td>
+              <td>1989.12.24</td>
+              <td>Лебедин</td>
+              <td>коваль</td>
+              <td>7485</td>
+            </tr>
+            <tr>
+              <td>Василенко В.В.</td>
+              <td>1995.11.26</td>
+              <td>Буринь</td>
+              <td>просто вася</td>
+              <td>542.4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /TABLE-->
+
+      <div style="max-width: 45%;
+                  margin: 0 auto;
+                  padding: 10px;
+                  border: 1px solid silver;
+                  border-radius: 6px;
+                  background:
+                  linear-gradient(to right, red, white, white, white, blue)">
+        <p>1. тег caption не використовувати - збивається drag'n'drop</p>
+        <p>2. таблиці не анімуються по ширині (якщо чарунка не пуста, вона максимально стиснеться до контенту, але не зникне повністю), а якщо використовувати display:none - при розкритті збиваються колонки. Щоб колонки анімувалися, довелося для чарунок прописати inline-block. Побічний ефект - потрібно явно вказувати ширину.</p>
+        <br>
+        <p>Що треба уточнити:</p>
+        <ol>
+          <li>сортування дати</li>
+        </ol>
+      </div>
+    </main>
+    <!-- /MAIN SECTION-->
+  </body>
+</html>

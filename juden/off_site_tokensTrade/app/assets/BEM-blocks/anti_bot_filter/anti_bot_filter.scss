@@ -1,0 +1,35 @@
+.anti_bot_filter {
+  border             : 1px solid grey;
+	max-width          : 200px;
+  height             : 50px;
+	padding            : 3px;
+	background-color   : transparent;
+  border-radius      : 4px;
+  overflow           : hidden;
+	&__header {
+		font-family      : rsr;
+		font-size        : 14px;
+		text-align       : center;
+		padding-bottom   : 3px;
+	}
+	&__body {
+    width            : 100%;
+		display          : flex;
+		justify-content  : center;
+		align-items      : center;
+		font-family      : rcl;
+		font-size        : 16px;
+
+	}
+	&__ansver {
+    width            : 90px;
+    margin-left      : 6px;
+    border           : 1px solid grey;
+    border-radius    : 4px;
+    background-color : transparent;
+    font-family      : rcl;
+    font-size        : 16px;
+    padding          : 0 6px;
+    color            : white;
+	}
+}

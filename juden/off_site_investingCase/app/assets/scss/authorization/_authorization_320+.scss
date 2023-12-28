@@ -1,0 +1,169 @@
+@media only screen and (min-width: 320px) {
+
+	.form-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 15px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .section-left {
+    	width: 100%;
+    	padding: 15px 30px;
+      .section-header {
+      	font-family: rl;
+      	font-size: 24px;
+      	color: grey;
+      }
+      .enter-form {
+      	input[type='text'],
+      	input[type='password'] {
+      		display: block;
+      		width: 100%;
+      		height: 40px;
+      		margin: 10px auto;
+          padding: 0 40px 0 10px;
+          font-family: rl;
+          font-size: 16px;
+          border: 1px solid lightgrey;
+          &::placeholder {
+            font-family: rl;
+            font-size: 16px;
+            line-height: 40px;
+          }
+      	}
+        .password-wrapper {
+          position: relative;
+          svg{
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translate(0,-50%);
+          }
+        }
+        #password-info {
+          height: 0px;
+          line-height: 30px;
+          margin-bottom: 6px;
+          padding-left: 6px;
+          border-left: 4px solid red;
+          background-color: rgba(255,0,0,0.2);
+          font-family: rl;
+          overflow: hidden;
+        }
+        #instead-input {
+          display: none;
+        }
+        .checkbox-label {
+          display: inline-block;
+          width: 300px;
+          height: 20px;
+          .checkbox-span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid lightgrey;
+            position: relative;
+            overflow: hidden;
+          }
+          input[type="checkbox"] {
+            position: absolute;
+            top: -100%;
+          }
+        }
+        input[type="checkbox"] + span {
+          svg {
+            color: #23cd45;
+          }
+          display: none;
+        }
+        input[type="checkbox"]:checked + span {
+          display: block;
+        }
+        .remember-span {
+          font-family: rl;
+          font-size: 16px;
+          color: grey;
+          position: relative;
+          top: -3px;
+        }
+      	button[type='button'] {
+      		display: inline-block;
+      		margin: 10px 3% 0 0;
+          width: 50%;
+          height: 60px;
+          cursor: pointer;
+          background-color: #ff1f26;
+          border: none;
+          font-family: rm;
+          font-size: 22px;
+          color: white;
+          border-radius: 6px;
+          transition: background-color .5s;
+          &:hover {
+            background-color: #df0d06;
+          }
+      	}
+        .restore-pas-wrapper {
+          display: inline-block;
+          height: 60px;
+          width: 45%;
+          position: relative;
+          top: 10px; left: 0px;
+          text-align: right;
+          .restore-pas {
+            font-family: rcl;
+            font-size: 18px;
+            color: dodgerblue;
+            border-bottom: 1px solid #ed1c24;
+            transition: border-bottom-color .5s;
+            &:hover {
+              border-bottom-color: transparent;
+            }
+          }
+        }
+      }
+    }
+    .section-right {
+    	width: 100%;
+      padding: 15px 30px;
+    	text-align: center;
+    	.section-header {
+    		font-family: rl;
+    		font-size: 24px;
+    	}
+    	.create-acc {
+    		display: block;
+    		margin: 30px auto;
+    		width: 100%;
+    		height: 70px;
+    		line-height: 70px;
+    		border-radius: 6px;
+    		background-color: #23cd45;
+    		font-family: rm;
+    		font-size: 22px;
+    		color: white;
+    		transition: background-color .5s;
+    		&:hover {
+    			background-color: #03ad25;
+    		}
+    	}
+    	span{
+    		font-family: rm;
+    		color: grey;
+    		.try-acc {
+    			font-family: rl;
+    			font-size: 12px;
+    			text-decoration: underline;
+    			color: grey;
+    			&:hover {
+    				text-decoration: none;
+    			}
+    		}
+    	}
+    }
+	}
+}

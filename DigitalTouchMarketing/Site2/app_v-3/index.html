@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <!-- css-libs (slick, animate ...)-->
+    <link rel="stylesheet" type="text/css" href="css/libs.min.css">
+    <!-- js-libs (font awesome, slick, wow ...)-->
+    <script src="js/libs.min.js"></script>
+    <!-- own stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/js.js" defer=""></script>
+  </head>
+  <body>
+
+    <!-- MAIN SECTION-->
+    <main class="main">
+      <!-- SECTION 1-->
+      <div class="s1-wrapper">
+        <section class="section1">
+          <h1 class="section-header">Пока другие мечтают,<br>ты - наслаждаешься жизнью!</h1>
+        </section>
+      </div>
+      <!-- /SECTION 1-->
+      <!-- SECTION 2-->
+      <div class="s2-wrapper">
+        <section class="section2">
+          <p>Готов составить список идей, желаний,<br>неосуществлённых мечтаний?</p>
+          <p>Съездить в самые красивые уголки планеты,<br>начать жить в доме своей мечты,<br>или менять страну каждый день?</p>
+          <p>Золотые пляжи или заснеженные вершины?<br>Может тебе больше по душе шум Нью-Йорка,<br>огни Лос-Анджелеса?</p>
+        </section>
+      </div>
+      <!-- /SECTION 2-->
+      <!-- SECTION 3-->
+      <div class="s3-wrapper">
+        <section class="section3">
+          <p>Хочешь продолжать ждать и надеяться на чудо?</p>
+          <p>Пора брать все в свои руки, и с нами это возможно!</p>
+        </section>
+      </div>
+      <!-- /SECTION 3-->
+      <!-- SECTION 4-->
+      <div class="s4-wrapper">
+        <section class="section4">
+          <h5>Узнал себя здесь?</h5>
+          <p>Да-да, именно здесь. </p>
+          <p>Шумный, душный офис который когда-то<br>был пределом твоих мечтаний. </p>
+          <p>Зануда-босс и коллеги,<br>которые изо дня в день тянут тебя вниз? </p>
+          <h5>А теперь подумай,</h5>
+          <p>где бы ты мог работать?</p>
+        </section>
+      </div>
+      <!-- /SECTION 4-->
+      <!-- SECTION 5-->
+      <div class="s5-wrapper">
+        <section class="section5">
+          <h5>Закрой глаза на секунду.</h5>
+          <p>Золотые пляжи Мадейры,<br>правда подходящее место для работы?</p>
+          <p>Больше никто и никогда не будет<br>кричать на ухо о дедлайнах и сроках.</p>
+          <p>Забудь про офис.</p>
+          <p>Работай исключительно на себя,<br>и своё удовольствие! </p>
+        </section>
+      </div>
+      <!-- /SECTION 5-->
+      <!-- SECTION 6-->
+      <div class="s6-wrapper">
+        <section class="section6">
+          <p>Недовольная жена, дети<br>которые перестали приносить радость<br>и лишь усугубляют количество проблем.</p>
+          <p>Всем от тебя что-то нужно,<br>и даже при желании у тебя<br>не получается всех обеспечить?</p>
+        </section>
+      </div>
+      <!-- /SECTION 6-->
+      <!-- SECTION 7-->
+      <div class="s7-wrapper">
+        <section class="section7">
+          <p>Теперь ты сможешь больше!<br>Окутать любимых и дорогих людей<br>заботой и любовью.</p>
+          <p>Они станут счастливыми<br>и будут дарить тебе радость.</p>
+        </section>
+      </div>
+      <!-- /SECTION 7-->
+      <!-- SECTION 8 (+form)-->
+      <div class="s8-wrapper">
+        <section class="section8"><img src="img/s8-bg.jpg" alt="img/s8-bg.jpg"><img src="img/s8-bg.jpg" alt="img/s8-bg.jpg">
+
+          <form class="form s8-form" name="form" action="ac.php" method="post" enctype="multipart/form-data" autocomplete="off">
+            <h4 class="form__header">заявка на консультацию</h4>
+            <input class="form__fname" type="text" name="Fname" placeholder="имя" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="form__lname" type="text" name="Lname" placeholder="фамилия" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="DateTimeId" name="DateTime" type="hidden">
+            <select class="form-control form__code" name="Code2" required="">
+              <option value="">Код</option>
+              <option value="+7">Россия +7</option>
+              <option value="+7">Казахстан +7</option>
+              <option value="+375">Беларусь +375</option>
+              <option value="+371">Латвия +371</option>
+              <option value="+370">Литва +370</option>
+              <option value="+372">Эстония +372</option>
+              <option value="+49">Германия +49</option>
+              <option value="+61">Австралия +61</option>
+              <option value="+43">Австрия +43</option>
+              <option value="+994">Азербайджан +994</option>
+              <option value="+355">Албания +355</option>
+              <option value="+54">Аргентина +54</option>
+              <option value="+374">Армения +374</option>
+              <option value="+32">Бельгия +32</option>
+              <option value="+359">Болгария +359</option>
+              <option value="+387">Босния и Герцеговина +387</option>
+              <option value="+55">Бразилия +55</option>
+              <option value="+44">Великобритания +44</option>
+              <option value="+36">Венгрия +36</option>
+              <option value="+84">Вьетнам +84</option>
+              <option value="+852">Гонконг (КНР) +852</option>
+              <option value="+30">Греция +30</option>
+              <option value="+995">Грузия +995</option>
+              <option value="+45">Дания +45</option>
+              <option value="+1767">Доминика +1767</option>
+              <option value="+1809">Доминиканская Республика +1809</option>
+              <option value="+20">Египет +20</option>
+              <option value="+972">Израиль +972</option>
+              <option value="+91">Индия +91</option>
+              <option value="+62">Индонезия +62</option>
+              <option value="+962">Иордания +962</option>
+              <option value="+353">Ирландия +353</option>
+              <option value="+354">Исландия +354</option>
+              <option value="+34">Испания +34</option>
+              <option value="+39">Италия +39</option>
+              <option value="+1">Канада +1</option>
+              <option value="+357">Кипр +357</option>
+              <option value="+996">Киргизия +996</option>
+              <option value="+88">Тайвань +88</option>
+              <option value="+86">КНР +86</option>
+              <option value="+506">Коста-Рика +506</option>
+              <option value="+53">Куба +53</option>
+              <option value="+965">Кувейт +965</option>
+              <option value="+423">Лихтенштейн +423</option>
+              <option value="+352">Люксембург +352</option>
+              <option value="+389">Македония +389</option>
+              <option value="+60">Малайзия +60</option>
+              <option value="+223">Мали +223</option>
+              <option value="+356">Мальта +356</option>
+              <option value="+212">Марокко +212</option>
+              <option value="+52">Мексика +52</option>
+              <option value="+373">Молдова +373</option>
+              <option value="+377">Монако +377</option>
+              <option value="+31">Нидерланды +31</option>
+              <option value="+64">Новая Зеландия +64</option>
+              <option value="+47">Норвегия +47</option>
+              <option value="+971">ОАЭ +971</option>
+              <option value="+48">Польша +48</option>
+              <option value="+351">Португалия +351</option>
+              <option value="+82">Корея +82</option>
+              <option value="+40">Румыния +40</option>
+              <option value="+381">Сербия +381</option>
+              <option value="+65">Сингапур +65</option>
+              <option value="+421">Словакия +421</option>
+              <option value="+986">Словения +986</option>
+              <option value="+1">США +1</option>
+              <option value="+992">Таджикистан +992</option>
+              <option value="+66">Таиланд +66</option>
+              <option value="+993">Туркмения +993</option>
+              <option value="+90">Турция +90</option>
+              <option value="+998">Узбекистан +998</option>
+              <option value="+38">Украина +38</option>
+              <option value="+358">Финляндия +358</option>
+              <option value="+33">Франция +33</option>
+              <option value="+358">Хорватия +358</option>
+              <option value="+382">Черногория +382</option>
+              <option value="+420">Чехия +420</option>
+              <option value="+41">Швейцария +41</option>
+              <option value="+46">Швеция +46</option>
+              <option value="+81">Япония +81</option>
+            </select>
+            <input class="form__phone" type="text" name="Phone" placeholder="телефон" required="" autocomplete="off" pattern="^[0-9]+$" minlength="9">
+            <input class="form__email" type="email" name="Email" placeholder="E-mail" required="" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" maxlength="40">
+            <button class="form__btn" type="submit" name="add">Отправить заявку</button>
+            <p class="form__info">заполняя данную форму Вы соглашаетесь с <span class="form__private">политикой конфиденциальности</span></p>
+          </form>
+
+        </section>
+      </div>
+      <!-- /SECTION 8 (+form)-->
+      <!-- SECTION 9-->
+      <div class="s9-wrapper">
+        <section class="section9">
+          <p>Взгляни на школу для сына и дочки.</p>
+          <p>Хочешь, чтобы они учились здесь?</p>
+          <p>Не секрет, что лучших специалистов<br>обучают за границей. </p>
+          <p>Ты сможешь себе это позволить.</p>
+        </section>
+      </div>
+      <!-- /SECTION 9-->
+      <!-- SECTION 10-->
+      <div class="s10-wrapper">
+        <section class="section10">
+          <p>Выбери лучший колледж<br>Англии, Франции, Германии.</p>
+          <p>Пускай дети выбирают<br>будущее исходя из желания,<br>а не возможности.</p>
+        </section>
+      </div>
+      <!-- /SECTION 10-->
+      <!-- SECTION 11-->
+      <div class="s11-wrapper">
+        <section class="section11">
+          <p>Неужели тебе нравится<br>работать круглыми сутками?</p>
+          <p>Ждать отпуск, ради 7 дней<br>в самом дешевом отеле?</p>
+          <p>Или просто ещё<br>один год без отпуска, в надежде на то,<br>что в следующем году босс таки отпустит?</p>
+          <p>Хочешь терпеть? Терпи.<br>Или всё-же попробуешь что-то изменить?</p>
+        </section>
+      </div>
+      <!-- /SECTION 11-->
+      <!-- SECTION 12-->
+      <div class="s12-wrapper">
+        <section class="section12">
+          <p>Теперь только ТЫ будешь решать,<br>когда отдыхать.</p>
+          <p>А можешь вовсе превратить<br>свою любимую работу в отдых.</p>
+          <p>Путешествия - самый яркий момент<br>в жизни любого человека.<br></p>
+          <p>Теперь ты сможешь себе это позволить.</p>
+          <p>Пора дышать на полную грудь<br>и отдыхать без ограничений.</p>
+        </section>
+      </div>
+      <!-- /SECTION 12-->
+      <!-- SECTION 13 (+form)-->
+      <div class="s13-wrapper">
+        <section class="section13">
+          <p>Мы не утверждаем,<br>что у тебя будет всё и сразу.</p>
+          <p>Мы лишь готовы тебе помочь.</p>
+          <p>Сейчас всё зависит только от тебя.</p>
+          <p>Готов ли ты изменить<br>существующее положение дел?</p>
+
+          <form class="form s13-form" name="form" action="ac.php" method="post" enctype="multipart/form-data" autocomplete="off">
+            <h4 class="form__header">заявка на консультацию</h4>
+            <input class="form__fname" type="text" name="Fname" placeholder="имя" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="form__lname" type="text" name="Lname" placeholder="фамилия" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="DateTimeId" name="DateTime" type="hidden">
+            <select class="form-control form__code" name="Code2" required="">
+              <option value="">Код</option>
+              <option value="+7">Россия +7</option>
+              <option value="+7">Казахстан +7</option>
+              <option value="+375">Беларусь +375</option>
+              <option value="+371">Латвия +371</option>
+              <option value="+370">Литва +370</option>
+              <option value="+372">Эстония +372</option>
+              <option value="+49">Германия +49</option>
+              <option value="+61">Австралия +61</option>
+              <option value="+43">Австрия +43</option>
+              <option value="+994">Азербайджан +994</option>
+              <option value="+355">Албания +355</option>
+              <option value="+54">Аргентина +54</option>
+              <option value="+374">Армения +374</option>
+              <option value="+32">Бельгия +32</option>
+              <option value="+359">Болгария +359</option>
+              <option value="+387">Босния и Герцеговина +387</option>
+              <option value="+55">Бразилия +55</option>
+              <option value="+44">Великобритания +44</option>
+              <option value="+36">Венгрия +36</option>
+              <option value="+84">Вьетнам +84</option>
+              <option value="+852">Гонконг (КНР) +852</option>
+              <option value="+30">Греция +30</option>
+              <option value="+995">Грузия +995</option>
+              <option value="+45">Дания +45</option>
+              <option value="+1767">Доминика +1767</option>
+              <option value="+1809">Доминиканская Республика +1809</option>
+              <option value="+20">Египет +20</option>
+              <option value="+972">Израиль +972</option>
+              <option value="+91">Индия +91</option>
+              <option value="+62">Индонезия +62</option>
+              <option value="+962">Иордания +962</option>
+              <option value="+353">Ирландия +353</option>
+              <option value="+354">Исландия +354</option>
+              <option value="+34">Испания +34</option>
+              <option value="+39">Италия +39</option>
+              <option value="+1">Канада +1</option>
+              <option value="+357">Кипр +357</option>
+              <option value="+996">Киргизия +996</option>
+              <option value="+88">Тайвань +88</option>
+              <option value="+86">КНР +86</option>
+              <option value="+506">Коста-Рика +506</option>
+              <option value="+53">Куба +53</option>
+              <option value="+965">Кувейт +965</option>
+              <option value="+423">Лихтенштейн +423</option>
+              <option value="+352">Люксембург +352</option>
+              <option value="+389">Македония +389</option>
+              <option value="+60">Малайзия +60</option>
+              <option value="+223">Мали +223</option>
+              <option value="+356">Мальта +356</option>
+              <option value="+212">Марокко +212</option>
+              <option value="+52">Мексика +52</option>
+              <option value="+373">Молдова +373</option>
+              <option value="+377">Монако +377</option>
+              <option value="+31">Нидерланды +31</option>
+              <option value="+64">Новая Зеландия +64</option>
+              <option value="+47">Норвегия +47</option>
+              <option value="+971">ОАЭ +971</option>
+              <option value="+48">Польша +48</option>
+              <option value="+351">Португалия +351</option>
+              <option value="+82">Корея +82</option>
+              <option value="+40">Румыния +40</option>
+              <option value="+381">Сербия +381</option>
+              <option value="+65">Сингапур +65</option>
+              <option value="+421">Словакия +421</option>
+              <option value="+986">Словения +986</option>
+              <option value="+1">США +1</option>
+              <option value="+992">Таджикистан +992</option>
+              <option value="+66">Таиланд +66</option>
+              <option value="+993">Туркмения +993</option>
+              <option value="+90">Турция +90</option>
+              <option value="+998">Узбекистан +998</option>
+              <option value="+38">Украина +38</option>
+              <option value="+358">Финляндия +358</option>
+              <option value="+33">Франция +33</option>
+              <option value="+358">Хорватия +358</option>
+              <option value="+382">Черногория +382</option>
+              <option value="+420">Чехия +420</option>
+              <option value="+41">Швейцария +41</option>
+              <option value="+46">Швеция +46</option>
+              <option value="+81">Япония +81</option>
+            </select>
+            <input class="form__phone" type="text" name="Phone" placeholder="телефон" required="" autocomplete="off" pattern="^[0-9]+$" minlength="9">
+            <input class="form__email" type="email" name="Email" placeholder="E-mail" required="" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" maxlength="40">
+            <button class="form__btn" type="submit" name="add">Отправить заявку</button>
+            <span class="form__info">заполняя данную форму Вы соглашаетесь с <span class="form__private">политикой конфиденциальности</span></span>
+          </form>
+
+        </section>
+      </div>
+      <!-- /SECTION 13 (+form)-->
+      <!-- SECTION 14-->
+      <div class="s14-wrapper">
+        <section class="section14">
+          <p>Все легально. Мы не предлагаем тебе тайных схем с миллионным заработком.</p>
+          <p>Наша репутация и имя - самое важное и дорогое, что у нас есть.</p>
+          <p>Мы - один из самых дорогих и прогрессирующих стартапов на рынке.</p>
+          <p>Мы работаем на увеличение количества успешных сделок, совершенных нашей программой.</p>
+          <p>Всё просто. Мы не будем загружать тебя непонятными терминами,<br>действиями, процессами. У нас есть выработанный алгоритм действий.</p>
+          <p>Просто бери и делай. Прямо сейчас!</p>
+          <p>Готов убедиться? Наш продукт проверен и протестирован<br>людьми разных возрастов, профессий, и типов мышлений. КАЖДЫЙ может это повторить.</p>
+          <p>Команда настоящих профессионалов. Собранные из разных сфер деятельности,<br>вместе мы составляем ведущую силу компании.</p>
+        </section>
+      </div>
+      <!-- /SECTION 14-->
+      <!-- SECTION 15 (+form)-->
+      <div class="s15-wrapper">
+        <section class="section15">
+          <form class="form s15-form" name="form" action="ac.php" method="post" enctype="multipart/form-data" autocomplete="off">
+            <h4 class="form__header">заявка на консультацию</h4>
+            <input class="form__fname" type="text" name="Fname" placeholder="имя" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="form__lname" type="text" name="Lname" placeholder="фамилия" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="DateTimeId" name="DateTime" type="hidden">
+            <select class="form-control form__code" name="Code2" required="">
+              <option value="">Код</option>
+              <option value="+7">Россия +7</option>
+              <option value="+7">Казахстан +7</option>
+              <option value="+375">Беларусь +375</option>
+              <option value="+371">Латвия +371</option>
+              <option value="+370">Литва +370</option>
+              <option value="+372">Эстония +372</option>
+              <option value="+49">Германия +49</option>
+              <option value="+61">Австралия +61</option>
+              <option value="+43">Австрия +43</option>
+              <option value="+994">Азербайджан +994</option>
+              <option value="+355">Албания +355</option>
+              <option value="+54">Аргентина +54</option>
+              <option value="+374">Армения +374</option>
+              <option value="+32">Бельгия +32</option>
+              <option value="+359">Болгария +359</option>
+              <option value="+387">Босния и Герцеговина +387</option>
+              <option value="+55">Бразилия +55</option>
+              <option value="+44">Великобритания +44</option>
+              <option value="+36">Венгрия +36</option>
+              <option value="+84">Вьетнам +84</option>
+              <option value="+852">Гонконг (КНР) +852</option>
+              <option value="+30">Греция +30</option>
+              <option value="+995">Грузия +995</option>
+              <option value="+45">Дания +45</option>
+              <option value="+1767">Доминика +1767</option>
+              <option value="+1809">Доминиканская Республика +1809</option>
+              <option value="+20">Египет +20</option>
+              <option value="+972">Израиль +972</option>
+              <option value="+91">Индия +91</option>
+              <option value="+62">Индонезия +62</option>
+              <option value="+962">Иордания +962</option>
+              <option value="+353">Ирландия +353</option>
+              <option value="+354">Исландия +354</option>
+              <option value="+34">Испания +34</option>
+              <option value="+39">Италия +39</option>
+              <option value="+1">Канада +1</option>
+              <option value="+357">Кипр +357</option>
+              <option value="+996">Киргизия +996</option>
+              <option value="+88">Тайвань +88</option>
+              <option value="+86">КНР +86</option>
+              <option value="+506">Коста-Рика +506</option>
+              <option value="+53">Куба +53</option>
+              <option value="+965">Кувейт +965</option>
+              <option value="+423">Лихтенштейн +423</option>
+              <option value="+352">Люксембург +352</option>
+              <option value="+389">Македония +389</option>
+              <option value="+60">Малайзия +60</option>
+              <option value="+223">Мали +223</option>
+              <option value="+356">Мальта +356</option>
+              <option value="+212">Марокко +212</option>
+              <option value="+52">Мексика +52</option>
+              <option value="+373">Молдова +373</option>
+              <option value="+377">Монако +377</option>
+              <option value="+31">Нидерланды +31</option>
+              <option value="+64">Новая Зеландия +64</option>
+              <option value="+47">Норвегия +47</option>
+              <option value="+971">ОАЭ +971</option>
+              <option value="+48">Польша +48</option>
+              <option value="+351">Португалия +351</option>
+              <option value="+82">Корея +82</option>
+              <option value="+40">Румыния +40</option>
+              <option value="+381">Сербия +381</option>
+              <option value="+65">Сингапур +65</option>
+              <option value="+421">Словакия +421</option>
+              <option value="+986">Словения +986</option>
+              <option value="+1">США +1</option>
+              <option value="+992">Таджикистан +992</option>
+              <option value="+66">Таиланд +66</option>
+              <option value="+993">Туркмения +993</option>
+              <option value="+90">Турция +90</option>
+              <option value="+998">Узбекистан +998</option>
+              <option value="+38">Украина +38</option>
+              <option value="+358">Финляндия +358</option>
+              <option value="+33">Франция +33</option>
+              <option value="+358">Хорватия +358</option>
+              <option value="+382">Черногория +382</option>
+              <option value="+420">Чехия +420</option>
+              <option value="+41">Швейцария +41</option>
+              <option value="+46">Швеция +46</option>
+              <option value="+81">Япония +81</option>
+            </select>
+            <input class="form__phone" type="text" name="Phone" placeholder="телефон" required="" autocomplete="off" pattern="^[0-9]+$" minlength="9">
+            <input class="form__email" type="email" name="Email" placeholder="E-mail" required="" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" maxlength="30">
+            <button class="form__btn" type="submit" name="add">Отправить заявку</button>
+            <p class="form__info">заполняя данную форму Вы соглашаетесь с <span class="form__private">политикой конфиденциальности</span></p>
+          </form>
+          <form class="form s15-form" name="form" style="display:none" action="ac.php" method="post" enctype="multipart/form-data" autocomplete="off"></form>
+        </section>
+      </div>
+      <!-- /SECTION 15 (+form)-->
+
+      <!-- /popups -->
+      <div class="popup__cover">
+        <div class="popup__massage">
+          <div class="popup__text">Это Ваш последний шанс изменить жизнь к лучшему!</div>
+          <form class="popup-form popup-form1" action="ac.php" method="post" enctype="multipart/form-data" autocomplete="off" name="form">
+            <h4 class="popup-form__header">заявка на консультацию</h4>
+            <input class="popup-form__fname" type="text" name="Fname" placeholder="имя" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="popup-form__lname" type="text" name="Lname" placeholder="фамилия" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="DateTimeId" name="DateTime" type="hidden">
+            <select class="form-control popup-form__code" name="Code2" required="">
+              <option value="">Код</option>
+              <option value="+7">Россия +7</option>
+              <option value="+7">Казахстан +7</option>
+              <option value="+375">Беларусь +375</option>
+              <option value="+371">Латвия +371</option>
+              <option value="+370">Литва +370</option>
+              <option value="+372">Эстония +372</option>
+              <option value="+49">Германия +49</option>
+              <option value="+61">Австралия +61</option>
+              <option value="+43">Австрия +43</option>
+              <option value="+994">Азербайджан +994</option>
+              <option value="+355">Албания +355</option>
+              <option value="+54">Аргентина +54</option>
+              <option value="+374">Армения +374</option>
+              <option value="+32">Бельгия +32</option>
+              <option value="+359">Болгария +359</option>
+              <option value="+387">Босния и Герцеговина +387</option>
+              <option value="+55">Бразилия +55</option>
+              <option value="+44">Великобритания +44</option>
+              <option value="+36">Венгрия +36</option>
+              <option value="+84">Вьетнам +84</option>
+              <option value="+852">Гонконг (КНР) +852</option>
+              <option value="+30">Греция +30</option>
+              <option value="+995">Грузия +995</option>
+              <option value="+45">Дания +45</option>
+              <option value="+1767">Доминика +1767</option>
+              <option value="+1809">Доминиканская Республика +1809</option>
+              <option value="+20">Египет +20</option>
+              <option value="+972">Израиль +972</option>
+              <option value="+91">Индия +91</option>
+              <option value="+62">Индонезия +62</option>
+              <option value="+962">Иордания +962</option>
+              <option value="+353">Ирландия +353</option>
+              <option value="+354">Исландия +354</option>
+              <option value="+34">Испания +34</option>
+              <option value="+39">Италия +39</option>
+              <option value="+1">Канада +1</option>
+              <option value="+357">Кипр +357</option>
+              <option value="+996">Киргизия +996</option>
+              <option value="+88">Тайвань +88</option>
+              <option value="+86">КНР +86</option>
+              <option value="+506">Коста-Рика +506</option>
+              <option value="+53">Куба +53</option>
+              <option value="+965">Кувейт +965</option>
+              <option value="+423">Лихтенштейн +423</option>
+              <option value="+352">Люксембург +352</option>
+              <option value="+389">Македония +389</option>
+              <option value="+60">Малайзия +60</option>
+              <option value="+223">Мали +223</option>
+              <option value="+356">Мальта +356</option>
+              <option value="+212">Марокко +212</option>
+              <option value="+52">Мексика +52</option>
+              <option value="+373">Молдова +373</option>
+              <option value="+377">Монако +377</option>
+              <option value="+31">Нидерланды +31</option>
+              <option value="+64">Новая Зеландия +64</option>
+              <option value="+47">Норвегия +47</option>
+              <option value="+971">ОАЭ +971</option>
+              <option value="+48">Польша +48</option>
+              <option value="+351">Португалия +351</option>
+              <option value="+82">Корея +82</option>
+              <option value="+40">Румыния +40</option>
+              <option value="+381">Сербия +381</option>
+              <option value="+65">Сингапур +65</option>
+              <option value="+421">Словакия +421</option>
+              <option value="+986">Словения +986</option>
+              <option value="+1">США +1</option>
+              <option value="+992">Таджикистан +992</option>
+              <option value="+66">Таиланд +66</option>
+              <option value="+993">Туркмения +993</option>
+              <option value="+90">Турция +90</option>
+              <option value="+998">Узбекистан +998</option>
+              <option value="+38">Украина +38</option>
+              <option value="+358">Финляндия +358</option>
+              <option value="+33">Франция +33</option>
+              <option value="+358">Хорватия +358</option>
+              <option value="+382">Черногория +382</option>
+              <option value="+420">Чехия +420</option>
+              <option value="+41">Швейцария +41</option>
+              <option value="+46">Швеция +46</option>
+              <option value="+81">Япония +81</option>
+            </select>
+            <input class="popup-form__phone" type="text" name="Phone" placeholder="телефон" required="" autocomplete="off" pattern="^[0-9]+$" minlength="9">
+            <input class="popup-form__email" type="email" name="Email" placeholder="E-mail" required="" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" maxlength="30">
+            <button class="popup__btn popup1__btn" type="submit" name="add">Узнать больше</button>
+            <p class="form__info">заполняя данную форму Вы соглашаетесь с <span class="form__private">политикой конфиденциальности</span></p>
+          </form>
+          <button class="close_btn"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
+      <div class="popup2__cover">
+        <div class="popup2__massage">
+          <div class="popup2__text">Ваш личный профессиональный брокер убережет Вас от любых рисков</div>
+          <form class="popup-form popup-form2" action="ac.php" method="post" enctype="multipart/form-data" autocomplete="off" name="form">
+            <h4 class="popup-form__header">заявка на консультацию</h4>
+            <input class="popup-form__fname" type="text" name="Fname" placeholder="имя" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="popup-form__lname" type="text" name="Lname" placeholder="фамилия" required="" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁёs]+$" maxlength="20">
+            <input class="DateTimeId" name="DateTime" type="hidden">
+            <select class="form-control popup-form__code" name="Code2" required="">
+              <option value="">Код</option>
+              <option value="+7">Россия +7</option>
+              <option value="+7">Казахстан +7</option>
+              <option value="+375">Беларусь +375</option>
+              <option value="+371">Латвия +371</option>
+              <option value="+370">Литва +370</option>
+              <option value="+372">Эстония +372</option>
+              <option value="+49">Германия +49</option>
+              <option value="+61">Австралия +61</option>
+              <option value="+43">Австрия +43</option>
+              <option value="+994">Азербайджан +994</option>
+              <option value="+355">Албания +355</option>
+              <option value="+54">Аргентина +54</option>
+              <option value="+374">Армения +374</option>
+              <option value="+32">Бельгия +32</option>
+              <option value="+359">Болгария +359</option>
+              <option value="+387">Босния и Герцеговина +387</option>
+              <option value="+55">Бразилия +55</option>
+              <option value="+44">Великобритания +44</option>
+              <option value="+36">Венгрия +36</option>
+              <option value="+84">Вьетнам +84</option>
+              <option value="+852">Гонконг (КНР) +852</option>
+              <option value="+30">Греция +30</option>
+              <option value="+995">Грузия +995</option>
+              <option value="+45">Дания +45</option>
+              <option value="+1767">Доминика +1767</option>
+              <option value="+1809">Доминиканская Республика +1809</option>
+              <option value="+20">Египет +20</option>
+              <option value="+972">Израиль +972</option>
+              <option value="+91">Индия +91</option>
+              <option value="+62">Индонезия +62</option>
+              <option value="+962">Иордания +962</option>
+              <option value="+353">Ирландия +353</option>
+              <option value="+354">Исландия +354</option>
+              <option value="+34">Испания +34</option>
+              <option value="+39">Италия +39</option>
+              <option value="+1">Канада +1</option>
+              <option value="+357">Кипр +357</option>
+              <option value="+996">Киргизия +996</option>
+              <option value="+88">Тайвань +88</option>
+              <option value="+86">КНР +86</option>
+              <option value="+506">Коста-Рика +506</option>
+              <option value="+53">Куба +53</option>
+              <option value="+965">Кувейт +965</option>
+              <option value="+423">Лихтенштейн +423</option>
+              <option value="+352">Люксембург +352</option>
+              <option value="+389">Македония +389</option>
+              <option value="+60">Малайзия +60</option>
+              <option value="+223">Мали +223</option>
+              <option value="+356">Мальта +356</option>
+              <option value="+212">Марокко +212</option>
+              <option value="+52">Мексика +52</option>
+              <option value="+373">Молдова +373</option>
+              <option value="+377">Монако +377</option>
+              <option value="+31">Нидерланды +31</option>
+              <option value="+64">Новая Зеландия +64</option>
+              <option value="+47">Норвегия +47</option>
+              <option value="+971">ОАЭ +971</option>
+              <option value="+48">Польша +48</option>
+              <option value="+351">Португалия +351</option>
+              <option value="+82">Корея +82</option>
+              <option value="+40">Румыния +40</option>
+              <option value="+381">Сербия +381</option>
+              <option value="+65">Сингапур +65</option>
+              <option value="+421">Словакия +421</option>
+              <option value="+986">Словения +986</option>
+              <option value="+1">США +1</option>
+              <option value="+992">Таджикистан +992</option>
+              <option value="+66">Таиланд +66</option>
+              <option value="+993">Туркмения +993</option>
+              <option value="+90">Турция +90</option>
+              <option value="+998">Узбекистан +998</option>
+              <option value="+38">Украина +38</option>
+              <option value="+358">Финляндия +358</option>
+              <option value="+33">Франция +33</option>
+              <option value="+358">Хорватия +358</option>
+              <option value="+382">Черногория +382</option>
+              <option value="+420">Чехия +420</option>
+              <option value="+41">Швейцария +41</option>
+              <option value="+46">Швеция +46</option>
+              <option value="+81">Япония +81</option>
+            </select>
+            <input class="popup-form__phone" type="text" name="Phone" placeholder="телефон" required="" autocomplete="off" pattern="^[0-9]+$" minlength="9">
+            <input class="popup-form__email" type="email" name="Email" placeholder="E-mail" required="" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" maxlength="30">
+            <button class="popup__btn popup2__btn" type="submit" name="add">Познакомиться с брокером</button>
+            <p class="form__info">заполняя данную форму Вы соглашаетесь с <span class="form__private">политикой конфиденциальности</span></p>
+          </form>
+          <button class="close_btn"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
+      <div class="politics-cover">
+        <div class="private-politics">
+          <h5 class="private-politics__header">Политика конфиденциальности</h5>
+          <p class="private-politics__text">Ваша конфиденциальность очень важна для нас. Мы хотим, чтобы Ваша работа в Интернет по возможности была максимально приятной и полезной, и Вы совершенно спокойно использовали широчайший спектр информации, инструментов и возможностей, которые предлагает Интернет. Личная информация, собранная при регистрации (или в любое другое время) преимущественно используется для подготовки коммерческого предложения по сотрудничеству в соответствии с Вашими потребностями. Ваша информация не будет передана или продана третьим сторонам.</p>
+          <h5 class="private-politics__header">Какие данные собираются на сайте</h5>
+          <p class="private-politics__text">При добровольной регистрации на получение доступа к Бизнес Модели вы отправляете свое Имя, E-mail и Телефон через форму регистрации.</p>
+          <h5 class="private-politics__header">С какой целью собираются эти данные</h5>
+          <p class="private-politics__text">Имя используется для обращения лично к вам, а ваш e-mail и телефон для связи с вами и направления запрошенной вами информации. Мы не используем ваш e-mail для рассылки писем, спама и коммерческих предложений. Ваши имя, номер телефона и e-mail не передаются третьим лицам, ни при каких условиях.</p>
+          <p class="private-politics__text">На этом сайте используются куки (Cookies) и данные о посетителях сервиса Yandex Metrika и Google Analytics При помощи этих сервисов собирается информация о действиях посетителей на сайте с целью улучшения его содержания, улучшения функциональных возможностей сайта и, как следствие, создания качественного контента и сервисов для посетителей. Вы можете в любой момент изменить настройки своего браузера так, чтобы браузер блокировал все файлы cookie или оповещал об отправке этих файлов. Учтите при этом, что некоторые функции и сервисы не смогут работать должным образом.</p>
+          <h5 class="private-politics__header">Как эти данные защищаются</h5>
+          <p class="private-politics__text">Для защиты Вашей личной информации мы используем разнообразные административные, управленческие и технические меры безопасности. Мы придерживаемся различных международных стандартов контроля, направленных на операции с личной информацией, которые включают определенные меры контроля по защите информации, собранной в Интернет. Тем не менее, несмотря на то, что мы стремимся обезопасить Вашу личную информацию, Вы тоже должны принимать меры, чтобы защитить ее. Мы настоятельно рекомендуем Вам принимать все возможные меры предосторожности во время пребывания в Интернете. Организованные нами услуги и веб-сайты предусматривают меры по защите от утечки, несанкционированного использования и изменения информации, которую мы контролируем. Несмотря на то, что мы делаем все возможное, чтобы обеспечить целостность и безопасность своей сети и систем, мы не можем гарантировать, что наши меры безопасности предотвратят незаконный доступ к этой информации хакеров сторонних организаций.</p>
+          <button class="private-politics__close_btn private-politics__close_btn1"><i class="fas fa-times"></i></button>
+          <button class="private-politics__close_btn private-politics__close_btn2">Спасибо, все понятно</button>
+        </div>
+      </div>
+      <!-- /popups -->
+    <!— Global site tag (gtag.js) - Google Analytics —>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116595491-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116595491-2');
+    </script>
+  </body>
+</html>

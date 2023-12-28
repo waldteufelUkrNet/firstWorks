@@ -1,0 +1,158 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="assets/css/reset.css")
+    link(rel="stylesheet", href="assets/css/fonts.css")
+    link(rel="stylesheet", href="assets/css/common.css")
+    link(rel="stylesheet", href="assets/css/depositPopup.css")
+    script(defer src="assets/js/depositPopup.js")
+    script(defer src="assets/js/test.js")
+
+  body
+
+    #test-area
+      #settings-area
+        h1 SETTINGS
+        form(style="border: 1px solid lightgrey; width:165px;")
+          ul(style="margin:20px 0")
+            li
+              label
+                input(type="checkbox" name="paySys0" value="1" checked)
+                span Терминал № 1
+            li
+              label
+                input(type="checkbox" name="paySys1" value="2" checked)
+                span Best Change
+            li
+              label
+                input(type="checkbox" name="paySys2" value="3" checked)
+                span Interkassa
+            li
+              label
+                input(type="checkbox" name="paySys3" value="4")
+                span Терминал №2
+            li
+              label
+                input(type="checkbox" name="paySys4" value="5")
+                span Терминал №3
+            li
+              label
+                input(type="checkbox" name="paySys5" value="6")
+                span Safe Currency
+            li
+              label
+                input(type="checkbox" name="paySys6" value="7")
+                span Терминал №4
+            li
+              label
+                input(type="checkbox" name="paySys7" value="8")
+                span Терминал №5
+            li
+              label
+                input(type="checkbox" name="paySys8" value="9")
+                span Терминал №6
+          button#changeCF(type="button") change configuration file
+          p( style="color:red") save/resave file into directory "/assets/config/config.txt"
+
+        button#showPopup(type="button" style='background-color: green; color: white; height: 30px; margin-top: 30px; width: 165px') show popup
+
+      #settings-area2
+        h1 AMAUNT ANSWER SETTINGS
+        form(style="border: 1px solid lightgrey;")
+          ul(style="margin:20px 0")
+            li
+              label
+                input(type="radio" name="answer" value="ok" checked)
+                span ok
+            li
+              label
+                input(type="radio" name="answer" value="Необходимо не меньше 5000 тугриков")
+                span Необходимо не меньше 5000 тугриков
+          button#changeAA(type="button") change configuration file
+          p( style="color:red") save/resave file into directory "/assets/config/amountAnswer.txt"
+
+
+      #result-area
+        h1 RESULT
+        pre#result-field(style="border: 1px solid lightgrey; min-height: 30px")
+    //- #info-area
+    //-   h1 INFO
+    //-   p Привіт)
+    //-   Р Для роботи потрібно взяти файли: depositPopup.css, depositPopup.js, шрифти, картинки,
+
+    #popups-wrapper
+      // make deposit
+      .depositPopup
+        .depositPopup__head
+          h5.depositPopup__header Сделать депозит
+          button.depositPopup__close-btn ×
+
+        .depositPopup__body
+
+          .depositPopup__tab-wrapper
+            //- .depositPopup__tab-header.depositPopup__tab-header_active(data-terminal="1")
+            //-   img.depositPopup__terminal-img(src="assets/img/best.png", alt="logo")
+            //-   span.depositPopup__terminal-name Терминал №1
+
+            //- .depositPopup__tab-header(data-terminal="2")
+            //-   span.depositPopup__terminal-name Терминал №2
+
+            //- .depositPopup__tab-header(data-terminal="3")
+            //-   img.depositPopup__terminal-img(src="assets/img/safe.png", alt="logo")
+
+          .depositPopup__form-wrapper
+            //- form.depositPopup__form
+            //-   a.depositPopup__link-to-pay-system(href="google.com.ua" target="_blank") go to Best Change
+
+            //- form.depositPopup__form
+            //-   .depositPopup__amount-wrapper
+            //-     input.depositPopup__amount(type='text' placeholder='введите сумму' name='currencyValue' onkeydown="return checkNumber(event.key)" onkeyup="checkAmount(this)")
+            //-     select.depositPopup__currency-select(name='currency')
+            //-       option(value='USD') USD
+            //-       option(value='EUR') EUR
+            //-       option(value='RUB') RUB
+            //-   label.depositPopup__checkbox-wrapper
+            //-     input(type='checkbox' name='age18+' onchange="removeCheckingErrorMessage(this)")
+            //-     span Мне исполнилось 18 лет. Я ознакомлен с рисками и принимаю
+            //-       |
+            //-       |
+            //-       a(href="#") Условия и Соглашения
+            //-       |
+            //-       | компании.
+            //-   .depositPopup__validation-error Поле суммы не может быть пустым
+            //-   .depositPopup__validation-error Подтвердите Ваш возраст и согласие с условиями
+            //-   depositPopup__validation-error depositPopup__validation-error_from-server
+            //-   button(type="button").depositPopup__deposit-btn оплатить
+
+            //- form.depositPopup__form
+
+            //-   .depositPopup__paySystem-wrapper
+            //-     .depositPopup__card-label выберите тип карты:
+            //-     select.depositPopup__card-select(name='paySystem')
+            //-       option(value='VISA') VISA
+            //-       option(value='MasterCard') MasterCard
+            //-       option(value='MIR') MIR
+
+            //-   .depositPopup__amount-wrapper
+            //-     input.depositPopup__amount(type='text' placeholder='введите сумму' name='currencyValue' onkeydown="return checkNumber(event.key)" onkeyup="checkAmount(this)")
+            //-     select.depositPopup__currency-select(name='currency')
+            //-       option(value='USD') USD
+            //-       option(value='EUR') EUR
+            //-       option(value='RUB') RUB
+            //-   label.depositPopup__checkbox-wrapper
+            //-     input(type='checkbox' name='age18+' onchange="removeCheckingErrorMessage(this)")
+            //-     span Мне исполнилось 18 лет. Я ознакомлен с рисками и принимаю
+            //-       |
+            //-       |
+            //-       a(href="#") Условия и Соглашения
+            //-       |
+            //-       | компании.
+
+            //-   .depositPopup__validation-error Поле суммы не может быть пустым
+            //-   .depositPopup__validation-error Подтвердите Ваш возраст и согласие с условиями
+            //-   depositPopup__validation-error depositPopup__validation-error_from-server
+
+            //-   button(type="button").depositPopup__deposit-btn оплатить

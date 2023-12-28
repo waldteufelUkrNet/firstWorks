@@ -1,0 +1,44 @@
+
+@media only screen and (min-width: 992px) {
+  .section1 {
+    &__headers-wrapper {
+      margin-right          : 80px;
+    }
+    &__header {
+      font-size             : 4.6rem;
+    }
+    &__icon-wrapper {
+      margin-left           : 80px;
+      span {
+        font-size           : 250px;
+      }
+    }
+  }
+
+  .section2 {
+    &__header {
+      font-size             : 4.8rem;
+    }
+    &__columns-wrapper {
+      flex-wrap             : nowrap;
+      padding               : 50px 0 50px;
+    }
+    &__left-column {
+      width                 : 65%;
+      margin-right          : 20px;
+      margin-bottom         : 0px;
+    }
+    &__right-column {
+      width                 : 35%;
+      margin-left           : 20px;
+    }
+    &__right-column-header {
+      font-size             : 3.2rem;
+      padding-bottom        : 0px;
+    }
+  }
+
+  .accordion {
+    max-width               : none;
+  }
+}

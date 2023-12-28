@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+
+    // css-libs (font awesome, slick, wow ...)
+    link(rel='stylesheet', href='css/jquery-ui.min.css')
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='js/jquery3.3.1.min.js')
+
+    // page stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/formValidationJs.js', defer='')
+  body
+    // ↓↓↓ MAIN SECTION (start) ↓↓↓
+    main.main
+      // ↓↓↓ WORK AREA (start) ↓↓↓
+      .work-area
+
+        form.forvalJs(data-forvalJs-lang='ua')
+
+          label(for='form-empty') Not empty:
+          input.forvalJs(type='text' id='form-empty' data-forvalJs-minLength='3' data-forvalJs-type='notEmpty')
+
+          label(for='form-email2') E-mail:
+          input.forvalJs(type='email' data-forvalJs-type='email' id='form-email2' data-forvalJs-minLength='6')
+
+          label(for='form-number') Price:
+          input.forvalJs(type='text' id='form-number' data-forvalJs-type='price' data-forvalJs-minLength='6')
+
+          label(for='form-password2') Password:
+          input.forvalJs(type='password' id='form-password2' data-forvalJs-type='password' data-forvalJs-minLength='6')
+
+          label(for='form-password') Confirm password:
+          input.forvalJs(type='password' id='form-password' data-forvalJs-type='confirmPassword')
+
+          .forvalJs-wrapper
+            button.forvalJs(type='submit') submit
+            button.forvalJs(type='reset') reset
+
+      // ↑↑↑ /WORK AREA (end) ↑↑↑
+    // ↑↑↑ /MAIN SECTION (end) ↑↑↑

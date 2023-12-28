@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.page-btn {
+	color              : white;
+	font-family        : rcl;
+	border-radius      : 6px;
+	padding            : 12px 12px;
+	text-align         : center;
+	display            : inline-block;
+	cursor             : pointer;
+	white-space        : nowrap;
+	transition         : background-color .5s, border-radius .5s;
+	&:hover {
+    color            : white;
+	}
+}
+
+main {
+	min-height: 100vh;
+	padding-bottom: calc( 300px + 15px );
+}
+footer {
+	margin-top: -300px;
+}

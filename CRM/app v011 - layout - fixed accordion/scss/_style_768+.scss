@@ -1,0 +1,140 @@
+@media only screen and (min-width: 768px) {
+
+	body {
+		font-family: arial;
+	}
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+  .header {
+  	max-width: 1920px;
+  	width: 100%;
+  	height: 50px;
+  	background-color: #1D160B;
+    position: fixed; z-index: 5555;
+    top: 0px; left: 50%;
+    transform: translate(-50%);
+    .navigation {
+      height: 100%;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      .company-logo {
+        display: block;
+        font-family: rb;
+        font-size: 20px;
+        color: gold;
+        line-height: 50px;
+        flex-grow: 1;
+      }
+      .nav-ul-1 {
+        height: 100%;
+        flex-grow: 5;
+        display: flex;
+        align-items: center;
+        li {
+          margin-right: 20px;
+        }
+        #nav-datetimer {
+          padding: 5px 10px;
+          font-family: rcl;
+          color: lightgrey;
+          border: 1px solid lightgrey;
+          border-radius: 12px;
+        }
+      }
+      .nav-ul-2 {
+        flex-grow: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        li {
+          margin-left: 20px;
+          a {
+            font-family: rcl;
+            color: lightgrey;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		max-width: 1920px;
+  	width: 100%;
+  	margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: 250px auto;
+
+		/* ↓↓↓ ASIDE MENU ↓↓↓ */
+    .aside {
+      min-height: calc( 100vh - 50px);
+      background-color: #353535;
+      font-family: rcl;
+      .accordion {
+        a {
+          display         : inline-block;
+          width           : 100%;
+          height          : 40px;
+          line-height     : 40px;
+          background-color: #353535;
+          color           : white;
+          font-family     : rcl;
+          font-size       : 16px;
+          position        : relative;
+          border-bottom   : 1px solid black;
+          padding-left    : 50px;
+          &:hover {
+            background-color: black;
+          }
+          svg {
+            display  : inline-block;
+            position : absolute;
+            left     : 10px; top: 50%;
+            transform: translate(0, -50%);
+            width    : 30px;
+            color    : orange;
+          }
+          span {//border: 1px dotted red;
+            display      : block;
+            width        : 20px;
+            height       : 20px;
+            padding-top  : 0px;
+            position     : absolute; z-index: 1;
+            right        : 10px;
+            top          : 10px;
+            svg {
+              color    : white;
+              font-size: 18px;
+              padding  : 0;
+              position : absolute;
+              top: 10px;
+              left: -6px;
+
+            }
+          }
+        }
+        & ul {
+          height  : 0px;
+          overflow: hidden;
+        }
+      }
+    }
+		/* ↑↑↑ /ASIDE MENU ↑↑↑ */
+
+		/* ↓↓↓ WORK AREA ↓↓↓ */
+    .work-area {
+      background-color: lightgrey;
+      padding: 15px;
+    }
+		/* ↑↑↑ /WORK AREA ↑↑↑ */
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

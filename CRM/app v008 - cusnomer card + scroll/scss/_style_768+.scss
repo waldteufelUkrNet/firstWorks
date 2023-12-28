@@ -1,0 +1,135 @@
+@media only screen and (min-width: 768px) {
+
+	body {
+		font-family: arial;
+	}
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+  .header {
+  	max-width: 1920px;
+  	width: 100%;
+  	height: 50px;
+  	background-color: #1D160B;
+    position: fixed; z-index: 5555;
+    top: 0px; left: 50%;
+    transform: translate(-50%);
+    .navigation {
+      height: 100%;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      .company-logo {
+        display: block;
+        font-family: rb;
+        font-size: 20px;
+        color: gold;
+        line-height: 50px;
+        flex-grow: 1;
+      }
+      .nav-ul-1 {
+        height: 100%;
+        flex-grow: 5;
+        display: flex;
+        align-items: center;
+        li {
+          margin-right: 20px;
+        }
+        #nav-datetimer {
+          padding: 5px 10px;
+          font-family: rcl;
+          color: lightgrey;
+          border: 1px solid lightgrey;
+          border-radius: 12px;
+        }
+      }
+      .nav-ul-2 {
+        flex-grow: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        li {
+          margin-left: 20px;
+          a {
+            font-family: rcl;
+            color: lightgrey;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		max-width: 1920px;
+  	width: 100%;
+  	margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: 250px auto;
+
+		/* ↓↓↓ ASIDE MENU ↓↓↓ */
+    .aside {
+      min-height: calc( 100vh - 50px);
+      background-color: #353535;
+      font-family: rcl;
+      .aside-list {
+        .aside-list-li a {//border: 1px dotted white;
+          display: inline-block;
+       	  width: 100%;
+       	  min-height: 40px;
+       	  line-height: 40px;
+       	  color: white;
+       	  border-bottom: 1px solid black;
+       	  position: relative;
+       	  svg {
+       	  	width: 50px;
+       	  	color: orange;
+       	  }
+       	  .submenu-indicator {
+       	  	display: block;
+       	  	width: 20px;
+       	  	height: 100%;
+       	  	padding: 0;
+       	  	position: absolute; z-index: 1;
+            right: 12px; top: 0;
+       	  	svg {
+       	  		color: white;
+       	  		font-size: 18px;
+       	  		width: 20px;
+	       	  	height: 20px;
+	       	  	padding: 0;
+	       	  	position: relative;
+	            top: 4px;
+       	  	}
+       	  }
+       	  &:hover {
+       	  	background-color: black;
+       	  }
+        }
+        .aside-submenu-list-li {
+        	height: 0px;
+        	opacity: 0;
+        	a {
+	        	position: relative;
+	        	padding: 0 15px 0 50px;
+	        }
+	      }
+      }
+    }
+		/* ↑↑↑ /ASIDE MENU ↑↑↑ */
+
+		/* ↓↓↓ WORK AREA ↓↓↓ */
+    .work-area {
+      background-color: lightgrey;
+      padding: 15px;
+    }
+		/* ↑↑↑ /WORK AREA ↑↑↑ */
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

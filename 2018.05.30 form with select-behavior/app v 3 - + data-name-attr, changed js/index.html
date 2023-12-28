@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>waldteufel@ukr.net</title>
+	<link rel='icon' href='img/wehrwolf.jpg'>
+
+	<!-- css-libs (slick, animate ...) -->
+	<link rel='stylesheet' type='text/css' href='css/libs.min.css'>
+
+	<!-- js-libs (font awesome, slick, wow ...) -->
+  <script src='js/libs.min.js'></script>
+
+  <!-- own stylesheet and js -->
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
+	<script src='js/js.js'></script>
+</head>
+<body>
+
+<div class='form-coworker-wrapper'>
+  <form action='#' method='post' name='popup-coworker-form' class='popup-coworker-form'>
+    <div class="popup-coworker-form__left-column">
+      <label for='popup-form-fname'>Имя сотрудника:</label>
+      <input type='text' id='popup-form-fname' name='popup-form-fname'>
+
+      <label for='popup-form-lname'>Фамилия сотрудника:</label>
+      <input type='text' id='popup-form-lname' name='popup-form-lname'>
+
+      <label for='popup-form-iphone'>IP телефония:</label>
+      <input type='text' id='popup-form-iphone' name='popup-form-iphone'>
+
+      <label for='popup-form-phone'>Телефон:</label>
+      <input type='text' id='popup-form-phone' name='popup-form-phone'>
+
+      <label for='popup-form-description'>Описание:</label>
+      <input type='text' id='popup-form-description' name='popup-form-description'>
+
+      <span>Аккаунт активен:</span>
+      <label for='popup-form-isActive'><input type='checkbox' name='popup-form-isActive' id='popup-form-isActive'><span></span></label>
+    </div>
+
+    <div class="popup-coworker-form__right-column">
+
+      <label for='popup-form-office'>Офис:</label>
+      <select name='popup-form-office' id='popup-form-office' class='popup-form-select'>
+        <option value='0'>Офис</option>
+        <option value='офис1'>офис1</option>
+        <option value='офис2'>офис2</option>
+        <option value='офис3'>офис3</option>
+        <option value='офис4'>офис4</option>
+        <option value='офис5'>офис5</option>
+        <option value='офис6'>офис6</option>
+        </select>
+
+
+      <label for='popup-form-post'>Должность:</label>
+      <div class="popup-form-select__holder">
+        <select name='popup-form-post' id='popup-form-post' class='popup-form-select'>
+          <option value='0'>Должность</option>
+          <option value='прыщедав'>прыщедав</option>
+          <option value='спиночух'>спиночух</option>
+          <option value='сиськожмяк'>сиськожмяк</option>
+          <option value='соплежуй'>соплежуй</option>
+          <option value='ухокрут'>ухокрут</option>
+          <option value='губошлёп'>губошлёп</option>
+          <option value='пальцелом'>пальцелом</option>
+          <option value='гримассодел'>гримассодел</option>
+          <option value='писькотряс'>писькотряс</option>
+          <option value='слюноглот'>слюноглот</option>
+          <option value='рукомах'>рукомах</option>
+          <option value='ногобрык'>ногобрык</option>
+          <option value='ногтегрыз'>ногтегрыз</option>
+          <option value='пяткоскрёб'>пяткоскрёб</option>
+          <option value='зубочист'>зубочист</option>
+          <option value='пузотёр'>пузотёр</option>
+          <option value='пупколиз'>пупколиз</option>
+        </select>
+        <button type='button' class="popup-form-select__add" data-name='coworker-post'><i class="fas fa-plus"></i></button>
+      </div>
+
+      <label for='popup-form-language'>Язык сотрудника:</label>
+      <div class="popup-form-select__holder">
+        <select name='popup-form-language' id='popup-form-language' class='popup-form-select'>
+          <option value='0'>Язык сотрудника</option>
+          <option value='español'>español</option>
+          <option value='English'>English</option>
+          <option value='اللغة العربية'>اللغة العربية</option>
+          <option value='língua portuguesa'>língua portuguesa</option>
+          <option value='русский язык'>русский язык</option>
+          <option value='Deutsch '>Deutsch </option>
+          <option value='français'>français</option>
+          <option value='italiano'>italiano</option>
+          <option value='Türkçe'>Türkçe</option>
+          <option value='język polski'>język polski</option>
+          <option value='українська мова'>українська мова</option>
+          <option value='limba română'>limba română</option>
+          <option value='Azəricə'>Azəricə</option>
+          <option value='Nederlands '>Nederlands </option>
+          <option value='magyar nyelv'>magyar nyelv</option>
+          <option value='Ελληνικά'>Ελληνικά</option>
+          <option value='čeština'>čeština</option>
+        </select>
+        <button type='button' class="popup-form-select__add" data-name='coworker-language'><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+
+    <button type='submit' name='popup-form-btn' id='coworker-form-submit' class='coworker-form-btn'>Сохранить</button>
+    <button type='button' name='popup-form-btn' id='coworker-form-annul' class='coworker-form-btn'>Отмена</button>
+
+  </form>
+</div>
+
+</body>
+</html>

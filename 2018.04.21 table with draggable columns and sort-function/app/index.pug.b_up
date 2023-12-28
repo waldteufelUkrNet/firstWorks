@@ -1,0 +1,119 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='css/libs.min.css')
+    // js-libs (font awesome, slick, wow ...)
+    script(defer='', src='js/libs.min.js')
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/js.js', defer='')
+
+  body
+
+    // MAIN SECTION
+    main.main
+      // TABLE
+      .table-wrapper
+        table.some-table#some-table
+          button.some-table__btn більше
+          thead
+            tr
+              th П.І.Б.
+                button.some-table__sort-btn(data-value="0")
+                  i.fas.fa-chevron-down
+              th дата народження
+                button.some-table__sort-btn(data-value="1")
+                  i.fas.fa-chevron-down
+              th м. народження
+                button.some-table__sort-btn(data-value="2")
+                  i.fas.fa-chevron-down
+              th професія
+                button.some-table__sort-btn(data-value="3")
+                  i.fas.fa-chevron-down
+              th зарплатня
+                button.some-table__sort-btn(data-value="4")
+                  i.fas.fa-chevron-down
+            tr
+              th 1.
+              th 2.
+              th 3.
+              th 4.
+              th 5.
+          tfoot
+            tr
+              td footer cell
+              td footer cell
+              td footer cell
+              td footer cell
+              td footer cell
+          tbody.some-table__tbody
+            tr
+              td Іваненко І.І.
+              td 1984.03.31
+              td Конотоп
+              td столяр
+              td 5600
+            tr
+              td Петренко П.П.
+              td 1978.05.12
+              td Ямпіль
+              td муляр
+              td 7211
+            tr
+              td Карпенко К.К.
+              td 1986.09.26
+              td Шостка
+              td тесля
+              td 5399
+            tr
+              td Клименко К.К.
+              td 1990.02.28
+              td Новгород-Сіверський
+              td стельмах
+              td 4732
+            tr
+              td Сидоренко С.С.
+              td 2000.04.30
+              td Ромни
+              td бондар
+              td 8364
+            tr
+              td Миколаєнко М.М.
+              td 1964.01.15
+              td Недригайлів
+              td гонтар
+              td 1212
+            tr
+              td Остапенко О.О.
+              td 1988.10.05
+              td Липова Долина
+              td швець
+              td 6443
+            tr
+              td Андрієнко А.А.
+              td 1977.10.05
+              td Ворожба
+              td кравець
+              td 8425
+            tr
+              td Семенченко С.С.
+              td 1989.12.24
+              td Лебедин
+              td коваль
+              td 7485
+            tr
+              td Василенко В.В.
+              td 1995.11.26
+              td Буринь
+              td просто вася
+              td бере натурою
+      // /TABLE
+
+      p 1. тег caption не використовувати - збивається drag'n'drop
+      p 2. таблиці за замовчуванням не анімуються по ширині, а якщо використовувати display:none - при розкритті збиваються колонки. Щоб колонки анімувалися, довелося для чарунок прописати inline-block. Побічний ефект - потрібно явно вказувати ширину.
+    // /MAIN SECTION

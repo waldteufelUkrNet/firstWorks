@@ -1,0 +1,41 @@
+@media only screen and (min-width: 1200px) {
+
+	/* ↓↓↓ section 2 ↓↓↓ */
+	.section2 {
+		width                : 1200px;
+	}
+	/* ↑↑↑ /section 2 ↑↑↑ */
+
+	/* ↓↓↓ section 4 ↓↓↓ */
+	.section4 {
+		width                : 1200px;
+	}
+	/* ↑↑↑ /section 4 ↑↑↑ */
+
+	/* ↓↓↓ section 8 ↓↓↓ */
+	.section8 {
+		width                   : 1200px;
+		&__cards-holder {
+		  grid-template-columns : repeat(4, auto);
+	  }
+	}
+	/* ↑↑↑ /section 8 ↑↑↑ */
+
+	/* ↓↓↓ section 9 ↓↓↓ */
+	.section9 {
+		width                   : 1200px;
+ 	}
+	/* ↑↑↑ /section 9 ↑↑↑ */
+
+	/* ↓↓↓ section 10 ↓↓↓ */
+	.section10 {
+		width                 : 1200px;
+		}
+	/* ↑↑↑ /section 10 ↑↑↑ */
+
+	/* ↓↓↓ section 11 ↓↓↓ */
+	.section11 {
+		width                : 1200px;
+	}
+	/* ↑↑↑ /section 11 ↑↑↑ */
+}

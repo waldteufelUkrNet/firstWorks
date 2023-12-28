@@ -1,0 +1,35 @@
+.wares-card {
+	width: 100%;
+	min-height: 98px;
+  padding: 13px 20px 15px 100px;
+  position: relative;
+  border-bottom: 1px dotted #e0dfca;
+  &__img {
+  	position: absolute;
+  	top: 18px; left: 22px;
+    cursor: pointer;
+  }
+  &__header{
+  	font-family: ar;
+  	font-size: 14px;
+  	line-height: 20px;
+    border-bottom: 1px solid #cbdbec;
+    cursor: pointer;
+    span {
+      color: #0072bc;
+    }
+  }
+  &__price-line {
+    padding-top: 14px;
+  }
+  &__price-line-left {
+    font-family: ar;
+    font-size: 14px;
+    color: #8d8d8d;
+  }
+  &__price-line-right {
+    font-family: ab;
+    font-size: 14px;
+    float: right;
+  }
+}

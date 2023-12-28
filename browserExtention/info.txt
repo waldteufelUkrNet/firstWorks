@@ -1,0 +1,3 @@
+https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+https://habr.com/ru/post/71839/
+https://habr.com/ru/post/310844/

@@ -1,0 +1,68 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title  Denial of responsibility
+
+    link(rel='icon', href='assets/img/logoIC_icon.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/denial_of_responsibility.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header DENIAL
+            br
+            | OF RESPONSIBILITY
+          h5.section1__subheader Last edited: 18.06.2018
+          .info
+            p By accepting the Terms and Conditions - hereinafter the Agreement, you thereby confirm that you are aware of the risks inherent in the activities in the field of binary options, including partial or complete loss of invested funds. Terwex Trade Ltd. believes that by starting trading in binary options, you invest only in the amount that you can afford. Before the commencement of operations, please read in detail the terms of the Agreement.
+
+            p The company warns that this notice can not, does not disclose or clarify all possible risks and other important aspects related to the trade in Binary Options. This document only outlines in general terms the nature of the possible risks that arise when working with Binary Options.
+
+            p We bring to your attention that the exchange rates on the Site are similar to those established by Terwex Trade Ltd. for the sale of binary options to customers. At the same time, Terwex Trade Ltd. is not responsible for their mismatch with the market rates in real-time option sales.
+
+            p By accepting the terms of the Agreement, you assume full responsibility for cooperation with Terwex Trade Ltd. in the legally established framework, including compliance of this interaction with laws and other legal acts of your country of residence. We ask you beforehand, before accepting the terms of the Contract, to become acquainted with the possibility of tax penalties on profits from similar operations in your country.
+
+            p You agree to receive letters of information and advertising nature from Terwex Trade Ltd. Terwex Trade Ltd. in its turn undertakes to exclude you from all dispatches on demand.
+
+            p By placing transactions on the site, you confirm that you are 18 years of age. In the event that the Company identifies underage traders on the platform, access to the account of such a trader will be immediately closed, including if there are funds in the account.
+
+            p The Company does not bear financial responsibility for the results of operations performed by the Customer. The company is also not responsible for losses associated with the service for copying transactions of other traders.
+
+            p Each client has the right to open only one trading account on the platform. The profit received on accounts opened on a fictitious name, or on several accounts opened by the same person will be canceled and unavailable for withdrawal. If one customer has opened several trading accounts, the profit will be canceled for all open accounts, and access to all accounts will be closed for further investigation. By agreement with the Company, it is possible to restore access to only one of the accounts and transfer funds from the remaining blocked accounts, in the event that there are no unlawful actions on the part of the client to generate profits using several accounts.
+
+            p In the event that the Company incurs undue financial losses, the Company is entitled to withhold from the client's account amounts equal to the sums of costs (legal, operational, etc.) caused by improper actions of the Customer, including costs caused by challenging payments from third parties .
+
+            p BUSINESS MODEL AND INCOME
+            p Terwex Trade Ltd. assumes that you are familiar with the business model of the activity, the result of which is completely subordinate to the choice of the specific direction of the price movement of assets from the initial strike price to the specified expiration date.
+
+            p Before the transaction is concluded, the trader is provided with complete information about the transaction: asset name, execution price, chosen direction of price change ("CALL" or "PUT"), and the amount of investment determined by the trader for a particular transaction.
+      // /SECTION 1
+
+    // /MAIN SECTION
+
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

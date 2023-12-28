@@ -1,0 +1,176 @@
+// @import "variables";
+@import "fonts";
+@import "style_general";
+
+//BEM-blocks
+@import "../BEM-blocks/header/header.scss";
+@import "../BEM-blocks/footer/footer.scss";
+@import "../BEM-blocks/language_switcher/language_switcher.scss";
+@import "../BEM-blocks/payment_systems/payment_systems.scss";
+
+@media only screen and (min-width: 320px) {
+  .s1-wrapper{
+    width                   : 100%;
+  }
+  .section1 {
+    max-width               : 1920px;
+    margin                  : 0 auto;
+    height                  : 450px;
+    display                 : flex;
+    justify-content         : center;
+    align-items             : center;
+    flex-wrap               : wrap;
+    &__headers-wrapper {
+      text-align            : right;
+    }
+    &__header {
+      font-family           : rb;
+      font-size             : 4.6rem;
+      color                 : white;
+      padding-bottom        : 20px;
+    }
+    &__subheader {
+      font-family           : rsr;
+      font-size             : 22px;
+      font-weight           : 900;
+      color                 : #fac51c;
+    }
+    &__icon-wrapper {
+      padding               : 15px;
+    }
+    span {
+      font-size             : 70px;
+      color                 : rgb(250, 197, 28);
+    }
+  }
+  .s2-wrapper{
+    width                   : 100%;
+  }
+  .section2 {
+    max-width               : 1100px;
+    margin                  : 0 auto;
+    display                 : flex;
+    justify-content         : center;
+    align-items             : center;
+    flex-wrap               : wrap;
+    padding                 : 40px 15px;
+    &__left-column {
+      margin-right          : 60px;
+      img {
+        width               : 360px;
+        display             : block;
+      }
+    }
+    &__right-column {}
+    &__header {
+      font-family           : rb;
+      font-size             : 3.2rem;
+      padding-bottom        : 30px;
+    }
+    &__text {
+      font-family           : rcl;
+      font-size             : 1.7rem;
+      color                 : #8c8c8c;
+      line-height           : 1.5em;
+    }
+  }
+
+  .s3-wrapper{
+    width                   : 100%;
+  }
+  .section3 {
+    max-width               : 1100px;
+    margin                  : 0 auto;
+    display                 : flex;
+    justify-content         : center;
+    align-items             : stretch;
+    flex-wrap               : wrap;
+    padding                 : 40px 15px;
+    &__left-column {
+      margin-right          : 60px;
+      width                 : 100%;
+      iframe {
+        width               : 100%;
+        height              : 100%;
+        max-height          : 475px;
+      }
+    }
+    &__right-column {
+      max-width             : 100%;
+      position              : relative;
+    }
+    &__header {
+      font-family           : rb;
+      font-size             : 4.8rem;
+      color                 : #313313;
+      padding-bottom        : 30px;
+    }
+    &__envelop {
+      color                 : rgb(102, 102, 102);
+      position              : absolute;
+      font-size             : 40px;
+    }
+    &__contacts-info {
+      font-family           : rb;
+      font-size             : 1.8rem;
+      line-height           : 1.5em;
+      padding-left          : 60px;
+    }
+    &__contacts-time {
+      font-family           : rcl;
+      font-size             : 1.4rem;
+      color                 : #a0a0a0;
+      padding-bottom        : 20px;
+      padding-left          : 60px;
+    }
+    &__contacts {
+      font-family           : rsr;
+      font-size             : 1.7rem;
+      color                 : #8c8c8c;
+      line-height           : 1.4em;
+      padding-left          : 60px;
+      a {
+        color               : #8c8c8c;
+      }
+    }
+
+    .regform {
+
+      &__form-btns-wrapper {
+         display            : flex;
+         align-items        : center;
+         justify-content    : spase-around
+      }
+      .anti_bot_filter {
+        width               : 170px;
+        height              : 50px;
+        margin              : auto;
+        &__ansver {
+          color             : black;
+        }
+      }
+      #btnsubmit {
+        width               : 165px;
+        height              : 50px;
+        margin              : auto;
+        border              : 1px solid #1ba101;
+        background-color    : #1ba101;
+        border-radius       : 4px;
+        color               : white;
+        font-family         : rcl;
+        font-size           : 1.4rem;
+        font-weight         : 400;
+        letter-spacing      : 2px;
+        text-transform      : uppercase;
+        cursor              : pointer;
+        transition          : background-color .5s;
+        &:hover {
+          background-color  : #4cae4c;
+          border-color      : #4cae4c;
+        }
+      }
+    }
+  }
+}
+
+@import "contacts/contacts_768+";

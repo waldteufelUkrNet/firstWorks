@@ -1,0 +1,40 @@
+/* ↓↓↓ for 1200px and more ↓↓↓ */
+@media only screen and (min-width: 1200px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+		.command-2 {
+			&__img {
+				position: absolute;
+				top: 66px;
+				right: 0px;
+				width: 345px;
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 ↓↓↓ */
+		.command-3 {
+			margin-left: 54px;
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.photo {
+
+			&__img {
+				left: 418px;
+			}
+
+			&__shadow {
+				width: 947px;
+				left: 125px;
+			}
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+
+}

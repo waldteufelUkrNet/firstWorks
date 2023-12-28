@@ -1,0 +1,22 @@
+// ↓↓↓ BEM-blocks: call_us_btn (start) ↓↓↓
+
+style
+  include call_us_btn.css
+
+.call-us-btn__wrapper
+  .call-us-btn
+    img(class="call-us-btn__girl" src="assets/img/call-us-btn-girl.png", alt="call-us-btn-girl.png")
+    h4(class="call-us-btn__header") Call us
+      br
+      | right now:
+    a(class="call-us-btn__link" title="Skype us" href="skype:echo123?call")
+      img(class="call-us-btn__img" src="assets/img/call-us-btn-skype.png", alt="call-us-skype.png")
+    button(class="call-us-btn__close")
+      i(class="fas fa-times")
+    .call-us-btn__reopen(title="Call us")
+      i(class="fas fa-chevron-left")
+
+script
+  include ../minjs/call_us_btn/call_us_btn.js
+
+// ↑↑↑ BEM-blocks: call_us_btn (end) ↑↑↑

@@ -1,0 +1,59 @@
+/* ↓↓↓ for 1200px and more ↓↓↓ */
+@media only screen and (min-width: 1200px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.section4 {
+
+		  .section4-info {
+		  	max-width: 656px;
+		  	padding-right: 170px;
+
+		  	.section-ulist li {
+		  		padding-left: 32px;
+		  	}
+		  }
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.section5 {
+			padding-top: 0px;
+
+			img {
+				top: -85px;
+			}
+
+		  .section5-info {
+		  	max-width: 656px;
+		  	padding-left: 166px;
+		  }
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.section6 {
+
+		  .spiner {
+		  	left: 0;
+		  }
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.section7 {
+
+			img {
+				width: 99%;
+			}
+
+		  .section7-info {
+		  	padding-left: 116px;
+		  	padding-top: 105px;
+		  }
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

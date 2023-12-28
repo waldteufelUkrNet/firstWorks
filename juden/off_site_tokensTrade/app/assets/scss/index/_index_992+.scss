@@ -1,0 +1,31 @@
+@media only screen and (min-width: 992px) {
+
+	.section2 {
+	  grid-template-columns   : repeat(5, 1fr);
+	}
+
+	.section3 {
+	  grid-template-columns   : repeat(5, 1fr);
+	}
+
+	.section4 {
+	  grid-template-columns   : repeat(3, 1fr);
+	}
+
+	.section6 {
+	  &__elems-wrapper {
+	    grid-template-columns : repeat(4, 1fr);
+	  }
+	}
+
+	.section7 {
+	  grid-template-columns   : 3fr 1fr;
+	  padding-left            : 0px;
+	}
+
+	.section8 {
+	  &__content-wrapper {
+	    grid-template-columns : 1fr 1fr 1fr;
+	  }
+	}
+}

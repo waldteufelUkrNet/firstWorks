@@ -1,0 +1,31 @@
+{
+  "name": "work_area",
+  "version": "1.0.0",
+  "description": "work_area for any project",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "highcharts": "^6.0.7",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-css-purge": "^3.0.3",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "waldteufel@ukr.net",
+  "license": "ISC"
+}

@@ -1,0 +1,89 @@
+// ↓↓↓ BEM-blocks: header (start) ↓↓↓
+
+style
+  include header.css
+
+.header-wrapper
+  header.header
+    .menu-btn__positioning-wrapper
+      include ../menu-btn/menu-btn.pug
+    ul.header__small-menu
+      li.header__small-list-item
+        a.header__small-menu-link(href="management.html") Руководство
+      li.header__small-list-item
+        a.header__small-menu-link(href="https://trade.platinumtrade.org/#!/regular") Вход
+      li.header__small-list-item
+        a.header__small-menu-link(href="https://trade.platinumtrade.org/#!/regular") Регистрация
+      li.header__small-list-item
+        a.header__small-menu-link(href="about_company.html") О компании
+      li.header__small-list-item
+        a.header__small-menu-link(href="terms_and_conditions.html") Условия и соглашения
+      li.header__small-list-item
+        a.header__small-menu-link(href="notification_of_risks.html") Уведомление о рисках
+      li.header__small-list-item
+        a.header__small-menu-link(href="privacy_policy.html") Политика конфиденциальности
+      li.header__small-list-item
+        a.header__small-menu-link(href="aml_and_kyc_policies.html") Политика AML и KYC
+      li.header__small-list-item
+        a.header__small-menu-link(href="refund_policy.html") Политика возврата
+      li.header__small-list-item
+        a.header__small-menu-link(href="denial_of_responsibility.html") Отказ от ответственности
+      li.header__small-list-item
+        a.header__small-menu-link(href="contacts.html") Контакты
+    span.header__logo-wrapper
+      a.header__logo-link(href="index.html")
+        img.header__logo(src="assets/img/logo.png" alt="logo.png")
+    span.header__big-menu
+      span
+        a.header__menu.header__menu0(href="index.html")
+          i.fas.fa-home
+          |  Главная
+      span
+        a.header__menu.header__menu1(href="#")
+          i.far.fa-file-alt
+          |  Руководство
+          ul.header__menu-list.header__menu-list1
+            li.header__menu-list-item
+              a.header__menu-link(href="management.html") Руководство
+            li.header__menu-list-item
+              a.header__menu-link(href="https://trade.platinumtrade.org/#!/regular") Вход
+            li.header__menu-list-item
+              a.header__menu-link(href="https://trade.platinumtrade.org/#!/regular") Регистрация
+
+      span
+        a.header__menu.header__menu2(href="#")
+          i.fas.fa-info-circle
+          |  О компании
+          ul.header__menu-list.header__menu-list2
+            li.header__menu-list-item
+              a.header__menu-link(href="about_company.html") О компании
+            li.header__menu-list-item
+              a.header__menu-link(href="terms_and_conditions.html") Условия и соглашения
+            li.header__menu-list-item
+              a.header__menu-link(href="notification_of_risks.html") Уведомление о рисках
+            li.header__menu-list-item
+              a.header__menu-link(href="privacy_policy.html") Политика конфиденциальности
+            li.header__menu-list-item
+              a.header__menu-link(href="aml_and_kyc_policies.html") Политика AML и KYC
+            li.header__menu-list-item
+              a.header__menu-link(href="refund_policy.html") Политика возврата
+            li.header__menu-list-item
+              a.header__menu-link(href="denial_of_responsibility.html") Отказ от ответственности
+            li.header__menu-list-item
+              a.header__menu-link(href="contacts.html") Контакты
+
+      a.header__btn.header__btn_enter(href="https://trade.platinumtrade.org/#!/regular")
+        i.fas.fa-sign-in-alt
+        |
+        | ВХОД
+      a.header__btn.header__btn_account(href="https://trade.platinumtrade.org/#!/regular")
+        i.far.fa-edit
+        |
+        | ОТКРЫТЬ СЧЕТ
+    .language-switcher__positioning-wrapper
+      include ../language_switcher/language_switcher.pug
+
+script
+  include ../minjs/header/header.js
+
+// ↑↑↑ BEM-blocks: header (end) ↑↑↑

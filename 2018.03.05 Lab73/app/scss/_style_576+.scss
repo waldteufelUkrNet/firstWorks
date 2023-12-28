@@ -1,0 +1,133 @@
+/* ↓↓↓ for 576px and more ↓↓↓ */
+@media only screen and (min-width: 576px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.header-wrapper {
+		.header {
+			height: 91px;
+			display: grid;
+			grid-template-columns: auto auto;
+			justify-content: space-between;
+			.logo {
+				margin: 34px 0;
+				position: relative;
+				left: 0;
+				transform: translate(0%);
+				img {
+					height: 23px;
+				}
+			}
+
+			/* ↓↓↓ NAVIGATION ↓↓↓ */
+			.navigation {
+				position: relative;
+				.small-nav-list {
+					display: none;
+				}
+			}
+			/* ↑↑↑ NAVIGATION ↑↑↑ */
+		}
+	}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		max-height: 1000px;
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.s1-wrapper {
+			.section1 {
+				margin: 20px auto 0;
+				padding: 0 15px;
+				grid-template-columns: 368px;
+				grid-template-rows: 250px 250px 180px 180px;
+				grid-row-gap: 30px;
+				.section-item-1 {
+					.section1__header {
+						line-height: 36px;
+						letter-spacing: -1.2px;
+					}
+					.section-item-1__line {
+						display: block;
+						width: 0px;
+						max-width: 220px;
+						height: 8px;
+						background-color: #7ab9ff;
+						position: absolute;
+						top: 68px;
+						left: 73px;
+						z-index: 1110;
+					}
+					.section-item-1__info {
+						font-size: 18px;
+						line-height: 24px;
+						padding-top: 22px;
+					}
+				}
+				.section-item-2 {
+					.parallax-container {
+						.parallax-item { 
+							max-width: 368px;
+							left: 0;
+							transform: translate(0%);
+							top: 0px;
+						}
+						.desctop-video {
+							width: 239px;
+							height: 157px;
+							left: 58px;
+							transform: translate(0%);
+						}
+					}
+				}
+				.btn {
+					width: 368px;
+					height: 146px;
+					border-radius: 9px;
+					background: url("../img/img-button-1.png");
+					margin-top: 10px;
+					text-align: left;
+					padding-top: 60px;
+					padding-left: 46px;
+					box-shadow: 1px 20px 20px lightgrey;
+					transition: margin-top .5s,
+											padding-top .5s,
+											transform 1s;
+					&__i-am {
+						font-family: gp;
+						font-size: 26px;
+					}
+					&__i-want {
+						position: absolute;
+						left: 46px;
+						top: 60px;
+						opacity: 0;
+						transition: opacity .5s,
+												top .5s;
+					}
+					&:hover {
+						margin-top: 0px;
+						padding-top: 40px;
+						.btn__i-want {
+							opacity: 1;
+							top: 90px;
+						}
+					}
+					&__i-choise {
+						display: none;
+					}
+				}
+				.btn-2 {
+					background: url("../img/img-button-2.png");
+				}
+				.draw-to-bottom {
+					display: none;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

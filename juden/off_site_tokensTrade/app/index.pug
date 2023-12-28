@@ -1,0 +1,342 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Торгуй по-своему: валютные пары, акции, индексы, товары и криптовалюта.")
+
+    title Главная страница E-Tokens Trade
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/linecons.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/index.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1(data-parallax="scroll" data-image-src="assets/img/bg1.png")
+          h1.section1__header.wow.fadeInUp E-TokensTrade
+          p.section1__mantra.wow.fadeInUp Откройте для себя мир инвестирования
+          p.section1__mantra.wow.fadeInUp ТОРГУЙТЕ ПО-СВОЕМУ
+          p.section1__mantra.wow.fadeInUp Валютные пары, акции, индексы,
+          p.section1__mantra.wow.fadeInUp товары и криптовалюта
+          .section1__btns-holder.wow.fadeInUp
+            a.section1__registry-btn(href='registration.html') регистрация
+            a.section1__authorization-btn(href='authorization.html') начать сейчас
+          img.section1__bitcoins-img.wow.fadeInUp(src="assets/img/bitcoin-coins.png", alt="bitcoin-coins.png")
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+
+          .section2-elem
+            .section2-elem__img-holder.wow.fadeInUp
+              a.icon54-v1-convert-curency.mbr-iconfont.mbr-iconfont-features7(href="#")
+            h5.section2-elem__header.wow.fadeInUp Валюты
+            p.section2-elem__text.wow.fadeInUp Один из крупнейших финансовых рынков в мире с точки зрения объема сделок и торгуемых валютных пар.
+
+          .section2-elem
+            .section2-elem__img-holder.wow.fadeInUp
+              a.icon54-v1-briefcase-2.mbr-iconfont.mbr-iconfont-features7(href="#")
+            h5.section2-elem__header.wow.fadeInUp Акции
+            p.section2-elem__text.wow.fadeInUp Торгуйте ведущими привлекательными акциями с различных местных и международных рынков.
+
+          .section2-elem
+            .section2-elem__img-holder.wow.fadeInUp
+              a.icon54-v1-dot-chart1.mbr-iconfont.mbr-iconfont-features7(href="#")
+            h5.section2-elem__header.wow.fadeInUp Индексы
+            p.section2-elem__text.wow.fadeInUp Прямая торговля ведущими показателями рынков Европы, США и Дальнего Востока.
+
+          .section2-elem
+            .section2-elem__img-holder.wow.fadeInUp
+              a.icon54-v1-oil-tower.mbr-iconfont.mbr-iconfont-features7(href="#")
+            h5.section2-elem__header.wow.fadeInUp Товары
+            p.section2-elem__text.wow.fadeInUp "Служба одного окна" для торговли ведущими мировыми сырьевыми товарами.
+
+          .section2-elem
+            .section2-elem__img-holder.wow.fadeInUp
+              a.icon54-v1-convert-curency.mbr-iconfont.mbr-iconfont-features7(href="#")
+            h5.section2-elem__header.wow.fadeInUp Криптовалюты
+            p.section2-elem__text.wow.fadeInUp Торгуйте криптовалютами
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+
+          .section3-elem
+            .section3-elem__img-holder.wow.fadeInUp
+              a.mdi-action-account-balance-wallet.mbr-iconfont.mbr-iconfont-features2(href="#")
+            h5.section3-elem__header.wow.fadeInUp ПЛАТЕЖИ
+              br
+              | (ДЕПОЗИТЫ)
+            p.section3-elem__text.wow.fadeInUp Поддержка типов платежных карт (VISA, MasterCard, Maestro, МИР) в соответствии с требованиям PCI DSS. Криптовалюта BTC.
+
+          .section3-elem
+            .section3-elem__img-holder.wow.fadeInUp
+              a.mdi-communication-quick-contacts-dialer.mbr-iconfont.mbr-iconfont-features2(href="#")
+            h5.section3-elem__header.wow.fadeInUp СЛУЖБА
+              br
+              | ПОДДЕРЖКИ
+            p.section3-elem__text.wow.fadeInUp Работаем в режиме 12/5. E-Tokens Trade распологает высокопрофессиональной службой поддержки клиентов.
+
+          .section3-elem
+            .section3-elem__img-holder.wow.fadeInUp
+              a.mdi-action-settings-input-composite.mbr-iconfont.mbr-iconfont-features2(href="#")
+            h5.section3-elem__header.wow.fadeInUp БЕЗРИСКОВАЯ
+              br
+              | ТОРГОВЛЯ
+            p.section3-elem__text.wow.fadeInUp Откройте счет и получите одну безрисковую сделку для успешного старта на пути к финансовому успеху. Обучение и работа с платформой - быстро поможет новичку освоить трейдинг.
+
+          .section3-elem
+            .section3-elem__img-holder.wow.fadeInUp
+              a.mdi-action-account-circle.mbr-iconfont.mbr-iconfont-features2(href="#")
+            h5.section3-elem__header.wow.fadeInUp САМОСТОЯТЕЛЬНАЯ
+              br
+              | ТОРГОВЛЯ
+            p.section3-elem__text.wow.fadeInUp Самостоятельный трейдинг позволяет полностью сконцентрироваться на торговле, происходящем на рынке, на своих реакциях и освобождает от необходимости переживать за торговую группу, если он сотрудничает с таковой.
+
+          .section3-elem
+            .section3-elem__img-holder.wow.fadeInUp
+              a.mdi-action-swap-vert-circle.mbr-iconfont.mbr-iconfont-features2(href="#")
+            h5.section3-elem__header.wow.fadeInUp ДОВЕРИТЕЛЬНОЕ
+              br
+              | УПРАВЛЕНИЕ
+            p.section3-elem__text.wow.fadeInUp Доверительное управление выбирает много людей, которые хотят просто инвестировать имеющиеся свободные средства и при этом не заниматься трейдерской деятельностью. Профессиональный управляющий с опытом торговли на финансовых рынках, приумножит Ваши средства.
+      // /SECTION 3
+
+      // SECTION 4
+      .s4-wrapper
+        section.section4
+
+          .section4-elem
+            .section4-elem__header-wrapper
+              a.icon54-v1-documents.mbr-iconfont.mbr-iconfont-features4.wow.fadeInUp(href="#")
+              .section4-elem__header-holder
+                h5.section4-elem__header.wow.fadeInUp Регистрация
+                h6.section4-elem__sub-header.wow.fadeInUp ЗАРЕГИСТРИРУЙТЕСЬ И ПОПОЛНИТЕ СЧЕТ
+            p.section4-elem__text.wow.fadeInUp Зарегистрируйтесь, пополните торговый счет и пройдите процедуру подтверждения личности пользователя для обеспечения безопасности платежей.
+
+          .section4-elem
+            .section4-elem__header-wrapper
+              a.icon54-v1-increasing-chart2.mbr-iconfont.mbr-iconfont-features4.wow.fadeInUp(href="#")
+              .section4-elem__header-holder
+                h5.section4-elem__header.wow.fadeInUp Торговля
+                h6.section4-elem__sub-header.wow.fadeInUp ТОРГУЙТЕ И ПОЛУЧАЙТЕ ПРИБЫЛЬ
+            p.section4-elem__text.wow.fadeInUp Выберите базовый актив. Определите будет ли цена актива выше или ниже. Выберите размер инвестиции для покупаемого контракта и откройте сделку. Торгуйте в любом браузере и на мобильном устройстве.
+
+          .section4-elem
+            .section4-elem__header-wrapper
+              a.icon54-v1-financial-care1.mbr-iconfont.mbr-iconfont-features4.wow.fadeInUp(href="#")
+              .section4-elem__header-holder
+                h5.section4-elem__header.wow.fadeInUp Прибыль
+                h6.section4-elem__sub-header.wow.fadeInUp ВЫВЕДИТЕ СВОЮ ПРИБЫЛЬ
+            p.section4-elem__text.wow.fadeInUp Получите средства быстро и легко на банковскую карту, BTC или на электронный кошелек. Для получения средств необходимо пройти полную верификацию.
+      // /SECTION 4
+
+      // SECTION 5
+      .s5-wrapper
+        section.section5
+        // TradingView Widget BEGIN
+        .tradingview-widget-container
+          .tradingview-widget-container__widget
+          script(type='text/javascript', src='https://s3.tradingview.com/external-embedding/embed-widget-tickers.js', async='').
+            {
+            "symbols": [
+            {
+            "title": "S&P 500",
+            "proName": "INDEX:SPX"
+            },
+            {
+            "title": "NASDAQ 100",
+            "proName": "INDEX:IUXX"
+            },
+            {
+            "title": "EUR/USD",
+            "proName": "FX_IDC:EURUSD"
+            },
+            {
+            "title": "BTC/USD",
+            "proName": "BITFINEX:BTCUSD"
+            },
+            {
+            "title": "ETH/USD",
+            "proName": "BITFINEX:ETHUSD"
+            }
+            ],
+            "locale": "ru"
+            }
+        // TradingView Widget END
+      // /SECTION 5
+
+      // SECTION 6
+      .s6-wrapper
+        section.section6
+          h4.section6__header.wow.fadeInUp Выберите свой ТОРГОВЫЙ СЧЕТ и начинайте зарабатывать уже сегодня!
+          h5.section6__subheader.wow.fadeInUp Торгуйте и зарабатывайте на лучших мировых активах
+
+          .section6__elems-wrapper
+
+            .section6-elem
+              .section6-elem__img.etl-icon.icon-layers.mbr-iconfont-extFeatures2
+              h6.section6-elem__name.wow.fadeInUp START
+              p.section6-elem__money.wow.fadeInUp 250-4.999
+              ul.section6-elem__basic-list
+                li.wow.fadeInUp Доходность - 50%
+                li.wow.fadeInUp MIN размер сделки - от $5
+                li.wow.fadeInUp Маржинальные требования - 100%
+              ul.section6-elem__bonus-list
+                li.wow.fadeInUp -
+                li.wow.fadeInUp -
+                li.wow.fadeInUp -
+                li.wow.fadeInUp -
+                li.wow.fadeInUp -
+              a.section6-elem__open-account-btn.wow.fadeInUp(href='registration.html') открыть счет
+
+            .section6-elem
+              .section6-elem__img.etl-icon.icon-layers.mbr-iconfont-extFeatures2
+              h6.section6-elem__name.wow.fadeInUp BUSINESS
+              p.section6-elem__money.wow.fadeInUp 5.000-9.999
+              ul.section6-elem__basic-list
+                li.wow.fadeInUp Доходность - 60%
+                li.wow.fadeInUp MIN размер сделки - от $5
+                li.wow.fadeInUp Маржинальные требования - 100%
+              ul.section6-elem__bonus-list
+                li.wow.fadeInUp Бонус - 20%
+                li.wow.fadeInUp Обзор рынка
+                li.wow.fadeInUp -
+                li.wow.fadeInUp -
+                li.wow.fadeInUp -
+              a.section6-elem__open-account-btn.wow.fadeInUp(href='registration.html') открыть счет
+
+            .section6-elem
+              .section6-elem__img.etl-icon.icon-layers.mbr-iconfont-extFeatures2
+              h6.section6-elem__name.wow.fadeInUp PREMIUM
+              p.section6-elem__money.wow.fadeInUp 10.000-49.999
+              ul.section6-elem__basic-list
+                li.wow.fadeInUp Доходность - 75%
+                li.wow.fadeInUp MIN размер сделки - от $5
+                li.wow.fadeInUp Маржинальные требования - 100%
+              ul.section6-elem__bonus-list
+                li.wow.fadeInUp Бонус - 30%
+                li.wow.fadeInUp Ускоренный вывод
+                li.wow.fadeInUp Торговля с экспертом
+                li.wow.fadeInUp Планирование бюджета
+                li.wow.fadeInUp -
+              a.section6-elem__open-account-btn.wow.fadeInUp(href='registration.html') открыть счет
+
+            .section6-elem
+              .section6-elem__img.etl-icon.icon-layers.mbr-iconfont-extFeatures2
+              h6.section6-elem__name.wow.fadeInUp ULTIMATE
+              p.section6-elem__money.wow.fadeInUp 50.000 +
+              ul.section6-elem__basic-list
+                li.wow.fadeInUp Доходность - 82%
+                li.wow.fadeInUp MIN размер сделки - от $5
+                li.wow.fadeInUp Маржинальные требования - 100%
+              ul.section6-elem__bonus-list
+                li.wow.fadeInUp Бонус - 40%
+                li.wow.fadeInUp Ускоренный вывод
+                li.wow.fadeInUp Торговля с экспертом
+                li.wow.fadeInUp Планирование бюджета
+                li.wow.fadeInUp Аналитик высшего уровня
+              a.section6-elem__open-account-btn.wow.fadeInUp(href='registration.html') открыть счет
+      // /SECTION 6
+
+      // SECTION 7
+      .s7-wrapper
+        section.section7
+          .section7__text-wrapper
+            h2.section7__header.wow.fadeInUp E-TokensTrade - готовы начать торговать?
+            h6.section7__subheader.wow.fadeInUp
+              strong Уведомление о рисках:
+              |
+              | Торговля финансовыми инструментами может привести не только к прибыли, но и к убыткам.
+          a.section7__btn.wow.fadeInUp(href='registration.html') начать торговать
+      // /SECTION 7
+
+      // SECTION 8
+      .s8-wrapper
+        section.section8
+          h1.section8__header.wow.fadeInUp Простая и удобная торговая платформа
+          h6.section8__subheader.wow.fadeInUp Обладая всем необходимым функционалом для профессионалов, наша торговая платформа остается понятной даже новичку.
+
+          .section8__content-wrapper
+            .section8__left-column
+
+              .section8__item.section8__item_r
+                .section8__item-img-wrapper.section8__item-img-wrapper_r.wow.fadeInUp
+                  span.etl-icon.icon-layers.mbr-iconfont-features6
+                .section8__item-text-wrapper.section8__item-text-wrapper_r.wow.fadeInUp
+                  h5.section8__item-header.wow.fadeInUp Платформа прибыльных инвестиций
+                  .section8__item-text.wow.fadeInUp Для получения прибыли нет необходимости покупать сам актив. Вам достаточно войти в сделку и сделать верный прогноз, вырастет цена или упадет. Размер изменения цены определять не нужно - только направление.
+
+              .section8__item.section8__item_r
+                .section8__item-img-wrapper.section8__item-img-wrapper_r.wow.fadeInUp
+                  span.etl-icon.icon-mobile.mbr-iconfont-features6
+                .section8__item-text-wrapper.section8__item-text-wrapper_r.wow.fadeInUp
+                  h5.section8__item-header.wow.fadeInUp Глобальная торговая платформа
+                  .section8__item-text.wow.fadeInUp Трейдеры из более чем 150 стран торгуют на платформе E-TokensTrade
+
+            .section8__central-column: img(src="assets/img/platform.jpg", alt="platform.jpg")
+            .section8__right-column
+
+              .section8__item
+                .section8__item-img-wrapper.wow.fadeInUp
+                  span.etl-icon.icon-mobile.mbr-iconfont-features6
+                .section8__item-text-wrapper
+                  h5.section8__item-header.wow.fadeInUp Платформа для любого устройства
+                  .section8__item-text.wow.fadeInUp С мобильной версией нашей платформы вы сможете зарабатывать в любое время и в любом месте. Держите руку на пульсе: мгновенная информация о закрытии сделок, акциях и турнирах.
+
+              .section8__item
+                .section8__item-img-wrapper.wow.fadeInUp
+                  span.etl-icon.icon-edit.mbr-iconfont-features6
+                .section8__item-text-wrapper
+                  h5.section8__item-header.wow.fadeInUp Служба поддержки
+                    br
+                    |
+                    | клиентов
+                  .section8__item-text.wow.fadeInUp Если у вас возникли вопросы относительно пополнения баланса или вывода средств, обязательно обратитесь в нашу службу поддержки клиентов Компании.
+      // /SECTION 8
+
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    script(src='assets/js/index.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

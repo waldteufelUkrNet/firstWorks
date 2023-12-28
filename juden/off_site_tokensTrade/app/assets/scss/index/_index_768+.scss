@@ -1,0 +1,60 @@
+@media only screen and (min-width: 768px) {
+	.section1 {
+	  padding-top             : 220px;
+	  font-size               : 3.2rem;
+	  &__header {
+	    font-size             : 6.0rem;
+	  }
+	  &__btns-holder {
+	    margin                : 40px 0 60px;
+	  }
+	  &__registry-btn,
+	  &__authorization-btn {
+	    width                 : 160px;
+	  }
+
+	  &__bitcoins-img {
+	    height                : 200px;
+	  }
+	}
+
+	.s6-wrapper {
+	  width                   : 100%;
+	}
+
+	.section6 {
+	  &__header {
+	    font-size             : 4.8rem;
+	  }
+	  &__elems-wrapper {
+	    grid-template-columns : repeat(2, 1fr);
+	  }
+  }
+	.section8 {
+	  &__header {
+	    font-family           : rb;
+	    font-size             : 4.8rem;
+	    padding-bottom        : 15px;
+	  }
+	  &__subheader {
+	    padding-bottom        : 20px;
+	  }
+	  &__item-img-wrapper {
+	    span {
+	      padding             : 30px 50px 0 20px;
+	    }
+	    &_r {
+	      order: 1;
+	      span {
+	        padding           : 30px 20px 0 50px;
+	      }
+	    }
+	  }
+	  &__central-column {
+	    img {
+	      width               : 410px;
+	    }
+	  }
+	}
+
+}

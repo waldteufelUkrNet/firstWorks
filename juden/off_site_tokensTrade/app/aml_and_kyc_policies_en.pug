@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Trade in your own way: currency pairs, stocks, indices, commodities and cryptocurrency.")
+
+    title AML and KYC Policy
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/linecons.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/simple_text_pages.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper(data-parallax="scroll" data-image-src="assets/img/simple_text_pages_bg.jpg")
+        section.section1
+          .section1__headers-wrapper
+            h1.wow.fadeInUp.section1__header AML AND KYC POLICY
+            h4.wow.fadeInUp.section1__subheader Last Edition: 21.02.2019
+          img.wow.fadeInUp.section1__logo(src="assets/img/veryBigLogo.png", alt="veryBigLogo.png")
+      // /SECTION 1
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text POLICY ON AGAINST MONEY LEGALIZATION (AML) AND "KNOW YOUR CLIENT" (KYC) POLICY
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 1. The AML and KYC policy applies to https://etokenstrade.com (E-Tokens Trade) and its partners and Customers (hereinafter referred to as the “Company”) and has the goal of preventing and actively preventing money laundering and any other activity facilitating money laundering or financing of terrorist or criminal activities. The company requires its managers, employees and branches to follow the principles of this Policy in order to prevent the use of their services in order to launder money.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 2. Within the framework of this Policy, as a rule, actions are aimed at hiding or distorting the true origin of funds obtained by criminal means in order to launder illicit proceeds.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 3. Usually money laundering occurs in three stages. Initially, at the “placement” stage, cash enters the financial system, where money received as a result of criminal acts is converted into cash instruments, such as money transfers, traveler's checks, or deposited in accounts in financial institutions. At the “stratification” stage, funds are transferred or transferred to other accounts or other financial institutions for further separation of money from their criminal origin. At the “integration” stage, money is returned to the economy and is used to purchase property, finance business or criminal activity. Funding for terrorism may not use funds derived from criminal activities; most likely it is an attempt to hide the origin or intended use of funds that will later be used for criminal purposes.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 4. The client assumes obligations:
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text - comply with legal norms, including international ones, aimed at combating illegal trade, financial fraud, money laundering and legalization of illegally obtained funds;
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text - exclude direct or indirect complicity in illegal financial activities and any other illegal operations using the Site.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 5. The Client guarantees legal origin, legal ownership and the right to use the funds transferred by him to the Company's Accounts. In the event of suspicious or fraudulent cash deposits, including the use of stolen credit cards and / or any other fraudulent activity (including any refunds or cancellation of payments), the Company reserves the right to block your account and cancel any payments made, as well as investigate any doubtful nature operations on the Client's Account, as a result of which they suspend such operations until the reasons for their occurrence are clarified and the investigation is completed.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 6. During the investigation, the Company reserves the right to request from the Client copies of the identity card and bank cards used to replenish the Account, payment, as well as other documents confirming the legal possession and legal origin of the funds. The Client is prohibited from using the services and / or software for any illegal or fraudulent activity, or for any illegal or fraudulent transaction (including money laundering) in accordance with the laws of the country of the Client’s jurisdiction. The refusal of the Company to conduct suspicious operations shall not be grounds for the emergence of civil liability of the Company for failure to fulfill obligations to the Client.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 7. Each division of the Company must be guided by AML and KYC policies, compiled in accordance with the requirements of local legislation.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 8. All personal and service documentation will be stored for a minimum period of time set by local law.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text 9. ВAll new employees are required to undergo training on the subject of AML and KYC. Existing employees are trained annually. Participation in additional training programs is mandatory for all employees related to AML and KYC.
+      // /SECTION 2
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    //- script(src='assets/js/aml_and_kyc_policies.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

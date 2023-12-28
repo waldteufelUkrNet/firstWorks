@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/depositPopup.css">
+    <script defer src="assets/js/depositPopup.js"></script>
+    <script defer src="assets/js/test.js"></script>
+  </head>
+  <body>
+    <div id="test-area">
+      <div id="settings-area">
+        <h1>SETTINGS</h1>
+        <form style="border: 1px solid lightgrey; width:165px;">
+          <ul style="margin:20px 0">
+            <li>
+              <label>
+                <input type="checkbox" name="paySys0" value="1" checked><span>Терминал № 1</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys1" value="2" checked><span>Best Change</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys2" value="3" checked><span>Interkassa</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys3" value="4"><span>Терминал №2</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys4" value="5"><span>Терминал №3</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys5" value="6"><span>Safe Currency</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys6" value="7"><span>Терминал №4</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys7" value="8"><span>Терминал №5</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="paySys8" value="9"><span>Терминал №6</span>
+              </label>
+            </li>
+          </ul>
+          <button id="changeCF" type="button">change configuration file</button>
+          <p style="color:red">save/resave file into directory "/assets/config/config.txt"</p>
+        </form>
+        <button id="showPopup" type="button" style="background-color: green; color: white; height: 30px; margin-top: 30px; width: 165px">show popup</button>
+      </div>
+      <div id="settings-area2">
+        <h1>AMAUNT ANSWER SETTINGS</h1>
+        <form style="border: 1px solid lightgrey;">
+          <ul style="margin:20px 0">
+            <li>
+              <label>
+                <input type="radio" name="answer" value="ok" checked><span>ok</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="answer" value="Необходимо не меньше 5000 тугриков"><span>Необходимо не меньше 5000 тугриков</span>
+              </label>
+            </li>
+          </ul>
+          <button id="changeAA" type="button">change configuration file</button>
+          <p style="color:red">save/resave file into directory "/assets/config/amountAnswer.txt"</p>
+        </form>
+      </div>
+      <div id="result-area">
+        <h1>RESULT</h1>
+        <pre id="result-field" style="border: 1px solid lightgrey; min-height: 30px"></pre>
+      </div>
+    </div>
+    <div id="popups-wrapper">
+      <!-- make deposit-->
+      <div class="depositPopup">
+        <div class="depositPopup__head">
+          <h5 class="depositPopup__header">Сделать депозит</h5>
+          <button class="depositPopup__close-btn">×</button>
+        </div>
+        <div class="depositPopup__body">
+          <div class="depositPopup__tab-wrapper">
+            <div class="depositPopup__tab-header depositPopup__tab-header_active" data-terminal="1"><img class="depositPopup__terminal-img" src="assets/img/best.png" alt="logo"></div>
+            <div class="depositPopup__tab-header" data-terminal="2"><span class="depositPopup__terminal-name">Терминал №2</span></div>
+          </div>
+          <div class="depositPopup__form-wrapper"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

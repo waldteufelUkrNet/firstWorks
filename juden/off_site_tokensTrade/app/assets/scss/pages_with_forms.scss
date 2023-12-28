@@ -1,0 +1,60 @@
+// @import "variables";
+@import "fonts";
+@import "style_general";
+
+//BEM-blocks
+@import "../BEM-blocks/header/header.scss";
+@import "../BEM-blocks/footer/footer.scss";
+@import "../BEM-blocks/language_switcher/language_switcher.scss";
+@import "../BEM-blocks/payment_systems/payment_systems.scss";
+
+@media only screen and (min-width: 320px) {
+  .s1-wrapper{
+    width                   : 100%;
+    background-color        : rgba(255,255,255,.3);
+  }
+  .section1 {
+    max-width               : 1920px;
+    margin                  : 0 auto;
+    height                  : 450px;
+    display                 : flex;
+    justify-content         : center;
+    align-items             : center;
+    flex-wrap               : wrap;
+    padding-top             : 70px;
+    &__headers-wrapper {
+      text-align            : center;
+      width                 : 100%;
+    }
+    &__header {
+      font-family           : rb;
+      font-size             : 3.2rem;
+      color                 : white;
+      padding-bottom        : 40px;
+    }
+    &__subheader {
+      font-family           : rsr;
+      font-size             : 22px;
+      font-weight           : 900;
+      color                 : #fac51c;
+    }
+    &__icon-wrapper {
+      padding               : 15px;
+      width                 : 100%;
+      text-align            : center;
+    }
+    span {
+      font-size             : 100px;
+      color                 : rgb(250, 197, 28);
+    }
+  }
+  // .s2-wrapper{
+  //   width                   : 100%;
+  // }
+  // .section2 {
+  //   max-width               : 1100px;
+  //   margin                  : 0 auto;
+  // }
+}
+
+@import "pages_with_forms/_pages_with_forms_992+.scss";

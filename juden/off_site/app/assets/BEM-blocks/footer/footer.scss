@@ -1,0 +1,131 @@
+@media only screen and (min-width: 320px) {
+	.footer-wrapper {
+		background-color: black;
+		width: 100%;
+		overflow: hidden;
+	}
+	.footer {
+		max-width: 300px;
+		margin: 0 auto;
+		padding: 15px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+		border-bottom: 1px solid silver;
+		overflow: hidden;
+		&__logo-img {
+			width: 50%;
+			display: block;
+			margin: 0 auto;
+		}
+		&__header {
+			color: white;
+			font-family: rcb;
+			font-size: 18px;
+			padding-bottom: 6px;
+			text-align: center;
+		}
+		&__text {
+			color: white;
+			font-family: rcl;
+			font-size: 14px;
+			text-align: justify;
+			line-height: 1.4em;
+		}
+		&__list-link {
+			color: #34965b;
+			font-family: rcl;
+			font-size: 14px;
+			display: block;
+			text-align: center;
+			line-height: 1.4em;
+			&:hover {
+				color: #127439;
+			}
+		}
+	}
+	.copyright-wrapper {
+		background-color: black;
+		width: 100%;
+	}
+	.copyright {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	  &__span {
+	  	color: white;
+	  	font-family: rcl;
+	  	font-size: 14px;
+	  }
+	  &__social {
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  	svg{
+	  		color: grey;
+	  		font-size: 20px;
+	  		transition: color .5s;
+	  		&:hover {
+	  			color: lightskyblue;
+	  		}
+	  	}
+	  }
+	  &__list-item {
+	  	display: inline-block;
+	  	margin: 0 10px;
+	  }
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.footer {
+		max-width: 768px;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+		&__logo-img {
+			width: 100%;
+			display: inline;
+			margin: none;
+		}
+		&__header {
+			padding-bottom: 20px;
+			text-align: left;
+			font-size: 20px;
+		}
+		&__text {
+			font-size: 16px;
+		}
+		&__list-link {
+			font-size: 14px;
+			text-align: left;
+		}
+	}
+	.copyright {
+	  &__span {
+	  	font-size: 16px;
+	  }
+	  &__social {
+	  	svg{
+	  		color: grey;
+	  		font-size: 30px;
+	  	}
+	  }
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.footer {
+		max-width: 768px;
+		grid-template-columns: 2fr 3fr 2fr 2fr;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.footer {
+		max-width: 1200px;
+		grid-template-columns: 2fr 3fr 2fr 2fr;
+	}
+}

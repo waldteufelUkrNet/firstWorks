@@ -1,0 +1,87 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Торгуй по-своему: валютные пары, акции, индексы, товары и криптовалюта.")
+
+    title Политика конфиденциальности
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/linecons.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/simple_text_pages.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper(data-parallax="scroll" data-image-src="assets/img/simple_text_pages_bg.jpg")
+        section.section1
+          .section1__headers-wrapper
+            h1.wow.fadeInUp.section1__header ПОЛИТИКА
+            h1.wow.fadeInUp.section1__header КОНФИДЕНЦИАЛЬНОСТИ
+            h4.wow.fadeInUp.section1__subheader Последняя редакция: 21.02.2019г.
+          img.wow.fadeInUp.section1__logo(src="assets/img/veryBigLogo.png", alt="veryBigLogo.png")
+      // /SECTION 1
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          p.wow.fadeInUp.section2__text https://etokenstrade.com (hereinafter referred to as etokenstrade.com or the Company), does everything possible to ensure the privacy and security of its customers, both when interacting with the company and subsequently, during the maximum period achievable for the company.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text By registering at http://etokenstrade.com, customers confirm their willingness to provide the company with certain personal information that the company uses to confirm the identities of customers and ensure the security of their deposits and trading accounts. This information is collected in accordance with our mandatory verification procedures designed to prevent international money laundering transactions, and to ensure the security of our clients ’trading activities.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text Our clients are committed to providing us with true, current and accurate information about themselves. In addition, they are required to declare categorically that they register and trade on their own behalf, do not seek, at any time to act in a manner that may be considered fraudulent, and also do not intend to impersonate others in any way. were goals.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text The data collection procedure https://etokenstrade.com includes the collection of freely disclosed customer information as provided by the company, in addition to placing cookies in order to collect data on how the customer interacts with the Company's website. These tools for collecting customer information are designed to ensure customer safety; All data collected by the company is provided only to individuals within the company who are involved in verifying customer account information with the express purpose of ensuring customer privacy and security.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text The company will never disclose any personal information (or otherwise confidential) of our current and former customers to third parties without the express written consent of our customers, except in such specific cases where the disclosure of information is required by law, or is necessary for other reasons to comply. verification of the identity of the client in order to protect his account and personal information.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text By registering at https://etokenstrade.com and voluntarily interacting with the Company's products, customers confirm their consent to use, in whole or in part, the information that they (customers) provide in relation to their trading accounts at https://etokenstrade.com , trading with a company or through a company, performed through these accounts. All company-customer interactions will be maintained by the company for recording and for use in case of disagreement between customers and the company.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text Related services and offers that have links to this website, including third-party sites, have their own privacy policy statements, which can be viewed by clicking on the corresponding link on each relevant website. Online merchants and others involved in https://etokenstrade.com services are encouraged to participate in privacy policy initiatives in this industry, as well as to be responsible for protecting the personal data of customers. However, since we do not have direct control over the policies or activities of the participating merchants and other third parties, we are not responsible for the privacy policies or content of such sites. We strongly recommend that you always familiarize yourself with the privacy policies of merchants and other third parties, before providing them with any personal information or conducting any transactions with such parties.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text The company is doing everything possible to ensure the confidentiality of the personal information of its customers, including through data protection procedures designed to ensure the confidentiality of customers. The company guarantees a regular update of its data protection policy to ensure the constant protection of confidential customer information.
+          p.wow.fadeInUp.section2__text ВTime to time The company can contact its customers by phone or e-mail and offer them more detailed information on trading in binary options and in financial markets. In addition, in some cases, the company may seek to contact customers, by phone or email, to inform them of unique promotional offers that the Company presents to customers. Clients agree to such contacts when they agree to the Terms and Conditions of Use when registering at https://etokenstrade.com. Any client has the right at any time to refuse from further contacts with the Company - for this you just need to contact the Company by phone or email and make a request to stop further contacts on behalf of the company.
+          p.wow.fadeInUp.section2__text-headers CONTACT INFORMATION
+          p.wow.fadeInUp.section2__text If you have any questions about the Policy, please contact us via customer support email support@etokenstrade.com
+
+      // /SECTION 2
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    //- script(src='assets/js/privacy_policy.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

@@ -1,0 +1,78 @@
+/* ↓↓↓ for 1330px and more ↓↓↓ */
+@media only screen and (min-width: 1330px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.header-wrapper {
+		.big-menu-image-holder {
+		}
+		.header {
+			padding: 0 30px;
+			margin: 0 auto;
+
+			/* ↓↓↓ NAVIGATION ↓↓↓ */
+			.navigation {
+				.nav-list {
+					top: 324px;
+				}
+			}
+			/* ↑↑↑ NAVIGATION ↑↑↑ */
+		}
+	}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.s1-wrapper {
+			.section1 {
+				margin: 103px auto 0;
+				padding: 0;
+				grid-template-columns: 670px 670px;
+				.section-item-1 {
+					.section1__header {
+						font-size: 60px;
+						line-height: 73px;
+						padding: 69px 60px 0 0;
+					}
+					.section-item-1__line {
+						max-width: 433px;
+						top: 184px;
+						left: 54px;
+					}
+				}
+				.section-item-2 {
+					.parallax-container {
+						max-width: 632px;
+						height: 393px;
+						left: 27px;
+						.parallax-item {
+							max-width: 632px;
+							top: 0px;
+						}
+						.desctop-video {
+							width: 406px;
+							height: 268px;
+							top: 82px;
+							left: 101px;
+						}
+					}
+				}
+				.btn {
+					width: 640px;
+					&:after {
+						width: 640px;
+						height: 255px;
+					}
+				}
+				.btn-2 {
+					margin-left: 30px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

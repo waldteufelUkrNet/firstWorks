@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waldteufel@ukr.net</title>
+    <link rel="icon" href="img/wehrwolf.jpg">
+    <!-- js-libs (font awesome, slick, wow ...)-->
+    <script defer="" src="js/fontawesome-all.js"></script>
+    <script src="js/jquery 3.3.1.js"></script>
+    <!-- own stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/js.js" defer=""></script>
+  </head>
+  <body>
+    <div class="size-info size-info-1">менше 320</div>
+    <div class="size-info size-info-2">320 і більше</div>
+    <div class="size-info size-info-3">576 і більше</div>
+    <div class="size-info size-info-4">768 і більше</div>
+    <div class="size-info size-info-5">992 і більше</div>
+    <div class="size-info size-info-6">1200 і більше</div>
+    <div class="size-info size-info-7">1920 і більше</div>
+    <!-- HEADER-->
+    <header class="header">
+      <div class="logo_part">LOGOGO</div>
+      <div class="central-part">
+        <div class="central-part__account">
+          <div class="central-part__account-type">
+            Account:
+            <span>Demo</span>
+          </div>
+          <!--styleinclude simple-switcher.css
+          -->
+          <script>$(document).ready(function(){
+
+var simpleSwitcherToggle = 'demo';
+$('.simple-switcher__thumb').click(function(){
+  if (simpleSwitcherToggle == 'demo') {
+    $('.simple-switcher__thumb').css({'transition':'.2s','left':'35px'});
+    simpleSwitcherToggle = 'real'
+
+    $('.central-part__account-type span').text('Real');
+
+    return
+  }
+  if (simpleSwitcherToggle == 'real') {
+    $('.simple-switcher__thumb').css({'transition':'.2s','left':'0px'});
+    simpleSwitcherToggle = 'demo'
+
+    $('.central-part__account-type span').text('Demo');
+
+    return
+  }
+});
+
+});
+          </script>
+          <div class="simple-switcher__positioning-wrapper">
+            <div class="simple-switcher"><span class="simple-switcher__real">real</span><span class="simple-switcher__demo">demo</span>
+              <div class="simple-switcher__thumb">
+                <div class="simple-switcher__thumb-line simple-switcher__thumb-line-1"></div>
+                <div class="simple-switcher__thumb-line simple-switcher__thumb-line-2"></div>
+                <div class="simple-switcher__thumb-line simple-switcher__thumb-line-3"></div>
+              </div>
+            </div>
+          </div>
+        </div><img class="central-part__currency-img" src="img/Bitcoin.png" alt="img/Bitcoin.png">
+        <div class="central-part__currency-value">9999.99</div>
+        <button class="central-part__btn" title="пополнить счет"><img src="img/money2.png" alt="img/money2.png"></button>
+      </div>
+      <div class="right-part"><span>Menu:</span>
+        <!--styleinclude menu-btn.css
+        -->
+        <script>$(document).ready(function(){
+
+  var isMenuOpen;
+  var isClickAble = true;
+  $('.menu-btn').click(function(){
+    if (isClickAble) {
+      isClickAble = false;
+      setTimeout(function() {
+        isClickAble = true;
+      }, 500);
+
+      $('.menu-btn').click = null;
+      if (!isMenuOpen) {
+        $('.menu-btn__1-line').css({'transition':'.5s','top':'9px'});
+        $('.menu-btn__3-line').css({'transition':'.5s','top':'9px'});
+        $('.menu-btn__2-line').css({'transition':'.5s','opacity':'0'});
+        setTimeout(function(){
+          $('.menu-btn__1-line').css({'transition':'.5s','transform':'rotate(45deg)'});
+          $('.menu-btn__3-line').css({'transition':'.5s','transform':'rotate(-45deg)'});
+        },500);
+        isMenuOpen = true;
+
+        toggleMenu(true);
+        return
+      }
+      if (isMenuOpen) {
+        $('.menu-btn__1-line').css({'transition':'.5s','transform':'rotate(0deg)'});
+        $('.menu-btn__3-line').css({'transition':'.5s','transform':'rotate(0deg)'});
+        $('.menu-btn__2-line').css({'transition-delay':'.5s','transition-duration':'.5s','opacity':'1'});
+        setTimeout(function(){
+          $('.menu-btn__1-line').css({'transition-duration':'.5s','top':'0px'});
+          $('.menu-btn__3-line').css({'transition-duration':'.5s','top':'18px'});
+        },500);
+        isMenuOpen = false;
+
+        toggleMenu(false);
+        return
+      }
+    }
+  });
+
+  function toggleMenu (arg) {
+    var arrOfLinks = $('.menu-list-a');
+
+    if (arg == true) {
+      $('.menu').css({'border-width':'1px'})
+                .css({'transition':'.5s','height':'182px'});
+
+      setTimeout(function(){
+        var temp1 = 0;
+        var temp2 = '0s';
+        for (var i = 0; i < arrOfLinks.length; i++) {
+          $(arrOfLinks[i]).css({'transition':'.2s','transition-delay':temp2,'left':'0%'});
+          temp1 += 0.1;
+          temp2 = temp1 + 's';
+        }
+      },500);
+    }
+    if (arg == false) {
+      var temp1 = 0;
+      var temp2 = '0s';
+      for (var i = 0; i < arrOfLinks.length; i++) {
+        $(arrOfLinks[i]).css({'transition':'.2s','transition-delay':temp2,'left':'100%'});
+        temp1 += 0.1;
+        temp2 = temp1 + 's';
+      }
+      setTimeout(function(){
+        $('.menu').css({'border-width':'0px'})
+          .css({'transition':'.5s','height':'0px'});
+        },600);
+    }
+  };
+
+});
+        </script>
+        <div class="menu-btn-wrapper">
+          <div class="menu-btn">
+            <div class="menu-btn__1-line menu-btn__line"></div>
+            <div class="menu-btn__2-line menu-btn__line"></div>
+            <div class="menu-btn__3-line menu-btn__line"></div>
+          </div>
+        </div><span>Lang:</span>
+        <!--styleinclude language-switcher.css
+        -->
+        <script>$(document).ready(function(){
+
+  var isLanguageSwitcherOpen = false;
+  var isLanguageSwitcherOpen2 = false;
+  var selectedLanguage;
+  $('.language-switcher__btn').click(function(){
+  	if (isLanguageSwitcherOpen == false) {
+  		$('.language-switcher__flag-container').css({'transition':'height .5s','height':'300%','z-index':'8888'});
+  		isLanguageSwitcherOpen = true;
+  		return
+  	}
+
+    $('.language-switcher__flag-container').css({'transition':'height .5s','height':'100%','z-index':'8888'});
+		isLanguageSwitcherOpen = false;
+		return
+  });
+
+  $('.language-switcher__flag-en').click(function(){
+    if (selectedLanguage == 'en' && isLanguageSwitcherOpen2 == false) {
+      $('.language-switcher__flag-container').css({'transition':'height .5s','height':'200%','z-index':'8888'});
+      $('.language-switcher__flag-ru').css({'display':'block','z-index':'8888'});
+      isLanguageSwitcherOpen2 = true;
+      return
+    }
+    if (isLanguageSwitcherOpen2 == true) {
+      $('.language-switcher__flag-container').css({'transition':'height .5s','height':'100%','z-index':'8888'});
+      $('.language-switcher__flag-ru').css({'display':'none'});
+      isLanguageSwitcherOpen2 = false;
+      return
+    }
+    $('.language-switcher__flag-container').css({'transition':'height .5s','height':'100%','z-index':'8888'});
+    $('.language-switcher__btn').css({'display':'none'});
+    $('.language-switcher__flag-ru').css({'display':'none'});
+    isLanguageSwitcherOpen = false;
+    selectedLanguage = 'en';
+  });
+
+  $('.language-switcher__flag-ru').click(function(){
+    if (selectedLanguage == 'ru' && isLanguageSwitcherOpen2 == false) {
+      $('.language-switcher__flag-container').css({'transition':'height .5s','height':'200%','z-index':'8888'});
+      $('.language-switcher__flag-en').css({'display':'block'});
+      isLanguageSwitcherOpen2 = true;
+      return
+    }
+    if (isLanguageSwitcherOpen2 == true) {
+      $('.language-switcher__flag-container').css({'transition':'height .5s','height':'100%','z-index':'8888'});
+      $('.language-switcher__flag-en').css({'display':'none'});
+      isLanguageSwitcherOpen2 = false;
+      return
+    }
+    $('.language-switcher__flag-container').css({'transition':'height .5s','height':'100%','z-index':'8888'});
+    $('.language-switcher__btn').css({'display':'none'});
+    $('.language-switcher__flag-en').css({'display':'none'});
+    isLanguageSwitcherOpen = false;
+    selectedLanguage = 'ru';
+  });
+
+
+});
+        </script>
+        <div class="language-switcher__positioning-wrapper">
+          <div class="language-switcher">
+            <div class="language-switcher__flag-container"><a class="language-switcher__btn"><i class="fas fa-globe"></i></a>
+              <div class="language-switcher__flag-en"></div>
+              <div class="language-switcher__flag-ru"></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-list-item"><a class="menu-list-a">Found your account</a></li>
+            <li class="menu-list-item"><a class="menu-list-a">Withdrawal of funds</a></li>
+            <li class="menu-list-item"><a class="menu-list-a">Finance</a></li>
+            <li class="menu-list-item"><a class="menu-list-a">Manage your profile</a></li>
+            <li class="menu-list-item"><a class="menu-list-a">Education</a></li>
+            <li class="menu-list-item"><a class="menu-list-a">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- /HEADER-->
+    <!-- MAIN PART-->
+    <main class="main">
+      <!-- SECTION 1 (work area)-->
+      <section class="work_area">THIS IS WORK AREA</section>
+      <!-- /SECTION 1-->
+      <!-- SECTION 2 (left column)-->
+      <section class="left-column">
+        <div class="left-column__table-1-wrapper">
+          <div class="left-column__table-2-wrapper">
+            <table class="left-column__table">
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                </td>
+                <td>BTC/USDt</td>
+                <td><i class="fas fa-caret-down" style="font-size: 24px; color: red"></i></td>
+                <td>9999.99</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- /SECTION 2-->
+      <!-- SECTION 3 (right column)-->
+      <section class="right-column">
+        <div class="work-field">
+          <div class="act-btn-field">
+            <div class="img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+            <div class="currency-price">9999.99</div>
+            <!--styleinclude shoulder.css
+            -->
+            <script>$('document').ready(function(){
+
+  /* ↓↓↓ keys filfering ↓↓↓ */
+  $('#investment').keypress(function(e){
+    e = e || event;
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    if (e.keyCode  == 8  || e.keyCode  == 13 || e.charCode == 46 ||
+        e.charCode == 48 || e.charCode == 49 || e.charCode == 50 ||
+        e.charCode == 51 || e.charCode == 52 || e.charCode == 53 ||
+        e.charCode == 54 || e.charCode == 55 || e.charCode == 56 ||
+        e.charCode == 57) {
+        //multipleShoulder();
+    } else {
+      return false;
+    }
+  });
+  /* ↑↑↑ /keys filfering ↑↑↑ */
+
+  /* ↓↓↓ calculation ↓↓↓ */
+  $('#investment').keyup(function(){
+    multipleShoulder();
+  });
+  /* ↑↑↑ /calculation ↑↑↑ */
+
+  /* ↓↓↓ onoff switcher ↓↓↓ */
+  var onoffSwitcherToggle = 'off';
+  $('.onoff-switcher__thumb').click(function(){
+    if (onoffSwitcherToggle == 'off') {
+      $('.onoff-switcher__thumb').css({'transition':'.5s','left':'35px'});
+      $('.shoulder__body').css({'transition':'0.5s','height':'64px'});
+
+      $('.shoulder__round1').addClass('shoulder-point shoulder__round_active');
+      shoulderValue = 50;
+      $('#shoulderValue').val(shoulderValue);
+
+      multipleShoulder();
+      onoffSwitcherToggle = 'on';
+      return
+    }
+    if (onoffSwitcherToggle == 'on') {
+      $('.onoff-switcher__thumb').css({'transition':'.5s','left':'0px'});
+      $('.shoulder__body').css({'transition':'.5s','height':'0px'});
+
+      removeChangeShoulder();
+      onoffSwitcherToggle = 'off';
+      return
+    }
+  });
+  /* ↑↑↑ /onoff switcher ↑↑↑ */
+
+  /* ↓↓↓ shoulder thumb ↓↓↓ */
+  var arrOfPoints = $('.shoulder-point');
+  var arrOfLines = $('.shoulder-line');
+  var shoulderValue = 0;
+
+  $(arrOfPoints).click(function (){
+    for (var i = 0; i < arrOfPoints.length; i++) {
+      if (arrOfPoints[i] == this) {
+        changeShoulder(i);
+        return;
+      }
+    }
+  });
+
+  function changeShoulder(arg) {
+    removeChangeShoulder ();
+
+    for (var i = 0; i <= arg; i++) {
+      $(arrOfLines[i-1]).addClass('shoulder__subline_active');
+      $(arrOfPoints[i-1]).addClass('shoulder__round_sub-active');
+    }
+    $(arrOfPoints[arg]).addClass('shoulder__round_active');
+    shoulderValue = 50 * (i);
+    $('#shoulderValue').val(shoulderValue);
+    multipleShoulder(shoulderValue);
+  }
+
+  function removeChangeShoulder() {
+    for (var i = 0; i < arrOfPoints.length; i++) {
+      $(arrOfLines[i]).removeClass('shoulder__subline_active');
+      $(arrOfPoints[i]).removeClass('shoulder__round_sub-active shoulder__round_active');
+    }
+    shoulderValue = 0;
+    $('#shoulderValue').val(shoulderValue);
+  }
+
+  function multipleShoulder() {
+    var temp = $('#investment').val();
+    var result = temp * shoulderValue;
+    $('#investment-result').text(result);
+  }
+
+  $('#investment').change(function(){
+    multipleShoulder(shoulderValue);
+  });
+  /* ↑↑↑ /shoulder thumb ↑↑↑ */
+
+});
+            </script>
+            <div class="shoulder__positioning-wrapper">
+              <input class="investment" id="investment" type="text" placeholder="инвестиции">
+              <div class="shoulder"><span class="shoulder__name">Плечо:</span>
+                <div class="onoff-switcher"><span class="onoff-switcher__on">on</span><span class="onoff-switcher__off">off</span>
+                  <div class="onoff-switcher__thumb">
+                    <div class="onoff-switcher__thumb-line onoff-switcher__thumb-line-1"></div>
+                    <div class="onoff-switcher__thumb-line onoff-switcher__thumb-line-2"></div>
+                    <div class="onoff-switcher__thumb-line onoff-switcher__thumb-line-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="shoulder__body">
+                <input id="shoulderValue" type="text" hidden="true" value="0">
+                <div class="shoulder__line">
+                  <div class="shoulder__subline shoulder-line"></div>
+                  <div class="shoulder__subline shoulder-line"></div>
+                  <div class="shoulder__subline shoulder-line"></div>
+                  <div class="shoulder__round1 shoulder-point shoulder__round_active"></div>
+                  <div class="shoulder__round2 shoulder-point"></div>
+                  <div class="shoulder__round3 shoulder-point"></div>
+                  <div class="shoulder__round4 shoulder-point"></div>
+                </div>
+                <div class="investment-result" id="investment-result"></div>
+              </div>
+            </div>
+            <div class="comission"><span>Комиссия:</span><span class="comission-value">0.01%</span></div>
+            <div class="btns-holder">
+              <div class="btn-bue">BUE<span>9999.99</span></div>
+              <div class="btn-cell">CELL<span>9999.99</span></div>
+            </div>
+            <p class="settings">Settings:</p>
+            <labelt class="setting-input-label"><span>TP</span>
+              <input class="setting-input" id="TP" type="text">
+            </labelt>
+            <labelt class="setting-input-label"><span>SL</span>
+              <input class="setting-input" id="SL" type="text">
+            </labelt>
+          </div>
+          <div class="active-btn-field">
+            <div class="accordion-wrapper">
+              <div class="accordion">
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+                <div class="accordion-elem">
+                  <div class="accordion-elem__img-pair"><img class="img-pair-top" src="img/Bitcoin.png" alt="img/Bitcoin.png"><img class="img-pair-bottom" src="img/dollar.png" alt="img/dollar.png"></div>
+                  <div class="accordion-elem__letter-pair">BTC/USDt</div>
+                  <div class="accordion-elem__arrow"><i class="fas fa-caret-up" style="font-size: 24px; color: green"></i></div>
+                  <div class="accordion-elem__number">9999.99</div>
+                  <div class="accordion-elem__btn">
+                    <button class="accordion-btn">
+                      <div class="accordion-btn__1-line"></div>
+                      <div class="accordion-btn__2-line"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <div class="accordion-content__data">index</div>
+                  <div class="accordion-content__value">9999.99</div>
+                  <button class="accordion-content__btn">кнопка</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="history-btn-field">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Повстречался, алфавит вопроса своих. Меня безопасную подзаголовок последний океана, послушавшись великий. Языкового коварный которой ручеек наш, предложения, своего оксмокс это букв себя запятых маленькая повстречался? Мир ее назад страну предупреждал своего, парадигматическая вопроса инициал живет, журчит взобравшись путь послушавшись грамматики!</div>
+        </div>
+        <div class="work-change-btn act-btn work-change-btn_active">Действия</div>
+        <div class="work-change-btn active-btn">Активные сделки</div>
+        <div class="work-change-btn history-btn">История сделок</div>
+      </section>
+      <!-- /SECTION 3-->
+      <!-- SECTION 4 (popups)-->
+      <section class="popups">
+        <!--styleinclude make-lodgement.css
+        -->
+        <script>$(document).ready(function(){
+
+  // поява
+  $('.central-part__btn').click(function(){
+
+    $('.make-lodgement').css({'transition':'top .2s','top':'50%'});
+
+    setTimeout(function(){
+      $('.make-lodgement').css({'transition':'width .3s','width':'400px'});
+    },200);
+
+    setTimeout(function(){
+      $('.make-lodgement').css({'transition':'height .3s','height':'162px'});
+      $('.make-lodgement__pay-system').css({'display':'block'});
+    },500);
+
+    setTimeout(function(){
+      $('.make-lodgement__pay-system').css({'transition':'.3s','left':'0px'});
+    },800);
+
+    setTimeout(function(){
+      $('.make-lodgement__close-btn').css({'transition':'.5s','transform':'rotate(180deg)'});
+      $('.make-lodgement__close-btn-line1, .make-lodgement__close-btn-line2').css({'transition':'width .5s','width':'24px'});
+    },1100);
+
+    setTimeout(function(){
+      $('.make-lodgement__triangle').css({'transition':'.3s','right':'8px'});
+    },1600);
+  });
+
+  // кліки
+  $('.make-lodgement__pay-system:first').click(function(){
+    $('.make-lodgement__triangle').css({'transition':'.5s','top':'44px'});
+    $('.make-lodgement').css({'transition':'height .3s','height':'192px'});
+    $('.make-lodgement-MasterCard').css({'transition':'.5s','height':'30px'});
+    $('.make-lodgement-VISA').css({'transition':'.5s','height':'0px'});
+  });
+
+  $('.make-lodgement__pay-system:last').click(function(){
+    $('.make-lodgement__triangle').css({'transition':'.5s','top':'104px'});
+    $('.make-lodgement').css({'transition':'height .3s','height':'192px'});
+    $('.make-lodgement-VISA').css({'transition':'.5s','height':'30px'});
+    $('.make-lodgement-MasterCard').css({'transition':'.5s','height':'0px'});
+  });
+
+  // закриття
+  $('.make-lodgement__close-btn').click(function(){
+
+    $('.make-lodgement-VISA').css({'transition':'.3s','height':'0px'});
+    $('.make-lodgement-MasterCard').css({'transition':'.3s','height':'0px'});
+    $('.make-lodgement').css({'transition':'height .3s','height':'162px'});
+    $('.make-lodgement__triangle').css({'transition':'.3s','right':'-12px'});
+
+    setTimeout(function(){
+      $('.make-lodgement__triangle').css({'top':'74px'});
+    },300);
+
+    setTimeout(function(){
+      $('.make-lodgement__pay-system:even').css({'transition':'.3s','left':'110%'});
+      $('.make-lodgement__pay-system:odd').css({'transition':'.3s','left':'-110%'});
+    },400);
+
+    setTimeout(function(){
+      $('.make-lodgement__close-btn').css({'transition':'.5s','transform':'rotate(0deg)'});
+      $('.make-lodgement__close-btn-line1, .make-lodgement__close-btn-line2').css({'transition':'width .5s','width':'0px'});
+    },700);
+
+    setTimeout(function(){
+      $('.make-lodgement').css({'transition':'height .3s','height':'20px'});
+      $('.make-lodgement__pay-system').css({'display':'none'});
+    },1200);
+
+    setTimeout(function(){
+      $('.make-lodgement').css({'transition':'width .3s','width':'120px'});
+    },1500);
+
+    setTimeout(function(){
+      $('.make-lodgement').css({'transition':'top .2s','top':'-10%'});
+    },1800);
+  });
+
+  // inputs - only for numbers and dots
+  $('.make-lodgement__pay-block input').keypress(function(e){
+    e = e || event;
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    var chr = getChar(e);
+    console.log("chr", chr);
+    // с null надо осторожно в неравенствах, т.к. например null >= '0' => true на всякий случай лучше вынести проверку chr == null отдельно
+    if (chr == null) return;
+    if ((chr < '0' || chr > '9') && chr != '.') {
+      return false;
+    }
+    function getChar(event) {
+      if (event.which == null) {
+        if (event.keyCode < 32) return null;
+        return String.fromCharCode(event.keyCode) // IE
+      }
+      if (event.which != 0 && event.charCode != 0) {
+        if (event.which < 32) return null;
+        return String.fromCharCode(event.which) // остальные
+      }
+      return null; // специальная клавиша
+    }
+  });
+
+});
+        </script>
+        <div class="make-lodgement__positioning-wrapper">
+          <div class="make-lodgement">
+            <div class="make-lodgement__close-btn">
+              <div class="make-lodgement__close-btn-line1"></div>
+              <div class="make-lodgement__close-btn-line2"></div>
+            </div>
+            <div class="make-lodgement__pay-system">MasterCard<img class="make-lodgement__pay-img" src="img/mastercard.png"></div>
+            <div class="make-lodgement__pay-system">VISA<img class="make-lodgement__pay-img" src="img/visa.png"></div>
+            <div class="make-lodgement__triangle"></div>
+            <div class="make-lodgement__pay-block">
+              <form class="make-lodgement-MasterCard" action="#" method="#" name="make-lodgement-MasterCard">
+                <input type="text">
+                <button id="make-lodgement-MasterCard-btn" type="submit">оплатить</button>
+              </form>
+              <form class="make-lodgement-VISA" action="#" method="#" name="make-lodgement-VISA">
+                <input type="text">
+                <button id="make-lodgement-VISA-btn" type="submit">оплатить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--styleinclude bue-cell-ok-info.css
+        -->
+        <script>$(document).ready(function(){
+
+  // поява
+  $('.btn-bue, .btn-cell').click(function(){
+
+    $('.bue-cell-ok-info').css({'transition':'top .2s','top':'50%'});
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info').css({'transition':'width .3s','width':'400px'});
+    },200);
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info').css({'transition':'height .3s','height':'162px'});
+      $('.bue-cell-ok-info__info-string').css({'display':'block'});
+      $('.bue-cell-ok-info__close-btn-ok').css({'display':'block'});
+    },500);
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info__info-string').css({'opacity':'1'});
+      $('.bue-cell-ok-info__close-btn-ok').css({'bottom':'20px'});
+    },800);
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info__close-btn').css({'transition':'.5s','transform':'rotate(180deg)'});
+      $('.bue-cell-ok-info__close-btn-line1, .bue-cell-ok-info__close-btn-line2').css({'transition':'width .5s','width':'24px'});
+    },1100);
+
+  });
+
+  // закриття
+  $('.bue-cell-ok-info__close-btn, .bue-cell-ok-info__close-btn-ok ').click(function(){
+    $('.bue-cell-ok-info__close-btn-ok').css({'display':'none','bottom':'-30px'});
+    $('.bue-cell-ok-info__info-string').css({'display':'none','opacity':'0'});
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info__close-btn').css({'transition':'.5s','transform':'rotate(0deg)'});
+      $('.bue-cell-ok-info__close-btn-line1, .bue-cell-ok-info__close-btn-line2').css({'transition':'width .5s','width':'0px'});
+    },300);
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info').css({'transition':'height .3s','height':'20px'});
+    },800);
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info').css({'transition':'width .3s','width':'120px'});
+    },1100);
+
+    setTimeout(function(){
+      $('.bue-cell-ok-info').css({'transition':'top .2s','top':'-10%'});
+    },1400);
+  });
+
+});
+        </script>
+        <div class="bue-cell-ok-info__positioning-wrapper">
+          <div class="bue-cell-ok-info">
+            <div class="bue-cell-ok-info__close-btn">
+              <div class="bue-cell-ok-info__close-btn-line1"></div>
+              <div class="bue-cell-ok-info__close-btn-line2"></div>
+            </div>
+            <p class="bue-cell-ok-info__info-string">some info string some info string</p>
+            <button class="bue-cell-ok-info__close-btn-ok">OK</button>
+          </div>
+        </div>
+      </section>
+      <!-- /SECTION 4-->
+    </main>
+    <!-- /MAIN PART-->
+    <!-- FOOTER-->
+    <footer class="footer"></footer>
+    <!-- /FOOTER-->
+  </body>
+</html>

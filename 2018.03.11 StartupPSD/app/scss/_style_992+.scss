@@ -1,0 +1,41 @@
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 3 about ↓↓↓ */
+		.s3-wrapper {
+			.about {
+				.about-slick-wrapper {
+					width: 830px;
+					.about-slick {
+						width: 850px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 3 about ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 works ↓↓↓ */
+		.s4-wrapper {
+			.works {
+				.work-card-holder {
+					grid-template-columns: auto auto auto;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 4 works ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 partners ↓↓↓ */
+		.s7-wrapper {
+			.partners {
+				.partners-slick {
+					width: 790px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 7 partners ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

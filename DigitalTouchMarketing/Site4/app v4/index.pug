@@ -1,0 +1,43 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='css/libs.min.css')
+    // js-libs (font awesome, slick, wow ...)
+    script(defer='', src='js/libs.min.js')
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/js.js', defer='')
+  body
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        video.bg-video(autoplay='', muted='', loop='')
+          source(src='video/StockMarket076HD[720p].mp4', type='video/mp4')
+
+        section.section1
+          .section1__header-wrapper
+            h1.section1__header Bitcoin - валюта будущего, 
+              br
+              | которая делает людей богатыми!
+          
+          .section1__flex-container
+            iframe.section1__iframe#section1__iframe()
+            video.section1__video#section1__video(autoplay='', loop='')
+              source(src='#', type='video/mp4')
+
+            .section1__aside
+              h2.section1__subheader Хочешь узнать больше?
+              p.section1__text Запишись на бесплатную консультацию
+                br
+                | и мы научим тебя зарабатывать на криптовалюте!
+              .section1__form-position
+                include BEM-blocks/form/_form.pug
+          include BEM-blocks/politic/_politics.pug
+          include BEM-blocks/popup/_popup.pug
+      // /SECTION 1
+    // /MAIN SECTION

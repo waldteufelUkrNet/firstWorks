@@ -1,0 +1,227 @@
+.depositPopup {
+  display: none;
+  min-width: 300px;
+  max-width: 600px;
+  min-height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #eee;
+  border: 5px solid grey;
+  cursor: default;
+  -webkit-transition: top .3s;
+  -o-transition: top .3s;
+  transition: top .3s;
+  font: 14px Tahoma_Regular;
+}
+
+.depositPopup__head {
+  height: 25px;
+  padding: 0px;
+  position: relative;
+  background-color: grey;
+  text-align: center;
+}
+
+.depositPopup__close-btn {
+  height: 20px;
+  width: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: white;
+  background-color: #F86E67;
+  font-weight: 900;
+}
+
+.depositPopup__body {
+  border: 1px solid transparent;
+  padding: 6px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.depositPopup__tab-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.depositPopup__tab-header {
+  border: 1px solid grey;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 26px;
+  padding: 0 3px;
+  cursor: pointer;
+  -webkit-transition: background-color .3s, color .3s;
+  -o-transition: background-color .3s, color .3s;
+  transition: background-color .3s, color .3s;
+}
+
+.depositPopup__tab-header:hover, .depositPopup__tab-header_active {
+  background-color: grey;
+  color: white;
+}
+
+.depositPopup__terminal-img {
+  max-height: 20px;
+  max-width: 80px;
+}
+
+.depositPopup__form-wrapper {
+  border: 1px solid grey;
+  padding: 6px 3px;
+}
+
+.depositPopup__form {
+  min-height: 50px;
+  position: relative;
+}
+
+.depositPopup__link-to-pay-system {
+  border: 1px solid grey;
+  background-color: lightgrey;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: black;
+  text-decoration: none;
+}
+
+.depositPopup__amount-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 280px;
+  height: 30px;
+}
+
+.depositPopup__amount {
+  padding: 6px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.depositPopup__amount::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.depositPopup__amount::-moz-placeholder {
+  opacity: 1;
+}
+
+.depositPopup__amount:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.depositPopup__amount::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.depositPopup__amount::placeholder {
+  opacity: 1;
+}
+
+.depositPopup__currency-select {
+  width: 60px;
+}
+
+.depositPopup__checkbox-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.depositPopup__checkbox-wrapper a {
+  color: MediumTurquoise;
+}
+
+.depositPopup__deposit-btn {
+  border: 1px solid grey;
+  margin: 0 auto;
+  height: 25px;
+  min-width: 60px;
+  padding: 4px 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.depositPopup__paySystem-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.depositPopup__card-label {
+  padding: 0 6px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.depositPopup__card-select {
+  height: 100%;
+}
+
+.depositPopup__validation-error {
+  background-color: #fff;
+  border-left: 6px solid red;
+  margin-bottom: 0px;
+  padding: 0 6px;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height .3s, padding .3s, margin .3s;
+  -o-transition: height .3s, padding .3s, margin .3s;
+  transition: height .3s, padding .3s, margin .3s;
+}
+
+.depositPopup__validation-error_active {
+  height: 100%;
+  padding: 6px 6px;
+  margin-bottom: 5px;
+}

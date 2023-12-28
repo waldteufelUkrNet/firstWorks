@@ -1,0 +1,20 @@
+.logo-block {
+  width: 200px;
+  height: 56px;
+  position: relative;
+  padding-top: 0;
+  &__link {}
+  &__img {
+    position: absolute;
+    top: 0; left: 0;
+  }
+  &__text {
+    font-family: rr;
+    font-size: 34px;
+    color: white;
+    padding-top: 0 !important;
+    letter-spacing: -0.2px;
+    position: absolute;
+    top: 14px; left: 66px;
+  }
+}

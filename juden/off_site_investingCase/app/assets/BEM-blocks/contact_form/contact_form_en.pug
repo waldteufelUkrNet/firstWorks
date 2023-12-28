@@ -1,0 +1,26 @@
+// ↓↓↓ BEM-blocks: contact_form (start) ↓↓↓
+
+//- style
+//-   include contact_form.css
+
+.contact-form__wrapper
+  form.contact-form(action='#', name='form', method='post')
+    .contact-form__inner
+      .contact-form__left
+        input.contact-form__input#input-id(type='text', placeholder='Name or ID', name='id')
+        .contact-form__info-field#input-id-warning Fill in the field!
+        input.contact-form__input#input-email(type='text', placeholder='E-mail', name='email')
+        .contact-form__info-field#input-email-warning Enter the correct address!
+        input.contact-form__input#input-phone(type='text', placeholder='Contact phone', name='phone')
+        .contact-form__info-field#input-phone-warning Enter the correct phone!
+        .contact-form__anti_bot_filter-wrapper
+          include ../anti_bot_filter/anti_bot_filter_en.pug
+      .contact-form__right
+        textarea.contact-form__textarea(placeholder='Message', name='message')
+        .contact-form__info-field#input-message-warning Write us a message!
+    button.contact-form__btn.page-btn(type='submit') SEND
+
+script
+  include ..//minjs/contact_form/contact_form.js
+
+// ↑↑↑ BEM-blocks: contact_form (end) ↑↑↑

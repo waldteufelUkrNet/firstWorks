@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waldteufel@ukr.net</title>
+    <link rel="icon" href="img/wehrwolf.jpg">
+    <!-- css-libs (font awesome, slick, wow ...)-->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- js-libs (font awesome, slick, wow ...)-->
+    <script src="js/jquery3.3.1.min.js"></script>
+    <!-- page stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/formValidationJs.js" defer=""></script>
+  </head>
+  <body>
+    <!-- ↓↓↓ MAIN SECTION (start) ↓↓↓-->
+    <main class="main">
+      <!-- ↓↓↓ WORK AREA (start) ↓↓↓-->
+      <div class="work-area">
+        <form class="forvalJs" data-forvalJs-lang="ua">
+          <label for="form-empty">Not empty:</label>
+          <input class="forvalJs" type="text" id="form-empty" data-forvalJs-minLength="3" data-forvalJs-type="notEmpty">
+          <label for="form-email2">E-mail:</label>
+          <input class="forvalJs" type="email" data-forvalJs-type="email" id="form-email2" data-forvalJs-minLength="6">
+          <label for="form-number">Price:</label>
+          <input class="forvalJs" type="text" id="form-number" data-forvalJs-type="price" data-forvalJs-minLength="6">
+          <label for="form-password2">Password:</label>
+          <input class="forvalJs" type="password" id="form-password2" data-forvalJs-type="password" data-forvalJs-minLength="6">
+          <label for="form-password">Confirm password:</label>
+          <input class="forvalJs" type="password" id="form-password" data-forvalJs-type="confirmPassword">
+          <div class="forvalJs-wrapper">
+            <button class="forvalJs" type="submit">submit</button>
+            <button class="forvalJs" type="reset">reset</button>
+          </div>
+        </form>
+      </div>
+      <!-- ↑↑↑ /WORK AREA (end) ↑↑↑-->
+    </main>
+    <!-- ↑↑↑ /MAIN SECTION (end) ↑↑↑-->
+  </body>
+</html>

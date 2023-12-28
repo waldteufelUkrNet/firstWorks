@@ -1,0 +1,93 @@
+/* ↓↓↓ for 1200px and more ↓↓↓ */
+@media only screen and (min-width: 1200px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.section1 { //border: 1px dotted red;
+			background-color: #f9f7ee;
+			max-width: 1290px;
+			min-height: 800px;
+			margin: 0 auto;
+			padding: 22px 30px;
+			.section-header {
+				font-family: osr;
+				font-size: 32px;
+			}
+			.s1-grid {
+				padding-top: 11px;
+				display: grid;
+				grid-template-columns: 660px 390px;
+				grid-gap: 30px;
+				justify-content: center;
+				.form-holder { //border: 1px dotted red;
+					.container {
+						padding: 0;
+						.nav.nav-tabs { //height: 58px;
+							.nav-item {
+								font-family: ab;
+								font-size: 14px;
+								line-height: 18px;
+								&:nth-of-type(1) {
+									width: 120px;
+								}
+								&:nth-of-type(2) {
+									width: 200px;
+								}
+								.nav-link {
+									color: #2073b3;
+									span {
+										border-bottom: 1px dotted #2073b3;
+									}
+								}
+								.nav-link.active {
+									color: black;
+									span {
+										border-bottom: none;
+									}
+								}
+							}
+						}
+						.tab-content {
+							.tab-pane.container {
+								background-color: white;
+								border: {
+									left: 1px solid #e0dfca;
+									right: 1px solid #e0dfca;
+									bottom: 1px solid #e0dfca;
+								};
+							}
+						}
+					}
+				}
+				.wares-holder {
+					background-color: white;
+					border: 1px solid #e0dfca;
+					border-radius: 3px;
+					align-self: start;
+					&__header {
+						font-family: ab;
+						font-size: 18px;
+						border-bottom: 1px dotted #e0dfca;
+						padding: 14px 19px;
+					}
+					&__footer {
+						font-family: ab;
+						font-size: 18px;
+						padding: 13px 19px;
+						text-align: right;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

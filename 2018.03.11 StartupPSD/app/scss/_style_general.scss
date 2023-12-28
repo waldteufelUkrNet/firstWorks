@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.section {
+	margin: 0 auto;
+	max-width: 1140px;
+	.section-header {
+		font-family: mr;
+		font-size: 20px;
+		color: #555555;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 30px 0 30px;
+		@media only screen and (min-width: 576px) {
+			padding: 97px 0 27px;
+		}
+	}
+	.section-header-line {
+		width: 50px;
+		height: 2px;
+		background-color: #555555;
+		margin: 0 auto;
+	}
+	.section-subheader {
+		font-family: rsr;
+		font-size: 16px;
+		color: #555555;
+		text-align: center;
+		padding-top: 27px;
+	}
+}
+
+.section,
+.header,
+.footer {
+	padding-left: 15px;
+	padding-right: 15px;
+	@media only screen and (min-width: 1200px) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}

@@ -1,0 +1,115 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title Management
+
+    link(rel='icon', href='assets/img/logo-small.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/management.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header MANAGEMENT
+          h5.section1__subheader DEAR TRADER, WELCOME YOU IN THE SECTION "GUIDELINES"!
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__logo: img(src="assets/img/logo.png", alt="logo.png")
+          .section2__text
+            p In this section you will find information on how to work with a trading account. Namely, two, perhaps, the most important things for any participant of financial markets:
+              |
+              |
+              span.bold-text how to replenish your trading account
+              |
+              | and in what way
+              |
+              span.bold-text withdraw the earnings.
+
+            p Our online trading platform offers a variety of trading tools to the trader's attention.
+
+            p
+              |
+              span.bold-text PlatinumTrade
+              |
+              | is pleased to meet the needs of any client, so we offer four types of trading accounts.
+
+            p In a world where speed and the ability to move around solve everything, special convenience gives the opportunity for mobile commerce.
+
+            p.bold-text WE WISH YOU SUCCESSFUL TRADING!
+
+            p.italic-text If you have any questions about working with the trading platform, then you will receive a guaranteed exhaustive answer from your personal manager!
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          h1.section3__header BALANCE SUPPLEMENT TRADING ACCOUNT
+
+          .section3__method-holder
+            .section3__method-item
+              .section3__method-item-head
+                .section3__method-item-logo: i.fab.fa-bitcoin
+                .section3__method-item-header Replenishment through payment systems
+              .section3__method-item-body You can make a deposit through the sites of partners (exchange points) with the help of Bitcoin (BTC) systems, replenishing this or that service in any way such as: Visa, MasterCard, QIWI, Yandex Money, etc. Crediting of funds occurs depending on the speed of processing of a particular payment system.
+      // /SECTION 3
+
+      // SECTION 4
+      .s4-wrapper
+        section.section4
+          h1.section4__header Withdrawal of funds
+          h5.section4__subheader MAIN TRADING IS PROFITS, so in PlatinumTrade you have made sure that you can withdraw the earnings in just two steps:
+          p.section4__step.bold-text 1 - Go to your personal area.
+          p.section4__step.bold-text 2 - Apply for a conclusion.
+          p.section4__step And all - it remains only to wait until the bank transfers the money to you on the account.
+
+          .section4__method-holder
+            .section4__method-item
+              .section4__method-item-head
+                .section4__method-item-logo: i.far.fa-credit-card
+                .section4__method-item-header Withdrawal of funds to a bank card
+            .section4__method-item
+              .section4__method-item-head
+                .section4__method-item-logo: i.fab.fa-bitcoin
+                .section4__method-item-header Withdrawal of funds through the payment system: Bitcoin, Bitcoin Cash, Ethereum, EXMO, Payeer, Perfect Money, QIWI, Yandex Money
+      // /SECTION 4
+
+      // SECTION 5
+      .s5-wrapper
+        section.section5
+          h1.section5__header TO GET A CONSULTATION
+          h5.section5__subheader If you have any questions regarding the replenishment of balance or withdrawal of funds, please contact our customer service team PlatinumTrade!
+          include assets/BEM-blocks/contact_form/contact_form_en.pug
+      // /SECTION 5
+
+      include assets/BEM-blocks/slick_money/slick_money.pug
+      include assets/BEM-blocks/notification_of_risks/notification_of_risks_en.pug
+    // /MAIN SECTION
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

@@ -1,0 +1,135 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Торгуй по-своему: валютные пары, акции, индексы, товары и криптовалюта.")
+
+    title О компании
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/linecons.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/about_company.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1(data-parallax="scroll" data-image-src="assets/img/about_company_bg.jpg")
+          .section1__text-wrapper
+            h1.wow.fadeInUp.section1__header О КОМПАНИИ
+            p.wow.fadeInUp.section1__text
+              span(style='font-weight: 900') Миссия и цель E-Tokens Trade
+              |
+              |
+              span - это предоставить Вам, как трейдеру, самый безопасный, самый удобный и в целом наилучший способ ведения   торговли. В наших модулях ценообразования и исполнения гарантируется использование самых современных и передовых технологий. Благодаря нашему партнерству с поставщиком новостей Reuters, мы получаем в реальном времени потоки точных данных, а в наших положениях и условиях четко указана разница между рыночной ценой в реальном времени и ценой опционов. Мы предоставляем графики экспирации в любой конкретный момент для обеспечения спокойствия трейдера, так что со стороны трейдера не возникает проблемных вопросов.
+            p.wow.fadeInUp.section1__text Стабильность имеет первостепенное значение для нашей компании. Мы прилагаем все усилия для обеспечения бесперебойных услуг, безопасной и простой торговли, финансовой жизнеспособности и строгого соблюдения законодательства.
+            p.wow.fadeInUp.section1__text Мы надеемся, что ваши отношения с
+              |
+              |
+              span(style='font-weight: 900') E-Tokens Trade
+              |
+              | будут долгосрочными, и мы сделаем все возможное, чтобы сделать его прибыльным!
+          .section1__logo-wrapper
+            img.wow.fadeInUp.section1__logo(src="assets/img/veryBigLogo.png", alt="veryBigLogo.png")
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__left-column
+            h1.section2__left-column-header Преимущества
+              br
+              |
+              | платформы
+              br
+              |
+              | E-Tokens Trade:
+
+            ul.accordion
+              li.accordion__list-item
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |ПРОСТАЯ ТОРГОВЛЯ
+                .inner.accordion__content Веб-интерфейс, не нужна загрузка. Простая торговля — легкая для понимания с четкими объяснениями.
+              li
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |РАЗНООБРАЗНЫЕ ПРОДУКТЫ
+                .inner.accordion__content Торговля, удобная для пользователя. Безопасно — соотношение риска/прибыли четко указано в опционе.
+              li
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |КРИПТОВАЛЮТНЫЕ ДЕПОЗИТЫ
+                .inner.accordion__content Быстрые и простые депозиты в BTC.
+              li
+                a.toggle.accordion__btn(href='javascript:void(0);')
+                  span.detector +
+                  |
+                  |ВЫСОКОРЕНТАБЕЛЬНЫЕ ФИДЫ
+                .inner.accordion__content Постоянное освоении высокорентабельных фидов в условиях современности.
+
+          .section2__right-column
+            img(src="assets/img/cow_with_pc.jpg", alt="cow_with_pc.jpg")
+
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          //- p.wow.fadeInUp.section3__text
+          //- p.wow.fadeInUp.section3__identation
+          p.wow.fadeInUp.section3__text
+            span(style='font-family:rb') E-Tokens Trade
+            |
+            | берет на себя обязательство предоставления самой качественной и уникальной торговой платформы, которая может быть использована частными инвесторами по всему миру. Сотрудники E-Tokens Trade готовы оказать трейдерам необходимое содействие, а профессиональные брокеры предоставляют трейдерам руководящие указания на каждом этапе пути.
+          p.wow.fadeInUp.section3__text
+            span(style='font-family:rb') Etokenstrade.com
+            |
+            | - это ведущая платформа для торговли бинарными опционами на сегодняшний день. Сейчас, когда бинарные опционы стали наиболее популярны, чем когда-либо, E-Tokens Trade обеспечивает трейдерам отличные условия работы с точки зрения безопасности, наличия различных функций, удобства пользования, предоставления инструментов и обучения.
+          p.wow.fadeInUp.section3__text Средства клиента хранятся на отдельном счете. Денежные средства используются только для торговли опционами через наш веб-сайт по поручению клиента и никогда не расходуются на любые другие цели. Управление нашими обязательствами и рисками осуществляют профессионалы, и мы гарантируем выплату вашей прибыли согласно нашим условиям.
+          p.wow.fadeInUp.section3__text В Компании E-Tokens Trade и в партнерских организациях есть профессиональные форекс-брокеры эксперты в области производных финансовых инструментов и управления рисками. Кроме того, мы сотрудничаем с платежными системами. Мы занимаемся всеми аспектами торговли бинарными опционами, так что вы получите наилучшие впечатления от торговли в любой момент времени.
+      // /SECTION 3
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    script(src='assets/js/about_company.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

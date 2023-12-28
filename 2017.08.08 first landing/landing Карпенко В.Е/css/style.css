@@ -1,0 +1,324 @@
+/* FONTS */
+@font-face {
+  font-family: Roboto-Light;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+  @font-face {
+  font-family: Roboto-Medium;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+  @font-face {
+  font-family: Roboto-Thin;
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+  @font-face {
+  font-family: MyriadProRegular;
+  src: url(../fonts/MyriadProRegular.ttf);
+}
+.font-f_RL {font-family: Roboto-Light}
+.font-f_RM {font-family: Roboto-Medium}
+.font-f_RT {font-family: Roboto-Thin}
+.font-f_MR {font-family: MyriadProRegular}
+
+.font-s_14 {font-size: 14px}
+.font-s_16 {font-size: 16px}
+.font-s_18 {font-size: 18px}
+.font-s_20 {font-size: 20px}
+.font-s_22 {font-size: 22px}
+.font-s_24 {font-size: 24px}
+.font-s_28 {font-size: 28px}
+.font-s_30 {font-size: 30px}
+.font-s_32 {font-size: 32px}
+.font-s_48 {font-size: 48px}
+.font-s_60 {font-size: 60px}
+.font-s_66 {font-size: 66px}
+
+.font-rgb_028103134 {color: rgb(28,103,134)}
+.font-rgb_061061061 {color: rgb(61,61,61)}
+.font-rgb_064064064 {color: rgb(64,64,64)}
+.font-rgb_084084084 {color: rgb(84,84,84)}
+.font-rgb_153153153 {color: rgb(153,153,153)}
+.font-rgb_183024016 {color: rgb(183,24,16)}
+.font-rgb_187187187 {color: rgb(187,187,187)}
+.font-rgb_193076072 {color: rgb(193,76,72)}
+.font-rgb_209101103 {color: rgb(209,101,103)}
+.font-rgb_239214213 {color: rgb(239,214,213)}
+.font-rgb_white {color: white}
+.font-rgb_black {color: black}
+
+/* GENERAL STYLES */
+body {
+  font-family: Roboto-Light;
+  text-align: center;
+}
+div {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+/* HEADER */
+.header {
+  position: relative;
+}
+.logo {
+  max-width: 920px;
+  height: 66px;
+  padding-top: 16px;
+  margin: 0 auto;
+}
+.logo a {
+  float: left;
+}
+.logo span {
+  float: right;
+  line-height: 34px;
+}
+.headerBgImg {
+  max-width: 1920px;
+  height: 474px;
+  padding-top: 80px;
+  margin: 0 auto;
+  background-image: url("../images/bg_header.png");
+}
+.headerBgImg a {
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 2px;
+  width: 320px;
+  height: 60px;
+  line-height: 60px;
+  background-color: white;
+  position: absolute;
+  bottom: 90px;
+  transform: translateX(-50%);
+}
+.headerBgImg2 {
+  padding-top: 40px;
+}
+
+/* MAIN PART */
+.main_1 {
+  max-width: 1200px;
+  height: 926px;
+  margin: 0 auto;
+}
+.main_1_1 {
+  height: 260px;
+  padding-top: 80px;
+}
+.main_1_1 p:last-child {
+  line-height: 100px;
+}
+.main_1_2 {
+  max-width: 1200px;
+  height: 392px;  
+}
+.main_1_item {
+  width: 400px;
+  height: 392px;
+  float: left;
+  padding-top: 60px;
+}
+.cycle1 {
+  height: 154px;
+  width: 154px;
+  background-color: rgb(176,198,207);
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.people {
+  position: absolute;
+  left: 30px;
+  top: 32px;
+}
+.clock {
+  position: absolute;
+  left: 32px;
+  top: 30px;
+}
+.pig {
+  position: absolute;
+  left: 32px;
+  top: 17px;
+}
+.main_1_item_text {
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.main_1_3 {
+  height: 274px;
+  padding-top: 80px;
+  padding-left: 337px;
+  text-align: left;
+  position: relative;
+}
+.cycle2 {
+  height: 154px;
+  width: 154px;
+  background-color: rgb(183,24,16);
+  border-radius: 50%;
+  position: absolute;
+  left: 123px;
+  bottom: 60px;
+}
+.cycle2 img {
+  position: absolute;
+  left: 44px;
+  top: 34px;
+}
+.main_1_item_text div:first-child {
+  height: 55px;
+}
+.main_1_3 p:first-child {
+  line-height: 60px;
+}
+.main_1_3 p:last-child {
+  line-height: 30px;
+}
+.main_2_wrapper {
+  max-width: 1920px;
+  height: 818px;
+  background-color: rgb(245,245,245);
+  margin: 0 auto;
+}
+.main_2 {
+  width: 1026px;
+  height: 818px;
+  position: relative;
+  background-color: rgb(245,245,245);
+  margin: 0 auto;
+}
+.main_2_info {
+  max-width: 100%;
+  height: 190px;
+  line-height: 30px;
+  padding-top: 65px;
+  margin: 0 auto;
+}
+  .main_2_item_holder {
+    width: 1026px;
+    height: 478px;
+  }
+.main_2_item {
+  display: inline-block;
+  float: left;
+  margin: 0 20px;
+  width: 300px;
+  height: 100%;
+  border-radius: 3px;
+  background-color: white;
+  position: relative;
+  box-shadow: 2px 2px 2px rgb(201, 199, 199);
+}
+.main_2_item_base {
+  height: 180px;
+  background-color: rgb(192, 54, 47);
+  padding: 30px 23px;
+  border-radius: 3px 3px 0 0 / 3px 3px 0 0;
+}
+.main_2_item_base_detail {
+  text-align: left;
+  font-weight: bold;
+  padding-top: 25px;
+}
+.main_2_item_2 {
+  height: 60px;
+  line-height: 60px;
+}
+.main_2_item_3 {
+  position: absolute;
+  width: 252px;
+  height: 80px;
+  top: 240px;
+  left: 24px;
+  line-height: 80px;
+}
+.main_2_item_31 {
+  height: 100%;
+  width: 50%;
+  text-align: left;
+  float: left;
+
+}
+.main_2_item_32 {
+  height: 100%;
+  width: 50%;
+  text-align: right;
+  float: left;
+}
+.s1 {
+  text-decoration: line-through;
+}
+.s2 {
+  letter-spacing: -4px;
+}
+.main_2_item_4 {
+  width: 252px;
+  height: 60px;
+  position: absolute;
+  top: 320px;
+  left: 24px;
+  text-align: left;
+  text-indent: 40px;
+  line-height: 60px;
+}
+.main_2_item_4 img {
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  z-index: 1;
+}
+.main_2_item_a {
+  display: inline-block;
+  width: 252px;
+  height: 52px;
+  border-radius: 2px;
+  line-height: 52px;
+  text-decoration: none;
+  background-color: rgb(192, 54, 47);
+  position: absolute;
+  bottom: 46px;
+  transform: translateX(-50%);
+}
+.action {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  border-radius: 2px;
+  line-height: 50px;
+  text-decoration: none;
+  background-color: rgb(201, 199, 199);
+    position: absolute;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+
+/* FOOTER */
+.footer {}
+.footerBgImg {
+  max-width: 1920px;
+  height: 215px;
+  background-image: url("../images/bg_footer.png");
+  margin: 0 auto;
+  padding-top:  65px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.copyright {
+  width: 940px;
+  height: 134px;
+  margin: 0 auto;
+}
+li {
+  display: inline-block;
+  padding-top: 40px;
+  width: 150px;
+  text-align: left;
+}
+li:first-child {
+  width: 470px;
+}

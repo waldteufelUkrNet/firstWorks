@@ -1,0 +1,36 @@
+@media only screen and (min-width: 576px) {
+  .section1 {
+    padding-top             : 50px;
+    &__header {
+      font-size             : 3.2rem;
+      padding-bottom        : 15px;
+    }
+    &__text {
+      font-size             : 1.7rem;
+      line-height           : 1.5em;
+      padding-bottom        : 15px;
+    }
+  }
+  .section2 {
+
+    &__left-column-header {
+      font-size             : 4rem;
+      padding-bottom        : 20px;
+    }
+    &__right-column {
+      max-width             : 50%;
+      margin-top            : 20px;
+      img {
+        max-width           : 540px;
+        width               : 100%;
+      }
+    }
+  }
+
+  .accordion {
+    width: 470px;
+    .toggle {
+      font-family: inherit;
+    }
+  }
+}

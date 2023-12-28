@@ -1,0 +1,50 @@
+// ↓↓↓ BEM-blocks: footer + copyright (start) ↓↓↓
+
+//- style
+//-   include footer.css
+
+.footer-wrapper
+  .footer
+    .footer__foo1
+      a.footer__logo-link(href="#")
+        img.footer__logo-img(src='assets/img/logoIC.png' alt='logo.png')
+    .footer__foo2
+      h3.footer__header Prohibition of services:
+      p.footer__text Terwex Trade Ltd does not provide its services to residents of the United States, Canada, Syria, Iran, North Korea and Japan, as well as other regions where services can not be provided due to current restrictions in the legislation.
+    .footer__foo3
+      h3.footer__header Website and management:
+      p.footer__text(style='text-align: left') https://investingcase.com is a trademark of Terwex Trade Ltd. Suite 244, Commercial Business Center, BOX 1465, Beachmont, Kingstown, St. Vincent and The Grenadines
+    .footer__foo4
+      h3.footer__header Conditions:
+      ul.footer__list
+        li.footer__list-item
+          a.footer__list-link(href="terms_and_conditions_en.html") Terms and conditions
+        li.footer__list-item
+          a.footer__list-link(href="notification_of_risks_en.html") Notification of risks
+        li.footer__list-item
+          a.footer__list-link(href="privacy_policy_en.html") Privacy policy
+        li.footer__list-item
+          a.footer__list-link(href="aml_and_kyc_policies_en.html") AML and KYC policies
+        li.footer__list-item
+          a.footer__list-link(href="refund_policy_en.html") Refund policy
+        li.footer__list-item
+          a.footer__list-link(href="denial_of_responsibility_en.html") Denial of responsibility
+
+//- script
+  include footer.js
+
+//- style
+  include copyright.css
+
+.copyright-wrapper
+  .copyright
+    .copyright__span Copyright © 2018 (investingcase.com). All rights reserved.
+    //- .copyright__span Обслуживается ООО «Онеро»
+    //- .copyright__span ИНН: 7702452561 / КПП: 770201001
+    //- .copyright__span 129110 Москва, переулок Орлово-Давыдовский 1, Э. 1, Пом. 3, К. 3, Оф. 101.
+    //- .copyright__span: a(href='mailto:company.onero@gmail.com' style='color: white') company.onero@gmail.com
+
+//- script
+  include copyright.js
+
+// ↑↑↑ BEM-blocks: footer + copyright (end) ↑↑↑

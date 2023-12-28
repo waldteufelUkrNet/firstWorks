@@ -1,0 +1,917 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ↓↓↓ FONTS ↓↓↓ */
+@font-face {
+  font-family: fa;
+  src: url(../fonts/fa-solid-900.ttf); }
+
+@font-face {
+  font-family: osr;
+  src: url(../fonts/OpenSansRegular.ttf); }
+
+@font-face {
+  font-family: ptsb;
+  src: url(../fonts/PTSansBold.ttf); }
+
+@font-face {
+  font-family: ptsbi;
+  src: url(../fonts/PTSansBoldItalic.ttf); }
+
+@font-face {
+  font-family: ptsn;
+  src: url(../fonts/PTSansNarrow.ttf); }
+
+@font-face {
+  font-family: ptsnb;
+  src: url(../fonts/PTSansNarrowBold.ttf); }
+
+@font-face {
+  font-family: ptsnr;
+  src: url(../fonts/PTSansNarrowRegular.ttf); }
+
+@font-face {
+  font-family: ptsr;
+  src: url(../fonts/PTSansRegular.ttf); }
+
+@font-face {
+  font-family: rcb;
+  src: url(../fonts/RobotoCondensedBold.ttf); }
+
+@font-face {
+  font-family: rm;
+  src: url(../fonts/RobotoMedium.ttf); }
+
+/* ↑↑↑ /FONTS ↑↑↑ */
+/* ↓↓↓ GENERAL STYLES ↓↓↓ */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background-color: black; }
+
+a, a:hover {
+  color: black;
+  text-decoration: none; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.red-text {
+  color: #fc481a; }
+
+/* ↑↑↑ /GENERAL STYLES ↑↑↑ */
+/* ↓↓↓ for 320px and more ↓↓↓ */
+@media only screen and (min-width: 320px) {
+  /* ↓↓↓ MAIN PART ↓↓↓ */
+  .main {
+    /* ↓↓↓ SECTION 1 how-much ↓↓↓ */
+    /* ↑↑↑ /SECTION 1 how-much ↑↑↑ */
+    /* ↓↓↓ SECTION 2 dialog ↓↓↓ */
+    /* ↑↑↑ /SECTION 2 dialog ↑↑↑ */
+    /* ↓↓↓ SECTION 3 info ↓↓↓ */
+    /* ↑↑↑ /SECTION 3 info ↑↑↑ */
+    /* ↓↓↓ SECTION 4 preference ↓↓↓ */
+    /* ↑↑↑ /SECTION 4 preference ↑↑↑ */
+    /* ↓↓↓ SECTION 5 doctor ↓↓↓ */
+    /* ↑↑↑ /SECTION 5 doctor ↑↑↑ */ }
+    .main .how-much {
+      margin: 0 auto;
+      position: relative;
+      max-width: 980px;
+      min-height: 1260px;
+      background: black url("../img/bg-s1.png") center top;
+      background-repeat: no-repeat;
+      padding-left: 15px; }
+      .main .how-much .logo {
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%); }
+      .main .how-much .leaf {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+        width: 230px;
+        height: 39px; }
+        .main .how-much .leaf span {
+          position: absolute;
+          color: white; }
+          .main .how-much .leaf span:first-of-type {
+            font-family: ptsb;
+            font-size: 24px;
+            left: 36px;
+            bottom: 7px; }
+          .main .how-much .leaf span:last-of-type {
+            font-family: ptsr;
+            font-size: 18px;
+            left: 106px;
+            bottom: 9px; }
+      .main .how-much .hand {
+        position: absolute;
+        top: 140px;
+        right: -webkit-calc(50% - 230px);
+        right: calc(50% - 230px);
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+        width: 230px;
+        height: 39px; }
+        .main .how-much .hand span {
+          position: absolute;
+          color: white; }
+          .main .how-much .hand span:first-of-type {
+            font-family: ptsb;
+            font-size: 24px;
+            left: 50px;
+            bottom: 7px; }
+          .main .how-much .hand span:last-of-type {
+            font-family: ptsr;
+            font-size: 18px;
+            left: 120px;
+            bottom: 9px; }
+      .main .how-much h1 {
+        font-family: rcb;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #f0e394;
+        padding-top: 200px;
+        text-align: center;
+        text-shadow: 0 0 10px black; }
+      .main .how-much h4 {
+        font-family: rm;
+        font-size: 22px;
+        color: white;
+        width: 100%;
+        padding: 20px 15px 11px 0;
+        text-align: center;
+        text-shadow: 0 0 10px black; }
+      .main .how-much .list {
+        font-family: ptsr;
+        font-size: 16px;
+        color: #e9e9e9;
+        width: 260px;
+        padding: 11px 0;
+        margin-left: 35px;
+        position: relative;
+        left: -webkit-calc(50% - 150px);
+        left: calc(50% - 150px);
+        text-shadow: 0 0 10px black; }
+        .main .how-much .list:before {
+          font-family: fa;
+          font-size: 14px;
+          content: "\f00c";
+          border: 1px solid #946443;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          background-color: #d43d16;
+          padding: 3px;
+          position: absolute;
+          left: -35px;
+          top: 10px; }
+      .main .how-much .bottle-with-shadow {
+        display: none; }
+      .main .how-much .sale {
+        width: 280px;
+        height: 250px;
+        position: absolute;
+        top: 570px;
+        right: -webkit-calc( 50% - 280px);
+        right: calc( 50% - 280px);
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%); }
+        .main .how-much .sale p {
+          font-family: ptsnr;
+          font-size: 19px;
+          color: #e9e9e9;
+          text-align: center;
+          line-height: 26px;
+          padding-top: 6px;
+          text-shadow: 0 0 10px black; }
+      .main .how-much .numdercard-holder {
+        width: 290px;
+        height: 54px;
+        position: absolute;
+        top: 749px;
+        right: -webkit-calc( 50% - 290px);
+        right: calc( 50% - 290px);
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+        background-color: transparent; }
+        .main .how-much .numdercard-holder .numdercard {
+          width: 47px;
+          height: 54px;
+          border: 1px solid white;
+          background-color: #f6f6f6;
+          float: left;
+          font-family: ptsnb;
+          font-size: 50px;
+          text-align: center;
+          margin-right: 4px;
+          -webkit-border-radius: 4px;
+                  border-radius: 4px;
+          position: relative;
+          z-index: 2; }
+          .main .how-much .numdercard-holder .numdercard .divider {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #cecece;
+            position: absolute;
+            top: 50%; }
+          .main .how-much .numdercard-holder .numdercard:first-of-type {
+            background-color: rgba(246, 246, 246, 0.5);
+            color: rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.5); }
+            .main .how-much .numdercard-holder .numdercard:first-of-type .divider {
+              z-index: 1;
+              background-color: rgba(206, 206, 206, 0.4); }
+          .main .how-much .numdercard-holder .numdercard:last-of-type {
+            width: 130px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-color: rgba(0, 0, 0, 0.5);
+            color: #e9e9e9;
+            font-family: ptsnr;
+            font-size: 19px;
+            text-align: left;
+            padding: 5px 0 0 17px; }
+            .main .how-much .numdercard-holder .numdercard:last-of-type:before {
+              content: "*";
+              position: absolute;
+              left: 10px;
+              top: 5px; }
+      .main .how-much .form {
+        position: absolute;
+        top: 833px;
+        right: -webkit-calc( 50% - 290px);
+        right: calc( 50% - 290px);
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+        background-color: transparent; }
+        .main .how-much .form .form-header {
+          width: 290px;
+          height: 116px;
+          position: relative; }
+          .main .how-much .form .form-header span {
+            display: block;
+            position: absolute; }
+          .main .how-much .form .form-header span:nth-of-type(1) {
+            font-family: ptsnr;
+            font-size: 18px;
+            color: #8b7a77;
+            left: 25px;
+            top: 18px; }
+          .main .how-much .form .form-header span:nth-of-type(2) {
+            font-family: ptsnr;
+            font-size: 48px;
+            color: #8b7a77;
+            text-decoration: line-through;
+            left: 25px;
+            top: 40px; }
+          .main .how-much .form .form-header span:nth-of-type(3) {
+            font-family: ptsnr;
+            font-size: 24px;
+            color: #8b7a77;
+            left: 112px;
+            top: 60px; }
+          .main .how-much .form .form-header span:nth-of-type(4) {
+            font-family: ptsnr;
+            font-size: 18px;
+            color: white;
+            left: 168px;
+            top: 18px; }
+          .main .how-much .form .form-header span:nth-of-type(5) {
+            font-family: ptsnb;
+            font-size: 48px;
+            color: white;
+            left: 168px;
+            top: 40px; }
+          .main .how-much .form .form-header span:nth-of-type(6) {
+            font-family: ptsnb;
+            font-size: 24px;
+            color: white;
+            left: 238px;
+            top: 60px; }
+        .main .how-much .form .form-body {
+          width: 290px;
+          height: 294px;
+          background-color: white;
+          position: relative;
+          -webkit-border-radius: 0 0 9px 9px;
+                  border-radius: 0 0 9px 9px;
+          position: relative; }
+          .main .how-much .form .form-body input {
+            width: 255px;
+            height: 55px;
+            background-color: #f6f6f6;
+            border: 1px solid #e1e1e1;
+            -webkit-border-radius: 6px;
+                    border-radius: 6px;
+            padding-left: 14px;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%);
+                -ms-transform: translate(-50%);
+                    transform: translate(-50%); }
+            .main .how-much .form .form-body input::-webkit-input-placeholder {
+              font-family: osr;
+              font-size: 14px; }
+            .main .how-much .form .form-body input::-moz-placeholder {
+              font-family: osr;
+              font-size: 14px; }
+            .main .how-much .form .form-body input:-ms-input-placeholder {
+              font-family: osr;
+              font-size: 14px; }
+            .main .how-much .form .form-body input::-ms-input-placeholder {
+              font-family: osr;
+              font-size: 14px; }
+            .main .how-much .form .form-body input::placeholder {
+              font-family: osr;
+              font-size: 14px; }
+            .main .how-much .form .form-body input:first-of-type {
+              top: 20px; }
+            .main .how-much .form .form-body input:last-of-type {
+              top: 90px; }
+          .main .how-much .form .form-body button {
+            width: 255px;
+            height: 60px;
+            background-color: #f6491b;
+            border: none;
+            -webkit-border-radius: 6px;
+                    border-radius: 6px;
+            font-family: ptsnb;
+            font-size: 22px;
+            text-transform: uppercase;
+            color: #e9e9e9;
+            cursor: pointer;
+            padding-left: 50px;
+            overflow: hidden;
+            -webkit-box-shadow: 0 0 20px rgba(224, 66, 24, 0.5);
+                    box-shadow: 0 0 20px rgba(224, 66, 24, 0.5);
+            position: absolute;
+            z-index: 2;
+            top: 170px;
+            left: 50%;
+            -webkit-transform: translate(-50%);
+                -ms-transform: translate(-50%);
+                    transform: translate(-50%); }
+            .main .how-much .form .form-body button span {
+              display: block;
+              width: 51px;
+              height: 100%;
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              background-color: #b13412;
+              font-size: 28px;
+              padding-top: 12px; }
+          .main .how-much .form .form-body .lock {
+            position: absolute;
+            top: 250px;
+            left: 27px; }
+          .main .how-much .form .form-body .your-data {
+            font-family: ptsnr;
+            font-size: 15px;
+            position: absolute;
+            top: 252px;
+            left: 50px; }
+    .main .dialog {
+      margin: 0 auto;
+      position: relative;
+      max-width: 980px;
+      min-height: 483px;
+      background: black url("../img/bg-s2.png") center 6px;
+      background-repeat: no-repeat;
+      padding-top: 40px; }
+      .main .dialog h1 {
+        font-family: ptsnb;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        padding-bottom: 16px; }
+        .main .dialog h1 span:nth-of-type(2) {
+          font-family: ptsnr; }
+      .main .dialog p {
+        font-family: ptsr;
+        font-size: 16px;
+        color: #e9e9e9;
+        text-align: center;
+        padding: 0 15px; }
+      .main .dialog .question {
+        position: relative;
+        margin: 30px auto;
+        width: 100%;
+        height: 340px;
+        background-color: white;
+        -webkit-border-radius: 9px;
+                border-radius: 9px; }
+        .main .dialog .question span {
+          position: absolute;
+          top: 31px;
+          left: 15px;
+          display: block;
+          width: 60px;
+          height: 60px;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          background-color: #e5e5e5;
+          color: black;
+          font-family: ptsb;
+          font-size: 30px;
+          text-align: center;
+          line-height: 60px; }
+        .main .dialog .question h4 {
+          font-family: ptsb;
+          font-size: 16px;
+          text-transform: uppercase;
+          padding-top: 50px;
+          padding-left: 120px; }
+        .main .dialog .question button {
+          width: 250px;
+          height: 80px;
+          border: none;
+          background: url("../img/button.jpg");
+          font-family: ptsb;
+          font-size: 24px;
+          text-transform: uppercase;
+          color: white;
+          cursor: pointer;
+          position: absolute; }
+          .main .dialog .question button:first-of-type {
+            top: 131px;
+            left: 50%;
+            -webkit-transform: translate(-50%);
+                -ms-transform: translate(-50%);
+                    transform: translate(-50%); }
+          .main .dialog .question button:last-of-type {
+            top: 231px;
+            right: -webkit-calc(50% - 250px);
+            right: calc(50% - 250px);
+            -webkit-transform: translate(-50%);
+                -ms-transform: translate(-50%);
+                    transform: translate(-50%); }
+    .main .info {
+      margin: 0 auto;
+      max-width: 980px;
+      background: white;
+      -webkit-border-radius: 9px;
+              border-radius: 9px;
+      padding: 20px 15px 0 15px; }
+      .main .info h1 {
+        font-family: ptsnb;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-bottom: 22px;
+        text-align: center; }
+      .main .info p {
+        font-family: ptsr;
+        font-size: 14px;
+        color: #262626;
+        line-height: 21px;
+        padding-bottom: 10px;
+        text-align: justify; }
+        .main .info p span {
+          font-family: ptsb;
+          text-transform: uppercase; }
+    .main .preference {
+      margin: 0 auto;
+      position: relative;
+      max-width: 980px;
+      min-height: 1680px;
+      background-color: black;
+      background-repeat: no-repeat;
+      padding-top: 20px; }
+      .main .preference h1 {
+        font-family: ptsnb;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white; }
+        .main .preference h1 span:first-of-type {
+          font-family: ptsnr; }
+      .main .preference .bottle {
+        display: none; }
+      .main .preference .bg-s4 {
+        display: none; }
+      .main .preference .card-holder {
+        width: 220px;
+        min-height: 517px;
+        position: absolute;
+        top: 80px;
+        right: -webkit-calc(50% - 220px);
+        right: calc(50% - 220px);
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+        z-index: 2;
+        display: grid;
+        grid-template-columns: auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 15px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .main .preference .card-holder .card {
+          width: 200px;
+          min-height: 251px;
+          background-color: white;
+          -webkit-border-radius: 9px;
+                  border-radius: 9px;
+          overflow: hidden; }
+          .main .preference .card-holder .card p {
+            font-family: ptsb;
+            font-size: 16px;
+            text-align: center;
+            padding-top: 21px; }
+          .main .preference .card-holder .card:nth-of-type(4) p {
+            padding-top: 12px; }
+    .main .doctor {
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      max-width: 980px;
+      min-height: 350px;
+      background: white;
+      background-repeat: no-repeat;
+      -webkit-border-radius: 9px;
+              border-radius: 9px;
+      padding: 20px 15px 0 15px; }
+      .main .doctor h1 {
+        font-family: ptsnb;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        text-align: center; }
+      .main .doctor p {
+        font-family: ptsr;
+        font-size: 14px;
+        color: #262626;
+        line-height: 21px;
+        padding-bottom: 5px;
+        text-align: justify; }
+        .main .doctor p:last-of-type {
+          font-family: ptsbi;
+          padding-top: 14px;
+          text-align: right; }
+      .main .doctor img {
+        display: none; }
+  /* ↑↑↑ /MAIN PART ↑↑↑ */
+  /* ↓↓↓ FOOTER ↓↓↓ */
+  .footer {
+    margin: 0 auto;
+    max-width: 980px;
+    height: 9px;
+    background: black url("../img/bg-s6.png") center top;
+    background-repeat: no-repeat; }
+  /* ↑↑↑ /FOOTER ↑↑↑ */ }
+
+/* ↓↓↓ for 576px and more ↓↓↓ */
+@media only screen and (min-width: 576px) {
+  /* ↓↓↓ MAIN PART ↓↓↓ */
+  .main {
+    /* ↓↓↓ SECTION 1 how-much ↓↓↓ */
+    /* ↑↑↑ /SECTION 1 how-much ↑↑↑ */
+    /* ↓↓↓ SECTION 2 dialog ↓↓↓ */
+    /* ↑↑↑ /SECTION 2 dialog ↑↑↑ */
+    /* ↓↓↓ SECTION 3 info ↓↓↓ */
+    /* ↑↑↑ /SECTION 3 info ↑↑↑ */
+    /* ↓↓↓ SECTION 4 preference ↓↓↓ */
+    /* ↑↑↑ /SECTION 4 preference ↑↑↑ */
+    /* ↓↓↓ SECTION 5 doctor ↓↓↓ */
+    /* ↑↑↑ /SECTION 5 doctor ↑↑↑ */ }
+    .main .how-much {
+      min-height: 1560px; }
+      .main .how-much .leaf {
+        left: 20px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+      .main .how-much .hand {
+        top: 90px;
+        right: 10px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+      .main .how-much h1 {
+        font-size: 60px;
+        padding-top: 140px; }
+      .main .how-much .list {
+        width: 300px; }
+      .main .how-much .bottle-with-shadow {
+        display: block;
+        position: absolute;
+        top: 520px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%); }
+      .main .how-much .sale {
+        top: 870px; }
+      .main .how-much .numdercard-holder {
+        top: 1049px; }
+      .main .how-much .form {
+        top: 1133px; }
+    .main .dialog h1 {
+      font-size: 48px; }
+    .main .dialog p {
+      font-size: 22px;
+      padding: 0; }
+    .main .dialog .question {
+      height: 260px; }
+      .main .dialog .question span {
+        left: 40px; }
+      .main .dialog .question h4 {
+        font-size: 24px; }
+      .main .dialog .question button:first-of-type {
+        left: 15px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+      .main .dialog .question button:last-of-type {
+        top: 131px;
+        right: 15px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+    .main .info h1 {
+      font-size: 48px;
+      line-height: 52px;
+      text-shadow: 0 0 10px white; }
+    .main .preference {
+      min-height: 1460px; }
+      .main .preference h1 {
+        font-size: 48px; }
+      .main .preference .bottle {
+        display: block;
+        position: absolute;
+        top: 144px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+        z-index: 2; }
+      .main .preference .card-holder {
+        width: 440px;
+        top: 660px;
+        right: -webkit-calc(50% - 440px);
+        right: calc(50% - 440px);
+        grid-template-columns: auto auto; }
+    .main .doctor h1 {
+      font-size: 48px; }
+  /* ↑↑↑ /MAIN PART ↑↑↑ */ }
+
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+  /* ↓↓↓ MAIN PART ↓↓↓ */
+  .main {
+    /* ↓↓↓ SECTION 1 how-much ↓↓↓ */
+    /* ↑↑↑ /SECTION 1 how-much ↑↑↑ */
+    /* ↓↓↓ SECTION 2 dialog ↓↓↓ */
+    /* ↑↑↑ /SECTION 2 dialog ↑↑↑ */
+    /* ↓↓↓ SECTION 3 info ↓↓↓ */
+    /* ↑↑↑ /SECTION 3 info ↑↑↑ */
+    /* ↓↓↓ SECTION 4 preference ↓↓↓ */
+    /* ↑↑↑ /SECTION 4 preference ↑↑↑ */
+    /* ↓↓↓ SECTION 5 doctor ↓↓↓ */
+    /* ↑↑↑ /SECTION 5 doctor ↑↑↑ */ }
+    .main .how-much {
+      min-height: 745px; }
+      .main .how-much .logo {
+        left: 15px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+      .main .how-much .leaf {
+        top: 31px;
+        left: 305px; }
+      .main .how-much .hand {
+        top: 31px;
+        left: 515px; }
+      .main .how-much h1 {
+        padding-top: 80px;
+        text-align: left; }
+      .main .how-much h4 {
+        width: 330px;
+        padding: 20px 0 11px 0;
+        text-align: left; }
+      .main .how-much .list {
+        left: 0; }
+      .main .how-much .bottle-with-shadow {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%);
+        margin: 150px 0 0 29px; }
+      .main .how-much .sale {
+        top: 220px;
+        right: 15px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+      .main .how-much .numdercard-holder {
+        top: 399px;
+        right: 15px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+      .main .how-much .form {
+        top: 483px;
+        right: 15px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+    .main .dialog .question {
+      width: 640px; }
+      .main .dialog .question span {
+        left: 114px; }
+      .main .dialog .question h4 {
+        padding-left: 189px; }
+      .main .dialog .question button:first-of-type {
+        left: 60px; }
+      .main .dialog .question button:last-of-type {
+        right: 60px; }
+    .main .info {
+      min-height: 392px;
+      background: white url("../img/bg-s3.png") right top;
+      background-repeat: no-repeat;
+      padding: 20px 100px 0 20px; }
+      .main .info h1 {
+        text-align: left; }
+      .main .info p {
+        padding-right: 280px;
+        text-align: left; }
+    .main .preference {
+      min-height: 940px; }
+      .main .preference .bottle {
+        left: -50px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+      .main .preference .bg-s4 {
+        display: block;
+        position: absolute;
+        top: 340px;
+        left: -60px;
+        z-index: 1; }
+      .main .preference .card-holder {
+        top: 140px;
+        right: 0px;
+        -webkit-transform: translate(0%);
+            -ms-transform: translate(0%);
+                transform: translate(0%); }
+    .main .doctor {
+      min-height: 443px;
+      background: white url("../img/bg-s5.png") right top;
+      background-repeat: no-repeat;
+      -webkit-border-radius: 9px;
+              border-radius: 9px;
+      padding: 20px 370px 0 15px; }
+      .main .doctor h1 {
+        font-family: ptsnb;
+        font-size: 48px;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        text-align: left; }
+      .main .doctor p {
+        font-family: ptsr;
+        font-size: 14px;
+        color: #262626;
+        line-height: 21px;
+        padding-bottom: 5px;
+        text-align: left;
+        width: 370px; }
+        .main .doctor p:last-of-type {
+          font-family: ptsbi;
+          padding-top: 14px;
+          text-align: left; }
+      .main .doctor img {
+        display: block;
+        position: absolute;
+        top: 362px;
+        left: 260px; }
+  /* ↑↑↑ /MAIN PART ↑↑↑ */
+  /* ↓↓↓ FOOTER ↓↓↓ */
+  /* ↑↑↑ /FOOTER ↑↑↑ */ }
+
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: black; }
+  /* ↓↓↓ HEADER ↓↓↓ */
+  /* ↑↑↑ /HEADER ↑↑↑ */
+  /* ↓↓↓ MAIN PART ↓↓↓ */
+  .main {
+    /* ↓↓↓ SECTION 1 how-much ↓↓↓ */
+    /* ↑↑↑ /SECTION 1 how-much ↑↑↑ */
+    /* ↓↓↓ SECTION 3 info ↓↓↓ */
+    /* ↑↑↑ /SECTION 3 info ↑↑↑ */
+    /* ↓↓↓ SECTION 4 preference ↓↓↓ */
+    /* ↑↑↑ /SECTION 4 preference ↑↑↑ */
+    /* ↓↓↓ SECTION 5 doctor ↓↓↓ */
+    /* ↑↑↑ /SECTION 5 doctor ↑↑↑ */ }
+    .main .how-much {
+      padding-left: 0px; }
+      .main .how-much .logo {
+        left: 0px; }
+      .main .how-much .leaf {
+        left: 346px; }
+      .main .how-much .hand {
+        left: 576px; }
+      .main .how-much h1 {
+        padding-top: 100px; }
+      .main .how-much .bottle-with-shadow {
+        margin: 16px 0 0 29px; }
+      .main .how-much .sale {
+        height: 150px;
+        top: 525px;
+        right: 324px; }
+      .main .how-much .numdercard-holder {
+        top: 179px; }
+      .main .how-much .form {
+        top: 263px; }
+    .main .info {
+      padding: 24px 385px 0 40px; }
+      .main .info p {
+        font-size: 17px;
+        color: #262626;
+        line-height: 26px;
+        padding-right: 0px; }
+    .main .preference {
+      min-height: 720px;
+      padding-top: 53px; }
+      .main .preference .bottle {
+        top: 164px; }
+      .main .preference .card-holder {
+        width: 660px;
+        top: 133px;
+        grid-template-columns: auto auto auto; }
+    .main .doctor {
+      padding: 24px 370px 0 40px; }
+      .main .doctor h1 {
+        padding-bottom: 28px; }
+      .main .doctor p {
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 10px;
+        width: 100%; }
+      .main .doctor img {
+        top: 362px;
+        left: 360px; }
+  /* ↑↑↑ /MAIN PART ↑↑↑ */ }

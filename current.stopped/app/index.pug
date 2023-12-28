@@ -1,0 +1,84 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='css/libs.min.css')
+    // js-libs (font awesome, slick, wow ...)
+    script(defer='', src='js/libs.min.js')
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/js.js', defer='')
+  body
+    .size-info.size-info-1 менше 320
+    .size-info.size-info-2 320 і більше
+    .size-info.size-info-3 576 і більше
+    .size-info.size-info-4 768 і більше
+    .size-info.size-info-5 992 і більше
+    .size-info.size-info-6 1200 і більше
+    .size-info.size-info-7 1920 і більше
+    // HEADER
+    .header-wrapper
+      header.header
+        
+        // NAVIGATION
+        nav.navbar.navbar-expand
+
+          a.navbar-brand(href="#") SITE LOGO
+
+          form.form-inline(action="#")
+            .input-group
+              .input-group-prepend
+                .dropdown
+                  button.btn.dropdown-toggle(type="button" data-toggle="dropdown")
+                    img(src="img/place-marker.png" alt="place-marker.png")
+                    .dropdown-menu
+                      a.dropdown-item(href="#") Link 1
+                      a.dropdown-item(href="#") Link 2
+                      a.dropdown-item(href="#") Link 3
+                      a.dropdown-item(href="#") Link 4
+                      a.dropdown-item(href="#") Link 5
+                      a.dropdown-item(href="#") Link 6
+
+              input.form-control(type="text")
+
+              .input-group-append
+                button.btn(type="submit")
+                  i.fas.fa-search
+
+          ul.navbar-nav
+
+            li.nav-item
+              a.nav-link(href='#')
+                i.fas.fa-bell(style="font-size:20px")
+                span.badge.badge-danger 4
+
+            li.nav-item
+              a.nav-link.person(href='#')
+                img.person__photo(src="img/some-face.jpg" alt="some-face.jpg")
+        // /NAVIGATION
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      section.section1
+        .row(style="justify-content: space-around")
+          .col-9
+            h1.section-header Английский для детей
+            h5 Лучше раньше, чем никогда
+            .lc(style="height: 300px; background-color: rgba(143,43,19,.5)")
+          .col-3
+            h1.section-header Курсы
+            h5 Английский язык
+            .lc(style="height: 300px; background-color: rgba(43,143,19,.5)")
+      // /SECTION 1
+    // /MAIN SECTION
+
+    // FOOTER
+    .footer-wrapper
+      footer.footer
+    // /FOOTER

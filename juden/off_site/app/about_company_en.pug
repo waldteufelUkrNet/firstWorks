@@ -1,0 +1,98 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title About company
+
+    link(rel='icon', href='assets/img/logo-small.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/about_company.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header ABOUT COMPANY
+          h5.section1__subheader PlatinumTrade IS THE SUPPLIER OF BINARY OPTIONS,
+            br
+            | WHICH TRUST THOUSAND TRADERS.
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__text
+            p
+              span.bold-text Purpose PlatinumTrade -
+              |
+              | is to give traders infinite opportunities, to be successful and financially independent person, without creating any obstacles and restrictions.
+
+            p
+              span.bold-text Mission PlatinumTrade -
+              |
+              | is to provide you, as a trader, the safest, most convenient and generally the best way to trade. Our pricing and execution modules guarantee the use of the most advanced and advanced technologies. Thanks to our partnership with the Reuters news provider, we receive real-time streams of accurate data, and our terms and conditions clearly indicate the difference between the market price in real time and the price of options. We provide expiration schedules at any given moment to ensure the calmness of the trader, so that the trader does not have any problematic issues.
+
+            p Stability is of paramount importance for our company. We make every effort to ensure uninterrupted services, safe and simple trading, financial viability and strict compliance with the law.
+
+            p We hope that your relationship with PlatinumTrade will be long-term, and we will do our best to make it profitable!
+          .section2__logo: img(src="assets/img/logo.png", alt="logo.png")
+
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          h1.section3__header
+            |  JOIN THE
+            br
+            span.bold-text PLATINUMTRADE.ORG
+            br
+            | AND TRADE
+            br
+            | AS A PROFESSIONAL!
+          h5.section3__subheader PlatinumTrade Platform Advantages:
+          ol.section3__list
+            li Web interface, no need to download
+            li Simple trade - easy to understand with clear explanations
+            li Diverse products
+            li User-friendly trade
+            li Safe - the risk / profit ratio is clearly stated in the option
+            li Quick and easy deposits in BTC
+            li Constant development of highly profitable feeds in modern conditions.
+          p.section3__text PlatinumTrade is committed to providing the most high-quality and unique trading platform that can be used by private investors around the world. Employees of GoldbergTrade are ready to provide traders with the necessary assistance, and professional brokers provide traders with guidance at every stage of the journey.
+          p.section3__text
+            span.bold-text PLATINUMTRADE.ORG -
+            |  This is the leading platform for trading binary options to date. Now that binary options have become more popular than ever, PlatinumTrade provides traders with excellent working conditions in terms of security, availability of various functions, ease of use, provision of tools and training.
+          p.section3__text Customer funds are stored on a separate account. Cash is only used to trade options through our website on behalf of the client and is never used for any other purpose. The management of our obligations and risks is carried out by professionals, and we guarantee the payment of your profit according to our conditions.
+          p.section3__text In PlatinumTrade Company and in partner organizations there are professional forex brokers experts in the field of derivative financial instruments and risk management. In addition, we cooperate with payment systems. We deal with all aspects of trading binary options, so that you get the best impression of trading at any one time.
+
+
+      // /SECTION 3
+
+      include assets/BEM-blocks/slick_money/slick_money.pug
+      include assets/BEM-blocks/notification_of_risks/notification_of_risks_en.pug
+    // /MAIN SECTION
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

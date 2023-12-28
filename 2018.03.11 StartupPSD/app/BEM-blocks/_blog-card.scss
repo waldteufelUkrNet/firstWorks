@@ -1,0 +1,100 @@
+.blog-card {
+	max-width: 1140px;
+	color: #777777;
+	display: grid;
+	grid-template-columns: auto;
+	@media only screen and (min-width: 768px) {
+		grid-template-columns: auto auto;
+	}
+	&__img {
+		width: 100%;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		@media only screen and (min-width: 768px) {
+			width: 300px;
+			padding-bottom: 0px;
+		}
+		@media only screen and (min-width: 992px) {
+			width: 460px;
+		}
+	}
+	&__content {
+		padding-left: 0px;
+		@media only screen and (min-width: 992px) {
+			padding-left: 38px;
+		}
+	}
+	&__header-block {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-column-gap: 28px;
+		justify-content: start;
+	}
+	&__date {
+		width: 76px;
+		height: 76px;
+		border: 2px solid #555555;
+		font-family: mb;
+		text-align: center;
+		padding-top: 11px;
+	}
+	&__day {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	&__month {
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+	&__header-container {
+		padding-top: 14px;
+	}
+	&__header {
+		font-family: mr;
+		font-size: 16px;
+		text-transform: uppercase;
+		padding-bottom: 16px;
+		transition: color .5s;
+	}
+	&__subheader {
+		font-family: ri;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+	}
+	&__name {
+		transition: color .5s;
+	}
+	&__work {
+		transition: color .5s;
+	}
+	&__text {
+		font-family: rsr;
+		font-size: 14px;
+		line-height: 24px;
+		padding: 18px 0 26px 2px;
+		text-align: center;
+		@media only screen and (min-width: 768px) {
+			text-align: left;
+		}
+	}
+	&__link {
+		font-family: rsb;
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 1.3px;
+		transition: color .5s;
+		display: block;
+		text-align: center;
+		@media only screen and (min-width: 768px) {
+			display: inline;
+		}
+	}
+	&:hover {
+		.blog-card__header,
+		.blog-card__name,
+		.blog-card__work,
+		.blog-card__link {
+			color: #c0301c;
+		}
+	}
+}

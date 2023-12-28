@@ -1,0 +1,104 @@
+.project-card {
+  width: 100%;
+  max-width: 290px;
+  height: 290px;
+  position: relative;
+  cursor: pointer;
+  background-color: #fbfaf8;
+  transition: background-color .5s;
+  @media only screen and (min-width: 576px) {
+    max-width: 370px;
+    height: 337px;
+  }
+  &__img {
+    max-width: 290px;
+    @media only screen and (min-width: 576px) {
+      max-width: 370px;
+    }
+  }
+  &__cover {
+    width: 100%;
+    max-width: 290px;
+    height: 185.75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    opacity: 0;
+    transition: opacity .5s;
+    @media only screen and (min-width: 576px) {
+      max-width: 370px;
+      height: 237px;
+    }
+  }
+  &__icons-holder {
+    position: absolute;
+    left: 50%;
+    top: 106px;
+    transform: translate(-50%);
+  }
+  &__icon {
+    display: inline-block;
+    padding: 0 14px;
+    color: white;
+    font-size: 26px;
+    opacity: 0;
+    transition: opacity .5s, color .5s;
+    &:hover {
+      color: #c7b299;
+    }
+  }
+  &__info {
+    padding: 26px 0 0 29px;
+    position: absolute;
+    max-width: 100%;
+    &:before {
+      content: "";
+      display: block;
+      height: 10px;
+      position: absolute;
+      top: -23px;
+      left: 20px;
+      border: {
+        bottom: 10px solid #fbfaf8;
+        left: 15px solid transparent;
+        right: 15px solid transparent;
+      }
+      transition: border-color .5s;
+    }
+  }
+   &__h4 {
+    font-family: rm;
+    font-size: 20px;
+    color: #c7b299;
+    text-align: left;
+    padding-bottom: 10px;
+    transition: color .5s;
+  }
+  &__h5 {
+    font-family: ml;
+    font-size: 14px;
+    color: #d1d1d1;
+    text-align: left;
+    transition: color .5s;
+  }
+
+  &:hover {
+    background-color: #362f2d;
+    .project-card__cover {
+      opacity: .5;
+    }
+    .project-card__icon {
+      opacity: 1;
+    }
+    .project-card__info:before {
+      border-bottom-color: #362f2d;
+    }
+    .project-card__h4 {
+      color: white;
+    }
+    .project-card__h5 {
+      color: #c7b299;
+    }
+  }
+}

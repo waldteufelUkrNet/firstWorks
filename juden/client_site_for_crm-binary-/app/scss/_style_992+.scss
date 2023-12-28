@@ -1,0 +1,81 @@
+@media only screen and (min-width: 992px) {
+// @media only screen and (min-width: 992px) and (min-height: 600px) {
+  /* ↓↓↓ MAIN PART ↓↓↓ */
+  .main {
+    /* ↓↓↓ SECTION 1 (work area) ↓↓↓ */
+    .work_area {
+      .graphic-header {
+        height                   : 42px;
+        .currency-logo-holder {
+          min-width              : 150px;
+          align-items            : center;
+          flex-grow              : none;
+          order                  : 2;
+        }
+        .timer-buttons-ul {
+          width                  : calc( (100% - 150px) / 2);
+          order                  : 1;
+          .timer-buttons-li {
+            padding              : 2px 4px;
+          }
+        }
+        .type-buttons-ul {
+          width                  : calc( (100% - 150px) / 2);
+        }
+      }
+    }
+    #container {
+      height                     : calc(100% - 200px);
+    }
+
+    .slider-area {
+      bottom                     : 10px;
+    }
+    .navigation {
+      display: none;
+    }
+    /* ↑↑↑ /SECTION 1 (work area) ↑↑↑ */
+
+    /* ↓↓↓ SECTION 2 (left column) ↓↓↓ */
+    .left-column {
+      height                     : 100%;
+      position                   : relative;
+      left                       : 0;
+      border-right               : none;
+      border-bottom              : none;
+      background-color           : transparent;
+      .wares-slider {
+        &__item {
+           height                 : calc(100vh - 60px);
+        }
+      }
+    }
+    /* ↑↑↑ /SECTION 2 (left column) ↑↑↑ */
+
+    /* ↓↓↓ SECTION 3 (right column) ↓↓↓ */
+    .right-column {
+      position                  : relative;
+      z-index                   : 1;
+      right                     : 0;
+      height                    : 100%;
+      border-left               : none;
+      border-bottom             : none;
+      background-color          : transparent;
+      .work-field-wrapper {
+        max-height              : calc(100vh - 240px);
+      }
+      .parlay-slider {
+        &__item-choice-field {
+          width                 : calc(100% - 1px);
+        }
+      }
+      .slider-change-btn-holder {
+        display                 : flex;
+        &:after {
+          display               : block;
+        }
+      }
+    }
+    /* ↑↑↑ /SECTION 3 (right column) ↑↑↑ */
+  }
+}

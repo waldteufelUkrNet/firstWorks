@@ -1,0 +1,88 @@
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 1 hero ↓↓↓ */
+		.hero-wrapper {
+			background-color: #d7eed6;
+			.hero {
+				min-height: 420px;
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 what ↓↓↓ */
+		.what-wrapper {
+			.what {
+				.list-holder {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 info ↓↓↓ */
+		.info-wrapper {
+			.info {
+				min-height: 895px;
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 s6 ↓↓↓ */
+		.s6-wrapper {
+			.s6 {
+				min-height: 1600px;
+				.s6-item {
+					margin: 15px auto 0;
+					position: relative;
+					display: flex;					
+
+					.s6-item-info {
+
+						h3 {
+							font-size: 200px;
+							top: -26px;
+						}
+						h4 {
+							padding: 88px 0 31px;
+						}
+					}
+					img {
+						width: 360px;
+						height: 360px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 why ↓↓↓ */
+		.why-wrapper {
+			.why {
+				.why-item {
+					margin: 0 auto 0;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 8 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 9 callback ↓↓↓ */
+		.callback-wrapper {
+			.callback {
+				min-height: 600px;
+				input[type="submit"] {
+					font-size: 18px;
+				}		
+			}
+		}
+		/* ↑↑↑ /SECTION 9 ↑↑↑ */
+	}
+}

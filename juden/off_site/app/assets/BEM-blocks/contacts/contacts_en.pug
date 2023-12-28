@@ -1,0 +1,32 @@
+// ↓↓↓ BEM-blocks: contacts (start) ↓↓↓
+
+style
+  include contacts.css
+
+.contacts-wrapper
+  .contacts
+    .contacts__item
+      span.contacts__logo(href='#')
+        i.fas.fa-phone-volume
+      .contacts__data
+        p: a.contacts__tel(href='tel:+441246808018') +441246808018
+        p: a.contacts__tel(href='tel:+31852081802') +31852081802
+    .contacts__item
+      a.contacts__logo(href='mailto:support@platinumtrade.org')
+        i.far.fa-envelope
+      .contacts__data support@platinumtrade.org
+    .contacts__item
+      a.contacts__logo(href='skype:#')
+        i.fab.fa-skype
+      .contacts__data support@platinumtrade.org
+    .contacts__item
+      .contacts__logo
+        i.fab.fa-buromobelexperte
+      .contacts__data
+        p Monday-Friday
+        p GMT 9:00–19:00
+
+//- script
+  include contacts.js
+
+// ↑↑↑ BEM-blocks: contacts (end) ↑↑↑

@@ -1,0 +1,350 @@
+/* ↓↓↓ for 320px and more ↓↓↓ */
+@media only screen and (min-width: 320px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.navigation {
+		margin: 0 auto;
+		width: 180px;
+		height: 86px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		transition: height .5s;
+		div {
+			font-family: ag;
+			font-size: 18px;
+			padding-right: 8px;
+			&:not(:first-of-type) {
+				padding-top: 10px;
+				a {
+					transition: color .5s, font-size .5s;
+						&:hover {
+						font-size: 20px;
+						color: rgb(43,123,229);
+					}
+				}
+			}
+		}
+		.logo {
+			img {
+				margin-top: 0px;
+			}
+		}
+    i {
+    	font-size: 30px;
+			position: absolute;
+			top: 30px;
+			right: 30px;
+    	cursor: pointer;
+    }
+	}
+
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		.green-line {
+			width: 190px;
+			height: 3px;
+			background-color: rgb(77,244,186);
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%);
+		}
+
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.command-1 {
+			margin-left: 0px;
+			height: 320px;
+			position: relative;
+			h1 {
+				font-size: 30px;
+				position: absolute;
+				top: 0px;
+				right: 50px;
+			}
+			&__img {
+				display: none;
+				box-shadow: 0px 30px 30px rgb(120,120,120); 
+			}
+			&__shadow {
+				width: 100%;
+				height: 200px;
+				background-color: rgba(77,244,186,0.5);
+				position: absolute;
+				top: 50px;
+				left: 0px;
+			}
+			&__info {
+				width: 100%;
+				height: 240px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				text-align: center;
+				p {
+					padding-top: 30px;
+					font-size: 14px;
+					letter-spacing: -2px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+		.command-2 {
+			margin-left: 0px;
+			height: 410px;
+			position: relative;
+			h2 {
+				font-size: 20px;
+				padding: 0px 0 36px 0px;
+				font-family: ab;
+				text-align: center;
+			}
+			&__info {
+				position: relative;
+				left: 0px;
+				width: 100%;
+				padding-top: 30px;
+				p {
+					text-align: center;
+					font-family: ab;
+					font-size: 14px;
+					padding: 0 20px 20px;
+					&:last-of-type {
+						padding: 10px 20px;
+					}
+				}
+			}
+			&__img {
+				display: none;
+				position: absolute;
+				top: 150px;
+				right: 10px;
+				width: 150px;
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 ↓↓↓ */
+		.command-3 {
+			display: none;
+			margin-left: 0px;
+			height: 420px;
+			position: relative;
+			&__shadow {
+				width: 620px;
+				height: 420px;
+				background-color: rgba(77,244,186,0.5);
+				position: absolute;
+				top: 0;
+				left: 125px;
+				z-index: 2;
+			}
+			&__img {
+				position: absolute;
+				top: 8px;
+				right: 83px;
+				z-index: 1;
+			}
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.whom {
+			height: 320px;
+			position: relative;
+			h2 {
+				font-size: 20px;
+				font-family: ab;
+				padding: 30px 0 40px 0;
+				text-align: center;
+			}
+			&__info {
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+				width: 100%;
+				padding-top: 50px;
+				p {
+					text-align: center;
+					font-family: ab;
+					font-size: 14px;
+					padding: 0;
+					&:first-of-type {
+						padding-bottom: 20px;
+					}
+				}
+			}
+			img:first-of-type {
+				display: none;
+				position: absolute;
+				top: 160px;
+				right: 0px;
+			}
+			img:last-of-type {
+				display: none;
+				position: absolute;
+				bottom: -73px;
+				left: -73px;
+				z-index: 5;
+			}
+		}
+
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.what {
+			height: 270px;
+			position: relative;
+			&__img {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 54px;
+			}
+			&__shadow {
+				position: absolute;
+				top: 20px;
+				left: 0px;
+				width: 100%;
+				height: 180px;
+				background-color: rgba(77,244,186,0.5);
+			}
+			&__info {
+				width: 100%;
+				height: 200px;
+				position: absolute;
+				top: 45px;
+				right: 0;
+				font-family: ab;
+				font-size: 20px;
+				text-align: center;
+				p {
+					color: black;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.knowledge {
+			min-height: 2460px;
+			position: relative;
+			h2 {
+				font-family: ab;
+				font-size: 20px;
+				text-align: center;
+				padding-top: 0px;
+			}
+			.green-line {
+				top: 60px;
+			}
+			.knowledge-container {
+				width: 236px;
+				position: absolute;
+				top: 130px;
+				left: 50%;
+				transform: translate(-50%);
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				.knowledge-item {
+					width: 234px;
+					height: 296px;
+					.rounded {
+						width: 136px;
+						height: 136px;
+						border-radius: 50%;
+						background-color: rgb(77,244,186);
+						position: relative;
+						margin: 0 auto;
+						img {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%,-50%);
+						}
+					}
+					p {
+						text-align: center;
+						padding: 15px 20px;
+						font-family: ab;
+						font-size: 18px;
+						line-height: 25px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.photo {
+			display: none;
+			height: 555px;
+			position: relative;
+			&__img {
+				position: absolute;
+				left: 0px;
+				z-index: 1;
+			}
+			&__triangle {
+				position: absolute;
+				top: -15px;
+				left: 0px;
+				z-index: 3;
+			}
+			&__shadow {
+				width: 750px;
+				height: 512px;
+				background-color: rgba(77,244,186,0.5);
+				position: absolute;
+				left: 0px;
+				top: 44px;
+				z-index: 2;
+			}
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 ↓↓↓ */
+		.contact {
+			height: 600px;
+			position: relative;
+			.message {
+				margin: 60px auto;
+				width: 90%;
+				font-family: ab;
+				font-size: 20px;
+				text-align: center;
+				color: black;
+				line-height: 30px;
+			}
+			#login {
+				display: block;
+				background: url('../img/button.jpg') center top;
+				margin: 0 auto;
+				border-radius: 6px;
+				width: 280px;
+				height: 80px;
+				font-family: ab;
+				font-size: 20px;
+				color: rgb(39,8,75);
+				text-align: center;
+				padding-top: 34px;
+			}
+			.timer {
+				width: 100%;
+				margin: 30px auto;
+				font-family: ab;
+				font-size: 12px;
+				text-align: center;
+			}
+		}
+		/* ↑↑↑ /SECTION 8 ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+
+}

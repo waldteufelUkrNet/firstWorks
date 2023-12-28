@@ -1,0 +1,24 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "size_info";
+@import "style_general";
+@import "style_320+";
+@import "style_576+";
+@import "style_768+";
+@import "style_992+";
+@import "style_1200+";
+@import "style_1920+";
+
+//BEM-blocks
+@import "../BEM-blocks/_services-card";
+@import "../BEM-blocks/_project-card";
+@import "../BEM-blocks/_btn";
+@import "../BEM-blocks/_a-btn";
+@import "../BEM-blocks/_a-btn_activ";
+@import "../BEM-blocks/_counter-card";
+@import "../BEM-blocks/_post-card";
+
+@import "../BEM-blocks/logo-block/_logo-block";
+@import "../BEM-blocks/nav-block/_nav-block";
+@import "../BEM-blocks/search-block/_search-block";

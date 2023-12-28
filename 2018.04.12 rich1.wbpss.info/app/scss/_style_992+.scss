@@ -1,0 +1,290 @@
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.section1 {
+			background: url("../img/s1-bg.jpg") center top no-repeat;
+			min-height: 699px;
+			background-size: 100% 100%;
+			.section-header {
+				font-size: 70px;
+				color: white;
+				text-align: center;
+				padding-top: 220px;
+				line-height: 80px;
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+		.section2 {
+			background: url("../img/s2-bg.jpg") center top no-repeat;
+			min-height: 600px;
+			background-size: 100% 100%;
+			padding-top: 100px;
+			padding-right: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: right;
+				padding-bottom: 20px;
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 ↓↓↓ */
+		.section3 {
+			background: url("../img/s3-bg.jpg") center top no-repeat;
+			min-height: 602px;
+			background-size: 100% 100%;
+			padding-top: 220px;
+			p {
+				font-size: 50px;
+				line-height: 60px;
+				color: white;
+				text-align: center;
+			}
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.section4 {
+			background: url("../img/s4-bg.jpg") right top no-repeat;
+			min-height: 525px;
+			background-size: 100% 100%;
+			padding-top: 80px;
+			padding-left: 40px;
+			h5 {
+				font-size: 50px;
+				&:first-of-type {
+					padding-bottom: 20px;
+				}
+			}
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: left;
+				&:nth-of-type(3) {
+					padding-bottom: 20px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.section5 {
+			background: url("../img/s5-bg.jpg") left top no-repeat;
+			min-height: 529px;
+			background-size: 100% 100%;
+			padding-top: 80px;
+			padding-right: 40px;
+			h5, p:nth-of-type(3) {
+				font-size: 50px;
+				text-align: right;
+			}
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: right;
+				&:nth-of-type(1),
+				&:nth-of-type(3) {
+					padding-bottom: 20px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.section6 {
+			background: url("../img/s6-bg.jpg") right bottom no-repeat;
+			min-height: 474px;
+			background-size: 100% 100%;
+			padding-top: 100px;
+			padding-left: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: left;
+				&:nth-of-type(1) {
+					padding-bottom: 30px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.section7 {
+			background: url("../img/s7-bg.jpg") left top no-repeat;
+			min-height: 537px;
+			background-size: 100% 100%;
+			padding-top: 120px;
+			padding-right: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: right;
+				padding-bottom: 20px;
+			}
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 (+form) ↓↓↓ */
+		.section8 {
+			min-height: 420px;
+			position: relative;
+
+			img:first-of-type {
+				position: absolute;
+				top: 0; left: 0;
+				z-index: 1100;
+			}
+			img:last-of-type {
+				position: absolute;
+				top: 0; right: 0;
+				transform: rotateY(180deg);
+				z-index: 1100;
+			}
+			.s8-form {
+				position: absolute; z-index: 1111;
+				top: 10px;
+				left: 50%;
+				transform: translate(-50%);
+			}
+		}
+		/* ↑↑↑ /SECTION 8 (+form) ↑↑↑ */
+
+		/* ↓↓↓ SECTION 9 ↓↓↓ */
+		.section9 {
+			background: url("../img/s9-bg.jpg") right top no-repeat;
+			min-height: 498px;
+			background-size: 100% 100%;
+			padding-top: 120px;
+			padding-left: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: left;
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					padding-bottom: 30px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 9 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 10 ↓↓↓ */
+		.section10 {
+			background: url("../img/s10-bg.jpg") center top no-repeat;
+			min-height: 527px;
+			background-size: 100% 100%;
+			padding-top: 120px;
+			padding-right: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: right;
+				&:nth-of-type(1) {
+					padding-bottom: 30px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 10 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 11 ↓↓↓ */
+		.section11 {
+			background: url("../img/s11-bg.jpg") center top no-repeat;
+			min-height: 534px;
+			background-size: 100% 100%;
+			padding-top: 40px;
+			padding-left: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: left;
+				padding-bottom: 20px;
+			}
+		}
+		/* ↑↑↑ /SECTION 11 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 12 ↓↓↓ */
+		.section12 {
+			background: url("../img/s12-bg.jpg") center top no-repeat;
+			min-height: 538px;
+			background-size: 100% 100%;
+			padding-top: 60px;
+			padding-right: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: right;
+				&:nth-of-type(2),
+				&:nth-of-type(4) {
+					padding-bottom: 20px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 12 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 13 (+form) ↓↓↓ */
+		.section13 {
+			background: url("../img/s13-bg.jpg") left top no-repeat;
+			min-height: 410px;
+			background-size: 100% 100%;
+			padding-top: 80px;
+			padding-left: 40px;
+			p {
+				font-size: 30px;
+				line-height: 40px;
+				text-align: left;
+			}
+			.s13-form {
+				position: absolute;
+				top: 0px;
+				right: 40px;
+			}
+		}
+		/* ↑↑↑ /SECTION 13 (+form) ↑↑↑ */
+
+		/* ↓↓↓ SECTION 14 ↓↓↓ */
+		.section14 {
+			background: url("../img/s14-bg.jpg") left top no-repeat;
+			min-height: 456px;
+			background-size: 100% 100%;
+			padding-top: 40px;
+			padding-left: 40px;
+			p {
+				font-size: 20px;
+				line-height: 30px;
+				text-align: left;
+				&:nth-of-type(2),
+				&:nth-of-type(4),
+				&:nth-of-type(6),
+				&:nth-of-type(7) {
+					padding-bottom: 10px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 14 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 15 (+form) ↓↓↓ */
+		.section15 {
+			background: url("../img/s15-bg.jpg") left bottom no-repeat;
+			min-height: 400px;
+			padding-top: 10px;
+			.s15-form {
+				margin: 0 auto;
+			}
+		}
+		/* ↑↑↑ /SECTION 15 (+form) ↑↑↑ */
+
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

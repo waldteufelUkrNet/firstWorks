@@ -1,0 +1,319 @@
+.option-panel {
+  max-width          : calc(100vw - 300px);
+  width              : auto;
+  overflow           : hidden;
+  position           : relative;
+  font-family        : rcl;
+  font-size          : 14px;
+  text-align         : justify;
+  background-color   : #D3D3D3;
+  border             : 1px solid white;
+  border-radius      : 6px;
+  margin             : 20px auto 10px;
+  padding            : 10px;
+  &__button {
+    display          : inline-block;
+    width            : 110px;
+    height           : 36px;
+    line-height      : 36px;
+    margin           : 0px 8px;
+    padding          : 0;
+    font-family      : rb;
+    font-size        : 14px;
+    cursor           : pointer;
+    text-align       : center;
+    border           : 1px solid white;
+    border-radius    : 6px;
+    background-color : #D3D3D3;
+    outline          : none;
+    user-select      : none;
+  }
+  &__filters-wrapper,
+    &__columns-wrapper {
+    position         : relative;
+    height           : 0px;
+    overflow         : hidden;
+  }
+  &__divider {
+    background-color : white;
+    border           : none;
+    height           : 1px;
+    margin           : 6px auto;
+  }
+
+  .search-filters-label-wrapper {
+    max-width             : 1116px;
+    margin                : 0 auto;
+    display               : grid;
+    grid-template-columns : repeat(4, 1fr);
+    grid-gap              : 20px;
+    justify-content       : space-between;
+    padding               : 0 10px 10px;
+    label {
+      position              : relative;
+      display               : grid;
+      grid-template-columns : 1fr 40px;
+    }
+    input {
+      height       : 30px;
+      line-height  : 30px;
+      font-family  : rcl;
+      font-size    : 14px;
+      color        : black;
+      outline      : none;
+      border-radius: 6px 0 0 6px / 6px 0 0 6px;
+      border       : 1px solid white;
+      padding      : 0 10px;
+      width        : 100%;
+    }
+
+    span.option-panel__search-btn {
+      width           : 40px;
+      height          : 30px;
+      line-height     : 30px;
+      border-radius   : 0 6px 6px 0 / 0 6px 6px 0;
+      background-color: #353535;
+      text-align      : center;
+      font-size       : 16px;
+      color           : #FFA500;
+      cursor          : pointer;
+      border          : 1px solid transparent;
+    }
+    span.ui-icon-circle-triangle-w {
+      display    : block;
+      content    : "\f053";
+      font-family: fa;
+      cursor     : pointer;
+    }
+  }
+
+  .filters-label-wrapper {
+    display               : grid;
+    grid-template-columns : repeat(2, auto);
+    grid-row-gap          : 6px;
+    justify-content       : space-evenly;
+    label {
+      position            : relative;
+    }
+    .datapicker-holder {
+      display  : inline-block;
+      max-width: 240px;
+      height   : 30px;
+    }
+    input.datepicker {
+      max-width    : 83px;
+      height       : 30px;
+      line-height  : 30px;
+      font-family  : rcl;
+      font-size    : 14px;
+      color        : black;
+      outline      : none;
+      border-radius: 0px;
+      border       : 1px solid #D3D3D3;
+      padding-left : 10px;
+    }
+    span {
+      display: inline-block;
+      width  : 180px;
+    }
+    span.datalist-arrow {
+      position: relative;
+      top     : 1px;
+      right   : 20px;
+    }
+    select {
+      width       : 240px;
+      height      : 30px;
+      line-height : 30px;
+      font-family : rcl;
+      font-size   : 14px;
+      color       : black;
+      outline     : none;
+      border      : 1px solid transparent;
+      padding-left: 10px;
+    }
+    datalist + input {
+      width        : 194px;
+      height       : 30px;
+      line-height  : 30px;
+      font-family  : rcl;
+      font-size    : 14px;
+      color        : black;
+      outline      : none;
+      border       : 1px solid transparent;
+      padding-left : 10px;
+      border-radius: 0;
+    }
+    span.enter-btn {
+      width           : 40px;
+      height          : 30px;
+      line-height     : 30px;
+      border-radius   : 6px;
+      background-color: #353535;
+      text-align      : center;
+      font-size       : 20px;
+      color           : #FFA500;
+      cursor          : pointer;
+      border          : 1px solid transparent;
+      margin-left     : 6px;
+      position        : relative;
+      top             : 3px;
+    }
+  }
+
+  .column-label-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-row-gap: 6px;
+    label {
+      width: 48.4px;
+      height: 20.6px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      span:first-of-type {
+        position: absolute;
+        top: 50%; left: 60px;
+        transform: translate(0,-50%);
+        white-space: nowrap;
+      }
+      input {
+        outline: none;
+      }
+      input[type="checkbox"]~span:last-of-type {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/yes-and-no.png) no-repeat;
+        background-size: cover;
+      }
+      input[type="checkbox"]:checked~span:last-of-type {
+        background-position: 0 -20px
+      }
+    }
+  }
+}
+#filter-markers-panel {
+  margin-bottom: 10px;
+  position: relative;
+  padding: 3px 0;
+  overflow: hidden;
+  display: none;
+  .filter-markers-panel-header {
+    font-family   : rb;
+    font-size     : 14px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+  }
+  #clear-filters-btn {
+    padding       : 6px 12px;
+    border        : 1px solid grey;
+    border-radius : 4px;
+    margin-left   : 30px;
+    font-family   : rb;
+    font-size     : 14px;
+    cursor        : pointer;
+    position      : absolute;
+    right         : -190px;
+    top           : 3px;
+    transition    : right .5s;
+    transition-timing-function: ease-out;
+    box-shadow: 0 0 10px white;
+    user-select: none;
+  }
+
+  .filter-marker {
+    display: inline-block;
+    height        : 20px;
+    line-height   : 16px;
+    padding       : 0 18px 0 6px;
+    border        : 1px solid grey;
+    border-radius : 4px;
+    margin        : 6px 6px 0 0;
+    font-family   : rcl;
+    font-size     : 12px;
+    position: relative;
+    user-select: none;
+    .filter-marker-close-btn {
+      display: block;
+      position: absolute;
+      top: 1px;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ↓↓↓ TABLE ↓↓↓ */
+.table-wrapper {border: 1px solid grey;
+  max-width: calc(100vw - 300px);
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.customers-table {
+  white-space: nowrap;
+  th, td {
+    padding: 1px 10px;
+  }
+  thead {
+    font-family: rb;
+    font-size: 14px;
+    background-color: grey;
+    overflow: hidden;
+    height: 26px;
+    line-height: 26px;
+  }
+  tbody {
+    font-family: rcl;
+    font-size: 14px;
+
+   tr:nth-of-type(odd) {
+      background-color: white;
+    }
+    tr:nth-of-type(even) {
+      background-color: lightgrey;
+    }
+  }
+}
+/* ↑↑↑ /TABLE ↑↑↑ */
+
+/* ↓↓↓ SLIDER THUMB ↓↓↓ */
+.thumbArea {
+  width: 100%;
+  height: 36px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  .thumb {
+    position: absolute; z-index: 2;
+    left: 0; right: 0;
+    cursor: pointer;
+     width: 36px;
+    height: 36px;
+  }
+  .thumbLeftLine {
+    width: 100%;
+    height: 2px;
+    background-color: #ffa500;
+    position: absolute; z-index: 1;
+    left: -100%; top: 50%;
+    transform: translate(0,-50%);
+  }
+  .thumbRightLine {
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;
+    position: absolute; z-index: 1;
+    left: 0; top: 50%;
+    transform: translate(0,-50%);
+  }
+}
+#thumbArea-buffer {
+  height: 36px;
+  display: none;
+}
+/* ↑↑↑ /SLIDER THUMB ↑↑↑ */

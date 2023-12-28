@@ -1,0 +1,179 @@
+@media only screen and (min-width: 576px) {
+	/* ↓↓↓ section 2 ↓↓↓ */
+	.section2 {
+		width                : 566px;
+		padding              : 50px 15px 0px;
+		&__header {
+			font-size          : 36px;
+		}
+		&__subheader {
+			font-size          : 20px;
+			padding            : 20px 0 50px;
+		}
+		&__instruction-container {
+			padding            : 50px 0;
+		}
+		&__instruction-header {
+			font-size          : 22px;
+		}
+		&__instruction-body {
+			font-size          : 18px;
+		}
+	}
+	/* ↑↑↑ /section 2 ↑↑↑ */
+
+	/* ↓↓↓ section 3 ↓↓↓ */
+	.section3 {
+		width                : 566px;
+		font-size            : 18px;
+	}
+	/* ↑↑↑ /section 3 ↑↑↑ */
+
+	/* ↓↓↓ section 4 ↓↓↓ */
+	.section4 {
+		width                : 566px;
+		padding              : 50px 15px;
+		&__header {
+			font-size          : 36px;
+		}
+		&__buttons-holder {
+			margin             : 50px auto;
+	    flex-wrap          : nowrap;
+		}
+		&__card {
+			width                 : 500px;
+			height                : 240px;
+	    svg {
+	    	font-size           : 40px;
+	    }
+		}
+		&__card-header {
+			font-size             : 24px;
+			padding               : 15px 0;
+		}
+	}
+	/* ↑↑↑ /section 4 ↑↑↑ */
+
+	/* ↓↓↓ section 5 ↓↓↓ */
+	.section5 {
+		width                : 566px;
+		&__header {
+			font-size          : 26px;
+		}
+		&__boldhed {
+			font-size          : 46px;
+		}
+		&__subheader {
+			font-size          : 20px;
+		}
+	}
+	/* ↑↑↑ /section 5 ↑↑↑ */
+
+	/* ↓↓↓ section 6 ↓↓↓ */
+	.section6 {
+		width                : 560px;
+		padding              : 50px 15px 50px 70px;
+		&__list-header {
+			font-size          : 20px;
+		}
+		&__list-boby {
+			font-size          : 18px;
+		}
+	}
+	/* ↑↑↑ /section 6 ↑↑↑ */
+
+	/* ↓↓↓ section 7 ↓↓↓ */
+	.section7 {
+		width                : 560px;
+		padding              : 50px 15px 50px 70px;
+	  &__header {
+	  	font-size          : 26px;
+	  }
+	  &__header_bold {
+	  	font-size          : 30px;
+	  }
+	}
+	/* ↑↑↑ /section 7 ↑↑↑ */
+
+	/* ↓↓↓ section 8 ↓↓↓ */
+	.section8 {
+		width                   : 560px;
+		padding                 : 50px 15px;
+		&__cards-holder {
+		  grid-template-columns : 1fr 1fr;
+	  }
+	  &__card-header {
+	  	font-size             : 26px;
+	  }
+	  &__card-price {
+	  	font-size             : 26px;
+	  	padding               : 10px 0;
+	  }
+	  &__card-list-item {
+	  	font-size             : 18px;
+	  	padding-bottom        : 10px;
+	  }
+	}
+	/* ↑↑↑ /section 8 ↑↑↑ */
+
+	/* ↓↓↓ section 9 ↓↓↓ */
+	.section9 {
+		width                   : 560px;
+		padding                 : 50px 15px 0px;
+	  &__header {
+			font-size             : 54px;
+	  }
+	  &__text {
+			font-size             : 22px;
+	  }
+	  &__img {
+			width                 : 75%;
+	  }
+	  &__right-grid {
+			grid-template-columns : auto auto auto auto;
+			grid-gap              : 10px;
+	  }
+	  &__number {
+			font-size             : 40px;
+	  }
+	}
+	/* ↑↑↑ /section 9 ↑↑↑ */
+
+	/* ↓↓↓ section 10 ↓↓↓ */
+	.section10 {
+		width                 : 560px;
+		padding               : 50px 15px;
+		grid-gap              : 30px;
+		&__text {
+			font-size           : 18px;
+		}
+		.toggle {
+	    line-height         : 50px;
+			font-size           : 22px;
+			padding             : 0 30px;
+		}
+		.inner {
+			font-size           : 16px;
+			padding             : 30px 32px;
+		}
+	}
+	/* ↑↑↑ /section 10 ↑↑↑ */
+
+	/* ↓↓↓ section 11 ↓↓↓ */
+	.s11-wrapper {
+		.parallax-item {
+			display            : block;
+			position           : absolute;
+			z-index            : 1;
+			display            : block;
+		}
+	}
+	.section11 {
+		width                : 560px;
+		padding              : 50px 15px;
+	  &__header {
+	  	font-size          : 50px;
+	  }
+	}
+	/* ↑↑↑ /section 11 ↑↑↑ */
+}

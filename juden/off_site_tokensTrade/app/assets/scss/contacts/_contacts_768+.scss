@@ -1,0 +1,27 @@
+@media only screen and (min-width: 768px) {
+  .section1 {
+    flex-wrap               : nowrap;
+    &__icon-wrapper {
+      padding               : 100px 0 0 200px;
+    }
+    span {
+      font-size             : 250px;
+    }
+  }
+  .s2-wrapper{
+    width                   : 100%;
+  }
+  .section2 {
+    flex-wrap               : nowrap;
+  }
+
+  .section3 {
+    flex-wrap               : nowrap;
+    &__left-column {
+      width                 : 50%;
+    }
+    &__right-column {
+      max-width             : 50%;
+    }
+  }
+}

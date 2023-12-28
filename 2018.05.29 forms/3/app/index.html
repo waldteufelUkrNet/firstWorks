@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>waldteufel@ukr.net</title>
+	<link rel='icon' href='img/wehrwolf.jpg'>
+
+	<!-- css-libs (slick, animate ...) -->
+	<link rel='stylesheet' type='text/css' href='css/libs.min.css'>
+
+	<!-- js-libs (font awesome, slick, wow ...) -->
+  <script defer src='js/libs.min.js'></script>
+
+  <!-- own stylesheet and js -->
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
+	<script src='js/js.js' defer></script>
+</head>
+<body>
+
+<div class='form-wrapper'>
+  <form action='#' method='post' name='popup-form' class='popup-form'>
+
+    <h4>Create Withdrawal Ticket</h4>
+
+  	<label for='popup-form-amount'>AMOUNT</label>
+  	<input type='text' id='popup-form-amount' name='popup-form-amount' placeholder='Enter amount'>
+    <span class='validation-info' id='val-info-amount'>This field is required</span>
+
+  	<label for='popup-form-method'>METHOD</label>
+  	<select name='popup-form-method' id='popup-form-method'>
+      <option value="0">Credit Card</option>
+      <option value="Giftcard">Giftcard</option>
+      <option value="Mastercard">Mastercard</option>
+      <option value="Trololocard">Trololocard</option>
+    </select>
+    <span class='validation-info' id='val-info-method'>This field is required</span>
+
+    <label for='popup-form-description'>DESCRIPTION</label>
+    <input type='text' name='popup-form-description' id='popup-form-description' placeholder='Enter description'>
+    <span class='validation-info' id='val-info-description'>This field is required</span>
+
+    <button type='submit' name='popup-form-add'>Submit</button>
+    <button type='button' name='popup-form-annul'>Close</button>
+
+  </form>
+</div>
+
+</body>
+</html>

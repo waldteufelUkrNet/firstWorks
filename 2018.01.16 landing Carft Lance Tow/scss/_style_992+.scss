@@ -1,0 +1,78 @@
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+
+	$green: rgb(93,180,66);
+	$greyD: rgb(119,119,119);
+	$grey: rgb(204,204,204);
+	$greyL: rgb(236,236,236);
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.header {
+		.navigation-wrapper {
+			background-color: white;
+
+			.navigation {
+				max-width: 1202px;
+				height: 80px;
+				margin: 0 auto;
+				padding-left: 15px;
+				padding-right: 15px;
+				
+				.nav-logo {
+					float: left;
+					line-height: 80px;
+					font-family: bss;
+					font-size: 30px;
+					color: rgb(99,102,102);
+				}
+
+				.nav-menu {
+					float: right;
+					font-family: robR;
+					font-size: 14px;
+					
+					li {
+						display: inline-block;
+
+						a {
+							display: block;
+							height: 30px;
+							margin-top: 25px;
+							border-radius: 15px;
+							border: 1px solid white;
+							padding-top: 6px;
+							padding-left: 30px;
+							padding-right: 30px;
+						
+							&:hover {
+								border: 1px solid $green;
+								color: $green;
+							}
+						}
+					}
+				}
+			} 
+		}
+	}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+	.footer {
+	  .footer-wrapper {
+	  	.footer-info {
+				.footer-row {
+					p {
+						padding-right: 120px;
+					}
+					.footer-input-holder {
+						width: 330px;
+						input {
+							width: 270px;
+						}
+					}
+				}
+	  	}
+	  }
+	}
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

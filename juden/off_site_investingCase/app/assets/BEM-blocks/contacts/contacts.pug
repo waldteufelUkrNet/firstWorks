@@ -1,0 +1,44 @@
+// ↓↓↓ BEM-blocks: contacts (start) ↓↓↓
+
+//- style
+//-   include contacts.css
+
+.contacts-wrapper
+  .contacts
+    .contacts__item
+      span.contacts__logo(href='#')
+        i.fas.fa-phone-volume
+      .contacts__data
+        .contacts__phones-block
+          a.contacts__tel(href='tel:+74993713301') +74993713301
+          span.contacts__tel-description
+            |
+            | Российская Федерация (Москва)
+          a.contacts__tel(href='tel:+37167885078') +37167885078
+          span.contacts__tel-description
+            |
+            | Латвия (Рига)
+          a.contacts__tel(href='tel:+442039666753') +442039666753
+          span.contacts__tel-description
+            |
+            | Великобритания (Лондон)
+        //- p: a.contacts__tel(href='tel:+0000000000') +0000000000
+    .contacts__item
+      a.contacts__logo(href='mailto:support@investingcase.com')
+        i.far.fa-envelope
+      .contacts__data support@investingcase.com
+    .contacts__item
+      a.contacts__logo(href='skype:support@investingcase.com')
+        i.fab.fa-skype
+      .contacts__data support@investingcase.com
+    .contacts__item
+      .contacts__logo
+        i.fab.fa-buromobelexperte
+      .contacts__data
+        p Понедельник-Пятница
+        p GMT 9:00–19:00
+
+//- script
+  include contacts.js
+
+// ↑↑↑ BEM-blocks: contacts (end) ↑↑↑

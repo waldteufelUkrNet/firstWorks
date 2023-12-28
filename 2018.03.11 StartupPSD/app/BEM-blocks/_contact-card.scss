@@ -1,0 +1,25 @@
+.contact-card {
+	width: 100%;
+	max-width: 260px;
+	height: 100px;
+	padding: 3px 0 0 26px;
+	color: #555555;
+	position: relative;
+	&__header {
+		font-family: mr;
+		font-size: 14px;
+		text-transform: uppercase;
+		padding-bottom: 17px;
+	}
+	&__description1,
+	&__description2 {
+		font-family: rsr;
+		font-size: 12px;
+		padding-bottom: 7px;
+	}
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

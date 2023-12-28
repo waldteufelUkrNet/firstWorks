@@ -1,0 +1,16 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "size_info";
+@import "style_general";
+@import "style_320+";
+@import "style_576+";
+@import "style_768+";
+@import "style_992+";
+@import "style_1200+";
+@import "style_1920+";
+
+@import "../BEM-Blocks/language-switcher/language-switcher.scss";
+@import "../BEM-Blocks/menu-btn/menu-btn.scss";
+@import "../BEM-Blocks/simple-switcher/simple-switcher.scss";
+@import "../BEM-Blocks/popups/make-lodgement/make-lodgement.scss";

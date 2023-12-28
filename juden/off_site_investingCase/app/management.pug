@@ -1,0 +1,115 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title Руководство
+
+    link(rel='icon', href='assets/img/logoIC_icon.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/management.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header РУКОВОДСТВО
+          h5.section1__subheader УВАЖАЕМЫЙ ТРЕЙДЕР, ПРИВЕТСТВУЕМ ВАС В РАЗДЕЛЕ "РУКОВОДСТВО"!
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__logo: img(src="assets/img/logoIC.png", alt="logoIC.png")
+          .section2__text
+            p В данном разделе Вы найдете информацию о том, как работать с торговым счетом. А именно, две, пожалуй, самые важные вещи для любого участника финансовых рынков:
+              |
+              |
+              span.bold-text как пополнить свой торговый счет
+              |
+              | и какими способом
+              |
+              span.bold-text вывести заработанные средства.
+
+            p Наша онлайн торговая платформа предлагает вниманию трейдера разнообразные торговые инструменты.
+
+            p
+              |
+              span.bold-text InvestigCase
+              |
+              | рада удовлетворить потребности любого клиента, поэтому мы предлагаем четыре вида торговых счетов.
+
+            p В мире, когда скорость и возможность передвигаться решают все, особое удобство дарит возможность мобильной торговли.
+
+            p.bold-text ЖЕЛАЕМ ВАМ УСПЕШНОГО ТРЕЙДИНГА!
+
+            p.italic-text Если у Вас возникли какие-либо вопросы по работе с торговой платформой, то гарантированно исчерпывающий ответ Вы получите у своего персонального менеджера!
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          h1.section3__header ПОПОЛНЕНИЕ БАЛАНСА ТОРГОВОГО СЧЕТА
+
+          .section3__method-holder
+            .section3__method-item
+              .section3__method-item-head
+                .section3__method-item-logo: i.fab.fa-bitcoin
+                .section3__method-item-header Пополнение через платежные системы
+              .section3__method-item-body Вы можете внести депозит через сайты партнеры (обменные пункты) с помощью систем Bitcoin (BTC), пополнив тот или иной сервис любым способом таким как: Visa, MasterCard, QIWI, Yandex Деньги и т.д. Зачисление средств происходит в зависимости от скорости обработки той или иной платежной системы.
+      // /SECTION 3
+
+      // SECTION 4
+      .s4-wrapper
+        section.section4
+          h1.section4__header ВЫВОД СРЕДСТВ
+          h5.section4__subheader ГЛАВНОЕ В ТРЕЙДИНГЕ – ЭТО ПРИБЫЛЬ, поэтому в InvestigCase сделали так, чтобы Вы могли вывести заработанные деньги буквально в два шага:
+          p.section4__step.bold-text 1 - Зайдите в ваш личный кабинет.
+          p.section4__step.bold-text 2 - Оформите заявку на вывод.
+          p.section4__step И все – остается только дождаться, пока банк переведет деньги к вам на счет.
+
+          .section4__method-holder
+            .section4__method-item
+              .section4__method-item-head
+                .section4__method-item-logo: i.far.fa-credit-card
+                .section4__method-item-header Вывод средств на банковскую карту
+            .section4__method-item
+              .section4__method-item-head
+                .section4__method-item-logo: i.fab.fa-bitcoin
+                .section4__method-item-header Вывод средств через платежную систему: Bitcoin, Bitcoin Cash, Ethereum, EXMO, Payeer, Perfect Money, QIWI, Yandex Деньги
+      // /SECTION 4
+
+      // SECTION 5
+      .s5-wrapper
+        section.section5
+          h1.section5__header ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+          h5.section5__subheader Если у вас возникли вопросы относительно пополнения баланса или вывода средств, обязательно обратитесь в нашу службу поддержки клиентов Компании InvestigCase!
+          include assets/BEM-blocks/contact_form/contact_form.pug
+      // /SECTION 5
+
+      include assets/BEM-blocks/slick_money/slick_money.pug
+      include assets/BEM-blocks/notification_of_risks/notification_of_risks.pug
+    // /MAIN SECTION
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

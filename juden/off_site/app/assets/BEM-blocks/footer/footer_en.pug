@@ -1,0 +1,53 @@
+// ↓↓↓ BEM-blocks: footer + copyright (start) ↓↓↓
+
+style
+  include footer.css
+
+.footer-wrapper
+  .footer
+    .footer__foo1
+      a.footer__logo-link(href="#")
+        img.footer__logo-img(src='assets/img/logo.png' alt='logo.png')
+    .footer__foo2
+      h3.footer__header Prohibition of services:
+      p.footer__text PlatinumTrade LTD does not provide its services to residents of the United States, Canada, Syria, Iran, North Korea and Japan, as well as other regions where services can not be provided due to current restrictions in the legislation.
+    .footer__foo3
+      h3.footer__header Website and management:
+      p.footer__text http://platinumtrade.org is a trademark of PlatinumTrade LTD.
+    .footer__foo4
+      h3.footer__header Conditions:
+      ul.footer__list
+        li.footer__list-item
+          a.footer__list-link(href="terms_and_conditions_en.html") Terms and conditions
+        li.footer__list-item
+          a.footer__list-link(href="notification_of_risks_en.html") Notification of risks
+        li.footer__list-item
+          a.footer__list-link(href="privacy_policy_en.html") Privacy policy
+        li.footer__list-item
+          a.footer__list-link(href="aml_and_kyc_policies_en.html") AML and KYC policies
+        li.footer__list-item
+          a.footer__list-link(href="refund_policy_en.html") Refund policy
+        li.footer__list-item
+          a.footer__list-link(href="denial_of_responsibility_en.html") Denial of responsibility
+
+//- script
+  include footer.js
+
+//- style
+  include copyright.css
+
+.copyright-wrapper
+  .copyright
+    .copyright__span Copyright © 2018 (PlatinumTrade LTD). All rights reserved.
+    ul.copyright__social
+      li.copyright__list-item
+        a.copyright__list-link(href="tel:#"): i.fas.fa-phone-volume
+      li.copyright__list-item
+        a.copyright__list-link(href="mailto:#"): i.far.fa-envelope
+      li.copyright__list-item
+        a.copyright__list-link(href="skype:#"): i.fab.fa-skype
+
+//- script
+  include copyright.js
+
+// ↑↑↑ BEM-blocks: footer + copyright (end) ↑↑↑

@@ -1,0 +1,122 @@
+.popup__cover {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed; z-index: 2222;
+	top: 0; left: 0;
+	background-color: rgba(0,0,0,0.8);
+}
+.popup__massage {
+	display: none;
+	width: 440px;
+	min-height: 200px;
+	background-color: white;
+	border-radius: 6px;
+	border: 3px solid black;
+	position: absolute; z-index: 2233;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	text-align: center;
+	padding: 30px 0;
+}
+.popup__text-1,
+.popup__text-2 {
+	font-family: bnb;
+	font-size: 30px;
+	text-align: center;
+}
+.popup__text-2 {
+	font-size: 20px;
+}
+.popup__form-holder {
+  width: 282px;
+  margin: 0 auto;
+  .form__info {
+  	color: black;
+  }
+  .form____private {
+  	position: relative; z-index: 6666;
+  	cursor: pointer;
+  }
+}
+.popup__btn {
+	height: 48px;
+	width: 300px;
+	border-radius: 24px;
+	border: none;
+	background: linear-gradient(to right, #ff0505, #6d0000);
+	color: white;
+	cursor: pointer;
+	font-family: bb;
+	font-size: 22px;
+	padding-top: 6px;
+	margin-bottom: 10px;
+}
+
+.close_btn {
+	width: 36px;
+	height: 36px;
+	font-size: 26px;
+	padding: 0px;
+	position: absolute;
+	right: -36px; top: -36px;
+	border: none;
+	border-radius: 3px;
+	background-color: white;
+	cursor: pointer;
+}
+
+.popup__form-holder {
+	.form {
+		width: 280px;
+		position: relative;
+		&__fname,
+		&__lname,
+		&__code,
+		&__phone,
+		&__email,
+		&__btn
+		 {
+			height: 30px;
+			width: 100%;
+			border-radius: 15px;
+			border: 2px solid black;
+			margin-bottom: 4px;
+			padding-left: 10px;
+			font-family: bnb;
+			font-size: 18px;
+			text-transform: uppercase;
+			&::placeholder {
+				font-family: bnb;
+				color: black;
+				opacity: 1;
+			}
+		}
+		&__code {
+			width: 48%;
+			margin-right: 4%;
+		}
+		&__phone {
+			width: 48%;
+		}
+		&__btn {
+			border: none;
+			background: linear-gradient(to right, #ff0505, #6d0000);
+			color: white;
+			cursor: pointer;
+		}
+		&__info {
+			font-family: bnb;
+			font-size: 16px;
+			color: black;
+			text-align: center;
+			letter-spacing: 0px;
+		}
+		&__private {
+			font-size: 18px;
+			color: Navy;
+			letter-spacing: 1px;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title  Refund policy
+
+    link(rel='icon', href='assets/img/logoIC_icon.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/refund_policy.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pugs
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header CASH REFUND POLICY
+          h5.section1__subheader Last revised: 14.12.2018.
+          .info
+            p CASH REFUND POLICY (REFUND & RETURNS POLICY OTHER T&C'S).
+
+            p The company strives to ensure that every customer is satisfied with the quality of the services provided. It is for this purpose that this refund policy is intended. In exceptional cases, the Company may effect a refund to the customer's bank cards. In this case, all funds will be returned to the card, which was previously used to enter funds.
+
+            p When replenishing a trading account from a bank card, you undertake not to apply for a withdrawal of a payment already credited to a merchant account to your bank or to your credit card provider both during and after the use of our services. Any such attempt will be regarded by our Company as a violation of the Terms and Conditions. If the Company still receives a withdrawal of payment for the transaction, we reserve the right to freeze the current balance of the customer and send the funds back to the trading account after payment of all services and commissions.
+
+            p Also, if no trading activity was recorded in your account within 12 (six) months, or if the trade was conducted, but not in sufficient volume (the trading volume is calculated by the company individually), we will be entitled to return the money to the sender. In this case, we return the entire deposit.
+
+            p Also for certain objective reasons and, if necessary, the Company can make a refund of payments received through any payment system, including credit / debit cards. In this case, the funds will be returned back to the same payment system, credit / debit card or bank account from which they were received.
+
+            p If you receive a request for payment / refund, the Company may spend up to 5 (five) banking days processing the request. After approval of the request, you must wait 5-7 (five to seven) additional days before transferring funds to the Customer's account. In the event of a loss, no compensation is provided, and the Company is not liable.
+
+            p In the event of reasonable suspicion that the source of your funds and / or activities in general are contrary to the Company's Anti-Money Laundering Policy (AML), the Company reserves the right to unilaterally refuse to deposit / withdraw funds for / c of your accounts in our systems, freeze these assets and return them back to the sender. Please note that we will also be required to notify the relevant government agencies of each violation of the AML policy and will be entitled to disclose your personal information. The Company will take all necessary measures to prevent and block both the enrollment and the withdrawal of funds from your accounts by third parties. Entering and withdrawal of funds from the account can be carried out only by the owner of this account.
+
+            p In the event that during the entire period of using our services, we classify any of your activities (especially replenishment / withdrawal of funds) contrary to the usual purpose of using our services, where there is a direct or indirect, wrongful or unfair intention, we reserve the right act within the framework of this document, without informing you in advance. At the same time, you, in this case, will reimburse our direct and indirect losses / damages that we incurred as a result of your activities, in particular - we at our discretion compensate ourselves for all the costs associated with money transfers while retaining the appropriate amounts from your funds.
+      // /SECTION 1
+
+    // /MAIN SECTION
+
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

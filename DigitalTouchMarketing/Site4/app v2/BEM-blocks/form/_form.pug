@@ -1,0 +1,92 @@
+form.form(name='form', action='ac.php', method='post', enctype='multipart/form-data', autocomplete='off')
+  input.form__fname(type='text', name='Fname', placeholder='имя', required='', autocomplete='off', pattern='^[A-Za-zА-Яа-яЁёs]+$', maxlength='20')
+  input.form__lname(type='text', name='Lname', placeholder='фамилия', required='', autocomplete='off', pattern='^[A-Za-zА-Яа-яЁёs]+$', maxlength='20')
+  input.DateTimeId(name='DateTime', type='hidden')
+  select.form__code(name='Code2', required='')
+    option(value='') Код
+    option(value='+7') Россия +7
+    option(value='+7') Казахстан +7
+    option(value='+375') Беларусь +375
+    option(value='+371') Латвия +371
+    option(value='+370') Литва +370
+    option(value='+372') Эстония +372
+    option(value='+49') Германия +49
+    option(value='+61') Австралия +61
+    option(value='+43') Австрия +43
+    option(value='+994') Азербайджан +994
+    option(value='+355') Албания +355
+    option(value='+54') Аргентина +54
+    option(value='+374') Армения +374
+    option(value='+32') Бельгия +32
+    option(value='+359') Болгария +359
+    option(value='+387') Босния и Герцеговина +387
+    option(value='+55') Бразилия +55
+    option(value='+44') Великобритания +44
+    option(value='+36') Венгрия +36
+    option(value='+84') Вьетнам +84
+    option(value='+852') Гонконг (КНР) +852
+    option(value='+30') Греция +30
+    option(value='+995') Грузия +995
+    option(value='+45') Дания +45
+    option(value='+1767') Доминика +1767
+    option(value='+1809') Доминиканская Республика +1809
+    option(value='+20') Египет +20
+    option(value='+972') Израиль +972
+    option(value='+91') Индия +91
+    option(value='+62') Индонезия +62
+    option(value='+962') Иордания +962
+    option(value='+353') Ирландия +353
+    option(value='+354') Исландия +354
+    option(value='+34') Испания +34
+    option(value='+39') Италия +39
+    option(value='+1') Канада +1
+    option(value='+357') Кипр +357
+    option(value='+996') Киргизия +996
+    option(value='+88') Тайвань +88
+    option(value='+86') КНР +86
+    option(value='+506') Коста-Рика +506
+    option(value='+53') Куба +53
+    option(value='+965') Кувейт +965
+    option(value='+423') Лихтенштейн +423
+    option(value='+352') Люксембург +352
+    option(value='+389') Македония +389
+    option(value='+60') Малайзия +60
+    option(value='+223') Мали +223
+    option(value='+356') Мальта +356
+    option(value='+212') Марокко +212
+    option(value='+52') Мексика +52
+    option(value='+373') Молдова +373
+    option(value='+377') Монако +377
+    option(value='+31') Нидерланды +31
+    option(value='+64') Новая Зеландия +64
+    option(value='+47') Норвегия +47
+    option(value='+971') ОАЭ +971
+    option(value='+48') Польша +48
+    option(value='+351') Португалия +351
+    option(value='+82') Корея +82
+    option(value='+40') Румыния +40
+    option(value='+381') Сербия +381
+    option(value='+65') Сингапур +65
+    option(value='+421') Словакия +421
+    option(value='+986') Словения +986
+    option(value='+1') США +1
+    option(value='+992') Таджикистан +992
+    option(value='+66') Таиланд +66
+    option(value='+993') Туркмения +993
+    option(value='+90') Турция +90
+    option(value='+998') Узбекистан +998
+    option(value='+38') Украина +38
+    option(value='+358') Финляндия +358
+    option(value='+33') Франция +33
+    option(value='+358') Хорватия +358
+    option(value='+382') Черногория +382
+    option(value='+420') Чехия +420
+    option(value='+41') Швейцария +41
+    option(value='+46') Швеция +46
+    option(value='+81') Япония +81
+  input.form__phone(type='text', name='Phone', placeholder='телефон', required='', autocomplete='off', pattern='^[0-9]+$', minlength='9')
+  input.form__email(type='email', name='Email', placeholder='E-mail', required='', autocomplete='off', pattern='[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$', maxlength='40')
+  button.form__btn(type='submit', name='add') Отправить заявку
+  p.form__info заполняя данную форму Вы соглашаетесь с
+    |  
+    span.form__private политикой конфиденциальности

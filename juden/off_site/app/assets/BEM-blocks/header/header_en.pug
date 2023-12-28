@@ -1,0 +1,89 @@
+// ↓↓↓ BEM-blocks: header (start) ↓↓↓
+
+style
+  include header.css
+
+.header-wrapper
+  header.header
+    .menu-btn__positioning-wrapper
+      include ../menu-btn/menu-btn.pug
+    ul.header__small-menu
+      li.header__small-list-item
+        a.header__small-menu-link(href="management_en.html") Instruction
+      li.header__small-list-item
+        a.header__small-menu-link(href="https://trade.platinumtrade.org/#!/regular") Login
+      li.header__small-list-item
+        a.header__small-menu-link(href="https://trade.platinumtrade.org/#!/regular") Check in
+      li.header__small-list-item
+        a.header__small-menu-link(href="about_company_en.html") About company
+      li.header__small-list-item
+        a.header__small-menu-link(href="terms_and_conditions_en.html") Terms and conditions
+      li.header__small-list-item
+        a.header__small-menu-link(href="notification_of_risks_en.html") Notification of risks
+      li.header__small-list-item
+        a.header__small-menu-link(href="privacy_policy_en.html") Privacy policy
+      li.header__small-list-item
+        a.header__small-menu-link(href="aml_and_kyc_policies_en.html") AML and KYC policies
+      li.header__small-list-item
+        a.header__small-menu-link(href="refund_policy_en.html") Refund policy
+      li.header__small-list-item
+        a.header__small-menu-link(href="denial_of_responsibility_en.html") Denial of responsibility
+      li.header__small-list-item
+        a.header__small-menu-link(href="contacts_en.html") Contacts
+    span.header__logo-wrapper
+      a.header__logo-link(href="index_en.html")
+        img.header__logo(src="assets/img/logo.png" alt="logo.png")
+    span.header__big-menu
+      span
+        a.header__menu.header__menu0(href="index_en.html")
+          i.fas.fa-home
+          |  Home
+      span
+        a.header__menu.header__menu1(href="#")
+          i.far.fa-file-alt
+          |  Instruction
+          ul.header__menu-list.header__menu-list1
+            li.header__menu-list-item
+              a.header__menu-link(href="management_en.html") Instruction
+            li.header__menu-list-item
+              a.header__menu-link(href="https://trade.platinumtrade.org/#!/regular") Login
+            li.header__menu-list-item
+              a.header__menu-link(href="https://trade.platinumtrade.org/#!/regular") Check in
+
+      span
+        a.header__menu.header__menu2(href="#")
+          i.fas.fa-info-circle
+          |  About company
+          ul.header__menu-list.header__menu-list2
+            li.header__menu-list-item
+              a.header__menu-link(href="about_company_en.html") About company
+            li.header__menu-list-item
+              a.header__menu-link(href="terms_and_conditions_en.html") Terms and conditions
+            li.header__menu-list-item
+              a.header__menu-link(href="notification_of_risks_en.html") Notification of risks
+            li.header__menu-list-item
+              a.header__menu-link(href="privacy_policy_en.html") Privacy policy
+            li.header__menu-list-item
+              a.header__menu-link(href="aml_and_kyc_policies_en.html") AML and KYC policies
+            li.header__menu-list-item
+              a.header__menu-link(href="refund_policy_en.html") Refund policy
+            li.header__menu-list-item
+              a.header__menu-link(href="denial_of_responsibility_en.html") Denial of responsibility
+            li.header__menu-list-item
+              a.header__menu-link(href="contacts_en.html") Contacts
+
+      a.header__btn.header__btn_enter(href="https://trade.platinumtrade.org/#!/regular")
+        i.fas.fa-sign-in-alt
+        |
+        | Login
+      a.header__btn.header__btn_account(href="https://trade.platinumtrade.org/#!/regular")
+        i.far.fa-edit
+        |
+        | SET UP AN ACCOUNT
+    .language-switcher__positioning-wrapper
+      include ../language_switcher/language_switcher.pug
+
+script
+  include ../minjs/header/header.js
+
+// ↑↑↑ BEM-blocks: header (end) ↑↑↑

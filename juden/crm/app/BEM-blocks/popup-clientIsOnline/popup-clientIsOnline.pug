@@ -1,0 +1,27 @@
+// ↓↓↓ BEM-blocks: popup-clientIsOnline (start) ↓↓↓
+
+.popup-clientIsOnline
+
+  .popup-clientIsOnline__body
+    img.popup-clientIsOnline__img(src='img/green-glossy-ball.jpg')
+    p.popup-clientIsOnline__info
+      | Клиент
+      |
+      a.popup-clientIsOnline__clientLink(href='#')
+        span.popup-clientIsOnline__clientName
+          | Вася Пупкин
+          |
+        | (id
+        |
+        span.popup-clientIsOnline__clientId 123456
+        | )
+      |
+      | сейчас онлайн
+    button.popup-clientIsOnline__btn ×
+
+//-style
+  include popup-clientIsOnline.css
+//-script
+  include ../minjs/popup-clientIsOnline/popup-clientIsOnline.js
+
+// ↑↑↑ BEM-blocks: popup-clientIsOnline (end) ↑↑↑

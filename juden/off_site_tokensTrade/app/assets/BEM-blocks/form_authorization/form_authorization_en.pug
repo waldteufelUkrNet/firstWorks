@@ -1,0 +1,48 @@
+// ↓↓↓ BEM-blocks: form_authorization (start) ↓↓↓
+
+//- style
+//-   include form_authorization.css
+
+.regform-wrapper
+  form.regform(action='#', method='post', name='enter-form' style='max-width: 500px')
+
+    .regform__column(style='width:100%; margin-right:0')
+
+      label.regform__label(for='input-email') E-mail:
+      .regform__input-wrapper
+        input#input-email.regform__input(type='text', name='input-email', autocomplete='off' placeholder='Enter your mail here')
+      .regform__info.regform__info_error Enter a valid address.
+
+      label.regform__label(for='input-password') Password:
+      .regform__input-wrapper
+        input#input-password.regform__input.regform__input_pass(type='password', name='input-password' placeholder='enter password')
+        span.regform__show-hide-pass
+          //- i.fas.fa-eye
+          i.fas.fa-eye-slash
+      .regform__info.regform__info_error Password field cannot be empty
+      .regform__info.regform__info_error Not valid Email or password.
+
+      .regform__checkbox-label-wrapper
+        label.regform__checkbox-label
+          span.regform__checkbox-span
+            input(type='checkbox', name='yes', value='yes', checked='')
+            span.regform__check-mark
+              i.fas.fa-check
+          span Remember me for 30 days
+
+      button.regform__btn#logIn(type='button') Login
+
+      a.regform__restore-pass-link(href='forgot_your_password_en.html') Restore password
+
+      .regform__footer
+        span You are not a client of E-Tokens Trade?
+        |
+        |
+        a.regform__link(href='registration_en.html') Open a live account
+
+  // /SECTION right
+
+//- script
+//-   include ../minjs/form_authorization/form_authorization.js
+
+// ↑↑↑ BEM-blocks: form_authorization (end) ↑↑↑

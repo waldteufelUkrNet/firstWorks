@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".slick_money__slick").slick({arrows:!1,dots:!1,autoplay:!0,autoplaySpeed:3e3,pauseOnFocus:!1,slidesToShow:6,slidesToScroll:1,responsive:[{breakpoint:1200,settings:{slidesToShow:5}},{breakpoint:992,settings:{slidesToShow:4}},{breakpoint:768,settings:{slidesToShow:3}},{breakpoint:576,settings:{slidesToShow:1}}]})});

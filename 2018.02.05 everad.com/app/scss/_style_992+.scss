@@ -1,0 +1,109 @@
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+
+body {
+	background-color: black;
+}
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.header {}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 1 how-much ↓↓↓ */
+		.how-much {
+			padding-left: 0px;
+
+			.logo {
+				left: 0px;
+			}
+
+			.leaf {
+				left: 346px;
+			}
+
+			.hand {
+				left: 576px;
+			}
+
+			h1 {
+				padding-top: 100px;
+			}
+
+			.bottle-with-shadow {
+				margin: 16px 0 0 29px;
+			}
+
+			.sale {
+				height: 150px;
+				top: 525px;
+				right: 324px;
+			}
+
+			.numdercard-holder {
+				top: 179px;
+			}
+
+			.form {
+				top: 263px;
+			}
+		}
+		/* ↑↑↑ /SECTION 1 how-much ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 info ↓↓↓ */
+		.info {
+			padding: 24px 385px 0 40px;
+
+			p {
+				font-size: 17px;
+				color: rgb(38,38,38);
+				line-height: 26px;
+				padding-right: 0px;
+			}
+		}
+		/* ↑↑↑ /SECTION 3 info ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 preference ↓↓↓ */
+		.preference {
+			min-height: 720px;
+			padding-top: 53px;
+
+			.bottle {
+				top: 164px;
+			}
+
+
+			.card-holder {
+				width: 660px;
+				top: 133px;
+				grid-template-columns: auto auto auto;
+			}
+
+		}
+		/* ↑↑↑ /SECTION 4 preference ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 doctor ↓↓↓ */
+		.doctor {
+			padding: 24px 370px 0 40px;
+
+			h1 {
+				padding-bottom: 28px;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				padding-bottom: 10px;
+				width: 100%;
+			}
+			
+			img {
+				top: 362px;
+				left: 360px;
+			}
+		}
+		/* ↑↑↑ /SECTION 5 doctor ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

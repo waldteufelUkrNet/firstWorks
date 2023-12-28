@@ -1,0 +1,16 @@
+@media only screen and (min-width: 768px) {
+  .s1-wrapper {
+    width: 100%;
+  }
+  .section1 {
+    &__grid {
+      grid-template-columns: 180px auto;
+    }
+    &__grid-header {
+      text-align: left;
+    }
+    &__grid-subheader {
+      text-align: left;
+    }
+  }
+}

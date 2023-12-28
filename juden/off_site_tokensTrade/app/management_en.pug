@@ -1,0 +1,103 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Trade in your own way: currency pairs, stocks, indices, commodities and cryptocurrency.")
+
+    title Management
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/mbr-additional.css')
+    link(rel ='stylesheet', type='text/css', href='assets/libs-css/mobirise-icons-bold.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/management.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1(data-parallax="scroll" data-image-src="assets/img/management_bg.jpg")
+          .section1__text-wrapper
+            h1.wow.fadeInUp.section1__header Management
+            p.wow.fadeInUp.section1__text In this section you will find information on how to work with a trading account. Namely, two, perhaps, the most important things for any participant in the financial markets: how to replenish your trading account and how to withdraw the money earned.
+            p.wow.fadeInUp.section1__text Our online trading platform offers the trader a variety of trading tools.
+            p.wow.fadeInUp.section1__text E-Tokens Trade is pleased to meet the needs of any client, so we offer four types of trading accounts.
+            p.wow.fadeInUp.section1__text In a world where speed and the ability to move decide everything, particular convenience gives the possibility of mobile p.wow.fadeInUp.section1__text trading.
+            p.wow.fadeInUp.section1__text WE WISH YOU SUCCESSFUL TRADING!
+            p.wow.fadeInUp.section1__text If you have any questions about working with the trading platform, then you will receive an assimilated personal manager with guaranteed comprehensive answers!
+          .section1__logo-wrapper
+            img.wow.fadeInUp.section1__logo(src="assets/img/veryBigLogo.png", alt="veryBigLogo.png")
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__btns-wrapper
+            a.section2__btn.section2__btn_active#btn-plus recharge
+            a.section2__btn#btn-minus Withdrawal of funds
+          .section2__toggle-wrapper
+            .section2__toggle-area.section2__toggle-area_active#toggle-area1
+                h4.section2__toggle-area-header TRADE ACCOUNT BALANCE REPLAY
+                p.section2__toggle-area-bold-text REPLENISHMENT THROUGH PAYMENT SYSTEMS:
+                p.section2__toggle-area-text - Through a personal account: Visa, MasterCard, Maestro, MIR, QIWI, Yandex Money, etc.
+                p.section2__toggle-area-text - Through partner sites (exchange points) using Bitcoin (BTC) systems, adding to a particular service in any way.
+
+                p.section2__toggle-area-text
+                  span.section2__toggle-area-bold-text ATTENTION:
+                  |
+                  | The funds are credited depending on the processing speed of one or another payment system.
+            .section2__toggle-area#toggle-area2
+                h4.section2__toggle-area-header WITHDRAWAL FROM TRADE BALANCE
+                p.section2__toggle-area-text
+                  |
+                  |
+                  span.section2__toggle-area-bold-text E-Tokens Trade
+                  |
+                  | make it so that you can withdraw the money earned in literally two steps:
+                p.section2__toggle-area-text - Go to your personal account.
+                p.section2__toggle-area-text - Make a request for withdrawal.
+
+                p.section2__toggle-area-bold-text OUTPUT OPTIONS:
+                p.section2__toggle-area-text - Withdrawals to Visa, MasterCard, Maestro, MIR
+                p.section2__toggle-area-text - Withdrawal of funds through the payment system: Bitcoin, Bitcoin Cash, Ethereum, EXMO, Payeer, Perfect Money, QIWI, Yandex Money.
+      // /SECTION 2
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    script(src='assets/js/management.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

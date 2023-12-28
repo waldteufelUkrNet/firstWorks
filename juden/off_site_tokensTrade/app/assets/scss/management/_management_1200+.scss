@@ -1,0 +1,16 @@
+@media only screen and (min-width: 1200px) {
+  .section1 {
+    &__text-wrapper {
+      padding               : 0 30px 0 100px;
+    }
+    &__header {
+      font-size             : 4.6rem;
+    }
+    &__text {
+      padding-bottom        : 20px;
+    }
+    &__logo-wrapper {
+      padding               : 15px 30px
+    }
+  }
+}

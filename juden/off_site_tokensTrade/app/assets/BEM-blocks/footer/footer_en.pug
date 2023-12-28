@@ -1,0 +1,71 @@
+// ↓↓↓ BEM-blocks: footer (start) ↓↓↓
+
+//- style
+//-   include footer.css
+
+.footer-wrapper
+  .footer
+    .footer__foo1
+
+      .footer__foo1-company
+        img.footer__logo.wow.fadeInUp(src="assets/img/bigLogo.png", alt="bigLogo.png")
+        p.footer__foo1-info.wow.fadeInUp E-Tokens Trade (https://etokenstrade.com) is a trademark of the company Invest Trade Aliance Ltd.
+        ul.footer__foo1-list
+          li.footer__foo1-list-item
+            span.etl-icon.icon-phone.mbr-iconfont-company-contacts3.wow.fadeInUp
+            span.wow.fadeInUp
+              a(href="tel:+74993713318") +74993713318
+              |
+              |
+              span or
+              |
+              |
+              a(href="tel:+442033186528") +442033186528
+              |
+              |
+              span or
+              |
+              |
+              a(href="tel:+37166103210") +37166103210
+          li.footer__foo1-list-item
+            span.etl-icon.icon-map-pin.mbr-iconfont-company-contacts3.wow.fadeInUp
+            span.wow.fadeInUp  Suite 305, Griffith Corporate Centre, P.O. Box 1510, Beachmont, Kingstown, St. Vincent and The Grenadines
+          li.footer__foo1-list-item
+            span.etl-icon.icon-envelope.mbr-iconfont-company-contacts3.wow.fadeInUp
+            a.wow.fadeInUp(href="mailto:support@etokenstrade.com") support@etokenstrade.com
+
+      .footer__foo1-terms
+        h5.footer__foo1-terms-header.wow.fadeInUp Conditions:
+        ul.footer__foo1-terms-list
+          li.footer__foo1-terms-list-item.wow.fadeInUp: a(href='terms_and_conditions_en.html') Terms and conditions
+          li.footer__foo1-terms-list-item.wow.fadeInUp: a(href='notification_of_risks_en.html') Notification of risks
+          li.footer__foo1-terms-list-item.wow.fadeInUp: a(href='privacy_policy_en.html') Privacy policy
+          li.footer__foo1-terms-list-item.wow.fadeInUp: a(href='aml_and_kyc_policies_en.html') AML and KYC policies
+          li.footer__foo1-terms-list-item.wow.fadeInUp: a(href='refund_policy_en.html') Refund policy
+          li.footer__foo1-terms-list-item.wow.fadeInUp: a(href='denial_of_responsibility_en.html') Denial of responsibility
+
+      .footer__interdiction
+        h5.footer__interdiction-header.wow.fadeInUp Ban on services:
+        p.footer__interdiction-body.wow.fadeInUp Invest Trade Aliance Ltd. (E-Tokens Trade) does not provide its services and do not open accounts for residents of certain jurisdictions, including residents of the United States, Canada, Israel, Syria, Iran, Australia, North Korea and Japan, as well as other regions where services cannot be provided due to current legal restrictions .
+
+      .footer__form
+        form.contact-form(action='#', name='form', method='')
+          label.wow.fadeInUp(for='#contact-form-email') E-mail*
+          input.wow.fadeInUp#contact-form-email(type='text')
+          label.wow.fadeInUp(for='#contact-form-subject') Subject
+          input.wow.fadeInUp#contact-form-subject(type='text')
+          label.wow.fadeInUp(for='#contact-form-message') Message
+          textarea.wow.fadeInUp#contact-form-message
+          .footer__form-send-area.wow.fadeInUp
+            button.wow.fadeInUp(type='button') Send
+
+    .footer__foo2
+      p.footer__foo2-risks
+        span(style='font-family: ob') Notification of risks:
+        |
+        | The operations offered by this site can be carried out only by adults (18+) and fully capable persons. Transactions with financial instruments offered by this site can be considered high-risk transactions, and their execution can be very risky. In case of making transactions with the financial instruments offered by the site, you may incur substantial losses of the invested funds or even completely lose funds on your trading account. Before deciding whether to start making transactions with financial instruments on this site, you must familiarize yourself with the Terms and Conditions of Service, as well as the Risk Disclaimer, Return Policy, Privacy Policy and AML and KYC Policies.
+      p.footer__foo2-copyright Copyright © 2018-2019 E-Tokens Trade. All rights reserved.
+script
+  include ../minjs/footer/footer.js
+
+// ↑↑↑ BEM-blocks: footer (end) ↑↑↑

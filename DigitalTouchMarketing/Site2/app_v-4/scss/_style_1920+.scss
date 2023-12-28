@@ -1,0 +1,273 @@
+/* ↓↓↓ for 1920px and more ↓↓↓ */
+@media only screen and (min-width: 1920px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.section1 {
+			background: url("../img/s1-bg.jpg") center top no-repeat;
+			min-height: 1339px;
+			.section-header {
+				font-size: 106px;
+				color: white;
+				text-align: center;
+				padding-top: 490px;
+				line-height: 128px;
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+		.section2 {
+			background: url("../img/s2-bg.jpg") center top no-repeat;
+			min-height: 1150px;
+			padding-top: 194px;
+			padding-right: 123px;
+			p {
+				font-size: 46.45px;
+				line-height: 80px;
+				text-align: right;
+				padding-bottom: 82px;
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 ↓↓↓ */
+		.section3 {
+			background: url("../img/s3-bg.jpg") center top no-repeat;
+			min-height: 1154px;
+			padding-top: 490px;
+			p {
+				font-size: 55px;
+				line-height: 70px;
+				color: white;
+				text-align: center;
+			}
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.section4 {
+			background: url("../img/s4-bg.jpg") right top no-repeat;
+			min-height: 1008px;
+			padding-top: 196px;
+			padding-left: 142px;
+			h5 {
+				font-size: 73px;
+				&:first-of-type {
+					padding-bottom: 40px;
+				}
+			}
+			p {
+				font-size: 51.25px;
+				line-height: 60px;
+				text-align: left;
+				&:nth-of-type(3) {
+					padding-bottom: 80px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.section5 {
+			background: url("../img/s5-bg.jpg") left top no-repeat;
+			min-height: 1014px;
+			padding-top: 216px;
+			padding-right: 130px;
+			h5, p:nth-of-type(3) {
+				font-size: 61px;
+				text-align: right;
+			}
+			p {
+				font-size: 44.33px;
+				line-height: 57px;
+				text-align: right;
+				&:nth-of-type(1),
+				&:nth-of-type(3) {
+					padding-bottom: 50px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.section6 {
+			background: url("../img/s6-bg.jpg") right bottom no-repeat;
+			min-height: 1038px;
+			padding-top: 304px;
+			padding-left: 142px;
+			p {
+				font-size: 56px;
+				line-height: 66px;
+				text-align: left;
+				&:nth-of-type(1) {
+					padding-bottom: 72px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.section7 {
+			background: url("../img/s7-bg.jpg") left top no-repeat;
+			min-height: 1029px;
+			padding-top: 314px;
+			padding-right: 127px;
+			p {
+				font-size: 62.67px;
+				line-height: 76px;
+				text-align: right;
+				padding-bottom: 74px;
+			}
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 (+form) ↓↓↓ */
+		.section8 {
+			min-height: 757px;
+			position: relative;
+
+			img:first-of-type {
+				position: absolute;
+				top: 0; left: 0;
+			}
+			img:last-of-type {
+				position: absolute;
+				top: 0; right: 0;
+				transform: rotateY(180deg);
+			}
+			.s8-form {
+				margin: 0 auto;
+			}
+		}
+		/* ↑↑↑ /SECTION 8 (+form) ↑↑↑ */
+
+		/* ↓↓↓ SECTION 9 ↓↓↓ */
+		.section9 {
+			background: url("../img/s9-bg.jpg") right top no-repeat;
+			min-height: 995px;
+			padding-top: 240px;
+			padding-left: 138px;
+			p {
+				font-size: 61px;
+				line-height: 74px;
+				text-align: left;
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					padding-bottom: 72px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 9 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 10 ↓↓↓ */
+		.section10 {
+			background: url("../img/s10-bg.jpg") center top no-repeat;
+			min-height: 1011px;
+			padding-top: 246px;
+			padding-right: 138px;
+			p {
+				font-size: 71px;
+				line-height: 84px;
+				text-align: right;
+				&:nth-of-type(1) {
+					padding-bottom: 88px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 10 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 11 ↓↓↓ */
+		.section11 {
+			background: url("../img/s11-bg.jpg") center top no-repeat;
+			min-height: 1024px;
+			padding-top: 158px;
+			padding-left: 138px;
+			p {
+				font-size: 49.84px;
+				line-height: 60px;
+				text-align: left;
+				padding-bottom: 60px;
+			}
+		}
+		/* ↑↑↑ /SECTION 11 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 12 ↓↓↓ */
+		.section12 {
+			background: url("../img/s12-bg.jpg") center top no-repeat;
+			min-height: 1031px;
+			padding-top: 148px;
+			padding-right: 126px;
+			p {
+				font-size: 57.37px;
+				line-height: 68px;
+				text-align: right;
+				&:nth-of-type(2),
+				&:nth-of-type(4) {
+					padding-bottom: 72px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 12 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 13 (+form) ↓↓↓ */
+		.section13 {
+			background: url("../img/s13-bg.jpg") left top no-repeat;
+			min-height: 754px;
+			padding-top: 176px;
+			padding-left: 144px;
+			p {
+				font-size: 54.17px;
+				line-height: 65px;
+				text-align: left;
+			}
+			.s13-form {
+				position: absolute;
+				top: 0px;
+				right: 110px;
+			}
+		}
+		/* ↑↑↑ /SECTION 13 (+form) ↑↑↑ */
+
+		/* ↓↓↓ SECTION 14 ↓↓↓ */
+		.section14 {
+			background: url("../img/s14-bg.jpg") left top no-repeat;
+			min-height: 875px;
+			padding-top: 140px;
+			padding-left: 138px;
+			p {
+				font-size: 26.9px;
+				line-height: 40px;
+				text-align: left;
+				&:nth-of-type(2),
+				&:nth-of-type(4),
+				&:nth-of-type(6),
+				&:nth-of-type(7) {
+					padding-bottom: 42px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 14 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 15 (+form) ↓↓↓ */
+		.section15 {
+			background: url("../img/s15-bg.jpg") left bottom no-repeat;
+			min-height: 754px;
+			padding-top: 10px;
+			.s15-form {
+				margin: 0 auto;
+			}
+		}
+		/* ↑↑↑ /SECTION 15 (+form) ↑↑↑ */
+
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

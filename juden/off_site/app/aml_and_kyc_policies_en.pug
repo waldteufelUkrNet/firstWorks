@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title  AML KYC policies
+
+    link(rel='icon', href='assets/img/logo-small.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/aml_and_kyc_policies.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header AML and KYC POLICIES
+          h5.section1__subheader Last revised: 18.06.2018
+          .info
+            p POLICY TO COMBAT LEGALIZATION OF CASH (AML) AND POLICY "KNOW YOUR CUSTOMER" (KYC)
+
+            p 1. AML and KYC policies apply to platinumtrade.org and its partners and customers (the "Company") and has the objective of preventing and actively preventing money laundering and any other activity that facilitates the laundering of funds or the financing of terrorist or criminal activities. The company requires its managers, employees and affiliates to follow the principles of this Policy in order to prevent the use of their services for money laundering purposes.
+
+            p 2. Within the framework of this Policy, as a rule, actions are aimed at concealing or distorting the true origin of funds obtained by criminal means with the aim of laundering illegal proceeds.
+
+            p 3. Usually money laundering occurs in three stages. Initially, at the stage of "placement", cash flows into the financial system, where money obtained as a result of criminal acts becomes money instruments, such as money orders, traveler's checks or placed on accounts in financial institutions. At the stage of "stratification", the funds are transferred or transferred to other accounts or to other financial institutions for further separation of money from their criminal origin. At the stage of "integration", money is returned to the economy and used to purchase property, finance business or criminal activity. With the financing of terrorism, funds derived from criminal activities may not be used; most likely this is an attempt to hide the origin or alleged use of funds that will later be used for criminal purposes.
+
+            p 4. The client assumes the following obligations:
+            p - comply with legal norms, including international ones, aimed at combating illegal trade, financial fraud, money laundering and money laundering;
+            p - to exclude direct or indirect complicity of illegal financial activities and any other illegal transactions using the Site.
+
+            p 5. The client guarantees the legal origin, legal possession and the right to use the funds transferred to them on the Company's Account. In the event of suspicious or fraudulent cash replenishment, including the use of stolen credit cards and / or any other fraudulent activities (including any refunds or cancellations of payments), the Company reserves the right to block your account and to cancel any payments made, as well as to investigate the nature of doubtful operations on the Client's Account, as a result of which, suspend such operations until the reasons for their occurrence are established and the investigation is completed.
+
+            p 6. During the investigation, the Company reserves the right to request from the Customer copies of the identity cards and bank cards used to replenish the Account, payment, as well as other documents confirming the legal ownership and legal origin of the funds. The customer is prohibited from using the services and / or software for any illegal or fraudulent activity, or for any illegal or fraudulent transaction (including money laundering) in accordance with the laws of the country of the Customer's jurisdiction. The Company's refusal to conduct suspicious operations is not grounds for the appearance of the Company's civil liability for non-fulfillment of its obligations with respect to the Client.
+
+            p 7. Each division of the Company should be governed by AML and KYC policies, which are drawn up in accordance with the requirements of local law.
+
+            p 8. All personal and service documentation will be kept for the minimum period of time established by local law.
+
+            p 9. All new employees are required to undergo training for AML and KYC. Existing employees are trained annually. Participation in additional training programs is mandatory for all employees related to AML and KYC.
+
+      // /SECTION 1
+
+    // /MAIN SECTION
+
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

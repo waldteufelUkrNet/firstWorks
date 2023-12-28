@@ -1,0 +1,314 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@font-face {
+    font-family: fa;
+    src: url(../fonts/fa-solid-900.ttf);
+}
+@font-face {
+    font-family: rcl;
+    src: url(../fonts/RobotoCondensedLight.ttf);
+}
+@font-face {
+    font-family: rl;
+    src: url(../fonts/RobotoLight.ttf);
+}
+@font-face {
+    font-family: rm;
+    src: url(../fonts/RobotoMedium.ttf);
+}
+.size-info {
+    width: 120px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    position: fixed;
+    left: 3px;
+    bottom: 21px;
+    z-index: 100;
+}
+.size-info-1 {
+    z-index: 101;
+}
+@media only screen and (min-width:320px) {
+    .size-info-2 {
+    z-index: 102;
+}
+}@media only screen and (min-width:576px) {
+    .size-info-3 {
+    z-index: 103;
+}
+}@media only screen and (min-width:768px) {
+    .size-info-4 {
+    z-index: 104;
+}
+}@media only screen and (min-width:992px) {
+    .size-info-5 {
+    z-index: 105;
+}
+}@media only screen and (min-width:1200px) {
+    .size-info-6 {
+    z-index: 106;
+}
+}@media only screen and (min-width:1920px) {
+    .size-info-7 {
+    z-index: 107;
+}
+}* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media only screen and (min-width:320px) {
+    .form-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 15px auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.form-wrapper .section-left {
+    width: 100%;
+    padding: 15px;
+}
+.form-wrapper .section-left .section-header {
+    font: 22px arial;
+    color: grey;
+}
+.form-wrapper .section-left .section-subheader {
+    font: 14px rm;
+    margin: 10px auto;
+}
+.form-wrapper .section-left ul {
+    font: 14px arial;
+}
+.form-wrapper .section-left ul li {
+    position: relative;
+    padding-left: 18px;
+}
+.form-wrapper .section-left ul li:before {
+    content: '\f00c';
+    font: 14px fa;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1e90ff;
+}
+.form-wrapper .section-right {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d3d3d3;
+    -webkit-box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 10px grey;
+    position: relative;
+}
+.form-wrapper .section-right .section-subheader {
+    font: 18px arial;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.form-wrapper .section-right .registration-form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+}
+.form-wrapper .section-right .registration-form label {
+    width: 35%;
+    height: 30px;
+    font: 12px/30px arial;
+    margin: 6px 0;
+    text-align: right;
+}
+.form-wrapper .section-right .registration-form label:not(:last-of-type):before {
+    content: '*';
+    color: red;
+    position: relative;
+    top: -3px;
+    left: -3px;
+}
+.form-wrapper .section-right .registration-form input:not(#input-checkbox), .form-wrapper .section-right .registration-form select {
+    width: 60%;
+    margin: 6px 0;
+    border: 1px solid #d3d3d3;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    height: 30px;
+    padding: 0 10px;
+}
+.form-wrapper .section-right .registration-form .phone-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 60%}
+.form-wrapper .section-right .registration-form .phone-wrapper #input-country-code {
+    width: 20%}
+.form-wrapper .section-right .registration-form .phone-wrapper #input-company-code {
+    width: 20%}
+.form-wrapper .section-right .registration-form .phone-wrapper #input-phone {
+    width: 50%}
+.form-wrapper .section-right .registration-form .form-agree {
+    width: 100%}
+.form-wrapper .section-right .registration-form .form-agree input {
+    position: relative;
+    top: 2px;
+}
+.form-wrapper .section-right .registration-form .form-agree a {
+    display: inline block;
+    font: 12px arial;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.form-wrapper .section-right .registration-form .form-agree a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+.form-wrapper .section-right .registration-form .form-button {
+    width: 100%;
+    padding: 10px 0;
+}
+.form-wrapper .section-right .registration-form .form-button button {
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase;
+    background-color: #911e2e;
+    color: #fff;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+    cursor: pointer;
+    outline: 0;
+    border: 1px solid transparent;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.form-wrapper .section-right .registration-form .form-button button:hover {
+    background-color: #a13e5e;
+}
+.form-wrapper .section-right .registration-form .info-field {
+    height: 0;
+    font: 12px/30px rl;
+    width: 60%;
+    margin-left: 40%;
+    padding: 0 10px;
+    border-left: 3px solid red;
+    background-color: rgba(255, 0, 0, 0.1);
+    overflow: hidden;
+}
+.form-wrapper .section-right .form-section-footer {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #1a283a;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 15px;
+}
+.form-wrapper .section-right .form-section-footer span {
+    display: inline-block;
+    font: 14px arial;
+    color: #fff;
+    padding: 0 15px;
+}
+.form-wrapper .section-right .form-section-footer span a {
+    color: #be273c;
+    font: 16px rm;
+}
+.form-wrapper .section-right .form-section-footer span a svg {
+    font-size: 14px;
+}
+.form-wrapper .section-right .form-section-footer span a:hover {
+    color: #08c;
+    text-decoration: underline;
+}
+}@media only screen and (min-width:768px) {
+    .form-wrapper .section-left {
+    width: 50%}
+.form-wrapper .section-right {
+    width: 50%}
+}@media only screen and (min-width:1200px) {
+    .form-wrapper .section-right .registration-form .form-agree {
+    width: 77% }
+.form-wrapper .section-right .registration-form .form-agree a {
+    left: 23px;
+    top: -8px;
+}
+.form-wrapper .section-right .registration-form .form-button {
+    width: 23%;
+    font-family: rl;
+    font-size: 12px; }
+}

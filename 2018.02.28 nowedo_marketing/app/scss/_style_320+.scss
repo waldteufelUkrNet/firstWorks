@@ -1,0 +1,261 @@
+/* ↓↓↓ for 320px and more ↓↓↓ */
+@media only screen and (min-width: 320px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.section4 {
+
+		  .section4-info {
+		  	max-width: 320px;
+		  	padding: 84px 15px 0;
+
+		  	.section-header {
+		  		padding-bottom: 66px;
+		  		word-spacing: 6px;
+		  		text-align: center;
+		  	}
+
+		  	.section-ulist li {
+		  		padding-left: 32px;
+		  	}
+
+		  	.button {
+		  		margin: 42px 0;
+		  	}
+		  }
+		  img {
+		  	width: 290px;
+		  	height: 422px;
+		  }
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.section5 {
+			padding-top: 20px;
+
+			img {
+				position: relative;
+				top: 0px;
+				left: 2px;
+				order: 2;
+		  	width: 290px;
+		  	height: 422px;
+			}
+
+		  .section5-info {
+		  	max-width: 320px;
+		  	padding: 64px 15px 0;
+		  	order: 1;
+
+		  	.section-header {
+		  		word-spacing: 2px;
+		  		padding-bottom: 62px;
+		  		text-align: center;
+		  	}
+
+		  	.section-ulist li {
+		  		padding-left: 38px;
+
+		  		&::before {
+		  			top: -2px;
+		  		}
+		  	}
+
+		  	.button {
+		  		margin: 42px 0;
+		  	}
+		  }
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.section6 {
+			overflow: hidden;
+
+		  .section6-info {
+		  	position: relative;
+		  	z-index: 1122;
+		  	padding: 0 15px;
+		  	max-width: 320px;
+				text-align: center;
+
+		  	.section-header {
+		  		line-height: 50px;
+		  		padding-top: 84px;
+		  		padding-bottom: 38px;
+		  		letter-spacing: 0.5px;
+				}
+
+		  	.section6-text {
+		  		font-family: mm;
+		  		font-size: 16px;
+		  		line-height: 28px;
+		  	}
+
+		  	.button {
+		  		margin: 42px 0 42px;
+		  	}
+		  }
+
+		  .spiner {
+		  	position: relative;
+		  	left: 0px;
+		  	z-index: 1111;
+
+		  	img {
+		  		position: relative;
+		  		z-index: 1111;
+		  		left: -10px;
+		  		top: -7px;
+		  		width: 300px;
+		  	}
+
+		  	.spiner-round {
+		  		font-family: msb;
+		  		font-size: 10px;
+		  		text-align: center;
+		  		line-height: 10px;
+					position: absolute;
+					z-index: 1122;
+					left: 50%;
+					top: 50%;
+					width: 90px;
+
+					&:nth-of-type(1) {
+						left: 103px;
+						top: 80px;
+					}
+
+					&:nth-of-type(2) {
+						left: 2px;
+						top: 35px;
+					}
+
+					&:nth-of-type(3) {
+						left: 207px;
+						top: 30px;
+					}
+
+					&:nth-of-type(4) {
+						left: 103px;
+						top: 210px;
+					}
+		  	}
+		  }
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.section7 {
+			padding-top: 0px;
+
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				order: 2;
+			}
+
+		  .section7-info {
+		  	order: 1;
+		  	padding: 42px 15px 0;
+		  	max-width: 320px;
+				
+		  	.section-header {
+		  		word-spacing: 2px;
+		  		padding-top: 18px;
+		  		padding-bottom: 26px;
+		  		text-align: center;
+		  	}
+
+		  	.section-subheader {
+		  		font-family: mm;
+		  		font-size: 16px;
+		  		line-height: 28px;
+		  		word-spacing: 4px;
+		  		text-align: center;
+		  	}
+
+		  	.button {
+		  		margin: 42px 0;
+		  	}
+		  }
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+	
+	/* ↓↓↓ FOOTER ↓↓↓ */
+		.footer-wrapper {
+			background-color: #222222;
+
+			.footer {
+				overflow: hidden;
+				max-width: 1250px;
+				min-height: 245px;
+				margin: 100px auto 0;
+				padding: 0 15px;
+				color: white;
+
+				.footer-flex {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+
+					.logo {
+						padding-top: 54px;
+						width: 90px;
+
+						a {
+							font-family: exo;
+							font-size: 31px;	
+							letter-spacing: 3px;
+							color: white;
+						}
+					}
+
+					.navigation {
+						font-family: msb;
+						font-size: 16px;
+						width: 217px;
+						padding-top: 63px;
+						display: flex;
+						justify-content: space-between;
+
+						a {
+							color: white;
+						}
+					}
+				}
+
+				.footer-info {
+					float: right;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					margin-top: 22px;
+
+					.social {
+						padding-top: 30px;
+						span {
+							padding-right: 27px;
+
+							a {
+								color: white;
+							}
+						}
+					}
+
+					.rights {
+						font-family: mm;
+						font-size: 14px;
+						padding: 30px 33px 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

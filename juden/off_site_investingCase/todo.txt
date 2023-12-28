@@ -1,0 +1,19 @@
++ меняем название бренда на InvestingCase
++ Suite 246, Commercial Business Center, BOX 1470, Beachmont, Kingstown, Saint Vincent and the Grenadines : Suite 244, Commercial Business Center, BOX 1465, Beachmont, Kingstown, St. Vincent and The Grenadines.
++ Copyright © 2018 (PlatinumTrade LTD). Все права защищены.                                               : Copyright © 2018 (SanitaTrade Ltd). Все права защищены.
++ PlatinumTrade LTD                                                                                       : SanitaTrade Ltd.
++ http://platinumtrade.org                                                                                : https://investingcase.com
++ support@platinumtrade.org                                                                               : support@investingcase.com
++ прикрутити форми
++ телефони обнулити
++ перевірити усі лого
++ добавить страницу Верефикации
++ картинка з адаптивністю - поміняти на нашу платформу
++ что такое бинарньіе опционьі - видалити
++ поміняти колір доджерблу на помаранч
++ поміняти стилістику тарифні плани
++ пульсація кнопки начать зарабатьівать
++ поміняти фонові картинки та відео
+
+
+- поставити антиспам фільтр

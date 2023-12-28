@@ -1,0 +1,88 @@
+// ↓↓↓ BEM-blocks: accordion (start) ↓↓↓
+
+.accordion-wrapper
+  ul.accordion
+    li
+      a(href='#')
+        i.fas.fa-home
+        | Home
+    li
+      a(href='#')
+        i.fas.fa-users
+        | Сustomers
+    li
+      a(href='#')
+        i.fas.fa-bookmark
+        | Tickets
+    li
+      a(href='#')
+        i.far.fa-bookmark
+        | Transactions
+    li
+      a.toggle(href='javascript:void(0);')
+        i.fas.fa-link
+        | Communications
+        span.submenu-indicator
+          i.fas.fa-plus
+      ul.inner
+        li: a(href='#') Новое уведомление
+        li: a(href='#') История уведомлений
+    li
+      a(href='#')
+        i.far.fa-copy
+        | Orders
+    li
+      a.toggle(href='javascript:void(0);')
+        i.fas.fa-chart-line
+        | Analytics
+        span.submenu-indicator
+          i.fas.fa-plus
+      ul.inner
+        li: a(href='#') Analytics1
+        li: a(href='#') Analytics2
+        li: a(href='#') Analytics3
+    li
+      a.toggle(href='javascript:void(0);')
+        i.far.fa-file-alt
+        | Logs
+        span.submenu-indicator
+          i.fas.fa-plus
+      ul.inner
+        li: a(href='#') Logs1
+        li: a(href='#') Logs2
+        li: a(href='#') Logs3
+    li
+      a.toggle(href='javascript:void(0);')
+        i.fas.fa-cogs
+        | Settings
+        span.submenu-indicator
+          i.fas.fa-plus
+      ul.inner
+        li: a(href='#') Settings Тестовая таблица
+        li: a(href='#') Settings2
+        li
+          a.toggle(href='javascript:void(0);')
+            | Admin
+            span.submenu-indicator
+              i.fas.fa-plus
+          ul.inner
+            li: a(href='#') Регистрация сотрудника
+            li: a(href='#') Смена пароля сотруднику
+            li: a(href='#') Admin3
+            li: a(href='#') Admin4
+            li
+              a(href='#')
+                i.fas.fa-briefcase
+                | Employees
+            li
+              a(href='#')
+                i.far.fa-flag
+                | Company
+
+//- style
+  include accordion.css
+
+//-script
+  include ../minjs/accordion/accordion.js
+
+// ↑↑↑ BEM-blocks: accordion (end) ↑↑↑

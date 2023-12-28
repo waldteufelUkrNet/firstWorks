@@ -1,0 +1,110 @@
+.post-card {
+  width: 290px;
+  height: 395px;
+  padding: 200px 27px 0;
+  border: 1px solid #f8f8f8;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  transition: background-color .5s, border-color .5s;
+  @media only screen and (min-width: 576px) {
+    width: 370px;
+    padding: 247px 27px 0;
+  }
+  .post-card__img {
+    width: 290px;
+    position: absolute; z-index: 22;
+    top: -1px; left: -1px;
+    z-index: 11;
+    @media only screen and (min-width: 576px) {
+      width: 370px;
+    }
+  }
+  .post-card__cover {
+    width: 290px;
+    height: 172.43px;
+    position: absolute; z-index: 33;
+    top: -1px; left: -1px;
+    background-color: black;
+    opacity: 0;
+    transition: opacity .5s;
+    @media only screen and (min-width: 576px) {
+      width: 370px;
+      height: 220px;
+    }
+  }
+  .post-card__date {
+    width: 50px;
+    height: 35px;
+    padding-top: 4px;
+    background-color: #363636;
+    border-radius: 3px 3px 0 0;
+    position: absolute;  z-index: 44;
+    top: 20px; left: 20px;
+    font-family: ml;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    transition: background-color .5s;
+  }
+  .post-card__month {
+    width: 50px;
+    height: 25px;
+    padding-top: 6px;
+    background-color: #252525;
+    border-radius: 0 0 3px 3px;
+    position: absolute;   z-index: 44;
+    top: 55px; left: 20px;
+    font-family: rr;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    transition: background-color .5s;
+  }
+  .post-card__header {
+    font-family: rm;
+    font-size: 20px;
+    color: #656565;
+    transition: color .5s;
+  }
+  .post-card__text {
+    font-family: ml;
+    font-size: 14px;
+    color: #8c8c8c;
+    line-height: 22px;
+    transition: color .5s;
+    padding: 15px 0 22px;
+  }
+  .post-card__more {
+    font-family: ml;
+    font-size: 14px;
+    color: #c7b299;
+    position: relative;
+    &:after {
+      content: "\f0da";
+      font-family: fa;
+      display: inline-block;
+      position: absolute;
+      top: 3px; left: 85px;
+    }
+  }
+  &:hover {
+    background-color: #362f2d;
+    border-color: #362f2d;
+    .post-card__cover {
+      opacity: .5;
+    }
+    .post-card__date {
+      background-color: #c7b299;
+    }
+    .post-card__month {
+      background-color: #a48d72;
+    }
+    .post-card__header {
+      color: #c7b299;
+    }
+    .post-card__text {
+      color: white;
+    }
+  }
+}

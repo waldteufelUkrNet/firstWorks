@@ -1,0 +1,116 @@
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+
+  .header-wrapper {
+  	.header {
+      grid-template-columns: 135px auto 145px;
+	  }
+  }
+
+	.logo {
+  	order: 1;
+  }
+
+	.navigation {
+		order: 2;
+  	&__button {
+  		display: none;
+  	}
+  	&__menu {
+  		display: inline-block;
+  		li {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+  			& a {
+          position: relative;
+          display: block;
+          margin: 0;
+          height: 60px;
+          line-height: 60px;
+          border: 1px solid $darkblue;
+          background-color: $darkblue;
+          font-family: ar;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: white;
+          text-align: center;
+          padding: 0 15px 0 15px;
+          transition: border-color .5s;
+  				&:hover {
+            border-color: white;
+  				}
+  			}
+        &:last-of-type a {
+          border-bottom: 1px solid transparent;
+        }
+  		}
+  	}
+    &__arrow {
+      display: block;
+      width: 15px;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 24px 0px;
+      border-left: none;
+    }
+
+    &__submenu {
+      position: relative;
+      li {
+        display: none;
+        position: absolute;
+        left: 0;
+        & a {
+          text-align: left;
+          width: 140px;
+        }
+        &:nth-of-type(2) {
+          top: 60px;
+        }
+        &:nth-of-type(3) {
+          top: 120px;
+        }
+      }
+    }
+  }
+
+  .gradient {
+    display: block;
+    width:187px;
+    height: 6px;
+    background: linear-gradient(to right, rgb(70,0,179), rgb(255,144,0));
+    position: absolute;
+    top: 54px;
+  }
+
+  .callback {
+  	order: 3;
+  	&__button {
+
+  	}
+  }
+
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	
+	.section {
+
+		&__title {
+			font-size: 90px;
+			text-align: left;
+			padding: 83px 0 60px 0;
+		}
+	}
+
+  .card-holder {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

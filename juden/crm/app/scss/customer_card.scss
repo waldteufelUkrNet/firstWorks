@@ -1,0 +1,303 @@
+* {
+  outline: none;
+}
+.client-card {
+  font-family           : rcb;
+  font-size             : 24px;
+  line-height           : 2em;
+}
+
+.client-menu,
+.client-info,
+.client-note,
+.client-wrap {
+  font                  : 16px rcl;
+  width                 : 100%;
+  margin                : 20px auto;
+  border                : 1px solid grey;
+  border-radius         : 6px;
+  background-color      : #fff;
+  padding               : 15px
+}
+
+.client-menu {
+  display               : grid;
+  grid-template-columns : 60px repeat(4, 1fr);
+  grid-column-gap       : 10px;
+  position              : relative;
+  height                : 67px;
+  &__go-out-btn {
+    outline             : none;
+    cursor              : pointer;
+    align-self          : start;
+    padding-top         : 6px;
+    padding-bottom      : 6px;
+    border              : 1px solid grey;
+  }
+
+  &__go-out-btn-sumbol-wrapper {
+    display             : block;
+    transform           : rotate(180deg)
+  }
+
+  &__dropdown {
+    position            : relative
+  }
+
+  &__dropdown-btn {
+    width               : 100%;
+    padding-top         : 6px;
+    padding-bottom      : 6px;
+    cursor              : pointer;
+    position            : relative;
+    border              : 1px solid grey;
+    transition          : background-color .5s;
+    &:hover {
+      background-color  : rgba(30,144,255,.2);
+    }
+  }
+
+  &__dropdown-btn-left {
+    position            : absolute;
+    z-index             : 1111;
+    top                 : 50%;
+    left                : 15px;
+    transform           : translate(0, -50%)
+  }
+
+  &__dropdown-btn-right {
+    display             : block;
+    position            : absolute;
+    top                 : 50%;
+    right               : 15px;
+    transform           : translate(0, -50%)
+  }
+
+  &__dropdown-options-holder {
+    position            : relative;
+    z-index             : 1122;
+    left                : 0px;
+    width               : 100%;
+    border              : 1px solid grey;
+    height              : 0;
+    overflow            : hidden;
+    display             : none;
+    background-color    : white;
+    margin-top          : 2px;
+  }
+
+  &__dropdown-options-holder a {
+    display             : block;
+    width               : 100%;
+    padding             : 4px 12px;
+    border-bottom       : 1px solid grey;
+    transition          : background-color .3s;
+    &:hover {
+      background-color  : rgba(30,144,255,.2);
+    }
+  }
+
+  &__dropdown-options-holder li:last-of-type a {
+    border-bottom       : none
+  }
+}
+.client-info {
+  &__1-wrapper {
+    height                : 30px;
+    display               : flex;
+    justify-content       : start;
+    align-items           : center;
+    font-size             : 1.8rem;
+  }
+
+  &__name {
+    min-width             : 200px;
+    margin-right          : 10px;
+  }
+
+  &__id {
+    & > span {
+      font-family         : rb
+    }
+  }
+
+  &__onoff-wrapper {
+    display               : flex;
+    align-items           : center;
+    margin                : 0 50px
+  }
+
+  &__onoff-img {
+    width                 : 24px;
+    height                : 24px;
+    user-select           : none;
+    margin-right          : 10px;
+  }
+
+  &__onoff {
+    user-select           : none;
+  }
+
+  &__money {
+    height                : 40px;
+    line-height           : 40px;
+    font-family           : rb;
+    font-size             : 2.7rem;
+    color                 : green;
+  }
+
+  &__1-wrapper-2 {
+    font-size             : 1.8rem;
+    display               : grid;
+    grid-template-columns : auto 1fr;
+    grid-column-gap       : 10px;
+    span:nth-of-type(even) {
+      font-family         : rb;
+    }
+  }
+
+  &__1-btns {
+    height                : 30px;
+    display               : flex;
+    align-items           : center;
+    margin-top            : 5px;
+    form {
+      border              : 1px solid grey;
+      border-radius       : 4px;
+      overflow            : hidden;
+      height              : 30px;
+      display             : flex;
+      input {
+        border            : none;
+        cursor            : pointer;
+        user-select       : none;
+      }
+    }
+  }
+  &__1-btn {
+    height                : 30px;
+    border                : 1px solid grey;
+    border-radius         : 4px;
+    cursor                : pointer;
+    user-select           : none;
+    margin-left           : 10px
+  }
+
+  &__2 {
+    display               : grid;
+    grid-template-columns : repeat(4, 1fr);
+    grid-gap              : 15px;
+    justify-content       : space-evenly
+  }
+
+  &__column-header {
+    text-transform        : uppercase;
+    text-align            : center;
+    text-decoration       : underline
+  }
+
+  &__value-wrapper {
+    display               : block;
+    display               : grid;
+    grid-template-columns : auto 1fr;
+    grid-column-gap       : 6px;
+  }
+
+  &__value-name {
+    display               : inline-block;
+    min-width             : 80px
+  }
+
+  &__value {
+    color                 : DodgerBlue
+  }
+}
+.client-note {
+  &__new-note-btn {
+    padding-top           : 6px;
+    padding-bottom        : 6px;
+    margin-bottom         : 10px;
+    cursor                : pointer
+  }
+
+  &__table {
+    font-size             : 14px;
+    width                 : 100%;
+    border                : 1px solid grey
+  }
+
+  &__table th {
+    font-family           : rb;
+    background-color      : lightgrey;
+    text-align            : left;
+    height                : 30px;
+    line-height           : 30px;
+  }
+
+  &__table th,
+  &__table td {
+    padding               : 6px
+  }
+
+  &__table tr {
+    height                : 30px;
+    line-height           : 30px;
+  }
+
+  &__table tr:nth-of-type(even) {
+    background-color      : rgb(230,230,230);
+  }
+}
+
+.client-wrap {
+  display               : grid;
+  grid-template-columns : repeat(2, 1fr);
+  grid-gap              : 15px
+}
+
+.client-small-cards {
+  padding               : 10px;
+  border                : 1px solid grey;
+  border-radius         : 6px;
+  &__header {
+    font-family           : rb;
+    padding               : 6px;
+    position              : relative
+  }
+
+  &__btn {
+    position              : absolute;
+    top                   : 50%;
+    right                 : -2px;
+    transform             : translate(0, -50%)
+  }
+
+  &__table {
+    font-size             : 14px;
+    width                 : 100%
+  }
+
+  &__table th {
+    background-color      : lightgrey;
+    text-align            : left
+  }
+
+  &__table th,
+  &__table td {
+    padding               : 6px
+  }
+  &__table tr:hover {
+    background-color      : rgb(230,230,230);
+  }
+}
+
+.table-doublewrapper {
+  height               : 186px;
+  overflow             : hidden;
+  position             : relative;
+}
+.table-wrapper {
+  height               : 186px;
+  width                : calc( 100% + 20px);
+  overflow             : auto;
+}

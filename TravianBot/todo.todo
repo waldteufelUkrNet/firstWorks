@@ -1,0 +1,61 @@
+не робочі посилання:
+http://trav.datacompboy.ru/map/s1.com.ua
+http://travilog.org.ua/ua
+http://travian-utils.com/
+http://trav.a-koss.ru/trav/map/
+http://abazaba.ru/
+http://travian.ws/analyser.pl?s
+http://travian-com.ttool.info/
+
+робочі посилання:
+http://www.javaschubla.de/2006/travian/wegerechner/wegerechner-t3i.html?lang=ru&dim=400&simple=true
+http://log.travianas.lt/ru/
+http://travmap.shishnet.org
+http://travian.kirilloid.ru/
+
+
+посилання на оаз:
+https://ts8.x1.europe.travian.com/position_details.php?x=174&y=-144
+
+
+Залежність будівництв:
+Rohstofflager        : Hauptgebäude Stufe 1
+Kornspeicher         : Hauptgebäude Stufe 1
+Hauptgebäude         : -
+Marktplatz           : Hauptgebäude Stufe 3, Rohstofflager Stufe 1, Kornspeicher Stufe 1
+Botschaft            : Hauptgebäude Stufe 1
+Versteck             : -
+Rathaus              : Hauptgebäude Stufe 10, Akademie Stufe 10
+Residenz             : Hauptgebäude Stufe 5, - Palast, - Kommandozentrale
+Palast               : Botschaft Stufe 1, Hauptgebäude Stufe 5, - Residenz, - Kommandozentrale
+Schatzkammer         : Hauptgebäude Stufe 10, - Weltwunder
+Handelskontor        : Marktplatz Stufe 20, Stall Stufe 10
+Steinmetz            : Hauptgebäude Stufe 5, + Hauptdorf
+
+
+
+Schmiede          : Hauptgebäude Stufe 3, Akademie Stufe 1
+Turnierplatz      : Versammlungsplatz Stufe 15
+Versammlungsplatz : -
+Kaserne           : Versammlungsplatz Stufe 1, Hauptgebäude Stufe 3
+Stall             : Schmiede Stufe 3, Akademie Stufe 5
+Werkstatt         : Akademie Stufe 10, Hauptgebäude Stufe 5
+Akademie          : Kaserne Stufe 3, Hauptgebäude Stufe 3
+Große Kaserne     : Kaserne Stufe 20, keines Hauptdorf
+Großer Stall      : Stall Stufe 20, keines Hauptdorf
+Palisade          : -
+Fallensteller     : Versammlungsplatz Stufe 1
+Heldenhof         : Hauptgebäude Stufe 3, Versammlungsplatz Stufe 1
+Hospital          : Hauptgebäude Stufe 10, Akademie Stufe 15
+
+
+
+Holzfäller    : -
+Lehmgrube     : -
+Eisenmine     : -
+Getreidefarm  : -
+Sägewerk      : Holzfäller Stufe 10, Hauptgebäude Stufe 5
+Lehmbrennerei : Lehmgrube Stufe 10, Hauptgebäude Stufe 5
+Eisengießerei : Eisenmine Stufe 10, Hauptgebäude Stufe 5
+Getreidemühle : Getreidefarm Stufe 5
+Bäckerei      : Getreidefarm Stufe 10, Hauptgebäude Stufe 5, Getreidemühle Stufe 5

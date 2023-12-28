@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>waldteufel@ukr.net</title><link rel="icon" href="img/wehrwolf.jpg"><!-- css-libs (slick, animate ...)--><link rel="stylesheet" type="text/css" href="css/libs.min.css"><!-- js-libs (font awesome, slick, wow ...)--><script src="js/libs.min.js"></script><!-- own stylesheet and js--><link rel="stylesheet" type="text/css" href="css/style.css"><script src="js/js.js" defer=""></script></head><body><!-- HEADER--><div class="header-wrapper"><header class="header"><!-- NAVIGATION--><script>$(document).ready(function(){
+
+  var navLinkArr = $(".navigation__link");
+
+  //відкриття меню
+  $(".navigation__nav-btn_open").click(function(){
+
+    //зникнення кнопки-гамбургера
+    $(this).css({ "transition":".5s",
+                  "opacity":"0",
+                  "zIndex":"-1"});
+
+    //поява меню (чорне тло)
+    $(".navigation__list").css({  "transition":".5s",
+                                  "transition-delay":".5s",
+                                  "top":"0"});
+
+    //поява пунктів меню
+    $(navLinkArr).css({"position":"relative","left":"-100%"});
+    setTimeout( function(){
+      $(navLinkArr[0]).css({"transition":".2s","transition-delay":".0s","left":"0%"});
+      $(navLinkArr[1]).css({"transition":".2s","transition-delay":".1s","left":"0%"});
+      $(navLinkArr[2]).css({"transition":".2s","transition-delay":".2s","left":"0%"});
+      $(navLinkArr[3]).css({"transition":".2s","transition-delay":".3s","left":"0%"});
+      $(navLinkArr[4]).css({"transition":".2s","transition-delay":".4s","left":"0%"});
+      $(navLinkArr[5]).css({"transition":".2s","transition-delay":".5s","left":"0%"});
+      $(navLinkArr[6]).css({"transition":".2s","transition-delay":".6s","left":"0%"});
+      $(navLinkArr[7]).css({"transition":".2s","transition-delay":".7s","left":"0%"});
+    }, 1000);
+
+    //поява кнопки-хрестика
+    $(".navigation__nav-btn_close").css({ "transition":".5s",
+                                          "transition-delay":".5s",
+                                          "opacity":"1",
+                                          "zIndex":"2233"});
+
+  setInterval(function(){
+      var controlWidth = $(window).width();
+      if (controlWidth >= 768) {location.reload();}
+    }, 500)
+
+  });
+
+  //закриття меню
+  $(".navigation__nav-btn_close").click(function(){
+
+    //зникнення кнопки-хрестика
+    $(this).css({"transition":".5s","opacity":"0","zIndex":"-1"});
+
+    //зникнення пунктів меню
+    setTimeout( function(){
+      $(navLinkArr[0]).css({"transition":".2s","transition-delay":".0s","left":"100%"});
+      $(navLinkArr[1]).css({"transition":".2s","transition-delay":".1s","left":"100%"});
+      $(navLinkArr[2]).css({"transition":".2s","transition-delay":".2s","left":"100%"});
+      $(navLinkArr[3]).css({"transition":".2s","transition-delay":".3s","left":"100%"});
+      $(navLinkArr[4]).css({"transition":".2s","transition-delay":".4s","left":"100%"});
+      $(navLinkArr[5]).css({"transition":".2s","transition-delay":".5s","left":"100%"});
+      $(navLinkArr[6]).css({"transition":".2s","transition-delay":".6s","left":"100%"});
+      $(navLinkArr[7]).css({"transition":".2s","transition-delay":".7s","left":"100%"});
+    }, 500);
+
+    //зникнення меню (чорне тло)
+    $(".navigation__list").css({"transition":"1.6s","transition-delay":"1.1s","top":"-320px"});
+
+    setTimeout( function(){
+      //поява кнопки-гамбургера
+      $(".navigation__nav-btn_open").css({"opacity":"1","zIndex":"0"});
+      $(navLinkArr).css({"left":"-100%"});
+
+    }, 1600);
+
+  });
+
+});</script><nav class="navigation"><div class="navigation__logo-block"><div class="logo-block"><a class="logo-block__link" href="#"><img class="logo-block__img" src="img/waxom-logo.png" alt="waxom-logo.png"><p class="logo-block__text">Waxom</p></a></div></div><ul class="navigation__list"><li class="navigation__list-item"><a class="navigation__link" href="#">Home</a></li><li class="navigation__list-item"><a class="navigation__link" href="#">About Us</a></li><li class="navigation__list-item"><a class="navigation__link" href="#">Portfolio</a></li><li class="navigation__list-item"><a class="navigation__link" href="#">Features</a></li><li class="navigation__list-item"><a class="navigation__link" href="#">Blog</a></li><li class="navigation__list-item"><a class="navigation__link" href="#">Pricing</a></li><li class="navigation__list-item"><a class="navigation__link" href="#">Shortcodes</a></li><li class="navigation__list-item"><a class="navigation__link" href="#">Contact</a></li></ul><ul class="navigation__icons"><li><a href="#"><img src="img/icon-card.png" alt="icon-card.png"></a></li><li><script>$(document).ready(function(){
+
+  var isSearchOpen = false;
+
+  // відкрити/закрити поле пошуку (використання кнопки)
+  $(".search-block__btn").click(function(){
+
+    if(!isSearchOpen){ // якщо поле закрите - відкрити
+      $(".search-block__field").animate({"opacity":"1","width":"234px"}, 500);
+      isSearchOpen = true;
+      return;
+    }
+    if(isSearchOpen){ // якщо поле відкрите
+
+      var searchValue = $(".search-block__field")[0].value; // значення, введене в поле
+      if (searchValue) {
+        alert('Пошук "' + searchValue + '" не дав результатів, оскільки не підключено пошуковий скрипт');
+        $(".search-block__field")[0].value = ""; // очистити поле
+      }
+
+      $(".search-block__field").animate({"opacity":"0","width":"0px"}, 500); // закрити поле
+      isSearchOpen = false;
+    }
+  });
+
+  document.onclick = function(event) {
+    console.log(event.target.className);
+    if (isSearchOpen && // якщо поле відкрите, а клік - поза полем - закрити поле
+      event.target.className != "search-block__btn" &&
+      event.target.className != "search-block__img" &&
+      event.target.className != "search-block__field") {
+      $(".search-block__field")[0].value = ""; // очистити поле
+      $(".search-block__field").animate({"opacity":"0","width":"0px"}, 500); // закрити поле
+      isSearchOpen = false;
+    };
+  }
+
+  document.onkeyup = function(event) {
+
+    if (isSearchOpen && // якщо поле відкрите і натиснуто на enter
+      event.keyCode == 13) {
+      var searchValue = $(".search-block__field")[0].value; // значення, введене в поле
+      if (searchValue) {
+        alert('Пошук "' + searchValue + '" не дав результатів, оскільки не підключено пошуковий скрипт');
+        $(".search-block__field")[0].value = ""; // очистити поле
+        $(".search-block__field").animate({"opacity":"0","width":"0px"}, 500); // закрити поле
+        isSearchOpen = false;
+      } else {
+        alert ("Введіть значення");
+      }
+    };
+  }
+});</script><div class="search-block"><input class="search-block__field" type="search" name="search"><button class="search-block__btn"><img class="search-block__img" src="img/icon-search.png" alt="icon-search.png"></button></div></li></ul><button class="navigation__nav-btn navigation__nav-btn_open" type="button"><i class="fas fa-bars"></i></button><button class="navigation__nav-btn navigation__nav-btn_close" type="button"><i class="fas fa-times"></i></button></nav><!-- /NAVIGATION--></header></div><!-- /HEADER--><!-- MAIN SECTION--><main class="main"><!-- SECTION 1 slider--><div class="s1-wrapper s1-slick"><div class="slick-item"><div class="slick-item-cover"></div><h2>Unique and Modern Design</h2><h1>Portfolio PSD Template</h1><h3>Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.</h3><button class="btn">get started </button></div><div class="slick-item"><div class="slick-item-cover"></div><h2>Unique and Modern Design</h2><h1>Portfolio PSD Template</h1><h3>Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.</h3><button class="btn">get started </button></div><div class="slick-item"><div class="slick-item-cover"></div><h2>Unique and Modern Design</h2><h1>Portfolio PSD Template</h1><h3>Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.</h3><button class="btn">get started </button></div><div class="slick-item"><div class="slick-item-cover"></div><h2>Unique and Modern Design</h2><h1>Portfolio PSD Template</h1><h3>Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.</h3><button class="btn">get started </button></div><div class="slick-item"><div class="slick-item-cover"></div><h2>Unique and Modern Design</h2><h1>Portfolio PSD Template</h1><h3>Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.</h3><button class="btn">get started </button></div></div><!-- /SECTION 1--><!-- SECTION 2 services--><div class="s2-wrapper"><section class="s2"><div class="services-card"><img class="services-card__img" src="img/s2__wad.png" alt="s2__wad.png"><img class="services-card__img services-card__img_hover" src="img/s2__wad_hover.png" alt="s2__wad_hover.png"><h4 class="services-card__header">Web & App Design</h4><p class="services-card__info">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p><div class="services-card__line"></div></div><div class="services-card"><img class="services-card__img" src="img/s2__dev.png" alt="s2__dev.png"><img class="services-card__img services-card__img_hover" src="img/s2__dev_hover.png" alt="s2__dev_hover.png"><h4 class="services-card__header">Development</h4><p class="services-card__info">Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p><div class="services-card__line"></div></div><div class="services-card"><img class="services-card__img" src="img/s2__cust.png" alt="s2__cust.png"><img class="services-card__img services-card__img_hover" src="img/s2__cust_hover.png" alt="s2__cust_hover.png"><h4 class="services-card__header">Customization</h4><p class="services-card__info">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p><div class="services-card__line"></div></div><div class="services-card"><img class="services-card__img" src="img/s2__mark.png" alt="s2__mark.png"><img class="services-card__img services-card__img_hover" src="img/s2__mark_hover.png" alt="s2__mark_hover.png"><h4 class="services-card__header">Marketing</h4><p class="services-card__info">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p><div class="services-card__line"></div></div></section></div><!-- /SECTION 2--><!-- SECTION 3 ideas--><div class="s3-wrapper"><section class="s3"><h1 class="section-header">Waxom is Realization of your Ideas.</h1><h3 class="section-subheader">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h3><img src="img/s3-1.jpg" alt="s3-1.jpg"><img src="img/s3-2.jpg" alt="s3-2.jpg"><img src="img/s3-3.jpg" alt="s3-3.jpg"></section></div><!-- /SECTION 3--><!-- SECTION 4 purchase--><div class="s4-wrapper"><section class="s4"><h1 class="s4__header"><span>Waxom</span> Multipurpose WordPress Theme</h1><h3 class="s4__subheader">Don't Forget to Rate the Template. Thanks so much!</h3><button class="btn s4__btn">Purchase Now</button></section></div><!-- /SECTION 4--><!-- SECTION 5 projects--><div class="s5-wrapper"><section class="s5" id="section5"><h1 class="section-header">Our Latest Projects.</h1><h3 class="section-subheader">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h3><ul class="s5__section-nav"><li><a class="a-btn s5__a-btn_margin a-btn_activ" href="#section5" data-choice="all">All</a></li><li><a class="a-btn s5__a-btn_margin" href="#section5" data-choice="WebDesign">Web Design</a></li><li><a class="a-btn s5__a-btn_margin" href="#section5" data-choice="MobileApp">Mobile App</a></li><li><a class="a-btn s5__a-btn_margin" href="#section5" data-choice="Illustration">Illustration</a></li><li><a class="a-btn s5__a-btn_margin" href="#section5" data-choice="Photography">Photography</a></li></ul><div class="s5__cards-holder"><div class="project-card" data-choice="Photography"><img class="project-card__img" src="img/s5-project-1.jpg" alt="project-1.jpg"><div class="project-card__cover"></div><div class="project-card__icons-holder"><a class="project-card__icon" href="#"><i class="fas fa-link"></i></a><a class="project-card__icon" href="#"><i class="fas fa-search"></i></a></div><div class="project-card__info"><h4 class="project-card__h4">Claritas Etiam Processus</h4><h5 class="project-card__h5">Photography, Nature</h5></div></div><div class="project-card" data-choice="WebDesign"><img class="project-card__img" src="img/s5-project-2.jpg" alt="project-1.jpg"><div class="project-card__cover"></div><div class="project-card__icons-holder"><a class="project-card__icon" href="#"><i class="fas fa-link"></i></a><a class="project-card__icon" href="#"><i class="fas fa-search"></i></a></div><div class="project-card__info"><h4 class="project-card__h4">Quam Nutamus Farum</h4><h5 class="project-card__h5">Graphic Design, Mock-Up</h5></div></div><div class="project-card" data-choice="Photography"><img class="project-card__img" src="img/s5-project-3.jpg" alt="project-1.jpg"><div class="project-card__cover"></div><div class="project-card__icons-holder"><a class="project-card__icon" href="#"><i class="fas fa-link"></i></a><a class="project-card__icon" href="#"><i class="fas fa-search"></i></a></div><div class="project-card__info"><h4 class="project-card__h4">Usus Legentis Videntur</h4><h5 class="project-card__h5">Photography, Holiday</h5></div></div><div class="project-card" data-choice="Photography"><img class="project-card__img" src="img/s5-project-4.jpg" alt="project-1.jpg"><div class="project-card__cover"></div><div class="project-card__icons-holder"><a class="project-card__icon" href="#"><i class="fas fa-link"></i></a><a class="project-card__icon" href="#"><i class="fas fa-search"></i></a></div><div class="project-card__info"><h4 class="project-card__h4">Claritas Etiam Processus</h4><h5 class="project-card__h5">Photography, Nature</h5></div></div><div class="project-card" data-choice="WebDesign"><img class="project-card__img" src="img/s5-project-5.jpg" alt="project-1.jpg"><div class="project-card__cover"></div><div class="project-card__icons-holder"><a class="project-card__icon" href="#"><i class="fas fa-link"></i></a><a class="project-card__icon" href="#"><i class="fas fa-search"></i></a></div><div class="project-card__info"><h4 class="project-card__h4">Quam Nutamus Farum</h4><h5 class="project-card__h5">Graphic Design, Mock-Up</h5></div></div><div class="project-card" data-choice="Photography"><img class="project-card__img" src="img/s5-project-6.jpg" alt="project-1.jpg"><div class="project-card__cover"></div><div class="project-card__icons-holder"><a class="project-card__icon" href="#"><i class="fas fa-link"></i></a><a class="project-card__icon" href="#"><i class="fas fa-search"></i></a></div><div class="project-card__info"><h4 class="project-card__h4">Usus Legentis Videntur</h4><h5 class="project-card__h5">Photography, Holiday</h5></div></div></div><button class="btn s5__btn">Load More</button></section></div><!-- /SECTION 5--><!-- SECTION 6 video--><div class="s6-wrapper parallax-container"><img class="parallax-item" src="img/s6-parallax-image.jpg" alt="s6-parallax-image.jpg"><section class="s6"><div class="s6__video-btn"><img src="img/s6-video-button.png" alt="s6-video-button.png"></div><h1 class="s6__header">Waxom Video Presentation</h1><h3 class="s6__subheader">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</h3><p class="video-timer">03:26</p><div class="s6__video-holder"><video class="s6__video" id="s6__video" controls=""><source src="video/movie.mp4" type="video/mp4"></video><button class="s6__video-close"><i class="fas fa-times"></i></button></div></section></div><!-- /SECTION 6--><!-- SECTION 7 devices--><div class="s7-wrapper"><section class="s7"><div class="s7__img-holder"><img class="s7__bg" src="img/s7-bg.png" alt="s7-bg.png"></div><div class="s7__content-holder"><h1 class="s7__header">Excellent for Mobile Devices.</h1><p class="s7__info">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl u aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p><ul class="s7__list"><li>Nam liber tempor cum soluta nobis eleifend option;</li><li>Option congue nihil imperdiet doming id quod mazim placerat facer;</li><li>Eodem modo typi, qui nunc nobis videntur parum futurum;</li><li>Investigationes demonstraverunt lectores</li></ul></div></section></div><!-- /SECTION 7--><!-- SECTION 8 counters--><div class="s8-wrapper"><section class="s8"><div class="counter-card"><img class="counter-card__img" src="img/s8-counter-img-1.png" alt="s8-counter-img-1.png"><div class="counter-card__counter">3587</div><div class="counter-card__description">Satisfied Clients</div><div class="counter-card__line"></div></div><div class="counter-card"><img class="counter-card__img" src="img/s8-counter-img-2.png" alt="s8-counter-img-2.png"><div class="counter-card__counter">207</div><div class="counter-card__description">Cups of coffee</div><div class="counter-card__line"></div></div><div class="counter-card"><img class="counter-card__img" src="img/s8-counter-img-3.png" alt="s8-counter-img-3.png"><div class="counter-card__counter">2500</div><div class="counter-card__description">Blog posts</div><div class="counter-card__line"></div></div><div class="counter-card"><img class="counter-card__img" src="img/s8-counter-img-4.png" alt="s8-counter-img-4.png"><div class="counter-card__counter">873</div><div class="counter-card__description">LIKES</div><div class="counter-card__line"></div></div><div class="counter-card"><img class="counter-card__img" src="img/s8-counter-img-5.png" alt="s8-counter-img-5.png"><div class="counter-card__counter">900</div><div class="counter-card__description">We launched</div><div class="counter-card__line"></div></div></section></div><!-- /SECTION 8--><!-- SECTION 9 posts--><div class="s9-wrapper"><section class="s9"><h1 class="section-header">Recent Posts.</h1><h3 class="section-subheader">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h3><div class="s9-slick-wrapper"><div class="s9-slick"><div class="post-card s9-slick__item-margin"><img class="post-card__img" src="img/s9-post-1.jpg" alt="img/s9-post-1.jpg"><div class="post-card__cover"></div><div class="post-card__date">30</div><div class="post-card__month">Sep.</div><h4 class="post-card__header">Lorem ipsum dolor sit amet</h4><p class="post-card__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p><a class="post-card__more" href="#">Read More</a></div><div class="post-card s9-slick__item-margin"><img class="post-card__img" src="img/s9-post-2.jpg" alt="img/s9-post-2.jpg"><div class="post-card__cover"></div><div class="post-card__date">30</div><div class="post-card__month">Sep.</div><h4 class="post-card__header">Lorem ipsum dolor sit amet</h4><p class="post-card__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p><a class="post-card__more" href="#">Read More</a></div><div class="post-card s9-slick__item-margin"><img class="post-card__img" src="img/s9-post-3.jpg" alt="img/s9-post-3.jpg"><div class="post-card__cover"></div><div class="post-card__date">30</div><div class="post-card__month">Sep.</div><h4 class="post-card__header">Lorem ipsum dolor sit amet</h4><p class="post-card__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p><a class="post-card__more" href="#">Read More</a></div><div class="post-card s9-slick__item-margin"><img class="post-card__img" src="img/s9-post-1.jpg" alt="img/s9-post-1.jpg"><div class="post-card__cover"></div><div class="post-card__date">30</div><div class="post-card__month">Sep.</div><h4 class="post-card__header">Lorem ipsum dolor sit amet</h4><p class="post-card__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p><a class="post-card__more" href="#">Read More</a></div><div class="post-card s9-slick__item-margin"><img class="post-card__img" src="img/s9-post-2.jpg" alt="img/s9-post-2.jpg"><div class="post-card__cover"></div><div class="post-card__date">30</div><div class="post-card__month">Sep.</div><h4 class="post-card__header">Lorem ipsum dolor sit amet</h4><p class="post-card__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p><a class="post-card__more" href="#">Read More</a></div></div></div></section></div><!-- /SECTION 9--><!-- SECTION 10 partners--><div class="s10-wrapper parallax-container2"><img class="parallax-item2" src="img/s10-bg.jpg" alt="s10-bg.jpg"><section class="s10"><a class="partner-link" href="#"><img class="partner-logo" src="img/s10-partner-1.png" alt="s10-partner-1.png"></a><a class="partner-link" href="#"><img class="partner-logo" src="img/s10-partner-2.png" alt="s10-partner-2.png"></a><a class="partner-link" href="#"><img class="partner-logo" src="img/s10-partner-3.png" alt="s10-partner-3.png"></a><a class="partner-link" href="#"><img class="partner-logo" src="img/s10-partner-4.png" alt="s10-partner-4.png"></a></section></div><!-- /SECTION 10--></main><!-- /MAIN SECTION--><!-- FOOTER--><footer class="footer"><div class="footer-info-wrapper"><div class="footer-info"><div class="foo-i-col1"><div class="logo-block"><a class="logo-block__link" href="#"><img class="logo-block__img" src="img/waxom-logo.png" alt="waxom-logo.png"><p class="logo-block__text">Waxom</p></a></div><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.</p><a class="read-more" href="#">Read More</a></div><div class="foo-i-col2"><h4 class="foo-i-col-header">Recent Posts</h4><div class="foo-post"><p class="foo-post__date">September 08, 2015</p><p class="foo-post__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p></div><div class="foo-post"><p class="foo-post__date">September 08, 2015</p><p class="foo-post__text">Diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p></div><div class="foo-post"><p class="foo-post__date">September 08, 2015</p><p class="foo-post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima</p></div></div><div class="foo-i-col3"><h4 class="foo-i-col-header">Our Twitter</h4><div class="foo-twitt"><p class="foo-post__text"><span>@waxom</span> Cum soluta nobis eleifend option congue nihil imperdiet doming</p><p class="foo-post__date">3 mins ago</p></div><div class="foo-twitt"><p class="foo-post__text">Mirum est <span>#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</p><p class="foo-post__date">5 hours ago</p></div><div class="foo-twitt"><p class="foo-post__text">Soluta nobis option <span>bit.ly/1Hniso7</span></p><p class="foo-post__date">20 days ago</p></div></div><div class="foo-i-col4"><h4 class="foo-i-col-header">Dribbble Widget</h4><div class="widget-container"><a href="#"><img src="img/widget-1.jpg" alt="widget-1.jpg"></a><a href="#"><img src="img/widget-2.jpg" alt="widget-2.jpg"></a><a href="#"><img src="img/widget-3.jpg" alt="widget-3.jpg"></a><a href="#"><img src="img/widget-4.jpg" alt="widget-4.jpg"></a></div></div></div></div><div class="footer-copyright-wrapper"><div class="footer-copyright"><div class="foo-cr-left-column"><span>Copyright © 2015 <a href="#">Waxom</a></span><span><a href="#">Privacy Policy</a></span><span><a href="#">FAQ</a></span><span><a href="#">Support</a></span></div><div class="foo-cr-right-column"><span>Designed by <a href="#">ThemeFire</a></span><span>Only on <a href="#">Envato Market</a></span></div></div></div></footer><!-- /FOOTER--></body></html>

@@ -1,0 +1,54 @@
+@media only screen and (min-width: 320px) {
+	.contacts-wrapper {
+		width: 100%;
+		background-color: dodgerblue;
+	}
+	.contacts {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 15px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 15px;
+		&__item {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 15px;
+			align-items: center;
+			text-align: center;
+		}
+		&__logo {
+			font-size: 60px;
+			color: white;
+			display: block;
+			&:hover {
+				color: white;
+			}
+		}
+		&__tel {
+			color: white;
+		}
+		&__data {
+			font-family: rcl;
+			font-size: 18px;
+			line-height: 1.3em;
+			color: white;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.contacts {
+		grid-template-columns: repeat(2, auto);
+		&__item {
+			grid-template-columns: repeat(2, auto);
+			text-align:left;
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.contacts {
+		grid-template-columns: repeat(4, auto);
+	}
+}

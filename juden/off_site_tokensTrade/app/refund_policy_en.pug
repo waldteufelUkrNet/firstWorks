@@ -1,0 +1,83 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Trade in your own way: currency pairs, stocks, indices, commodities and cryptocurrency.")
+
+    title Return policy
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/linecons.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/simple_text_pages.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper(data-parallax="scroll" data-image-src="assets/img/simple_text_pages_bg.jpg")
+        section.section1
+          .section1__headers-wrapper
+            h1.wow.fadeInUp.section1__header CASH RETURN
+            h1.wow.fadeInUp.section1__header POLICY
+            h4.wow.fadeInUp.section1__subheader Last Edition: 21.02.2019
+          img.wow.fadeInUp.section1__logo(src="assets/img/veryBigLogo.png", alt="veryBigLogo.png")
+      // /SECTION 1
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          p.wow.fadeInUp.section2__text CASH RETURN POLICY (REFUND & RETURNS POLICY OTHER T&C'S).
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text The company strives to ensure that each client is satisfied with the quality of the services provided. This is exactly what this refund policy is for. In exceptional cases, the Company may return funds to the customer’s bank cards. In this case, all funds will be returned to the card that was previously used to deposit funds.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text When replenishing a trading account from a bank card, you agree not to submit a request for withdrawal of a payment already credited to a trading account to your bank or your credit card supplier both during and after using our services. Any such attempt will be considered by our Company as a violation of the Terms and Agreements. If the Company nevertheless receives a withdrawal of the payment on the transaction, we reserve the right to freeze the current balance of the client and send the funds back to the trading account after paying all services and commissions.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text Also, if no trading activity was recorded on your account within 12 (six) months, or the trade was conducted, but in insufficient volume (the trading volume is calculated by the company individually), we will be entitled to return the money to the sender. In this case, we return the entire deposit.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text Also, for certain objective reasons and, if necessary, the Company may refund payments received through any payment system, including credit / debit cards. In this case, the funds will be returned back to the same payment system, credit / debit card or bank account from which they were received.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text Upon receipt of a request for payment / refund, the Company may spend up to 5 (five) banking days to process the request. After approval of the request, you need to wait from 0 to 7 (zero-seven) additional days before transferring funds to the Client’s account. In case of loss, no compensation is provided, and the Company is not liable.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text In case of a reasonable suspicion that the source of your funds and / or activities in general contradict the Company's policy on combating money laundering (AML), the Company reserves the right to unilaterally refuse to deposit / withdraw funds to / from your accounts in our systems, freeze these assets and return them to the sender. Please note that we will also be required to notify the relevant government agencies of each case of violation of AML policies and will be entitled to disclose your personal data. The company will take all necessary measures to prevent and block both the crediting and the withdrawal of funds from your accounts by third parties. The input and output of funds from the account can only be carried out by the owner of this account.
+          p.wow.fadeInUp.section2__identation
+          p.wow.fadeInUp.section2__text If during the whole period of using our services, we classify any of your activities (especially replenishment / withdrawal of funds) contrary to the usual purpose of using our services, where there is a direct or indirect, illegal or unfair intention, we reserve the right to act within this document, without informing you in advance. At the same time you, in this case, reimburse our direct and indirect losses / damage that we suffered as a result of your activity, in particular - we will, at our own discretion, compensate all the costs associated with remittances by withholding the corresponding amounts from your funds.
+      // /SECTION 2
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    //- script(src='assets/js/refund_policy.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

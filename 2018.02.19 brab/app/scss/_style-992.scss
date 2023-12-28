@@ -1,0 +1,196 @@
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 1 hero ↓↓↓ */
+		.hero-wrapper {
+			.hero {
+				min-height: 603px;
+				max-width: 1362px;
+				img {
+					display: block;
+					position: absolute;
+					top: 0;
+					right: -96px;
+				}
+				h1 {
+					font-size: 28px;
+					line-height: 28px;
+					padding: 112px 0 40px 13px;
+					text-align: left;
+					width: 560px;
+				}
+				p {
+					padding: 0 0 33px 15px;
+					text-align: left;
+					width: 550px;
+					&:last-of-type {
+						padding-bottom: 83px;
+					}
+				}
+				span {
+					position: absolute;
+					left: 0;
+					transform: translate(0);
+					a {
+						&:first-of-type {
+							padding: 15px 44px;
+						}
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 what ↓↓↓ */
+		.what-wrapper {
+			.what {
+				min-height: 1227px;
+				padding: 0;
+				h1 {
+					font-size: 32px;
+					padding: 65px 0 30px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 call ↓↓↓ */
+		.call-wrapper {
+			.call {
+				h1 {
+					font-size: 24px;
+					padding: 55px 0 16px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 info ↓↓↓ */
+		.info-wrapper {
+			background: white url("../img/bg-s5.jpg") center top no-repeat;
+			.info {
+				min-height: 895px;
+				h1 {
+					font-size: 32px;
+					padding: 84px 0 50px;
+				}
+				h5 {
+					padding: 0px 0 18px;
+				}
+				h6 {
+					font-family: ptsr;
+					font-size: 15px;
+					line-height: 22px;
+					color: #d7d6d6;
+					text-align: center;
+					&:last-of-type {
+						padding: 0 180px;
+					}
+				}
+				.info-holder {
+					margin: 95px auto 55px;
+					grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+					.info-item {
+						margin-bottom: 0;
+					}
+				}
+				p {
+					font-size: 24px;
+					padding-bottom: 77px;
+					span {
+						font-size: 48px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 s6 ↓↓↓ */
+		.s6-wrapper {
+			.s6 {
+				min-height: 1900px;
+				h1 {
+					padding: 103px 0 0 0;
+				}
+				.s6-item {
+					margin: 70px auto 0;
+					&:nth-of-type(even) {
+					}
+					.s6-item-info {
+						padding: 0 100px 0 70px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 scheme ↓↓↓ */
+		.scheme-wrapper {
+			.scheme {
+				h1 {
+					padding: 78px 0 40px 0;
+				}
+				.scheme-holder {
+					height: 200px;
+					grid-template-columns: auto auto auto;
+					grid-column-gap: 30px;
+					border-bottom: 2px solid #63b945;
+					.scheme-item {
+						text-align: left;
+						&:nth-of-type(1) {
+							padding: 0 0 0 15px;
+							&:after {
+								left: 15px;
+							}
+						}
+						&:nth-of-type(3) {
+							&:after {
+								right: 15px;
+							}
+						}
+						&:after {
+							top: 170px;
+						}
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 why ↓↓↓ */
+		.why-wrapper {
+			.why {
+				min-height: 903px;
+				h1 {
+					padding: 75px 0 75px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 8 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 9 callback ↓↓↓ */
+		.callback-wrapper {
+			.callback {
+				min-height: 656px;
+				h1 {
+					font-size: 32px;
+					padding-top: 65px;
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 9 ↑↑↑ */
+	}
+
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+	.footer-wrapper {
+		.footer {
+			text-align: left;
+		}
+	}
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

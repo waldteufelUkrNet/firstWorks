@@ -1,0 +1,39 @@
+/* ↓↓↓ for 1920px and more ↓↓↓ */
+@media only screen and (min-width: 1920px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+		.command-2 {
+			&__img {
+				right: -109px;
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.whom {
+			img:first-of-type {
+				right: -40px;
+			}
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.knowledge {
+			min-height: 994px;
+			position: relative;
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 ↓↓↓ */
+		.contact {
+			height: 590px;
+			position: relative;
+		}
+		/* ↑↑↑ /SECTION 8 ↑↑↑ */
+
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

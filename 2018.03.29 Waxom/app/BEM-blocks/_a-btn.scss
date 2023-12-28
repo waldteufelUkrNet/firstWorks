@@ -1,0 +1,18 @@
+.a-btn {
+  display: block;
+  height: 32px;
+  min-width: 70px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  background-color: white;
+  padding: 8px 19px;
+  font-family: ml;
+  font-size: 14px;
+  color: #8c8c8c;
+  text-align: center;
+  transition: background-color .5s;
+  &:not(.a-btn_activ):hover {
+    color: #8c8c8c;
+    background-color: #ebebeb;
+  }
+}

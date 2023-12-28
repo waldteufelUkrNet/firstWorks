@@ -1,0 +1,154 @@
+@media only screen and (min-width: 768px) {
+	/* ↓↓↓ section 1 ↓↓↓ */
+	.section1 {
+		width                : 1200px;
+		height               : 90vh;
+		padding-top: 15vh;
+	  &__header {
+			font-size          : 72px;
+	  }
+	  &__subheader {
+			font-size          : 32px;
+	  }
+	  &__offering-container {
+			width              : 60%;
+			justify-content    : space-around;
+	  }
+	  &__offering-item {
+			width              : 120px;
+			height             : 120px;
+			font-size          : 20px;
+	  	svg {
+	  		font-size        : 50px;
+	  	}
+	  }
+	}
+	/* ↑↑↑ /section 1 ↑↑↑ */
+
+	/* ↓↓↓ section 2 ↓↓↓ */
+
+	.section2 {
+		width                : 768px;
+
+		&__instruction-container {
+			flex-wrap          : nowrap;
+		}
+		&__instruction-header {
+			padding-bottom     : 20px;
+			padding-top        : 0px;
+		}
+	}
+	/* ↑↑↑ /section 2 ↑↑↑ */
+
+	/* ↓↓↓ section 3 ↓↓↓ */
+	.section3 {
+		width                : 600px;
+	}
+	/* ↑↑↑ /section 3 ↑↑↑ */
+
+	/* ↓↓↓ section 4 ↓↓↓ */
+	.section4 {
+		width                : 768px;
+		&__buttons-holder {
+			width              : 600px;
+		}
+		&__cards-holder {
+	    grid-template-columns : repeat(3, auto);
+		}
+		&__card {
+			width                 : 230px;
+			height                : 420px;
+	    svg {
+	    	font-size           : 40px;
+	    }
+		}
+	}
+	/* ↑↑↑ /section 4 ↑↑↑ */
+
+	/* ↓↓↓ section 5 ↓↓↓ */
+	.section5 {
+		width                : 758px;
+		padding              : 100px 15px;
+		grid-template-columns: 1fr 2fr;
+		grid-gap             : 10px;
+		&__right {
+			text-align         : right;
+		}
+	}
+	/* ↑↑↑ /section 5 ↑↑↑ */
+
+	/* ↓↓↓ section 6 ↓↓↓ */
+	.s6-wrapper {
+		max-width            : 100%;
+		position             : relative;
+		overflow             : hidden;
+		background-color     : white;
+	}
+	.section6 {
+		width                : 700px;
+	}
+	/* ↑↑↑ /section 6 ↑↑↑ */
+
+	/* ↓↓↓ section 7 ↓↓↓ */
+	.section7 {
+		width                : 700px;
+	  &__header {
+	  	font-size          : 46px;
+	  }
+	  &__header_bold {
+	  	font-size          : 56px;
+	  }
+	}
+	/* ↑↑↑ /section 7 ↑↑↑ */
+
+	/* ↓↓↓ section 8 ↓↓↓ */
+	.section8 {
+		width                   : 768px;
+	}
+	/* ↑↑↑ /section 8 ↑↑↑ */
+
+	/* ↓↓↓ section 9 ↓↓↓ */
+	.section9 {
+		width                   : 768px;
+		grid-template-columns   : 1fr 1fr;
+		grid-gap                : 15px;
+		&__right {
+			order                 : 1;
+		}
+		&__left {
+			order                 : 2;
+		}
+	  &__header {
+			text-align            : left;
+	  }
+	  &__text {
+			text-align            : left;
+	  }
+	  &__right-grid {
+			grid-template-columns : auto auto;
+	  }
+	  &__right-item {
+			width                 : 180px;
+			height                : 180px;
+	  	svg {
+				font-size           : 100px;
+	  	}
+	  }
+	  &__number {
+			font-size             : 50px;
+	  }
+	}
+	/* ↑↑↑ /section 9 ↑↑↑ */
+
+	/* ↓↓↓ section 10 ↓↓↓ */
+	.section10 {
+		width                 : 758px;
+	}
+	/* ↑↑↑ /section 10 ↑↑↑ */
+
+	/* ↓↓↓ section 11 ↓↓↓ */
+	.section11 {
+		width                : 768px;
+	}
+	/* ↑↑↑ /section 11 ↑↑↑ */
+}

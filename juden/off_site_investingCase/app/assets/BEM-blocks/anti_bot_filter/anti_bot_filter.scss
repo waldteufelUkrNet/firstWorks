@@ -1,0 +1,28 @@
+.anti_bot_filter {
+  border             : 1px dotted black;
+	max-width          : 300px;
+	padding            : 6px;
+	background-color   : rgb(230,230,230);
+	&__header {
+		font-family      : rcb;
+		font-size        : 18px;
+		text-align       : center;
+		padding-bottom   : 6px;
+	}
+	&__body {
+		display          : flex;
+		justify-content  : center;
+		align-items      : center;
+		font-family      : rcl;
+		font-size        : 18px;
+
+	}
+	&__ansver { border: 1px solid lightskyblue;
+    width            : 50px;
+    margin-left      : 6px;
+    background-color : rgb(230,230,230);
+    font-family      : rcl;
+    font-size        : 18px;
+    padding          : 0 6px;
+	}
+}

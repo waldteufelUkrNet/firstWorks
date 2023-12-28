@@ -1,0 +1,2131 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title customers - waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+
+    // css-libs (font awesome, slick, wow ...)
+    link(rel='stylesheet', href='css/jquery-ui.min.css')
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='js/jquery3.3.1.min.js')
+    script(src='js/jquery-ui.min.js')
+    script(defer='', src='js/fontawesome-all.min.js')
+
+    // project stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/layout.css')
+    script(src='js/layout.js', defer='')
+
+    // page stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/customers.css')
+    script(src='js/customers.js', defer='')
+
+
+
+  body
+    // HEADER
+    include BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // ASIDE MENU
+      aside.aside
+        include BEM-blocks/accordion/accordion.pug
+      // /ASIDE MENU
+
+      // ↓↓↓ WORK AREA (start) ↓↓↓
+      .work-area
+        // this input is for localStorage testing
+        input(id='tableMarker' type='hidden' value='c2')
+        // ↓↓↓ OPTION PANEL (start) ↓↓↓
+        .option-panel
+          a#option-panel-filters.option-panel__button(href='#') фильтры
+          a#option-panel-columns.option-panel__button(href='#') колонки
+
+          #filters-wrapper.option-panel__filters-wrapper
+            .option-panel__divider
+            .search-filters-label-wrapper
+              label#search
+                input#searchId(placeholder='поиск по Id', type='text')
+                span.option-panel__search-btn
+                  i.fas.fa-search
+              label#searchE
+                input#searchEmail(placeholder='поиск по E-mail', type='text')
+                span.option-panel__search-btn
+                  i.fas.fa-search
+              label#searchN
+                input#searchName(placeholder='поиск по Имени', type='text')
+                span.option-panel__search-btn
+                  i.fas.fa-search
+              label#searchP
+                input#searchPhone(placeholder='поиск по телефону', type='text')
+                span.option-panel__search-btn
+                  i.fas.fa-search
+
+            .filters-label-wrapper
+              label
+                span По статусу верификации:
+                select#VerificationStatusSelect
+                  option(value='0') Все
+                  option(value='1') без верефикации
+                  option(value='2') частичная верефикация
+                  option(value='3') полная верефикация
+              label
+                span Активность:
+                select#IsActiveSelect
+                  option(value='0') Все
+                  option(value='1') активен
+                  option(value='2') не активен
+              label
+                span Возможность торговли:
+                select#IsTradingSelect
+                  option(value='0') Все
+                  option(value='1') есть доступ
+                  option(value='2') нет доступа
+              label
+                span Компании:
+                select#CompanySelect
+                  option Все
+                  option Крипто-Биткоин
+                  option Квантум
+              label
+                span Аккаунты:
+                select#AccountSelect
+                  option Все
+                  option Демо
+                  option Реальный
+              label
+                span Страны:
+                select#CountrySelect
+                  option Все
+                  option Страна0
+                  option Страна1
+                  option Страна2
+                  option Страна3
+                  option Страна4
+                  option Страна5
+                  option Страна6
+                  option Страна7
+                  option Страна8
+                  option Страна9
+                  option Страна10
+                  option Страна11
+                  option Страна12
+                  option Страна13
+                  option Страна14
+                  option Страна15
+                  option Страна16
+                  option Страна17
+                  option Страна18
+                  option Страна19
+                  option Страна20
+                  option Страна21
+                  option Страна22
+                  option Страна23
+                  option Страна24
+                  option Страна25
+                  option Страна26
+                  option Страна27
+                  option Страна28
+                  option Страна29
+              label
+                span Статусы:
+                select#statusSelect
+                  option Все
+                  option Платежеспособный
+                  option Жадина-говядина
+              div
+                span Период:
+                .datapicker-holder
+                  | с
+                  input#date-start.datepicker(type='text' onkeydown="return false" onkeypress="return false")
+                  |
+                  | по
+                  input#date-end.datepicker(type='text' onkeydown="return false" onkeypress="return false")
+                span.enter-btn#dataPieckerBtn
+                  i.far.fa-check-circle
+              label
+                span Спец.Статусы:
+                select#specStatusesSelect
+                  option Все
+                  option Специальный статус 1
+                  option Специальный статус 2
+              label
+                span Сотрудники:
+                datalist#employerSelect
+                  option(value='Все') Все
+                  option(value='Толик Мудрый') Толик Мудрый
+                  option(value='Коля Толковый') Коля Толковый
+                  option(value='Таня Улыбаха') Таня Улыбаха
+                  option(value='Женя Крахобор') Женя Крахобор
+                  option(value='Петя Пасочник') Петя Пасочник
+                input(list='employerSelect')
+                span.enter-btn#empInput
+                  i.far.fa-check-circle
+              label
+                span Строки:
+                select#pageCount
+                  option 5
+                  option 25
+                  option 50
+                  option 100
+              label
+                span Передать клиентов сотруднику:
+                datalist#EmployersList
+                  option#sel1(value='Толик Мудрый', onclick='OpenModal(1)') Толик Мудрый
+                  option#sel2(value='Коля Толковый', onclick='OpenModal(2)') Коля Толковый
+                  option#sel3(value='Таня Улыбаха', onclick='OpenModal(3)') Таня Улыбаха
+                  option#sel4(value='Женя Крахобор', onclick='OpenModal(4)') Женя Крахобор
+                  option#sel5(value='Петя Пасочник', onclick='OpenModal(5)') Петя Пасочник
+                input(list='EmployersList')
+                span.enter-btn
+                  i.far.fa-check-circle
+
+          #columns-wrapper.option-panel__columns-wrapper
+            .option-panel__divider
+            .column-label-wrapper
+              label
+                input(type='checkbox')
+                span Id
+                span
+              label
+                input(type='checkbox')
+                span E-mail
+                span
+              label
+                input(type='checkbox')
+                span ФИО
+                span
+              label
+                input(type='checkbox')
+                span Телефон
+                span
+              label
+                input(type='checkbox')
+                span Брокер
+                span
+              label
+                input(type='checkbox')
+                span Верификация
+                span
+              label
+                input(type='checkbox')
+                span Страна
+                span
+              label
+                input(type='checkbox')
+                span Активность
+                span
+              label
+                input(type='checkbox')
+                span Доступ к торгам
+                span
+              label
+                input(type='checkbox')
+                span Дата регистрации
+                span
+              label
+                input(type='checkbox')
+                span Баланс
+                span
+              label
+                input(type='checkbox')
+                span Бонусы
+                span
+              label
+                input(type='checkbox')
+                span Дата последней активности
+                span
+              label
+                input(type='checkbox')
+                span Тип аккаунта
+                span
+              label
+                input(type='checkbox')
+                span Компания
+                span
+              label
+                input(type='checkbox')
+                span Статус
+                span
+              label
+                input(type='checkbox')
+                span Специальный Статус
+                span
+        #filter-markers-panel
+          h5.filter-markers-panel-header Выбранные фильтры:
+          btn#clear-filters-btn сбросить все фильтры
+        // ↑↑↑ /OPTION PANEL (end) ↑↑↑
+        // ↓↓↓ TABLE (start) ↓↓↓
+        .table-wrapper
+          #thumbArea.thumbArea
+            img#thumb.thumb(src='img/thumb-arrows.png', alt='img/thumb-arrows.png')
+            #thumbLeftLine.thumbLeftLine
+            #thumbRightLine.thumbRightLine
+          #thumbArea-buffer
+          table#thumbObj.customers-table
+            thead#customers-table-tr
+              tr
+                th
+                th Id
+                th E-mail
+                th ФИО
+                th Телефон
+                th Брокер
+                th Верификация
+                th Страна
+                th Активность
+                th Доступ к торгам
+                th Дата регистрации
+                th Баланс
+                th Бонусы
+                th Дата последней активности
+                th Тип аккаунта
+                th Компания
+                th Статус
+                th Специальный Статус
+                th .
+            tbody#customers-table-body.customers-table__tbody
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 2
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 3
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 4
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 5
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 4
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 5
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 4
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 5
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(6)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 6
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(7)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 7
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 8
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 9
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 10
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 11
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 12
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 13
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 14
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 15
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 2
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 3
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 4
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 5
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(6)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 6
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(7)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 7
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 8
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 9
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 10
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 11
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 12
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 13
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 14
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 15
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 2
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 3
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 4
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 5
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(6)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 6
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(7)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 7
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 8
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 9
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 10
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 11
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 12
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 13
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 14
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 15
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 2
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 3
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 4
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 5
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(6)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 6
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(7)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 7
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 8
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 9
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 10
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 11
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 12
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 13
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 14
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 15
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 2
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 3
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 4
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 5
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(6)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 6
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(7)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 7
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 8
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 9
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 10
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(1)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 11
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+                td Страна0
+                td активен
+                td есть доступ
+                td 4/25/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Платежеспособный
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(2)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 12
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(3)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 13
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(4)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 14
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+              tr
+                td
+                  input(onchange='SelectCust(5)', type='checkbox')
+                  input#cust1(name='idCustomers', type='hidden')
+                td 15
+                td testmail0@gmail1.com
+                td Имя1 Фамилия1
+                td 9999999991
+                td Толик Мудрый
+                td не верефицирован
+                td Страна1
+                td активен
+                td есть доступ
+                td 4/24/2018 12:18:37 PM
+                td 250.033333
+                td 100.001
+                td 4/25/2018 12:18:37 PM
+                td Реальный
+                td Крипто-Биткоин
+                td Жадина-говядина
+                td Специальный статус 1
+                td
+                  input#Button1(value='button', type='button')
+          #thumbArea2.thumbArea
+            img#thumb2.thumb(src='img/thumb-arrows.png', alt='img/thumb-arrows.png')
+            #thumbLeftLine2.thumbLeftLine
+            #thumbRightLine2.thumbRightLine
+        // ↑↑↑ /TABLE (end) ↑↑↑
+        br
+        p(style='font-family:rb; text-align: justify;')
+          | RobotoBold
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.
+        br
+        p(style='font-family:rcl; text-align: justify;')
+          | RobotoCondensedLight
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.
+        br
+      // ↑↑↑ /WORK AREA (end) ↑↑↑
+    // /MAIN SECTION
+
+    // FOOTER
+    .footer-wrapper
+      footer.footer
+    // /FOOTER

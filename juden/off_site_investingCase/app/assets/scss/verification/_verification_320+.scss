@@ -1,0 +1,67 @@
+@media only screen and (min-width: 320px) {
+  .s1-wrapper {
+    width: 100%;
+  }
+  .section1 {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 75px 15px 0px;
+    &__header {
+      font-family: rcb;
+      font-size: 26px;
+      text-align: center;
+      padding: 20px 0 10px;
+    }
+    &__subheader {
+      font-family: rcl;
+      font-size: 16px;
+      color: dodgerblue;
+      text-align: center;
+      padding: 10px 0 20px;
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+      margin-top: 20px;
+      padding: 15px;
+    }
+    &__left-column img {
+      display: block;
+      margin: 0 auto;
+    }
+    &__grid-header {
+      font-family: rb;
+      font-size: 26px;
+      line-height: 1.3em;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    &__grid-subheader {
+      font-family: rm;
+      line-height: 1.3em;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    &__block {
+      margin: 20px auto 10px;
+    }
+    &__block-head {
+      display: grid;
+      grid-template-columns: 80px auto;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &__logo {
+      font-size: 50px;
+    }
+    &__block-header {
+      font-family: rcb;
+      font-size: 22px;
+    }
+    &__list {
+      list-style: decimal;
+      font-family: rcl;
+    }
+  }
+}

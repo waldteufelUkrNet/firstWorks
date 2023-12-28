@@ -1,0 +1,103 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Торгуй по-своему: валютные пары, акции, индексы, товары и криптовалюта.")
+
+    title Руководство
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/mbr-additional.css')
+    link(rel ='stylesheet', type='text/css', href='assets/libs-css/mobirise-icons-bold.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/management.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1(data-parallax="scroll" data-image-src="assets/img/management_bg.jpg")
+          .section1__text-wrapper
+            h1.wow.fadeInUp.section1__header Руководство
+            p.wow.fadeInUp.section1__text В данном разделе Вы найдете информацию о том, как работать с торговым счетом. А именно, две, пожалуй, самые важные вещи для любого участника финансовых рынков: как пополнить свой торговый счет и какими способом вывести заработанные средства.
+            p.wow.fadeInUp.section1__text Наша онлайн торговая платформа предлагает вниманию трейдера разнообразные торговые инструменты.
+            p.wow.fadeInUp.section1__text E-Tokens Trade рада удовлетворить потребности любого клиента, поэтому мы предлагаем четыре вида торговых счетов.
+            p.wow.fadeInUp.section1__text В мире, когда скорость и возможность передвигаться решают все, особое удобство дарит возможность мобильной p.wow.fadeInUp.section1__text торговли.
+            p.wow.fadeInUp.section1__text ЖЕЛАЕМ ВАМ УСПЕШНОГО ТРЕЙДИНГА!
+            p.wow.fadeInUp.section1__text Если у Вас возникли какие-либо вопросы по работе с торговой платформой, то гарантированно исчерпывающий ответ Вы получите усвоего персонального менеджера!
+          .section1__logo-wrapper
+            img.wow.fadeInUp.section1__logo(src="assets/img/veryBigLogo.png", alt="veryBigLogo.png")
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__btns-wrapper
+            a.section2__btn.section2__btn_active#btn-plus пополнение баланса
+            a.section2__btn#btn-minus ВЫВОД СРЕДСТВ
+          .section2__toggle-wrapper
+            .section2__toggle-area.section2__toggle-area_active#toggle-area1
+                h4.section2__toggle-area-header ПОПОЛНЕНИЕ БАЛАНСА ТОРГОВОГО СЧЕТА
+                p.section2__toggle-area-bold-text ПОПОЛНЕНИЕ ЧЕРЕЗ ПЛАТЕЖНЫЕ СИСТЕМЫ:
+                p.section2__toggle-area-text - Через личный кабинет: Visa, MasterCard, Maestro, МИР, QIWI, Yandex Деньги и т.д.
+                p.section2__toggle-area-text - Через сайты партнеры (обменные пункты) с помощью систем Bitcoin (BTC), пополнив тот или иной сервис любым способом.
+
+                p.section2__toggle-area-text
+                  span.section2__toggle-area-bold-text ВНИМАНИЕ:
+                  |
+                  | Зачисление средств происходит в зависимости от скорости обработки той или иной платежной системы.
+            .section2__toggle-area#toggle-area2
+                h4.section2__toggle-area-header ВЫВОД СРЕДСТВ С ТОРГОВОГО БАЛАНСА
+                p.section2__toggle-area-text В
+                  |
+                  |
+                  span.section2__toggle-area-bold-text E-Tokens Trade
+                  |
+                  | сделали так, чтобы Вы могли вывести заработанные деньги буквально в два шага:
+                p.section2__toggle-area-text - Зайдите в ваш личный кабинет.
+                p.section2__toggle-area-text - Оформите заявку на вывод.
+
+                p.section2__toggle-area-bold-text ВАРИАНТЫ ВЫВОДА СРЕДСТВ:
+                p.section2__toggle-area-text - Вывод средств на банковскую карту Visa, MasterCard, Maestro, МИР
+                p.section2__toggle-area-text - Вывод средств через платежную систему: Bitcoin, Bitcoin Cash, Ethereum, EXMO, Payeer, Perfect Money, QIWI, Yandex Деньги.
+      // /SECTION 2
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    script(src='assets/js/management.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

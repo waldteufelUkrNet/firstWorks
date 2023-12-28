@@ -1,0 +1,16 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+
+@import "style_general";
+
+@import "style_768+";
+@import "style_1024+";
+@import "style_1200+";
+@import "style_1440+";
+
+
+//BEM-blocks
+
+@import "../BEM-blocks/_wares-card";
+@import "../BEM-blocks/_form";

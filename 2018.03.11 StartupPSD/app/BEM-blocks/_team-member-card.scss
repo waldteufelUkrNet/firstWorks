@@ -1,0 +1,59 @@
+.team-member-card {
+	width: 263px;
+	height: 310px;
+	margin: 0 15px;
+	position: relative;
+	&__name {
+		font-family: mr;
+		font-size: 14px;
+		color: #555555;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 19px 0 13px;
+	}
+	&__prof {
+		font-family: rsr;
+		font-size: 13px;
+		color: #555555;
+		text-align: center;
+	}
+	&__onhover {
+		opacity: 0;
+		transition: opacity .5s;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 263px;
+		height: 250px;
+		background-color: rgba(0,0,0,0.5);
+	}
+	&__social {
+		position: absolute;
+		top: 190px;
+		left: 50%;
+		transform: translate(-50%);
+		a {
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			padding: 6px 6px;
+			color: white;
+			transition: background-color .5s;
+			cursor: pointer;
+			&:hover {
+				background-color: #c0301c;
+			}
+		}
+		.facebook {
+			padding: 6px 9px;
+		}
+		.google {
+			padding: 6px 4px;
+		}
+	}
+	&:hover {
+		.team-member-card__onhover {
+			opacity: 1;
+		}
+	}
+}

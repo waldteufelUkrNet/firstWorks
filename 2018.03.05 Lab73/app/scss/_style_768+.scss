@@ -1,0 +1,55 @@
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.s1-wrapper {
+			background: white url("../img/img-text-guru.jpg") left bottom no-repeat;
+			.section1 {
+				grid-template-columns: 368px 368px;
+				grid-template-rows: 250px 250px;
+				.section-item {
+					overflow: visible;
+				}
+				.section-item-1 {
+					text-align: left;
+					.section-item-1__line {
+						top: 67px;
+						left: 3px;
+					}
+				}
+				.section-item-2 {
+					.parallax-container {
+						.parallax-item { 
+							top: 10px;
+						}
+					}
+				}
+				.btn {
+					box-shadow: 1px 40px 40px lightgrey;
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						z-index: 0;
+						background-color: transparent;
+						top: 0;
+						left: 0;
+						width: 368px;
+						height: 146px;
+						border-radius: 3px;
+						box-shadow: 5px 40px 40px lightgrey;
+						transition: top .5s,
+												border-radius .5s;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

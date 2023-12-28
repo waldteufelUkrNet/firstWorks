@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>waldteufel@ukr.net</title>
+  <link rel="icon" href="img/wehrwolf.jpg">
+  <!-- js-libs (font awesome, slick, wow ...)-->
+  <script src="js/jquery3.3.1.min.js"></script>
+  <script defer="" src="js/fontawesome-all.min.js"></script>
+  <!-- project stylesheet and js-->
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <script src="js/layout.js" defer=""></script>
+  <!-- page stylesheet and js-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/client_card.js" defer=""></script>
+</head>
+<body>
+  <!-- HEADER-->
+  <div class="header-wrapper">
+    <header class="header">
+      <!-- NAVIGATION-->
+      <nav class="navigation"><a class="company-logo">© New Trade Company</a>
+        <ul class="nav-ul-1">
+          <li><span id="nav-datetimer"></span></li>
+          <li><a href="#"><img src="img/calender.png" alt="img/calender.png" style="height: 36px"></a></li>
+          <li><a href="#"><img src="img/messageBell.png" alt="img/messageBell.png"></a></li>
+        </ul>
+        <ul class="nav-ul-2">
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#"><img src="img/ru.png" alt="img/ru.png" style="height: 28px"></a></li>
+          <li><a href="#"><img src="img/en.png" alt="img/en.png" style="height: 28px"></a></li>
+        </ul>
+      </nav>
+      <!-- /NAVIGATION-->
+    </header>
+  </div>
+  <!-- /HEADER-->
+  <!-- MAIN SECTION-->
+  <main class="main">
+    <!-- ASIDE MENU-->
+    <aside class="aside">
+      <div class="accordion-wrapper">
+        <ul class="accordion">
+          <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="#"><i class="fas fa-users"></i>Сustomers</a></li>
+          <li><a href="#"><i class="fas fa-bookmark"></i>Tickets</a></li>
+          <li><a href="#"><i class="far fa-bookmark"></i>Transactions</a></li>
+          <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-link"></i>Communications<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+            <ul class="inner">
+              <li><a href="#">Новое уведомление</a></li>
+              <li><a href="#">История уведомлений</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="far fa-copy"></i>Orders</a></li>
+          <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-chart-line"></i>Analytics<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+            <ul class="inner">
+              <li><a href="#">Analytics1</a></li>
+              <li><a href="#">Analytics2</a></li>
+              <li><a href="#">Analytics3</a></li>
+            </ul>
+          </li>
+          <li><a class="toggle" href="javascript:void(0);"><i class="far fa-file-alt"></i>Logs<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+            <ul class="inner">
+              <li><a href="#">Logs1</a></li>
+              <li><a href="#">Logs2</a></li>
+              <li><a href="#">Logs3</a></li>
+            </ul>
+          </li>
+          <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-cogs"></i>Settings<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+            <ul class="inner">
+              <li><a href="#">Settings Тестовая таблица</a></li>
+              <li><a href="#">Settings2</a></li>
+              <li><a class="toggle" href="javascript:void(0);">Admin<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+                <ul class="inner">
+                  <li><a href="#">Регистрация сотрудника</a></li>
+                  <li><a href="#">Смена пароля сотруднику</a></li>
+                  <li><a href="#">Admin3</a></li>
+                  <li><a href="#">Admin4</a></li>
+                  <li><a href="#"><i class="fas fa-briefcase"></i>Employees</a></li>
+                  <li><a href="#"><i class="far fa-flag"></i>Company</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- /ASIDE MENU-->
+    <!-- WORK AREA-->
+    <div class="work-area">
+      <h1 class="client-card">Карточка клиента</h1>
+      <div class="client-menu">
+        <button class="client-menu__go-out-btn" title="вертуться назад"><span class="client-menu__go-out-btn-sumbol-wrapper"><i class="fas fa-sign-out-alt"></i></span></button>
+        <div class="client-menu__dropdown">
+          <button class="client-menu__dropdown-btn" title="Действия"><span class="client-menu__dropdown-btn-left"><i class="fas fa-fire"></i></span><span>Действия</span><span class="client-menu__dropdown-btn-right"><i class="fas fa-chevron-down"></i></span></button>
+          <div class="client-menu__dropdown-options-holder">
+            <ul>
+              <li><a href="#">действие 1</a></li>
+              <li><a href="#">действие 2</a></li>
+              <li><a href="#">действие 3</a></li>
+              <li><a href="#">действие 4</a></li>
+              <li><a href="#">действие 5</a></li>
+              <li><a href="#">действие 6</a></li>
+              <li><a href="#">действие 7</a></li>
+              <li><a href="#">действие 8</a></li>
+              <li><a href="#">действие 9</a></li>
+              <li><a href="#">действие 10</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="client-menu__dropdown">
+          <button class="client-menu__dropdown-btn" title="Контакты"><span class="client-menu__dropdown-btn-left"><i class="fas fa-users"></i></span><span>Контакты</span><span class="client-menu__dropdown-btn-right"><i class="fas fa-chevron-down"></i></span></button>
+          <div class="client-menu__dropdown-options-holder">
+            <ul>
+              <li><a href="#">действие 1</a></li>
+              <li><a href="#">действие 2</a></li>
+              <li><a href="#">действие 3</a></li>
+              <li><a href="#">действие 4</a></li>
+              <li><a href="#">действие 5</a></li>
+              <li><a href="#">действие 6</a></li>
+              <li><a href="#">действие 7</a></li>
+              <li><a href="#">действие 8</a></li>
+              <li><a href="#">действие 9</a></li>
+              <li><a href="#">действие 10</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="client-menu__dropdown">
+          <button class="client-menu__dropdown-btn" title="Баланс"><span class="client-menu__dropdown-btn-left"><i class="fas fa-balance-scale"></i></span><span>Баланс</span><span class="client-menu__dropdown-btn-right"><i class="fas fa-chevron-down"></i></span></button>
+          <div class="client-menu__dropdown-options-holder">
+            <ul>
+              <li><a href="#">действие 1</a></li>
+              <li><a href="#">действие 2</a></li>
+              <li><a href="#">действие 3</a></li>
+              <li><a href="#">действие 4</a></li>
+              <li><a href="#">действие 5</a></li>
+              <li><a href="#">действие 6</a></li>
+              <li><a href="#">действие 7</a></li>
+              <li><a href="#">действие 8</a></li>
+              <li><a href="#">действие 9</a></li>
+              <li><a href="#">действие 10</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="client-menu__dropdown">
+          <button class="client-menu__dropdown-btn" title="Экспорт"><span class="client-menu__dropdown-btn-left"><i class="fas fa-external-link-alt"></i></span><span>Экспорт</span><span class="client-menu__dropdown-btn-right"><i class="fas fa-chevron-down"></i></span></button>
+          <div class="client-menu__dropdown-options-holder">
+            <ul>
+              <li><a href="#">действие 1</a></li>
+              <li><a href="#">действие 2</a></li>
+              <li><a href="#">действие 3</a></li>
+              <li><a href="#">действие 4</a></li>
+              <li><a href="#">действие 5</a></li>
+              <li><a href="#">действие 6</a></li>
+              <li><a href="#">действие 7</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="client-info">
+        <div class="client-info__1"><span class="client-info__name">Вася Пупкин</span><span class="client-info__id">id: 30632</span><img class="client-info__onoff-img" src="img/red-glossy-ball.jpg" alt="on/off"><span class="client-info__onoff">offline</span><span class="client-info__many">0.00$</span><span class="client-info__phone">Телефон: 37125298377</span></div>
+        <hr>
+        <div class="client-info__2">
+          <div class="client-info__column">
+            <p class="client-info__column-header">общая информация</p><span class="client-info__value-wrapper"><span class="client-info__value-name">Имя:</span><span class="client-info__value">sandis jablonskis</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Тип:</span><span class="client-info__value">аккаунта Mini</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Секция:</span><span class="client-info__value">quantum</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Адрес:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Город:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Область:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Страна:</span><span class="client-info__value">lv</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Телефон:</span><span class="client-info__value">37125298377</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Мобильный:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Факс:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Язык:</span><span class="client-info__value">Russian</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Торговая группа:</span><span class="client-info__value">Empty</span></span>
+          </div>
+          <div class="client-info__column">
+            <p class="client-info__column-header">аккаунт</p><span class="client-info__value-wrapper"><span class="client-info__value-name">Имя:</span><span class="client-info__value">sandis jablonskis</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Тип:</span><span class="client-info__value">аккаунта Mini</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Секция:</span><span class="client-info__value">quantum</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Адрес:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Город:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Область:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Страна:</span><span class="client-info__value">lv</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Телефон:</span><span class="client-info__value">37125298377</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Мобильный:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Факс:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Язык:</span><span class="client-info__value">Russian</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Торговая группа:</span><span class="client-info__value">Empty</span></span>
+          </div>
+          <div class="client-info__column">
+            <p class="client-info__column-header">финансовая информация</p><span class="client-info__value-wrapper"><span class="client-info__value-name">Имя:</span><span class="client-info__value">sandis jablonskis</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Тип:</span><span class="client-info__value">аккаунта Mini</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Секция:</span><span class="client-info__value">quantum</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Адрес:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Город:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Область:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Страна:</span><span class="client-info__value">lv</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Телефон:</span><span class="client-info__value">37125298377</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Мобильный:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Факс:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Язык:</span><span class="client-info__value">Russian</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Торговая группа:</span><span class="client-info__value">Empty</span></span>
+          </div>
+          <div class="client-info__column">
+            <p class="client-info__column-header">брокер</p><span class="client-info__value-wrapper"><span class="client-info__value-name">Имя:</span><span class="client-info__value">sandis jablonskis</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Тип:</span><span class="client-info__value">аккаунта Mini</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Секция:</span><span class="client-info__value">quantum</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Адрес:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Город:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Область:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Страна:</span><span class="client-info__value">lv</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Телефон:</span><span class="client-info__value">37125298377</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Мобильный:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Факс:</span><span class="client-info__value">Empty</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Язык:</span><span class="client-info__value">Russian</span></span><span class="client-info__value-wrapper"><span class="client-info__value-name">Торговая группа:</span><span class="client-info__value">Empty</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="client-note">
+        <button class="client-note__new-note-btn">Новая заметка</button>
+        <table class="client-note__table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>ФИО брокера</th>
+              <th>ФИО клиента</th>
+              <th>Заголовок</th>
+              <th>Дата</th>
+              <th>Тело</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="client-wrap">
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <div class="table-doublewrapper">
+            <div class="table-wrapper">
+              <table class="client-small-cards__table">
+                <thead>
+                  <tr>
+                    <th>thead</th>
+                    <th>thead</th>
+                    <th>thead</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <div class="table-doublewrapper">
+            <div class="table-wrapper">
+              <table class="client-small-cards__table">
+                <thead>
+                  <tr>
+                    <th>thead</th>
+                    <th>thead</th>
+                    <th>thead</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                  <tr>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <table class="client-small-cards__table">
+            <thead>
+              <tr>
+                <th>thead</th>
+                <th>thead</th>
+                <th>thead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <table class="client-small-cards__table">
+            <thead>
+              <tr>
+                <th>thead</th>
+                <th>thead</th>
+                <th>thead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <table class="client-small-cards__table">
+            <thead>
+              <tr>
+                <th>thead</th>
+                <th>thead</th>
+                <th>thead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <table class="client-small-cards__table">
+            <thead>
+              <tr>
+                <th>thead</th>
+                <th>thead</th>
+                <th>thead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <table class="client-small-cards__table">
+            <thead>
+              <tr>
+                <th>thead</th>
+                <th>thead</th>
+                <th>thead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="client-small-cards">
+          <h4 class="client-small-cards__header">Header
+            <button class="client-small-cards__btn"><span class="client-small-cards__btn-sumbol-wrapper"><i class="fas fa-arrows-alt"></i></span></button>
+          </h4>
+          <table class="client-small-cards__table">
+            <thead>
+              <tr>
+                <th>thead</th>
+                <th>thead</th>
+                <th>thead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- /WORK AREA-->
+  <!-- /MAIN SECTION-->
+  <!--FOOTER-->
+  <div class="footer-wrapper">
+    <footer class="footer"></footer>
+  </div>
+  <!-- /FOOTER-->
+</body>

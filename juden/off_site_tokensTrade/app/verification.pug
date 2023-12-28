@@ -1,0 +1,101 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="Торгуй по-своему: валютные пары, акции, индексы, товары и криптовалюта.")
+
+    title Верификация
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/et-line-font-plugin.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/icon54.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/material.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/mbr-additional.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/mobirise-icons.css')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/verification.css')
+
+    // jQuery
+    script(src='assets/libs/jquery.js')
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper(data-parallax="scroll" data-image-src="assets/img/verification_bg.jpg")
+        section.section1
+          .section1__headers-wrapper
+            h1.wow.fadeInUp.section1__header ВЕРИФИКАЦИЯ
+              br
+              |
+              | ПОЛЬЗОВАТЕЛЯ
+            h4.wow.fadeInUp.section1__subheader Процедура подтверждения личности
+              br
+              |
+              | пользователя
+          .section1__icon-wrapper
+            span.mbri-users.mbr-iconfont.mbr-iconfont-msg-box5
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          h1.section2__header Что требуется для верификации?
+          h1.section2__subheader По правилам компании вы должны пройти верификацию счета в обязательном   порядке, в противном случае счет может быть заблокирован.
+
+          .section2__columns-wrapper
+            .section2__left-column
+              img(src="assets/img/bank_card.jpg", alt="bank_card.jpg")
+            .section2__right-column
+              .section2__right-column-header При пополнении счета через банковскую карту
+              ul.accordion
+                li.accordion__list-item
+                  a.toggle.accordion__btn(href='javascript:void(0);') 1. Скан/фото карты
+                  .inner.accordion__content Скан/фото карты с двух сторон, которые вы использовали для пополнения счета на платформе, оставив видимыми первые и последние 4 цифры, имя владельца карты, срок годности, подпись владельца.
+                li
+                  a.toggle.accordion__btn(href='javascript:void(0);') 2. Паспорт или ID карта
+                  .inner.accordion__content Документ, подтверждающий личность: паспорт или ID карту
+                li
+                  a.toggle.accordion__btn(href='javascript:void(0);') 3. Адрес проживания
+                  .inner.accordion__content Документ, подтверждающий адрес проживания: счет за коммунальные платежи, счет за интернет или др., не старше 3 месяцев.
+                li
+                  a.toggle.accordion__btn(href='javascript:void(0);') 4. Форма Ф-306
+                  .inner.accordion__content Форма авторизации кредитной карты Ф-306
+                li
+                  a.toggle.accordion__btn(href='javascript:void(0);') 5. Разрешение I-402
+                  .inner.accordion__content Разрешение I-402
+      // /SECTION 2
+
+      include assets/BEM-blocks/payment_systems/payment_systems.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // scripts
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src="assets/libs/wow.js")
+    script.
+      new WOW().init();
+
+    // own js
+    script(src='assets/js/verification.js')
+    script(type="text/javascript").
+      document.ondragstart = noselect;
+      // запрет на перетаскивание
+      document.onselectstart = noselect;
+      // запрет на выделение элементов страницы
+      document.oncontextmenu = noselect;
+      // запрет на выведение контекстного меню
+      function noselect() {return false;}

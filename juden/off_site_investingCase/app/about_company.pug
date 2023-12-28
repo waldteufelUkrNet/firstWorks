@@ -1,0 +1,98 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title О компании
+
+    link(rel='icon', href='assets/img/logoIC_icon.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/about_company.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header О КОМПАНИИ
+          h5.section1__subheader InvestigCase ЯВЛЯЕТСЯ ПОСТАВЩИКОМ БИНАРНЫХ
+            br
+            | ОПЦИОНОВ, КОТОРОМУ ДОВЕРЯЮТ ТЫСЯЧИ ТРЕЙДЕРОВ.
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+          .section2__text
+            p
+              span.bold-text Цель InvestigCase -
+              |
+              | предоставить трейдерам бесконечные возможности, быть успешным и финансово независимым человеком, не создавая при этом никаких препятствий и ограничений.
+
+            p
+              span.bold-text Миссия InvestingCase -
+              |
+              | это предоставить Вам, как трейдеру, самый безопасный, самый удобный и в целом наилучший способ ведения торговли. В наших модулях ценообразования и исполнения гарантируется использование самых современных и передовых технологий. Благодаря нашему партнерству с поставщиком новостей Reuters, мы получаем в реальном времени потоки точных данных, а в наших положениях и условиях четко указана разница между рыночной ценой в реальном времени и ценой опционов. Мы предоставляем графики экспирации в любой конкретный момент для обеспечения спокойствия трейдера, так что со стороны трейдера не возникает проблемных вопросов.
+
+            p Стабильность имеет первостепенное значение для нашей компании. Мы прилагаем все усилия для обеспечения бесперебойных услуг, безопасной и простой торговли, финансовой жизнеспособности и строгого соблюдения законодательства.
+
+            p Мы надеемся, что ваши отношения с InvestigCase будут долгосрочными, и мы сделаем все возможное, чтобы сделать его прибыльным!
+          .section2__logo: img(src="assets/img/logoIC.png", alt="logo.png")
+
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          h1.section3__header
+            |  ПРИСОЕДИНЯЙТЕСЬ К
+            br
+            span.bold-text INVESTINGCASE.COM
+            br
+            | И ТОРГУЙТЕ
+            br
+            | КАК ПРОФЕССИОНАЛ!
+          h5.section3__subheader Преимущества платформы InvestigCase:
+          ol.section3__list
+            li Веб-интерфейс, не нужна загрузка
+            li Простая торговля — легкая для понимания с четкими объяснениями
+            li Разнообразные продукты
+            li Торговля, удобная для пользователя
+            li Безопасно — соотношение риска/прибыли четко указано в опционе
+            li Быстрые и простые депозиты в BTC
+            li Постоянное освоении высокорентабельных фидов в условиях современности.
+          p.section3__text investingcase.com берет на себя обязательство предоставления самой качественной и уникальной торговой платформы, которая может быть использована частными инвесторами по всему миру. Сотрудники InvestigCase готовы оказать трейдерам необходимое содействие, а профессиональные брокеры предоставляют трейдерам руководящие указания на каждом этапе пути.
+          p.section3__text
+            span.bold-text INVESTINGCASE.COM -
+            |  это ведущая платформа для торговли бинарными опционами на сегодняшний день. Сейчас, когда бинарные опционы стали наиболее популярны, чем когда-либо, InvestingCase обеспечивает трейдерам отличные условия работы с точки зрения безопасности, наличия различных функций, удобства пользования, предоставления инструментов и обучения.
+          p.section3__text Средства клиента хранятся на отдельном счете. Денежные средства используются только для торговли опционами через наш веб-сайт по поручению клиента и никогда не расходуются на любые другие цели. Управление нашими обязательствами и рисками осуществляют профессионалы, и мы гарантируем выплату вашей прибыли согласно нашим условиям.
+          p.section3__text В Компании InvestigCase и в партнерских организациях есть профессиональные форекс-брокеры эксперты в области производных финансовых инструментов и управления рисками. Кроме того, мы сотрудничаем с платежными системами. Мы занимаемся всеми аспектами торговли бинарными опционами, так что вы получите наилучшие впечатления от торговли в любой момент времени.
+
+
+      // /SECTION 3
+
+      include assets/BEM-blocks/slick_money/slick_money.pug
+      include assets/BEM-blocks/notification_of_risks/notification_of_risks.pug
+    // /MAIN SECTION
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

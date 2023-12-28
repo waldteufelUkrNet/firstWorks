@@ -1,0 +1,101 @@
+.header {
+  max-width: 1920px;
+  width: -webkit-calc( 100% + 1px);
+  width: calc( 100% + 1px);
+  height: 50px;
+  background-color: #1D160B;
+  position: fixed;
+  z-index: 5555;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  font-size: 1.6rem;
+}
+
+.header .navigation {
+  height: 100%;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .navigation .company-logo {
+  display: block;
+  font-family: rb;
+  font-size: 2rem;
+  color: gold;
+  line-height: 50px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.header .navigation .nav-ul-1 {
+  height: 100%;
+  -webkit-box-flex: 5;
+  -webkit-flex-grow: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .navigation .nav-ul-1 li {
+  margin-right: 20px;
+}
+
+.header .navigation .nav-ul-1 #nav-datetimer {
+  padding: 5px 10px;
+  font-family: rcl;
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+}
+
+.header .navigation .nav-ul-2 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .navigation .nav-ul-2 li {
+  margin-left: 20px;
+}
+
+.header .navigation .nav-ul-2 li a {
+  font-family: rcl;
+  color: lightgrey;
+}
+
+.header .navigation .nav-ul-2 li a:hover {
+  color: white;
+}

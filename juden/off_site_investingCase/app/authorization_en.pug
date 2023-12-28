@@ -1,0 +1,81 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title Login
+
+    link(rel='icon', href='assets/img/logoIC_icon.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/authorization.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header AUTHORIZATION
+            br
+            | OF USER
+          h5.section1__subheader investingcase.com site client zone
+          .form-wrapper
+
+            // SECTION left
+            section.section-left
+              h1.section-header Login to your account
+
+              form.enter-form(action='#', name='enter-form')
+                input#emailForm(type='text', placeholder='Эл. почта', name='email')
+                .password-wrapper
+                  input#real-input(type='password', placeholder='password', name='password')
+                  input#instead-input(type='text', placeholder='password', name='password')
+                  span#togglePass
+                    i.fas.fa-eye
+                #password-info Invalid email or password.
+                label.checkbox-label
+                  span.checkbox-span
+                    input(type='checkbox', name='yes', value='yes', checked='')
+                    span
+                      i.fas.fa-check
+                  span.remember-span Remember me for 30 days
+                button#logIn(type='button') Login
+                .restore-pas-wrapper
+                  a.restore-pas(href='forgot_your_password_en.html') Restore password
+            // /SECTION left
+
+            // SECTION right
+            section.section-right
+              h1.section-header Are you not a InvestingCase customer yet?
+              a.create-acc(href='check_in_en.html') Open a live account
+
+            // /SECTION right
+      // /SECTION 1
+      include assets/BEM-blocks/contacts/contacts_en.pug
+      include assets/BEM-blocks/slick_money/slick_money.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')
+
+    // own js
+    script(src='assets/js/authorization.js')

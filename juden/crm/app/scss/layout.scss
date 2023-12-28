@@ -1,0 +1,44 @@
+@import 'reset';
+@import 'style_global';
+@import 'fonts';
+
+/* ↓↓↓ HEADER ↓↓↓ */
+@import '../BEM-blocks/header/header.scss';
+/* ↑↑↑ /HEADER ↑↑↑ */
+
+/* ↓↓↓ MAIN PART ↓↓↓ */
+.main {
+	max-width          : 1920px;
+	width              : 100%;
+  height             : calc(100vh - 50px);
+  overflow           : hidden;
+	margin             : 50px auto 0;
+  position           : relative;
+  display            : grid;
+  grid-template-columns: 220px 1fr;
+
+	/* ↓↓↓ ASIDE MENU ↓↓↓ */
+  .aside {
+    height           : calc( 100vh - 50px );
+    background-color : #353535;
+    font-family      : rcl;
+    // position         : fixed;
+    top              : 50px;
+    left             : 0px;
+    overflow         : hidden;
+    padding-right    : 6px;
+    min-width        : 220px;
+  }
+  @import '../BEM-blocks/accordion/accordion.scss';
+	/* ↑↑↑ /ASIDE MENU ↑↑↑ */
+
+	/* ↓↓↓ WORK AREA ↓↓↓ */
+  .work-area {
+    background-color : lightgrey;
+    padding          : 15px;
+    min-height       : calc( 100vh - 50px );
+    font-size        : 1.6rem;
+    overflow-y       : auto;
+  }
+	/* ↑↑↑ /WORK AREA ↑↑↑ */
+}

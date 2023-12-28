@@ -1,0 +1,986 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title waldteufel@ukr.net
+    link(rel='icon', href='img/logoIC_icon.png')
+
+    // stylesheet
+    link(rel='stylesheet', type='text/css', href='libs-css/jquery-ui.css')
+    link(rel='stylesheet', type='text/css', href='libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='libs-css/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href='libs-css/TimeCircles.css')
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+
+    // jquery
+    script(src='libs/jquery 3.3.1.js')
+
+  body
+    //- include BEM-blocks/size-info/size-info.pug
+    .body-cover-wrapper
+      .body-cover
+        p Разрешение Вашего устройства слишком мало и не позволяет отображать контент платформы
+        p Your device’s resolution is too low and doesn’t allow displaying platform content
+        p Поверните устройство на 90°
+        p Rotate the device 90°
+
+    .temp-btns-wrapper(style="display: none; position: fixed; z-Index: 8888; bottom: 35px; left: 3px; border: 1px dotted white; width: 134px; height: 194px; background-color: lightskyblue; padding: 6px;")
+      button.tempBTN(style='width: 120px; height: 30px; cursor: pointer') message
+      button.tempBTN2(style='width: 120px; height: 30px; cursor: pointer') withdrawal
+      button.tempBTN3(style='width: 120px; height: 30px; cursor: pointer') depo confirm
+      button.tempBTN5(style='width: 120px; height: 30px; cursor: pointer') parlay result
+      button.tempBTN6(style='width: 120px; height: 30px; cursor: pointer') timerCandleTest1
+      button.tempBTN7(style='width: 120px; height: 30px; cursor: pointer') timerCandleTest2
+    btn.temp-btns-wrapper-btn(style="width: 134px; height: 30px; background-color: lightskyblue; position: fixed; z-Index: 8888; bottom: 3px; left: 3px; border: 1px dotted white; cursor: pointer; color: black; text-align: center; line-height: 26px") popups
+    script.
+      var isBottomFielsOpen = false;
+      $('.temp-btns-wrapper-btn').click(function(){
+        if (!isBottomFielsOpen) {
+          $('.temp-btns-wrapper').css('display','block');
+          isBottomFielsOpen = true;
+        } else {
+          $('.temp-btns-wrapper').css('display','none');
+          isBottomFielsOpen = false;
+        }
+      });
+
+    // HEADER
+    header.header
+      .logo_part
+        img(src="img/logoIC.png", alt="logoIC.png")
+        img(src="img/logoIC_icon.png", alt="logoIC_icon.png")
+      .central-part
+        //- .central-part__account
+          .central-part__account-type
+            |Account:
+            |
+            span Demo
+          include BEM-blocks/simple-switcher/simple-switcher.pug
+        img.central-part__currency-img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+        .central-part__currency-value 9999.99
+
+        button.central-part__btn(title='пополнить счет')
+          img(src='img/wallet.png' alt='wallet.png')
+          span.central-part__btn-text пополнить счет
+          span.central-part__btn-splendour
+      .right-part
+        //- button.call-us-btn(title='contact us'): img(src="img/call-center.png", alt="call-center.png")
+        span.header-greeting Добро пожаловать, Гусь Звичайний!
+        span.header-titles Menu:
+        include BEM-blocks/menu-btn/menu-btn.pug
+        span.header-titles#language-span Lang:
+        include BEM-blocks/language-switcher/language-switcher.pug
+        .menu
+          ul.menu-list
+            li.menu-list-item
+              a.menu-list-a Found your account
+            li.menu-list-item
+              a.menu-list-a Withdrawal of funds
+            li.menu-list-item
+              a.menu-list-a Finance
+            li.menu-list-item
+              a.menu-list-a#profile-editor Manage your profile
+            li.menu-list-item
+              a.menu-list-a Education
+            li.menu-list-item
+              a.menu-list-a Sign out
+    // /HEADER
+
+    // MAIN PART
+    main.main
+
+      // SECTION 1 (work area)
+      section.work_area
+        .graphic-header
+          ul.timer-buttons-ul
+            li.timer-buttons-li.timer-buttons-li_active(data-time='5')  5 min.
+            li.timer-buttons-li(data-time='10') 10 min.
+            li.timer-buttons-li(data-time='15') 15 min.
+            li.timer-buttons-li(data-time='30') 30 min.
+            li.timer-buttons-li(data-time='45') 45 min.
+            li.timer-buttons-li(data-time='60') 60 min.
+          .currency-logo-holder
+            img.img-pair(src='img/BTCETH.png')
+            h2 BTC ETH
+          ul.type-buttons-ul
+            li.type-buttons-li.type-buttons-li_active(data-type='areaspline')
+              img(src='img/chart-line.png', alt='chart-line.png')
+            li.type-buttons-li(data-type='candlestick')
+              img(src='img/chart-candle.png', alt='chart-candle.png')
+            li.type-buttons-li(data-type='ohlc')
+              img(src='img/chart-bars.png', alt='chart-bars.png')
+
+        #container
+        p#labelBorder
+        #labelIndicator
+        .slider-area
+          .slider-area__slider#active-slider
+
+            .active-slider__item
+              .active-slider__item-timer-wrapper
+                .active-slider__time-candle-wrapper
+                  .active-slider__time-candle
+
+              .active-slider__item-graphic
+              .active-slider__info
+                span.active-slider__pair-name BTC/ETH
+                  |
+                  |
+                span.active-slider__parlay 30
+                  |
+                  |
+                  i.fas.fa-angle-double-up
+                .active-slider__start-price 12345.67890
+
+          .slider-area__slider#history-slider
+            .slider-area__slider-item.history-slider__item.slider-area__win
+              span.history-slider__item-start время открытия:
+              span.history-slider__item-start-value 2018.09.27 14:34
+              span.history-slider__item-end время закрытия:
+              span.history-slider__item-end-value 2018.09.28 14:34
+              span.history-slider__item-class класс сделки:
+              span.history-slider__item-class-value обычная
+              span.history-slider__item-type тип сделки:
+              span.history-slider__item-type-value вниз
+              span.history-slider__item-pair торговая пара:
+              span.history-slider__item-pair-value BTC/UAH
+              span.history-slider__item-open цена открытия:
+              span.history-slider__item-open-value 12345.645
+              span.history-slider__item-close цена закрытия:
+              span.history-slider__item-close-value 14322.643
+              span.history-slider__item-parlay ставка:
+              span.history-slider__item-parlay-value 144
+              span.history-slider__item-profit выигрыш:
+              span.history-slider__item-profit-value 144
+            .slider-area__slider-item.history-slider__item.slider-area__lose
+              span.history-slider__item-start время открытия:
+              span.history-slider__item-start-value 2018.09.27 14:34
+              span.history-slider__item-end время закрытия:
+              span.history-slider__item-end-value 2018.09.28 14:34
+              span.history-slider__item-class класс сделки:
+              span.history-slider__item-class-value обычная
+              span.history-slider__item-type тип сделки:
+              span.history-slider__item-type-value вниз
+              span.history-slider__item-pair торговая пара:
+              span.history-slider__item-pair-value BTC/UAH
+              span.history-slider__item-open цена открытия:
+              span.history-slider__item-open-value 12345.645
+              span.history-slider__item-close цена закрытия:
+              span.history-slider__item-close-value 14322.643
+              span.history-slider__item-parlay ставка:
+              span.history-slider__item-parlay-value 144
+              span.history-slider__item-profit выигрыш:
+              span.history-slider__item-profit-value 144
+            .slider-area__slider-item.history-slider__item.slider-area__lose
+              span.history-slider__item-start время открытия:
+              span.history-slider__item-start-value 2018.09.27 14:34
+              span.history-slider__item-end время закрытия:
+              span.history-slider__item-end-value 2018.09.28 14:34
+              span.history-slider__item-class класс сделки:
+              span.history-slider__item-class-value обычная
+              span.history-slider__item-type тип сделки:
+              span.history-slider__item-type-value вниз
+              span.history-slider__item-pair торговая пара:
+              span.history-slider__item-pair-value BTC/UAH
+              span.history-slider__item-open цена открытия:
+              span.history-slider__item-open-value 12345.645
+              span.history-slider__item-close цена закрытия:
+              span.history-slider__item-close-value 14322.643
+              span.history-slider__item-parlay ставка:
+              span.history-slider__item-parlay-value 144
+              span.history-slider__item-profit выигрыш:
+              span.history-slider__item-profit-value 144
+            .slider-area__slider-item.history-slider__item.slider-area__win
+              span.history-slider__item-start время открытия:
+              span.history-slider__item-start-value 2018.09.27 14:34
+              span.history-slider__item-end время закрытия:
+              span.history-slider__item-end-value 2018.09.28 14:34
+              span.history-slider__item-class класс сделки:
+              span.history-slider__item-class-value обычная
+              span.history-slider__item-type тип сделки:
+              span.history-slider__item-type-value вниз
+              span.history-slider__item-pair торговая пара:
+              span.history-slider__item-pair-value BTC/UAH
+              span.history-slider__item-open цена открытия:
+              span.history-slider__item-open-value 12345.645
+              span.history-slider__item-close цена закрытия:
+              span.history-slider__item-close-value 14322.643
+              span.history-slider__item-parlay ставка:
+              span.history-slider__item-parlay-value 144
+              span.history-slider__item-profit выигрыш:
+              span.history-slider__item-profit-value 144
+            .slider-area__slider-item.history-slider__item.slider-area__lose
+              span.history-slider__item-start время открытия:
+              span.history-slider__item-start-value 2018.09.27 14:34
+              span.history-slider__item-end время закрытия:
+              span.history-slider__item-end-value 2018.09.28 14:34
+              span.history-slider__item-class класс сделки:
+              span.history-slider__item-class-value обычная
+              span.history-slider__item-type тип сделки:
+              span.history-slider__item-type-value вниз
+              span.history-slider__item-pair торговая пара:
+              span.history-slider__item-pair-value BTC/UAH
+              span.history-slider__item-open цена открытия:
+              span.history-slider__item-open-value 12345.645
+              span.history-slider__item-close цена закрытия:
+              span.history-slider__item-close-value 14322.643
+              span.history-slider__item-parlay ставка:
+              span.history-slider__item-parlay-value 144
+              span.history-slider__item-profit выигрыш:
+              span.history-slider__item-profit-value 144
+
+          .slider-area__slider#deposit-slider
+            .slider-area__slider-item.deposit-slider__item
+              span.deposit-slider__item-date-name дата:
+              span.deposit-slider__item-date-value 03.10.2018
+              span.deposit-slider__item-sum-name сумма:
+              span.deposit-slider__item-sum-full-value
+                span.deposit-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.deposit-slider__item-sum-currency USD
+              span.deposit-slider__item-system-name Платёжная система:
+              span.deposit-slider__item-system-value MasterCard
+            .slider-area__slider-item.deposit-slider__item
+              span.deposit-slider__item-date-name дата:
+              span.deposit-slider__item-date-value 03.10.2018
+              span.deposit-slider__item-sum-name сумма:
+              span.deposit-slider__item-sum-full-value
+                span.deposit-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.deposit-slider__item-sum-currency USD
+              span.deposit-slider__item-system-name Платёжная система:
+              span.deposit-slider__item-system-value MasterCard
+            .slider-area__slider-item.deposit-slider__item
+              span.deposit-slider__item-date-name дата:
+              span.deposit-slider__item-date-value 03.10.2018
+              span.deposit-slider__item-sum-name сумма:
+              span.deposit-slider__item-sum-full-value
+                span.deposit-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.deposit-slider__item-sum-currency USD
+              span.deposit-slider__item-system-name Платёжная система:
+              span.deposit-slider__item-system-value MasterCard
+            .slider-area__slider-item.deposit-slider__item
+              span.deposit-slider__item-date-name дата:
+              span.deposit-slider__item-date-value 03.10.2018
+              span.deposit-slider__item-sum-name сумма:
+              span.deposit-slider__item-sum-full-value
+                span.deposit-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.deposit-slider__item-sum-currency USD
+              span.deposit-slider__item-system-name Платёжная система:
+              span.deposit-slider__item-system-value MasterCard
+            .slider-area__slider-item.deposit-slider__item
+              span.deposit-slider__item-date-name дата:
+              span.deposit-slider__item-date-value 03.10.2018
+              span.deposit-slider__item-sum-name сумма:
+              span.deposit-slider__item-sum-full-value
+                span.deposit-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.deposit-slider__item-sum-currency USD
+              span.deposit-slider__item-system-name Платёжная система:
+              span.deposit-slider__item-system-value MasterCard
+
+          .slider-area__slider#withdrawal-slider
+            .slider-area__slider-item.withdrawal-slider__item
+              span.withdrawal-slider__item-date-name дата:
+              span.withdrawal-slider__item-date-value 03.10.2018
+              span.withdrawal-slider__item-sum-name сумма:
+              span.withdrawal-slider__item-sum-full-value
+                span.withdrawal-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.withdrawal-slider__item-sum-currency USD
+              span.withdrawal-slider__item-system-name Платёжная система:
+              span.withdrawal-slider__item-system-value MasterCard
+            .slider-area__slider-item.withdrawal-slider__item
+              span.withdrawal-slider__item-date-name дата:
+              span.withdrawal-slider__item-date-value 03.10.2018
+              span.withdrawal-slider__item-sum-name сумма:
+              span.withdrawal-slider__item-sum-full-value
+                span.withdrawal-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.withdrawal-slider__item-sum-currency USD
+              span.withdrawal-slider__item-system-name Платёжная система:
+              span.withdrawal-slider__item-system-value MasterCard
+            .slider-area__slider-item.withdrawal-slider__item
+              span.withdrawal-slider__item-date-name дата:
+              span.withdrawal-slider__item-date-value 03.10.2018
+              span.withdrawal-slider__item-sum-name сумма:
+              span.withdrawal-slider__item-sum-full-value
+                span.withdrawal-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.withdrawal-slider__item-sum-currency USD
+              span.withdrawal-slider__item-system-name Платёжная система:
+              span.withdrawal-slider__item-system-value MasterCard
+            .slider-area__slider-item.withdrawal-slider__item
+              span.withdrawal-slider__item-date-name дата:
+              span.withdrawal-slider__item-date-value 03.10.2018
+              span.withdrawal-slider__item-sum-name сумма:
+              span.withdrawal-slider__item-sum-full-value
+                span.withdrawal-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.withdrawal-slider__item-sum-currency USD
+              span.withdrawal-slider__item-system-name Платёжная система:
+              span.withdrawal-slider__item-system-value MasterCard
+            .slider-area__slider-item.withdrawal-slider__item
+              span.withdrawal-slider__item-date-name дата:
+              span.withdrawal-slider__item-date-value 03.10.2018
+              span.withdrawal-slider__item-sum-name сумма:
+              span.withdrawal-slider__item-sum-full-value
+                span.withdrawal-slider__item-sum-value 12345.67890
+                  |
+                  |
+                span.withdrawal-slider__item-sum-currency USD
+              span.withdrawal-slider__item-system-name Платёжная система:
+              span.withdrawal-slider__item-system-value MasterCard
+
+        .navigation
+          btn.navigation__btn
+            span.navigation__btn-rotor: i.fas.fa-angle-double-up
+            |
+            |
+            span Навигация
+            |
+            |
+            span.navigation__btn-rotor: i.fas.fa-angle-double-up
+          ul.navigation__body
+            li.navigation__items
+              span.navigation__items-inner-text Выбрать котировку
+              i.fab.fa-sistrix
+            li.navigation__items
+              span.navigation__items-inner-text Сделать ставку
+              i.fas.fa-gavel
+            li.navigation__items
+              span.navigation__items-inner-text Активные
+              i.far.fa-star
+            li.navigation__items
+              span.navigation__items-inner-text История
+              i.fas.fa-history
+            li.navigation__items
+              span.navigation__items-inner-text Депозиты
+              i.fas.fa-sign-in-alt
+            li.navigation__items
+              span.navigation__items-inner-text Выводы
+              i.fas.fa-sign-out-alt
+      // /SECTION 1
+
+      // SECTION 2 (left column)
+      section.left-column
+        .wares-slider
+          .wares-slider__item
+            h5.wares-slider__item-header Акции
+
+            .wares-slider__item-table-1-wrapper
+              .wares-slider__item-table-2-wrapper
+                table.wares-slider__table
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td first
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 99999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 99999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 99999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 99999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHBTC.png' alt='BCHBTC.png')
+                    td BCHBTC
+                    td(style='color: dodgerblue') ▲
+                    td 1111
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHDSH.png' alt='BCHDSH.png')
+                    td BCHDSH
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHETH.png' alt='BCHETH.png')
+                    td BTCETH
+                    td(style='color: red') ▼
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHLTC.png' alt='BCHLTC.png')
+                    td BCHLTC
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHUSDt.png' alt='BCHUSDt.png')
+                    td BCHUSDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/BCHXRP.png' alt='BCHXRP.png')
+                    td BCHXRP
+                    td(style='color: red') ▼
+                    td last
+
+          .wares-slider__item
+            h5.wares-slider__item-header Валютные пары
+
+            .wares-slider__item-table-1-wrapper
+              .wares-slider__item-table-2-wrapper
+                table.wares-slider__table
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: red') ▼
+                    td 9999.99
+
+          .wares-slider__item
+            h5.wares-slider__item-header Криптовалюта
+
+            .wares-slider__item-table-1-wrapper
+              .wares-slider__item-table-2-wrapper
+                table.wares-slider__table
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: red') ▼
+                    td 9999.99
+
+          .wares-slider__item
+            h5.wares-slider__item-header Товары
+
+            .wares-slider__item-table-1-wrapper
+              .wares-slider__item-table-2-wrapper
+                table.wares-slider__table
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: dodgerblue') ▲
+                    td 9999.99
+                  tr
+                    td: .img-pair
+                      img(src='img/Bitcoin.png' alt='img/Bitcoin.png')
+                    td BTC/USDt
+                    td(style='color: red') ▼
+                    td 9999.99
+      // /SECTION 2
+
+      // SECTION 3 (right column)
+      section.right-column
+        .work-field-wrapper-scroll
+          .work-field-wrapper
+            .work-field
+              .trade-pair
+                input( type="hidden" id="currentStockPairId" value="2" data-break="0" data-typestock="3")
+                img.trade-pair__logo(src="img/BTCETH.png", alt="BTCETH.png")
+                h5.trade-pair__name BTC/ETH
+                p.trade-pair__description котировка: биткоин/тугрик
+                span#activeStatus.trade-pair__price(style='color: dodgerblue') ▲
+                  span#activePairPrise(style='color: black') 12345.67890
+
+              //- include BEM-blocks/tug-of-war/tug-of-war.pug
+
+              .investment-calculator
+                label(for='#investment-input') инвестиции:
+                input(id='investment-input' type='text' placeholder='инвестиции' value='25')
+
+                label(for='#investment-percent') доход, %:
+                span(id='investment-percent' type='text') 80
+
+                label(for='#investment-result') прибыль:
+                span(id='investment-result' type='text')
+
+              #UTC-datetimer-holder
+                span#UTC-datetimer-info Время UTC: &nbsp;
+                span#UTC-datetimer
+
+              .parlay-slider-wrapper
+                .parlay-slider
+
+                  .parlay-slider__item(data-parlayType='short' data-parlayTypeForBackEnd='0')
+                    h5.parlay-slider__item-header Быстрые
+                    .parlay-slider__item-choice-field
+                      .parlay-slider__parlay-choise-btn-holder
+                        //- .parlay-slider__parlay-choise-btn(onclick='deActivationParlayBtns(this)' data-timeToEndInMS='30000') 30 секунд
+                        //- .parlay-slider__parlay-choise-btn(onclick='deActivationParlayBtns(this)' data-timeToEndInMS='60000') 1 минута
+                        //- .parlay-slider__parlay-choise-btn(onclick='deActivationParlayBtns(this)' data-timeToEndInMS='120000') 2 минуты
+                        //- .parlay-slider__parlay-choise-btn(onclick='deActivationParlayBtns(this)' data-timeToEndInMS='180000') 3 минуты
+
+                  .parlay-slider__item(data-parlayType='normal' data-parlayTypeForBackEnd='1')
+                    h5.parlay-slider__item-header Нормальные
+                    .parlay-slider__item-choice-field
+                      .parlay-slider__parlay-choise-btn-holder
+
+                  .parlay-slider__item(data-parlayType='long' data-parlayTypeForBackEnd='2')
+                    h5.parlay-slider__item-header Длинные
+                    .parlay-slider__item-choice-field
+                      .parlay-slider__parlay-choise-btn-holder
+
+                //- .parlay-slider__reactivation-field
+                //-   .parlay-slider__reactivation-field-btn обновить
+                //-     |
+                //-     |
+                //-     i.fas.fa-redo-alt
+                .parlay-btns__holder
+                  .parlay-btns__btn.parlay-btns__btn_up(data-parlayAnticipation='up') Вверх
+                    |
+                    |
+                    i.fas.fa-angle-double-up
+                  .parlay-btns__btn.parlay-btns__btn_down(data-parlayAnticipation='down')
+                    i.fas.fa-angle-double-down
+                    |
+                    | Вниз
+                .parlay-btns__cover
+                  .parlay-btns__cover-left
+                  .parlay-btns__cover-right
+
+            .slider-change-btn-holder
+              .slider-change-btn.active-slider-btn.slider-change-btn_active Активные сделки
+              .slider-change-btn.history-slider-btn История сделок
+              .slider-change-btn.deposit-slider-btn История депозитов
+              .slider-change-btn.withdrawal-slider-btn История выводов
+
+      // /SECTION 3
+
+      // SECTION 4 (popups)
+      section.popups
+        include BEM-Blocks/popup-make-lodgement/make-lodgement.pug
+        include BEM-Blocks/popup-make-cash-withdrawal/make-cash-withdrawal.pug
+        include BEM-blocks/popup-message-to-mentor/message-to-mentor.pug
+        include BEM-blocks/popup-message-from-mentor/message-from-mentor.pug
+        include BEM-blocks/popup-profile-editor/profile-editor.pug
+        include BEM-blocks/popup-info-message/info-message.pug
+        include BEM-blocks/popup-change-password/change-password.pug
+        include BEM-blocks/popup-parlay-confirmation/parlay-confirmation.pug
+        include BEM-blocks/popup-deposit-confirmation/deposit-confirmation.pug
+        include BEM-blocks/popup-info-parlay-result/info-parlay-result.pug
+      // /SECTION 4
+    // /MAIN PART
+
+    // FOOTER
+    footer.footer
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='libs/fontawesome.js')
+    script(src='libs/highstock.js')
+    script(src='libs/jquery-ui.js')
+    script(src='libs/slick.js')
+    //script(src='libs/TimeCircles.js')
+
+    // own js
+    script(src='js/myFirstHighstock.js')
+    script(src='js/js.js')
+    script(src='js/testJs.js')
+    script(src='js/phoneNavigation.js')
+    script(src='js/BEM-blocks.js')

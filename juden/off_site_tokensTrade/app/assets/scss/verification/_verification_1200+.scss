@@ -1,0 +1,8 @@
+@media only screen and (min-width: 1200px) {
+  .section2 {
+    max-width               : 1100px;
+    &__columns-wrapper {
+      padding               : 100px 0 100px;
+    }
+  }
+}

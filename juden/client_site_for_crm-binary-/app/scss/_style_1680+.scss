@@ -1,0 +1,155 @@
+@media only screen and (min-width: 1680px) {
+// @media only screen and (min-width: 1680px) and (min-height: 720px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* ↓↓↓ MAIN PART ↓↓↓ */
+  .main {
+    height                       : calc(100% - 60px);
+    /* ↓↓↓ SECTION 1 (work area) ↓↓↓ */
+    .work_area {
+      padding                    : 15px;
+      .graphic-header {
+        .currency-logo-holder {
+          min-width              : 180px;
+          height                 : 45px;
+          .img-pair {
+            min-width            : 60px;
+            max-height           : 45px
+          }
+          h2 {
+            font-size            : 22px;
+          }
+        }
+      }
+
+    }
+    #container {
+      height                     : calc(100% - 240px);
+    }
+
+    .slider-area {
+      width                      : calc( 100% - 30px);
+      height                     : 200px;
+    }
+    /* ↑↑↑ /SECTION 1 (work area) ↑↑↑ */
+
+    /* ↓↓↓ SECTION 2 (left column) ↓↓↓ */
+    .left-column {
+      width                      : 250px;
+      padding                    : 15px 10px 10px 15px;
+      &::after {
+        height                   : 1px;
+        width                    : 280px;
+        top                      : 50px;
+      }
+      .wares-slider {
+        &__item {
+          height                 : calc(100vh - 85px);
+        }
+        &__item-header {
+          font-size              : 20px;
+          padding-bottom         : 20px;
+        }
+        &__item-table-1-wrapper {
+          height                 : calc(100% - 40px );
+        }
+        &__table {
+          tr {
+            height               : 40px;
+            td {
+              &:nth-of-type(2) {
+                width            : 65px;
+              }
+            }
+          }
+        }
+        .slick-arrow {
+          width                 : 20px;
+          height                : 30px;
+        }
+        .slick-prev {
+          top                   : 11px;
+          left                  : -9px;
+        }
+        .slick-next {
+          top                   : 11px;
+          right                 : -3px;
+        }
+      }
+    }
+    /* ↑↑↑ /SECTION 2 (left column) ↑↑↑ */
+
+    /* ↓↓↓ SECTION 3 (right column) ↓↓↓ */
+    .right-column {
+      width                     : 250px;
+      padding                   : 15px 15px 10px 15px;
+      .work-field-wrapper {
+        max-height              : calc(100vh - 295px);
+      }
+      .work-field {
+        .trade-pair {
+          &__logo {
+            width               : 50px;
+          }
+          &__name {
+            padding             : 4px 0 10px 60px;
+          }
+          &__description {
+            font-size           : 14px;
+          }
+        }
+        .investment-calculator {
+          grid-template-columns : 90px 120px;
+          label {
+            height              : 26px;
+          }
+          input, span {
+            height              : 26px;
+            line-height         : 26px;
+            font-size           : 14px;
+          }
+        }
+      }
+      .parlay-slider {
+        &__item-choice-field {
+          height                : 132px;
+          padding               : 0;
+        }
+        &__parlay-choise-btn {
+          height                : 30px;
+        }
+        &__parlay-choise-btn-holder {
+          height                : 130px;
+        }
+      }
+      .parlay-btns {
+        &__btn {
+          height        : 40px;
+          line-height   : 37px;
+          svg {
+            top               : 12px;
+          }
+        }
+        &__cover {
+          height             : 40px;
+        }
+      }
+      .slider-change-btn-holder {
+        width                   : calc(100% - 30px);
+        height                  : 190px;
+        &:after {
+          height                : 1px;
+          background-color      : black;
+          left                  : -15px;
+        }
+        .slider-change-btn {
+          height                : 42px;
+          line-height           : 40px;
+        }
+      }
+    }
+    /* ↑↑↑ /SECTION 3 (right column) ↑↑↑ */
+  }
+}

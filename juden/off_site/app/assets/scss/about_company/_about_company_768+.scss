@@ -1,0 +1,22 @@
+@media only screen and (min-width: 768px) {
+  .section2 {
+    grid-template-columns: 3fr 2fr;
+    &__text {
+      order: 1;
+    }
+    &__logo {
+      order: 2;
+      img {
+        width: 400px;
+      }
+    }
+  }
+  .section3 {
+    &__header {
+      font-size: 26px;
+      .bold-text {
+      font-size: 26px;
+      }
+    }
+  }
+}

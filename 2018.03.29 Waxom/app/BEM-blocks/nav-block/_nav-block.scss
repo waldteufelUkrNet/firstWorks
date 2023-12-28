@@ -1,0 +1,144 @@
+  .navigation {
+    height: 76px;
+    z-index: 2222;
+    padding-top: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    &__logo-block {
+      order: 2;
+      z-index: 0;
+      .logo-block__text {
+        top: 12px;
+      }
+    }
+    &__list {
+      position: fixed; z-index: 2222;
+      top: -320px;
+      left: 0;
+      width: 100vw;
+      height: 320px;
+      background-color: black;
+      padding-top: 40px;
+    }
+    &__list-item {
+    	display: block;
+    	text-align: center;
+    	height: 30px;
+    	line-height: 30px;
+    }
+    &__link {
+      font-family: ml;
+      font-size: 18px;
+      color: white;
+      transition: color .5s;
+      &:hover {
+        color: #c7b299;
+      }
+    }
+    &__icons {
+      order: 3;
+      text-align: right;
+      padding-top: 15px;
+      li {
+        display: inline-block;
+        a {
+          font-family: ml;
+          font-size: 14px;
+          color: white;
+          transition: color .5s;
+          &:hover {
+            color: #c7b299;
+          }
+        }
+        &:first-of-type {
+          display: none;
+        }
+        &:last-of-type {
+          padding-left: 10px;
+        }
+      }
+    }
+    .navigation__nav-btn {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      outline: none;
+      position: relative; z-index: 5556;
+    }
+    .navigation__nav-btn_open {
+      order: 1;
+    }
+    .navigation__nav-btn_close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+@media only screen and (min-width: 992px) {
+  .navigation {
+    height: 96px;
+    padding-top: 40px;
+    &__logo-block {
+      order: 1;
+      flex-grow: 2;
+    }
+    &__list {
+      display: block;
+      order: 2;
+      flex-grow: 2;
+      text-align: right;
+      padding: 19px 3px 0 0;
+      position: relative;
+      top: 0;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+    }
+    &__list-item {
+      display: inline-block;
+      padding: 0 10px;
+      height: 16px;
+      line-height: 16px;
+    }
+    &__link {
+      font-size: 14px;
+    }
+    &__icons {
+      order: 3;
+      flex-grow: 1;
+      li {
+        &:first-of-type {
+          display: inline-block;
+          position: relative;
+          top: -2px;
+        }
+      }
+    }
+    .navigation__nav-btn {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navigation {
+    &__list {
+      li {
+        padding: 0 14px;
+      }
+    }
+    &__icons {
+      li {
+        &:last-of-type {
+          padding-left: 27px;
+        }
+      }
+    }
+  }
+}

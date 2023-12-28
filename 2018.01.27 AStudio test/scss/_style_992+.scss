@@ -1,0 +1,79 @@
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.navigation {
+		div {
+			padding-right: 30px;
+		}
+	}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+
+		.command-2 {
+			h2 {
+				padding: 50px 0 36px 10px;
+			}
+			&__info {
+				left: -54px;
+				width: 990px;
+				p {
+					padding: 0 220px 36px;
+					&:last-of-type {
+						padding: 64px 120px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.whom {
+
+			img:first-of-type {
+				top: 275px;
+			}
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.what {
+			&__shadow {
+				left: 124px;
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.knowledge {
+			.knowledge-container {
+				width: 940px;
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.photo {
+			&__img {
+				left: 208px;
+			}
+			&__shadow {
+				width: 862px;
+			}
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 ↓↓↓ */
+		.contact {
+			height: 590px;
+			position: relative;
+		}
+		/* ↑↑↑ /SECTION 8 ↑↑↑ */
+
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

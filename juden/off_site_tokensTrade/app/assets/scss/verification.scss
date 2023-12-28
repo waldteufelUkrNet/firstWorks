@@ -1,0 +1,132 @@
+// @import "variables";
+@import "fonts";
+@import "style_general";
+
+@media only screen and (min-width: 320px) {
+  .s1-wrapper {
+    width                   : 100%;
+    background-color        : rgba(0,0,0,.2);
+  }
+  .section1 {
+    max-width               : 1920px;
+    height                  : 450px;
+    margin                  : 0 auto;
+    display                 : flex;
+    justify-content         : center;
+    align-items             : center;
+    flex-wrap               : wrap;
+    padding-top             : 90px;
+    &__headers-wrapper {
+      text-align            : center;
+      padding               : 0 15px;
+    }
+    &__header {
+      font-family           : rb;
+      font-size             : 3.2rem;
+      color                 : white;
+      padding-bottom        : 30px;
+    }
+    &__subheader {
+      font-family           : rsr;
+      font-size             : 2.2rem;
+      font-weight           : 600;
+      color                 : #fac51c;
+    }
+    &__icon-wrapper {
+      span {
+        font-size           : 100px;
+        color               : #fac51c;
+      }
+    }
+  }
+
+  .s2-wrapper {
+    width                   : 100%;
+  }
+  .section2 {
+    max-width               : calc(100% - 30px);
+    margin                  : 0 auto;
+    &__header {
+      font-family           : rb;
+      font-size             : 3.2rem;
+      text-align            : center;
+      line-height           : 1.5em;
+    }
+    &__subheader {
+      font-family           : rcl;
+      font-size             : 1.7rem;
+      color                 : #8c8c8c;
+      text-align            : center;
+    }
+    &__columns-wrapper {
+      display               : flex;
+      justify-content       : center;
+      align-items           : flex-start;
+      flex-wrap             : wrap;
+      padding               : 20px 0 20px;
+    }
+    &__left-column {
+      width                 : 100%;
+      margin-right          : 0px;
+      text-align            : center;
+      margin-bottom         : 20px;
+      img {
+        width               : 100%;
+        max-width           : 640px;
+      }
+    }
+    &__right-column {
+      width                 : 100%;
+      text-align            : center;
+      margin-left           : 0px;
+    }
+    &__right-column-header {
+      font-family           : rcl;
+      font-size             : 2.2rem;
+      font-weight           : 700;
+      padding-bottom        : 20px;
+    }
+  }
+
+  .accordion {
+    width                   : calc(100% - 30px);
+    min-width               : 290px;
+    max-width               : 500px;
+    font-family             : rsr;
+    font-size               : 1.6rem;
+    margin                  : 0 auto;
+    .toggle {
+      width                 : 100%;
+      height                : 60px;
+      line-height           : 58px;
+      font-family           : rcl;
+      display               : block;
+      border                : 1px solid lightgrey;
+      margin                : 3px 0;
+      user-select           : none;
+      transition            : box-shadow .5s;
+      &:hover {
+        box-shadow          : 0 0 15px lightgrey;
+      }
+    }
+    .inner {
+      overflow              : hidden;
+      display               : none;
+      padding               : 20px 0;
+      text-align            : left;
+      font-family           : rsr;
+      font-size             : 1.6rem;
+      line-height           : 1.5em;
+    }
+  }
+}
+
+@import "verification/_verification_768+";
+@import "verification/_verification_992+";
+@import "verification/_verification_1200+";
+
+//BEM-blocks
+@import "../BEM-blocks/header/header.scss";
+@import "../BEM-blocks/footer/footer.scss";
+@import "../BEM-blocks/language_switcher/language_switcher.scss";
+@import "../BEM-blocks/payment_systems/payment_systems.scss";

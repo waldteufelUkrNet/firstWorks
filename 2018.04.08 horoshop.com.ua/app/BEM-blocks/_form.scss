@@ -1,0 +1,110 @@
+.new-customer-form {
+  &__receiver {
+    border-bottom: 1px dotted #e0dfca;
+    padding: 26px 27px 23px;
+  }
+  &__subheader {
+    font-family: ab;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  label {
+    width: 120px;
+    font-family: ar;
+    font-size: 16px;
+    color: #8d8d8d;
+    @media only screen and (min-width: 1440px) {
+      width: 152px;
+    }
+  }
+  input, select {
+    min-width: 360px;
+    height: 30px;
+    border: 1px solid #8d8d8d;
+    border-radius: 3px;
+    font-family: ar;
+    font-size: 16px;
+    color: black;
+    padding-left: 4px;
+    margin-bottom: 18px;
+    &:hover {
+      background-color: #ddd;
+    }
+    &:focus {
+      outline: 1px dotted green;
+    }
+  }
+  input {
+    padding-left: 10px;
+  }
+  input[name="person-email"] {
+    margin-bottom: 14px;
+  }
+  input::placeholder {
+    color: black;
+    opacity: 1;
+  }
+  select[name="adress"] {
+    @media only screen and (min-width: 1440px) {
+      width: 600px;
+    }
+  }
+  &__more-info {
+    font-family: ar;
+    font-size: 14px;
+    color: #0072bc;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 118px;
+    padding-top: 6px;
+    @media only screen and (min-width: 1440px) {
+      margin-left: 150px;
+    }
+  }
+  &__textarea textarea {
+    margin-left: 118px;
+    width: 360px;
+    min-height: 80px;
+    font-family: ar;
+    font-size: 16px;
+    color: black;
+    padding-left: 4px;
+    @media only screen and (min-width: 1440px) {
+      margin-left: 150px;
+    }
+  }
+  &__logistics {
+    border-bottom: 1px dotted #e0dfca;
+    padding: 20px 27px 2px;
+    label:first-of-type {
+      font-family: ab;
+      font-size: 18px;
+      color: black;
+    }
+  }
+  &__pay {
+    border-bottom: 1px dotted #e0dfca;
+    padding: 20px 27px 2px;
+    label:first-of-type {
+      font-family: ab;
+      font-size: 18px;
+      color: black;
+    }
+  }
+  &__btn {
+    width: 196px;
+    height: 34px;
+    background-color: #63bf1f;
+    font-family: ab;
+    font-size: 20px;
+    color: white;
+    border-radius: 17px;
+    cursor: pointer;
+    border: none;
+    margin: 22px 146px;
+    @media only screen and (min-width: 1440px) {
+      margin: 22px 178px;
+    }
+  }
+}

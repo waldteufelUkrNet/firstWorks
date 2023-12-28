@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>waldteufel@ukr.net</title>
+  <link rel="icon" href="img/wehrwolf.jpg">
+  <!-- js-libs (font awesome, slick, wow ...)-->
+  <script src="js/jquery3.3.1.min.js"></script>
+  <script defer="" src="js/fontawesome-all.min.js"></script>
+  <!-- project stylesheet and js -->
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <script src="js/layout.js" defer=""></script>
+  <!-- page stylesheet and js -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/customers.js" defer=""></script>
+</head>
+
+<body>
+  <!-- HEADER-->
+  <div class="header-wrapper">
+    <header class="header">
+      <!-- NAVIGATION-->
+      <nav class="navigation">
+        <a class="company-logo">© New Trade Company</a>
+        <ul class="nav-ul-1">
+          <li><span id="nav-datetimer"></span></li>
+          <li><a href="#"><img src="img/calender.png" alt="img/calender.png" style="height: 36px"></a></li>
+          <li><a href="#"><img src="img/messageBell.png" alt="img/messageBell.png"></a></li>
+        </ul>
+        <ul class="nav-ul-2">
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#"><img src="img/ru.png" alt="img/ru.png" style="height: 28px"></a></li>
+          <li><a href="#"><img src="img/en.png" alt="img/en.png" style="height: 28px"></a></li>
+        </ul>
+      </nav>
+      <!-- /NAVIGATION-->
+    </header>
+  </div>
+  <!-- /HEADER-->
+  <!-- MAIN SECTION-->
+  <main class="main">
+    <!-- ASIDE MENU -->
+    <aside class="aside">
+      <ul class="aside-list accordion">
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="fas fa-home"></i>Home </a></li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="fas fa-users"></i></i>Сustomers</a></li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="fas fa-briefcase"></i></i>Employees </a></li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="fas fa-bookmark"></i></i>Tickets</a></li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="far fa-bookmark"></i>Transactions </a></li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="far fa-flag"></i>Company </a></li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="fas fa-link"></i>Communications 
+        	<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+          <ul class="submenu">
+            <li class="aside-submenu-list-li"><a href="#">Новое уведомление</a></li>
+            <li class="aside-submenu-list-li"><a href="#">История уведомлений</a></li>
+          </ul>
+        </li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="far fa-copy"></i>Orders</a></li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="fas fa-chart-line"></i></i>Analytics 
+        	<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+          <ul class="submenu">
+            <li class="aside-submenu-list-li"><a href="#">Analytics1 </a></li>
+            <li class="aside-submenu-list-li"><a href="#">Analytics2 </a></li>
+            <li class="aside-submenu-list-li"><a href="#">Analytics3 </a></li>
+          </ul>
+        </li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="far fa-file-alt"></i>Logs 
+        	<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+          <ul class="submenu">
+            <li class="aside-submenu-list-li"><a href="#">Logs1</a></li>
+            <li class="aside-submenu-list-li"><a href="#">Logs2</a></li>
+            <li class="aside-submenu-list-li"><a href="#">Logs3</a></li>
+          </ul>
+        </li>
+        <li class="aside-list-li"><a href="#" class="aside-link"><i class="fas fa-cogs"></i>Settings 
+        	<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+          <ul class="submenu">
+            <li class="aside-submenu-list-li"><a href="#">SettingsТестовая таблица </a></li>
+            <li class="aside-submenu-list-li"><a href="#">Settings2</a></li>
+            <li class="aside-submenu-list-li"><a href="#">Admin 
+            	<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="submenu">
+                <li><a href="#">Регистрация сотрудника </a></li>
+                <li><a href="#">Смена пароля сотруднику </a></li>
+                <li><a href="#">Admin3 </a></li>
+                <li><a href="#">Admin4 </a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <!-- /ASIDE MENU -->
+    <!-- WORK AREA -->
+    <div class="work-area">
+      WORK AREA
+      <!-- OPTION PANEL -->
+      <div class="option-panel">
+        <a href="#" class="option-panel__button" id="option-panel-filters">фильтры</a>
+        <a href="#" class="option-panel__button" id="option-panel-columns">колонки</a>
+        <div class="option-panel__filters-wrapper" id="filters-wrapper">
+          <div class="option-panel__divider"></div>
+          <div class="filters-label-wrapper">
+            <label id="search">
+              <input id="searchId" type="text" placeholder="поиск по Id">
+              <span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+            </label>
+            <label id="searchE">
+              <input id="searchEmail" type="text" placeholder="поиск по E-mail">
+              <span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+            </label>
+            <label id="searchN">
+              <input id="searchName" type="text" placeholder="поиск по Имени">
+              <span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+            </label>
+            <label id="searchP">
+              <input id="searchPhone" type="text" placeholder="поиск по телефону">
+              <span class="option-panel__search-btn"><i class="fas fa-search"></i></span>
+            </label>
+            <label><span>По статусу верификации:</span>
+              <select id="VerificationStatusSelect">
+                <option value="0">Все</option>
+                <option value="1">без верефикации</option>
+                <option value="2">частичная верефикация</option>
+                <option value="3">полная верефикация</option>
+              </select>
+            </label>
+            <label><span>Активность:</span>
+              <select id="IsActiveSelect">
+                <option value="0">Все</option>
+                <option value="1">активен</option>
+                <option value="2">не активен</option>
+              </select>
+            </label>
+            <label><span>Возможность торговли:</span>
+              <select id="IsTradingSelect">
+                <option value="0">Все</option>
+                <option value="1">есть доступ</option>
+                <option value="2">нет доступа</option>
+              </select>
+            </label>
+            <label><span>Компании:</span>
+              <select id="CompanySelect">
+                <option>Все</option>
+                <option>Крипто-Биткоин</option>
+                <option>Квантум</option>
+              </select>
+            </label>
+            <label><span>Аккаунты:</span>
+              <select id="AccountSelect">
+                <option>Все</option>
+                <option>Демо</option>
+                <option>Реальный</option>
+              </select>
+            </label>
+            <label><span>Страны:</span>
+              <select id="CountrySelect">
+                <option>Все</option>
+                <option>Страна0</option>
+                <option>Страна1</option>
+                <option>Страна2</option>
+                <option>Страна3</option>
+                <option>Страна4</option>
+                <option>Страна5</option>
+                <option>Страна6</option>
+                <option>Страна7</option>
+                <option>Страна8</option>
+                <option>Страна9</option>
+                <option>Страна10</option>
+                <option>Страна11</option>
+                <option>Страна12</option>
+                <option>Страна13</option>
+                <option>Страна14</option>
+                <option>Страна15</option>
+                <option>Страна16</option>
+                <option>Страна17</option>
+                <option>Страна18</option>
+                <option>Страна19</option>
+                <option>Страна20</option>
+                <option>Страна21</option>
+                <option>Страна22</option>
+                <option>Страна23</option>
+                <option>Страна24</option>
+                <option>Страна25</option>
+                <option>Страна26</option>
+                <option>Страна27</option>
+                <option>Страна28</option>
+                <option>Страна29</option>
+              </select>
+            </label>
+            <label><span>Сотрудники:</span>
+              <select id="employerSelect">
+                <option value="0">Все</option>
+                <option value="1">Толик Мудрый</option>
+                <option value="2">Коля Толковый</option>
+                <option value="3">Таня Улыбаха</option>
+                <option value="4">Женя Крахобор</option>
+                <option value="5">Петя Пасочник</option>
+              </select>
+            </label>
+            <label><span>Статусы:</span>
+              <select id="statusSelect">
+                <option>Все</option>
+                <option>Платежеспособный</option>
+                <option>Жадина-говядина</option>
+              </select>
+            </label>
+            <label><span>Спец.Статусы:</span>
+              <select id="specStatusesSelect">
+                <option>Все</option>
+                <option>Специальный статус 1</option>
+                <option>Специальный статус 2</option>
+              </select>
+            </label>
+            <label><span>Строки:</span>
+              <select id="pageCount">
+                <option>5</option>
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
+              </select>
+            </label>
+            <label><span>Передать клиентов сотруднику:</span>
+              <select id="EmployersList">
+                <option></option>
+                <option id="sel1" name="Толик Мудрый" onclick="OpenModal(1)">Толик Мудрый</option>
+                <option id="sel2" name="Коля Толковый" onclick="OpenModal(2)">Коля Толковый</option>
+                <option id="sel3" name="Таня Улыбаха" onclick="OpenModal(3)">Таня Улыбаха</option>
+                <option id="sel4" name="Женя Крахобор" onclick="OpenModal(4)">Женя Крахобор</option>
+                <option id="sel5" name="Петя Пасочник" onclick="OpenModal(5)">Петя Пасочник</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="option-panel__columns-wrapper" id="columns-wrapper">
+          <div class="option-panel__divider"></div>
+          <div class="column-label-wrapper">
+            <label>
+              <input type="checkbox"><span>Id</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>E-mail</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>ФИО</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Телефон</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Брокер</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Верификация</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Страна</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Активность</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Доступ к торгам</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Дата регистрации</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Баланс</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Бонусы</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Дата последней активности</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Тип аккаунта</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Компания</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Статус</span>
+              <span></span>
+            </label>
+            <label>
+              <input type="checkbox"><span>Специальный Статус</span>
+              <span></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- /OPTION PANEL -->
+      <!-- TABLE -->
+      <div class="table-wrapper">
+        <div class="thumbArea" id="thumbArea">
+          <img class="thumb" id="thumb" src="img/thumb-arrows.png" alt="img/thumb-arrows.png">
+          <div class="thumbLeftLine" id="thumbLeftLine"></div>
+          <div class="thumbRightLine" id="thumbRightLine"></div>
+        </div>
+        <div id="thumbArea-buffer"></div>
+        <table class="customers-table" id="thumbObj">
+          <thead id="customers-table-tr">
+            <tr>
+              <th></th>
+              <th>Id</th>
+              <th>E-mail</th>
+              <th>ФИО</th>
+              <th>Телефон</th>
+              <th>Брокер</th>
+              <th>Верификация</th>
+              <th>Страна</th>
+              <th>Активность</th>
+              <th>Доступ к торгам</th>
+              <th>Дата регистрации</th>
+              <th>Баланс</th>
+              <th>Бонусы</th>
+              <th>Дата последней активности</th>
+              <th>Тип аккаунта</th>
+              <th>Компания</th>
+              <th>Статус </th>
+              <th>Специальный Статус</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="customers-table__tbody" id="customers-table-body">
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>2</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>3</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>4</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>5</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(6)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>6</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(7)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>7</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>8</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>9</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>10</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>11</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>12</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>13</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>14</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>15</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>2</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>3</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>4</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>5</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(6)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>6</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(7)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>7</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>8</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>9</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>10</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>11</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>12</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>13</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>14</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>15</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>2</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>3</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>4</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>5</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(6)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>6</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(7)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>7</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>8</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>9</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>10</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>11</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>12</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>13</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>14</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>15</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>2</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>3</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>4</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>5</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(6)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>6</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(7)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>7</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>8</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>9</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>10</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>11</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>12</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>13</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>14</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>15</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>1</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>2</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>3</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>4</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>5</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(6)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>6</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(7)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>7</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>8</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>9</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>10</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(1)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>11</td>
+              <td>testmail0@gmail.com</td>
+              <td>Имя0 Фамилия0</td>
+              <td>9999999990</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна0</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Платежеспособный</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(2)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>12</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(3)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>13</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(4)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>14</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" onchange="SelectCust(5)">
+                <input id="cust1" type="hidden" name="idCustomers">
+              </td>
+              <td>15</td>
+              <td>testmail0@gmail1.com</td>
+              <td>Имя1 Фамилия1</td>
+              <td>9999999991</td>
+              <td>Толик Мудрый</td>
+              <td>не верефицирован</td>
+              <td>Страна1</td>
+              <td>активен</td>
+              <td>есть доступ</td>
+              <td>4/24/2018 12:18:37 PM</td>
+              <td>250.033333</td>
+              <td>100.001</td>
+              <td>4/25/2018 12:18:37 PM</td>
+              <td>Реальный</td>
+              <td>Крипто-Биткоин</td>
+              <td>Жадина-говядина</td>
+              <td>Специальный статус 1</td>
+              <td>
+                <input id="Button1" type="button" value="button">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="thumbArea" id="thumbArea2">
+          <img class="thumb" id="thumb2" src="img/thumb-arrows.png" alt="img/thumb-arrows.png">
+          <div class="thumbLeftLine" id="thumbLeftLine2"></div>
+          <div class="thumbRightLine" id="thumbRightLine2"></div>
+        </div>
+      </div>
+      <!-- /TABLE -->
+      <br>
+      <p style="font-family:rb; text-align: justify;">RobotoBold
+        <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.</p>
+      <br>
+      <p style="font-family:rcl; text-align: justify;">RobotoCondensedLight
+        <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.</p>
+      <br>
+      <br>
+      <p style="font-family:rb; text-align: justify;">RobotoBold
+        <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.</p>
+      <br>
+      <p style="font-family:rcl; text-align: justify;">RobotoCondensedLight
+        <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.</p>
+      <br>
+    </div>
+    <!-- /WORK AREA -->
+  </main>
+  <!-- /MAIN SECTION -->
+  <!-- FOOTER -->
+  <div class="footer-wrapper">
+    <footer class="footer"></footer>
+  </div>
+  <!-- /FOOTER -->
+</body>
+
+</html>

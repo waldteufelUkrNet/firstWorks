@@ -1,0 +1,33 @@
+// ↓↓↓ BEM-blocks: header (start) ↓↓↓
+
+.header-wrapper
+  header.header
+    // NAVIGATION
+    nav.navigation
+      a.company-logo(href='index.html') © New Trade Company
+      ul.nav-ul-1
+        li: span#nav-datetimer
+        li
+          a(href='#')
+            img(src='img/calender.png', alt='img/calender.png', style='height: 36px')
+        li
+          a(href='#')
+            img(src='img/messageBell.png', alt='img/messageBell.png')
+      ul.nav-ul-2
+        li: a(href='#') Sign up
+        li: a(href='#') Sign in
+        li
+          a(href='#')
+            img(src='img/ru.png', alt='img/ru.png', style='height: 28px')
+        li
+          a(href='#')
+            img(src='img/en.png', alt='img/en.png', style='height: 28px')
+    // /NAVIGATION
+
+//- style
+  include header.css // this styles are in layout.css
+
+//-script
+  include ../minjs/header/header.js // this js is in layout.js
+
+// ↑↑↑ BEM-blocks: header (end) ↑↑↑

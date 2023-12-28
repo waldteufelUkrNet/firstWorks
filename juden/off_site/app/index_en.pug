@@ -1,0 +1,332 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title PlatinumTrade.org - binary options
+
+    link(rel='icon', href='assets/img/logo-small.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/index.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        video.section1__video(autoplay loop muted)
+          source(src='assets/video/video.mp4' type='video/mp4')
+        section.section1
+          h1.section1__header PlatinumTrade
+          h5.section1__subheader Trade and earn on the best global assets
+          a.page-btn.section1__registry-btn(href='check_in_en.html') check in
+
+          .section1__offering-container
+            .section1__offering-item.animated.bounceInUp
+              i.far.fa-money-bill-alt
+              br
+              |  Currency pairs
+            .section1__offering-item.animated.bounceInUp
+              i.fas.fa-briefcase
+              br
+              |  Stock
+            .section1__offering-item.animated.bounceInUp
+              i.fas.fa-chart-line
+              br
+              |  Indexes
+            .section1__offering-item.animated.bounceInUp
+              i.fas.fa-shopping-cart
+              br
+              |  Goods
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2(style='')
+          h1.section2__header WHAT IS BINARY OPTIONS?
+          h5.section2__subheader A binary option is a forecast to raise or lower the value of an exchange asset
+          //- img.section2__img(src='assets/img/s2.jpg' alt='s2.jpg')
+          .highstock-container#highstock-container(style='width: 100%; height: 300px')
+
+          .section2__instruction-container
+            .section2__instruction-item.wow.bounceInLeft(data-wow-delay="0.6s" data-wow-offset='100')
+              h5.section2__instruction-header
+                i.fas.fa-crosshairs
+                //= ' '
+                | 1. Select asset
+              p.section2__instruction-body Select an asset, such as currency, commodity or stock
+            .section2__instruction-item.wow.bounceInLeft(data-wow-delay="0.3s" data-wow-offset='100')
+              h5.section2__instruction-header
+                i.fas.fa-chart-line
+                //= ' '
+                | 2. Make a prediction
+              p.section2__instruction-body Make a forecast to decrease or increase the value of an asset
+            .section2__instruction-item.wow.bounceInLeft(data-wow-offset='100')
+              h5.section2__instruction-header
+                i.far.fa-money-bill-alt
+                //= ' '
+                | 3. Make a profit
+              p.section2__instruction-body Make a profit! If your forecast was justified - you get a pre-specified win amount
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          p For profit, there is no need to buy the asset itself. You just enter into a deal to make a correct forecast, the price will rise or fall. The size of the price change is not necessary to determine - just the direction.
+      // /SECTION 3
+
+      // SECTION 4
+      .s4-wrapper
+        img.section4__bg(src='assets/img/graphic-1.png' alt='graphic-1.png')
+        section.section4
+          h1.section4__header OUR ADVANTAGES
+
+          .section4__buttons-holder
+            a.page-btn.section4__btn.section4__btn_activ(data-choice="security") SECURITY
+            a.page-btn.section4__btn(data-choice="clients") CUSTOMER SUPPORT
+            a.page-btn.section4__btn(data-choice="trade") KINDS OF TRADE
+
+          .section4__cards-holder
+            .section4__card.wow.fadeIn(data-choice="security" data-wow-offset='100')
+              i.far.fa-credit-card
+              h5.section4__card-header PAYMENTS (DEPOSITS)
+              .section4__card-body Support for payment card types (VISA, MasterCard, Maestro) in accordance with the requirements of PCI DSS. Bank transfers and support of BTC crypto currencies.
+            .section4__card.wow.fadeIn(data-choice="security" data-wow-delay="0.3s" data-wow-offset='100')
+              i.fas.fa-wrench
+              h5.section4__card-header REGULATORY
+              .section4__card-body PlatinumTrade is an adjustable SVG broker, we guarantee safe and reliable trading for every trader.
+            .section4__card.wow.fadeIn(data-choice="security" data-wow-delay="0.6s" data-wow-offset='100')
+              i.fas.fa-shield-alt
+              h5.section4__card-header PUNISHED TRADE
+              .section4__card-body Open an account and get one risk-free transaction for a successful start on the way to financial successю
+            .section4__card(data-choice="clients")
+              i.far.fa-clock
+              h5.section4__card-header SUPPORT SERVICE
+              .section4__card-body We work in 12/5 mode. PlatinumTrade has a highly professional customer support service.
+            .section4__card(data-choice="clients")
+              i.fas.fa-link
+              h5.section4__card-header COMMUNICATION
+              .section4__card-body Contact us right now, in a convenient way for you in the CONTACTS section.
+            .section4__card(data-choice="clients")
+              i.far.fa-question-circle
+              h5.section4__card-header FAQ
+              .section4__card-body Training in trading and working with the platform - will quickly help the beginner learn trading.
+            .section4__card(data-choice="trade")
+              i.far.fa-thumbs-up
+              h5.section4__card-header INDEPENDENT TRADE
+              .section4__card-body Independent trading allows you to fully concentrate on trading on the market, on your reactions and relieves of the need to worry for the trading group if it cooperates with that.
+            .section4__card(data-choice="trade")
+              i.fas.fa-retweet
+              h5.section4__card-header AUTOMATIC TRADE
+              .section4__card-body Automatic advisers work on algorithms that are created on the basis of knowledge and experience of traders from around the world. Thus, you can at any time use ready-made working schemes that do not have to learn for a long time.
+            .section4__card(data-choice="trade")
+              i.far.fa-handshake
+              h5.section4__card-header TRUST MANAGEMENT
+              .section4__card-body Trust management selects many people who want to simply invest the available funds and not engage in trading activities. A professional manager with experience in trading in financial markets will multiply your funds.
+      // /SECTION 4
+
+      // SECTION 5
+      .s5-wrapper
+        img.section5__bg(src='assets/img/graphic-2.jpg' alt='graphic-2.jpg')
+        section.section5
+          .section5__left
+            a.page-btn.section5__btn(href='check_in_en.html') Start earning!
+          .section5__right
+            h1.section5__header Start earning with
+              br
+              span.section5__boldhed PLATINUMTRADE.ORG
+              br
+              span.section5__boldhed EASY!
+            h5.section5__subheader THE FOUR STEP FOR THE BEGINNING OF TRADE
+      // /SECTION 5
+
+      // SECTION 6
+      .s6-wrapper
+        section.section6
+          ul.section6__list
+            li.section6__list-item
+              span.section6__list-header USER REGISTRATION -
+                span.section6__list-number 1
+              span.section6__list-boby Register now. This will take 1 minute. After registration you will be available: All instruments for trading.
+            li.section6__list-item
+              span.section6__list-header BALANCE SUPPLEMENT -
+                span.section6__list-number 2
+              span.section6__list-boby Replenish the balance of trade and withdraw money in a way convenient for you.
+            li.section6__list-item
+              span.section6__list-header START TO TRADE -
+                span.section6__list-number 3
+              span.section6__list-boby Select the underlying asset. Determine whether the asset price is higher or lower. Select the size of the investment for the contract to be purchased and open the trade, Trade in any browser and on the mobile device.
+      // /SECTION 6
+
+      // SECTION 7
+      .s7-wrapper
+        section.section7
+          h1.section7__header
+            | Choose your
+            |
+            span.section7__header_bold
+              | TRADING
+              br
+              | ACCOUNT
+            |  and start trading today!
+      // /SECTION 7
+
+      // SECTION 8
+      .s8-wrapper
+        section.section8
+
+          .section8__cards-holder
+            .section8__card
+              .section8__card-header Standart
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  250-4999
+              ul.section8__card-list
+                li.section8__card-list-item MIN transaction size - from $ 5
+                li.section8__card-list-item Margin requirements - 100%
+                li.section8__card-list-item Commission - 0%
+                li.section8__card-list-item Bonus - 0%
+                li.section8__card-list-item Profitability - 77%
+              a.page-btn.section8__registry-btn(href='authorization_en.html') OPEN AN ACCOUNT
+            .section8__card
+              .section8__card-header Business
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  5000-9999
+              ul.section8__card-list
+                li.section8__card-list-item MIN transaction size - от $5
+                li.section8__card-list-item Margin requirements - 100%
+                li.section8__card-list-item Commission - 0%
+                li.section8__card-list-item Bonus - 20%
+                li.section8__card-list-item Profitability - 82%
+                li.section8__card-list-item Market Review
+              a.page-btn.section8__registry-btn(href='authorization_en.html') OPEN AN ACCOUNT
+            .section8__card
+              .section8__card-header Gold
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  10000-49999
+              ul.section8__card-list
+                li.section8__card-list-item MIN transaction size - от $5
+                li.section8__card-list-item Margin requirements - 100%
+                li.section8__card-list-item Commission - 0%
+                li.section8__card-list-item Bonus - 30%
+                li.section8__card-list-item Profitability - 88%
+                li.section8__card-list-item Market Review
+                li.section8__card-list-item Accelerated output
+                li.section8__card-list-item Trade with an expert
+                li.section8__card-list-item Budget Planning
+              a.page-btn.section8__registry-btn(href='authorization_en.html') OPEN AN ACCOUNT
+            .section8__card
+              .section8__card-header Premium
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  50000 +
+              ul.section8__card-list
+                li.section8__card-list-item MIN transaction size - от $5
+                li.section8__card-list-item Margin requirements - 100%
+                li.section8__card-list-item Commission - 0%
+                li.section8__card-list-item Bonus - 40%
+                li.section8__card-list-item Profitability - 93%
+                li.section8__card-list-item Market Review
+                li.section8__card-list-item Accelerated output
+                li.section8__card-list-item Trade with an expert
+                li.section8__card-list-item Budget Planning
+                li.section8__card-list-item Top-level analyst
+                li.section8__card-list-item Personal Broker
+              a.page-btn.section8__registry-btn(href='authorization_en.html') OPEN AN ACCOUNT
+      // /SECTION 8
+
+      // SECTION 9
+      .s9-wrapper
+        section.section9
+
+          .section9__right
+            .section9__right-grid
+              .section9__right-item
+                i.fab.fa-apple
+                br
+                span.section9__number(data-number='2500') 0
+              .section9__right-item
+                i.fab.fa-android
+                br
+                span.section9__number(data-number='3500') 0
+              .section9__right-item
+                i.fab.fa-windows
+                br
+                span.section9__number(data-number='11500') 0
+              .section9__right-item
+                i.fas.fa-globe
+                br
+                span.section9__number(data-number='400') 0
+
+          .section9__left
+            h1.section9__header Earn money everywhere!
+            p.section9__text With a mobile version of our platform, you can earn at any time and anywhere. Keep your hand on the pulse: instant information about closing deals, promotions and tournaments.
+            img.section9__img(src='assets/img/s9.png' alt='s9.png')
+      // /SECTION 9
+
+      // SECTION 11
+      .s11-wrapper.parallax-container
+        img.parallax-item(src="assets/img/s11.jpg", alt="s11.jpg")
+        .s11-img-cover
+        section.section11
+          h1.section11__header SUPPORT SERVICE
+          h5.section11__subheader Contact us right now, in a convenient way for you in the section
+            |
+            a.section11__contacts(href='contacts_en.html') CONTACTS
+          a.page-btn.section11__contact-btn(href='contacts_en.html') CONNECT WITH US
+
+      // /SECTION 11
+
+    include assets/BEM-blocks/slick_money/slick_money.pug
+
+    include assets/BEM-blocks/notification_of_risks/notification_of_risks_en.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+    include assets/BEM-blocks/call_us_btn/call_us_btn_en.pug
+
+    // js-libs (font awesome, slick, wow ...)
+
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src='assets/libs/wow.js')
+    script(src='assets/libs/highstock.js')
+
+    script.
+      new WOW().init();
+
+    // own js
+    script(src='assets/js/index.js')
+    script(src='assets/js/customHighstock.js')

@@ -1,0 +1,41 @@
+@media only screen and (min-width: 992px) {
+
+  .section1 {
+    max-width               : 1920px;
+    margin                  : 0 auto;
+    height                  : 450px;
+    display                 : flex;
+    justify-content         : center;
+    align-items             : center;
+    flex-wrap               : nowrap;
+    padding-top             : 70px;
+    &__headers-wrapper {
+      text-align            : right;
+      width                 : 50%;
+      margin-right          : 30px;
+    }
+    &__header {
+      font-family           : rb;
+      font-size             : 4.6rem;
+      color                 : white;
+      padding-bottom        : 40px;
+    }
+    &__subheader {
+      font-family           : rsr;
+      font-size             : 22px;
+      font-weight           : 900;
+      color                 : #fac51c;
+    }
+    &__icon-wrapper {
+      padding               : 15px;
+      padding-left          : 100px;
+      width                 : 50%;
+      margin-left           : 30px;
+      text-align            : left;
+    }
+    span {
+      font-size             : 250px;
+      color                 : rgb(250, 197, 28);
+    }
+  }
+}

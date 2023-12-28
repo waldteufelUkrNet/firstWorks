@@ -1,0 +1,328 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="InvestingCase - торгуйте и зарабатывайте на лучших мировых активах! Валютные пары: EUR/USD, AUD/USD, GPB/USD, BTC/USD и др. Акции: Apple, Coca-Cola, Microsoft Co, McDonald's, Facebook и активы других компаний.")
+
+    title Investment Trade: investingcase.com
+    link(rel='icon', href='assets/img/logoIC_icon.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/index.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        .s1-wrapper__bg
+        video.section1__video(autoplay loop muted)
+          source(src='assets/video/video.mp4' type='video/mp4')
+        section.section1
+          h1.section1__header InvestingCase
+          h5.section1__subheader Торгуйте и зарабатывайте на лучших мировых активах!
+          a.page-btn.section1__registry-btn(href='check_in.html') регистрация
+          .section1__offering-container
+            .section1__offering-item.animated.bounceInUp
+              i.far.fa-money-bill-alt
+              br
+              |  Валютные пары
+            .section1__offering-item.animated.bounceInUp
+              i.fas.fa-briefcase
+              br
+              |  Акции
+            .section1__offering-item.animated.bounceInUp
+              i.fas.fa-chart-line
+              br
+              |  Индексы
+            .section1__offering-item.animated.bounceInUp
+              i.fas.fa-shopping-cart
+              br
+              |  Товары
+      // /SECTION 1
+
+      // SECTION 2
+      .s2-wrapper
+        section.section2
+
+          .section2__instruction-container
+            .section2__instruction-item.wow.bounceInLeft(data-wow-delay="0.6s" data-wow-offset='100')
+              h5.section2__instruction-header
+                i.fas.fa-crosshairs
+                //= ' '
+                | 1. Выберите актив
+              p.section2__instruction-body Выберите актив, например валюту, сырье или акции
+            .section2__instruction-item.wow.bounceInLeft(data-wow-delay="0.3s" data-wow-offset='100')
+              h5.section2__instruction-header
+                i.fas.fa-chart-line
+                //= ' '
+                | 2. Сделайте прогноз
+              p.section2__instruction-body Сделайте прогноз на понижение или повышение стоимости актива
+            .section2__instruction-item.wow.bounceInLeft(data-wow-offset='100')
+              h5.section2__instruction-header
+                i.far.fa-money-bill-alt
+                //= ' '
+                | 3. Получите прибыль
+              p.section2__instruction-body Получите прибыль! Если ваш прогноз оправдался - вы получаете заранее указанную сумму выигрыша
+      // /SECTION 2
+
+      // SECTION 3
+      .s3-wrapper
+        section.section3
+          p Для получения прибыли нет необходимости покупать сам актив. Вам достаточно войти в сделку, сделать верный прогноз, вырастет цена или упадет. Размер изменения цены определять не нужно - только направление.
+      // /SECTION 3
+
+      // SECTION 4
+      .s4-wrapper
+        video.section4__video(autoplay loop muted)
+          source(src='assets/video/video5.mp4' type='video/mp4')
+        section.section4
+          h1.section4__header НАШИ ПРЕИМУЩЕСТВА
+
+          .section4__buttons-holder
+            a.page-btn.section4__btn.section4__btn_activ(data-choice="security") БЕЗОПАСНОСТЬ
+            a.page-btn.section4__btn(data-choice="clients") ПОДДЕРЖКА КЛИЕНТОВ
+            a.page-btn.section4__btn(data-choice="trade") ВИДЫ ТОРГОВЛИ
+
+          .section4__cards-holder
+            .section4__card.wow.fadeIn(data-choice="security" data-wow-offset='100')
+              i.far.fa-credit-card
+              h5.section4__card-header ПЛАТЕЖИ (ДЕПОЗИТЫ)
+              .section4__card-body Поддержка типов платежных карт (VISA, MasterCard, Maestro) в соответствии требованиям PCI DSS. Банковские переводы и поддержка крипто-валют BTC.
+            .section4__card.wow.fadeIn(data-choice="security" data-wow-delay="0.3s" data-wow-offset='100')
+              i.fas.fa-wrench
+              h5.section4__card-header РЕГУЛИРУЕМОСТЬ
+              .section4__card-body InvestingCase - регулируемый брокер SVG, гарантируем безопасную и надежную торговлю каждому трейдеру.
+            .section4__card.wow.fadeIn(data-choice="security" data-wow-delay="0.6s" data-wow-offset='100')
+              i.fas.fa-shield-alt
+              h5.section4__card-header БЕЗРИСКОВАЯ ТОРГОВЛЯ
+              .section4__card-body Откройте счет и получите одну безрисковую сделку для успешного старта на пути к финансовому успеху
+            .section4__card(data-choice="clients")
+              i.far.fa-clock
+              h5.section4__card-header СЛУЖБА ПОДДЕРЖКИ
+              .section4__card-body Работаем в режиме 12/5. InvestingCase распологает высопрофессионалой службой поддержки клиентов.
+            .section4__card(data-choice="clients")
+              i.fas.fa-link
+              h5.section4__card-header КОММУНИКАЦИЯ
+              .section4__card-body Свяжитесь с нами прямо сейчас, удобным для Вас способом в разделе КОНТАКТЫ.
+            .section4__card(data-choice="clients")
+              i.far.fa-question-circle
+              h5.section4__card-header FAQ
+              .section4__card-body Обучение трейдингу и работа с платформой - быстро поможет новичку освоить трейдинг.
+            .section4__card(data-choice="trade")
+              i.far.fa-thumbs-up
+              h5.section4__card-header САМОСТОЯТЕЛЬНАЯ ТОРГОВЛЯ
+              .section4__card-body Самостоятельный трейдинг позволяет полностью сконцентрироваться на торговле, происходящем на рынке, на своих реакциях и освобождает от необходимости переживать за торговую группу, если он сотрудничает с таковой.
+            .section4__card(data-choice="trade")
+              i.fas.fa-retweet
+              h5.section4__card-header АВТОМАТИЧЕСКАЯ ТОРГОВЛЯ
+              .section4__card-body Автоматические советники работают по алгоритмам, которые создаются на основе знаний и опыта работы трейдеров со всего мира. Таким образом, вы можете в любой момент воспользоваться готовыми работающими схемами, которым не придется учиться в течение долгого времени.
+            .section4__card(data-choice="trade")
+              i.far.fa-handshake
+              h5.section4__card-header ДОВЕРИТЕЛЬНОЕ УПРАВЛЕНИЕ
+              .section4__card-body Доверительное управление выбирает много людей, которые хотят просто инвестировать имеющиеся свободные средства и при этом не заниматься трейдерской деятельностью. Профессиональный управляющий с опытом торговли на финансовых рынках, приумножит Ваши средства.
+      // /SECTION 4
+
+      // SECTION 5
+      .s5-wrapper
+        //- img.section5__bg(src='assets/img/graphic-2.jpg' alt='graphic-2.jpg')
+        section.section5
+          .section5__left
+            a.page-btn.section5__btn.animated.pulse(href='check_in.html') Начать зарабатывать!
+          .section5__right
+            h1.section5__header Начать зарабатывать с
+              br
+              span.section5__boldhed INVESTINGCASE.COM
+              br
+              span.section5__boldhed ПРОСТО!
+            h5.section5__subheader ТРИ ШАГА ДЛЯ НАЧАЛА ТОРГОВЛИ
+      // /SECTION 5
+
+      // SECTION 6
+      .s6-wrapper
+        section.section6
+          ul.section6__list
+            li.section6__list-item
+              span.section6__list-header РЕГИСТРАЦИЯ ПОЛЬЗОВАТЕЛЯ -
+                span.section6__list-number 1
+              span.section6__list-boby Регистрируйтесь. Это займет 1 минуту. После регистрации вам станут доступны: Все инструменты для торговли.
+            li.section6__list-item
+              span.section6__list-header ПОПОЛНЕНИЕ БАЛАНСА -
+                span.section6__list-number 2
+              span.section6__list-boby Пополняйте торговый баланс и выводите деньги удобным для Вас способом.
+            li.section6__list-item
+              span.section6__list-header НАЧАТЬ ТОРГОВАТЬ -
+                span.section6__list-number 3
+              span.section6__list-boby Выберите базовый актив. Определите будет ли цена актива выше или ниже. Выберите размер инвестиции для покупаемого контракта и откройте сделку, Торгуйте в любом браузере и на мобильном устройстве.
+      // /SECTION 6
+
+      // SECTION 7
+      .s7-wrapper
+        section.section7
+          h1.section7__header
+            | Выберете свой
+            |
+            span.section7__header_bold
+              | ТОРГОВЫЙ
+              br
+              | СЧЕТ
+            |  и начинайте торговать уже сегодня!
+      // /SECTION 7
+
+      // SECTION 8
+      .s8-wrapper
+        section.section8
+
+          .section8__cards-holder
+            .section8__card
+              .section8__card-header Standart
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  250-4999
+              ul.section8__card-list
+                li.section8__card-list-item MIN размер сделки - от $5
+                li.section8__card-list-item Маржинальные требования - 100%
+                li.section8__card-list-item Комиссия - 0%
+                li.section8__card-list-item Бонус - 0%
+                li.section8__card-list-item Доходность - 77%
+
+              a.page-btn.section8__registry-btn(href='authorization.html') ОТКРЫТЬ СЧЕТ
+            .section8__card
+              .section8__card-header Business
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  5000-9999
+              ul.section8__card-list
+                li.section8__card-list-item MIN размер сделки - от $5
+                li.section8__card-list-item Маржинальные требования - 100%
+                li.section8__card-list-item Комиссия - 0%
+                li.section8__card-list-item Бонус - 20%
+                li.section8__card-list-item Доходность - 82%
+                li.section8__card-list-item Обзор рынка
+
+              a.page-btn.section8__registry-btn(href='authorization.html') ОТКРЫТЬ СЧЕТ
+            .section8__card
+              .section8__card-header Gold
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  10000-49999
+              ul.section8__card-list
+                li.section8__card-list-item MIN размер сделки - от $5
+                li.section8__card-list-item Маржинальные требования - 100%
+                li.section8__card-list-item Комиссия - 0%
+                li.section8__card-list-item Бонус - 30%
+                li.section8__card-list-item Доходность - 88%
+                li.section8__card-list-item Обзор рынка
+                li.section8__card-list-item Ускоренный вывод
+                li.section8__card-list-item Торговля с экспертом
+                li.section8__card-list-item Планирование бюджета
+
+              a.page-btn.section8__registry-btn(href='authorization.html') ОТКРЫТЬ СЧЕТ
+            .section8__card
+              .section8__card-header Premium
+                |
+                |
+                i.fab.fa-bitcoin
+              .section8__card-price
+                i.fas.fa-dollar-sign
+                |  50000 +
+              ul.section8__card-list
+                li.section8__card-list-item MIN размер сделки - от $5
+                li.section8__card-list-item Маржинальные требования - 100%
+                li.section8__card-list-item Комиссия - 0%
+                li.section8__card-list-item Бонус - 40%
+                li.section8__card-list-item Доходность - 93%
+                li.section8__card-list-item Обзор рынка
+                li.section8__card-list-item Ускоренный вывод
+                li.section8__card-list-item Торговля с экспертом
+                li.section8__card-list-item Планирование бюджета
+                li.section8__card-list-item Аналитик высшего уровня
+                li.section8__card-list-item Личный брокер
+              a.page-btn.section8__registry-btn(href='authorization.html') ОТКРЫТЬ СЧЕТ
+      // /SECTION 8
+
+      // SECTION 9
+      .s9-wrapper
+        section.section9
+
+          .section9__right
+            .section9__right-grid
+              .section9__right-item
+                i.fab.fa-apple
+                br
+                span.section9__number(data-number='2500') 0
+              .section9__right-item
+                i.fab.fa-android
+                br
+                span.section9__number(data-number='3500') 0
+              .section9__right-item
+                i.fab.fa-windows
+                br
+                span.section9__number(data-number='11500') 0
+              .section9__right-item
+                i.fas.fa-globe
+                br
+                span.section9__number(data-number='400') 0
+
+          .section9__left
+            h1.section9__header Зарабатывайте деньги везде!
+            p.section9__text С мобильной версией нашей платформы вы сможете зарабатывать в любое время и в любом месте. Держите руку на пульсе: мгновенная информация о закрытии сделок, акциях и турнирах.
+            img.section9__img(src='assets/img/s9.jpg' alt='s9.jpg')
+      // /SECTION 9
+
+      // SECTION 11
+      .s11-wrapper.parallax-container
+        img.parallax-item(src="assets/img/s11.jpg", alt="s11.jpg")
+        .s11-img-cover
+        section.section11
+          h1.section11__header СЛУЖБА ПОДДЕРЖКИ
+          h5.section11__subheader Свяжитесь с нами прямо сейчас, удобным для Вас способом в разделе
+            |
+            a.section11__contacts(href='contacts.html') КОНТАКТЫ
+          a.page-btn.section11__contact-btn(href='contacts.html') СВЯЗАТЬСЯ С НАМИ
+
+      // /SECTION 11
+
+    include assets/BEM-blocks/slick_money/slick_money.pug
+    include assets/BEM-blocks/notification_of_risks/notification_of_risks.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/parallax.js')
+    script(src='assets/libs/highstock.js')
+    script(src='assets/libs/wow.js')
+
+    //- script.
+    //-   new WOW().init();
+
+    // own js
+    script(src='assets/js/index.js')
+    script(src='assets/js/customHighstock.js')

@@ -1,0 +1,1 @@
+[{"terminalId":"1","name":"terminal1","imgSrc":"","bodySrc":"assets/snippet/terminal1.html"},{"terminalId":"2","name":"","imgSrc":"assets/img/best.png","bodySrc":"assets/snippet/bestchange.html"},{"terminalId":"3","name":"","imgSrc":"assets/img/inter.png","bodySrc":"assets/snippet/interkassa.html"}]

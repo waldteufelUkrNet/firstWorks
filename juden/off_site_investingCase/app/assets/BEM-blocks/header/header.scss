@@ -1,0 +1,189 @@
+@media only screen and (min-width: 320px) {
+	.header-wrapper {
+		width                : 100%;
+		background-color     : black;
+		position             : fixed;
+	  z-index              : 9000;
+	  overflow             : hidden;
+	}
+	.header {
+		max-width      		   : 1200px;
+		height        		   : 60px;
+		margin      		     : 0 auto;
+		padding   		       : 0 15px;
+		background-color		 : black;
+		display     		     : flex;
+		justify-content 		 : space-between;
+		align-items   		   : center;
+		&__logo {
+			height             : 45px;
+		}
+		.menu-btn__positioning-wrapper {
+			order              : 1;
+		}
+		&__logo-wrapper {
+			order              : 2;
+		}
+		&__big-menu {
+			display     		     : none;
+		}
+		.language-switcher__positioning-wrapper {
+			order              : 3;
+		}
+		&__small-menu {
+			display            : block;
+			position           : fixed;
+			top                : 60px;
+			left               : 0;
+			width              : 100%;
+			height             : 0%;
+			transition         : height .5s;
+			background-color   : rgba(0,0,0,.9);
+			overflow           : hidden;
+			border-top         : 1px solid transparent;
+		}
+		&__small-menu-link {
+			display: block;
+			font-family: rcl;
+			font-size: 16px;
+			color: dodgerblue;
+			text-align: center;
+			padding: 6px;
+			transition: background-color .5s;
+			&:hover {
+				color: dodgerblue;
+				background-color: white;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1030px) {
+	.header-wrapper {
+		width                : 100%;
+		background-color     : black;
+		position             : fixed;
+	  z-index              : 9000;
+	  overflow             : hidden;
+	}
+	.header {
+		max-width      		   : 1200px;
+		height        		   : 60px;
+		margin      		     : 0 auto;
+		padding   		       : 0 15px;
+		background-color		 : black;
+		display     		     : flex;
+		justify-content 		 : space-between;
+		align-items   		   : center;
+		.menu-btn__positioning-wrapper {
+			display            : none;
+		}
+		&__logo-wrapper {
+			flex-grow          : 1;
+			order              : 1;
+		}
+		&__logo {
+			height             : 50px;
+		}
+		&__big-menu {
+			display     		     : flex;
+			justify-content 		 : space-between;
+			align-items   		   : center;
+			order                : 2;
+		}
+		&__menu {
+			color              : white;
+			font-family        : rcb;
+			margin             : 0 20px;
+			transition         : color .5s;
+			position           : relative;
+			white-space        : nowrap;
+			display            : block;
+	    &:after,
+	    &:before {
+				content          : '';
+				display          : block;
+				height           : 2px;
+				width            : 0%;
+				background-color : white;
+				transition       : width .5s;
+				position         : absolute;
+	  	}
+	  	&:after {
+	  		bottom           : -4px;
+	  		left             : 0;
+	    }
+	    &:before {
+	      top              : -4px;
+	    	right            : 0;
+	    }
+	    &:hover {
+	    	color            : gold;
+	    	&:after,
+	    	&:before {
+	  	  	width          : 100%;
+	    	}
+	    }
+		}
+		&__small-menu {
+			display            : none;
+		}
+		&__btn {
+			color              : white;
+			font-family        : rcl;
+			margin             : 0 20px;
+			border             : 1px solid black;
+			border-radius      : 6px;
+			padding            : 10px 12px;
+			display            : block;
+			transition         : background-color .5s, border-radius .5s;
+			white-space        : nowrap;
+		}
+		&__btn_enter {
+	    background-color   : #34965b;
+	    &:hover {
+	    	background-color : #127439;
+	    	color            : white;
+	    }
+		}
+		&__btn_account {
+	    background-color   : #e91248;
+	    &:hover {
+	    	background-color : #c70026;
+	    	color            : white;
+	    	border-radius    : 6px;
+	    }
+		}
+		.language-switcher__positioning-wrapper {
+			order              : 3;
+		}
+		&__menu-list {
+			width              : 180px;
+			overflow           : hidden;
+			position           : fixed;
+			top                : 60px;
+			background-color   : rgba(255,255,255,.9);
+			height             : 0px;
+			transition         : height .5s;
+			border             : 0px solid black;
+		}
+		&__menu-list1 {
+		  left               : calc(50% - 100px);
+		}
+		&__menu-list2 {
+			left               : calc(50% + 100px);
+		}
+		&__menu-link {
+			font-family        : rcb;
+			display            : block;
+			text-align         : center;
+			padding            : 10px;
+			border-left        : 3px solid transparent;
+			transition         : background-color .5s, border-color .5s;
+			&:hover {
+			  background-color : lightskyblue;
+        border-color     : dodgerblue;
+			}
+		}
+	}
+}

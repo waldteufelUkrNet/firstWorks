@@ -1,0 +1,169 @@
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.navigation {
+		margin-left: 54px;
+		height: 159px;
+		width: 100%;
+		justify-content: flex-start;
+		.logo {
+			img {
+				margin-top: 30px;
+			}
+		}
+		div {
+			&:not(:first-of-type) {
+				padding-top: 70px;
+				display: block;
+			}
+		}
+    i {
+    	display: none;
+    }
+
+	}
+
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.command-1 {
+			height: 512px;
+					margin-left: 54px;
+			h1 {
+				font-size: 86px;
+				top: -25px;
+				right: 80px;
+			}
+			&__img {
+				display: block;
+			}
+
+			&__shadow {
+				width: 620px;
+				height: 420px;
+				left: 127px;
+			}
+			&__info {
+				width: 422px;
+				height: 360px;
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 2 ↓↓↓ */
+		.command-2 {
+			&__info {
+				left: -80px;
+				p {
+					font-size: 24px;
+				}
+			}
+
+			&__img {
+				display: block;
+				position: absolute;
+			}
+		}
+		/* ↑↑↑ /SECTION 2 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 ↓↓↓ */
+		.command-3 {
+			display: block;
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 ↓↓↓ */
+		.whom {
+			height: 719px;
+			h2 {
+				font-size: 40px;
+				padding: 50px 0 83px 0;
+			}
+			&__info {
+				p {
+					font-size: 24px;
+					&:first-of-type {
+						padding-bottom: 75px;
+					}
+				}
+			}
+			img:first-of-type {
+				display: block;
+			}
+			img:last-of-type {
+				display: block;
+			}
+		}
+		/* ↑↑↑ /SECTION 4 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.what {
+			height: 499px;
+			&__img {
+				display: block;
+			}
+			&__shadow {
+				top: 48px;
+				left: 70px;
+				width: 678px;
+				height: 452px;
+			}
+			&__info {
+				height: 330px;
+				width: 330px;
+				right: 50px;
+				font-size: 40px;
+				text-align: left;
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.knowledge {
+			min-height: 1164px;
+			h2 {
+				font-size: 40px;
+				padding-top: 70px;
+			}
+			.green-line {
+				top: 173px;
+			}
+			.knowledge-container {
+				width: 704px;
+				top: 272px;
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 7 ↓↓↓ */
+		.photo {
+			display: block;
+		}
+		/* ↑↑↑ /SECTION 7 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 8 ↓↓↓ */
+		.contact {
+			height: 590px;
+			.message {
+				width: 560px;
+			}
+			#login {
+				width: 701px;
+				height: 198px;
+				font-size: 40px;
+				padding-top: 70px;
+			}
+			.timer {
+				width: 701px;
+				font-size: 15px;
+			}
+		}
+		/* ↑↑↑ /SECTION 8 ↑↑↑ */
+
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

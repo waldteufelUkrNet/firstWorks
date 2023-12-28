@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1200px) {
+
+	.section3-elem {
+	  padding                 : 40px 30px;
+	}
+
+  .section8 {
+
+    &__central-column {
+      display               : flex;
+      img {
+        width               : 400px;
+        margin              : auto;
+        position: relative;
+        top:-50px;
+      }
+    }
+
+  }
+
+}

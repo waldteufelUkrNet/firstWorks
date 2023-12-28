@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script type="text/javascript" src="main.js"></script>
+  <title>Simple JS Test</title>
+</head>
+<body>
+
+<!-- /////////////////////////////////////////////////////////////////////// -->
+
+<h1>Motorola DP2400e & DP2600e</h1>
+
+<div class="headerWrapper">
+  <h3>
+    <span>Генератор ключів</span>
+    <button id="keygen" type='button'>згенерувати</button>
+  </h3>
+</div>
+<h5>(ключі повинні бути 10-ти знакові у HEX-форматі (цифри + букви A-F, букви великі))</h5>
+
+<div class="keysTableWrapper" id="keysTable">
+<!--   <div class="keyNumber">1</div>
+  <div class="keyValue">ABCDEF1234</div>
+  <div class="keyButtonWrapper">
+    <button class="keyCopyButton">скопіювати</button>
+  </div> -->
+</div>
+
+<div class="headerWrapper">
+  <h3>
+    <span>Генератор частот</span>
+    <button id="wavegen" type='button'>згенерувати</button>
+  </h3>
+</div>
+<h5>(частоти в межах 146 - 160 МГц)</h5>
+
+<form>
+  <label>
+    <span>початок діапазону:</span>
+    <input type="text" name="startValue" value="146.00100" data-val_range="146.001, 159.009" onkeydown="return checkPushedKey(event.key)">
+  </label>
+  <label>
+    <span>кінець діапазону:</span>
+    <input type="text" name="finishValue" value="159.00900" data-val_range="146.001, 159.009" onkeydown="return checkPushedKey(event.key)">
+  </label>
+  <label>
+    <input type="radio" name="separator" value="," checked="true">
+    <span>кома</span>
+  </label>
+  <label>
+    <input type="radio" name="separator" value=".">
+    <span>крапка</span>
+  </label>
+</form>
+
+<div class="keysTableWrapper" id="wavesTable">
+<!--   <div class="keyNumber">1</div>
+  <div class="keyValue">ABCDEF1234</div>
+  <div class="keyButtonWrapper">
+    <button class="keyCopyButton">скопіювати</button>
+  </div> -->
+</div>
+
+<!-- /////////////////////////////////////////////////////////////////////// -->
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

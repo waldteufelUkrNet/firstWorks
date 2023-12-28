@@ -1,0 +1,46 @@
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+
+	/* ↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 3 ↓↓↓ */
+		.s3-wrapper {
+			.section3 {
+				h4 {
+					padding: 0 0 40px;
+				}
+				.fact-holder {
+					grid-gap: 30px;
+				}				
+			}
+		}
+		/* ↑↑↑ /SECTION 3 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 ↓↓↓ */
+		.s5-wrapper {
+			.section5 {
+				.slick1 {
+					width: 768px;
+					.slick1-item {
+						margin: 0 57px;
+					}
+				}	
+			}
+		}
+		/* ↑↑↑ /SECTION 5 ↑↑↑ */
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.s6-wrapper {
+			.section6 {
+				.slick2 {
+					width: 768px;
+					.slick2-item {
+						margin: 0 57px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+	}
+}

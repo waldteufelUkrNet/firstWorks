@@ -1,0 +1,704 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title customer card - waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='js/jquery3.3.1.min.js')
+    script(defer='', src='js/fontawesome-all.min.js')
+
+    // project stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/layout.css')
+    script(src='js/layout.js', defer='')
+
+    // page stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/customer_card.css')
+    script(src='js/customer_card.js', defer='')
+
+  body
+    // HEADER
+    include BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // ASIDE MENU
+      aside.aside
+        include BEM-blocks/accordion/accordion.pug
+      // /ASIDE MENU
+
+      // WORK AREA
+      .work-area
+        h1.client-card Карточка клиента
+        .client-menu
+          button.client-menu__go-out-btn(title='вертуться назад')
+            span.client-menu__go-out-btn-sumbol-wrapper
+              i.fas.fa-sign-out-alt
+          .client-menu__dropdown
+            button.client-menu__dropdown-btn(title='Действия')
+              span.client-menu__dropdown-btn-left
+                i.fas.fa-fire
+              span Действия
+              span.client-menu__dropdown-btn-right
+                i.fas.fa-chevron-down
+            .client-menu__dropdown-options-holder
+              ul
+                li
+                  a(href='#') действие 1
+                li
+                  a(href='#') действие 2
+                li
+                  a(href='#') действие 3
+                li
+                  a(href='#') действие 4
+
+          .client-menu__dropdown
+            button.client-menu__dropdown-btn(title='Контакты')
+              span.client-menu__dropdown-btn-left
+                i.fas.fa-users
+              span Контакты
+              span.client-menu__dropdown-btn-right
+                i.fas.fa-chevron-down
+            .client-menu__dropdown-options-holder
+              ul
+                li
+                  a(href='#') действие 1
+                li
+                  a(href='#') действие 2
+                li
+                  a(href='#') действие 3
+                li
+                  a(href='#') действие 4
+                li
+                  a(href='#') действие 5
+                li
+                  a(href='#') действие 6
+                li
+                  a(href='#') действие 7
+                li
+                  a(href='#') действие 8
+                li
+                  a(href='#') действие 9
+                li
+                  a(href='#') действие 10
+                li
+                  a(href='#') действие 11
+                li
+                  a(href='#') действие 12
+          .client-menu__dropdown
+            button.client-menu__dropdown-btn(title='Баланс')
+              span.client-menu__dropdown-btn-left
+                i.fas.fa-balance-scale
+              span Баланс
+              span.client-menu__dropdown-btn-right
+                i.fas.fa-chevron-down
+            .client-menu__dropdown-options-holder
+              ul
+                li
+                  a(href='#') действие 1
+                li
+                  a(href='#') действие 2
+                li
+                  a(href='#') действие 3
+                li
+                  a(href='#') действие 4
+                li
+                  a(href='#') действие 5
+                li
+                  a(href='#') действие 6
+                li
+                  a(href='#') действие 7
+                li
+                  a(href='#') действие 8
+                li
+                  a(href='#') действие 9
+                li
+                  a(href='#') действие 10
+          .client-menu__dropdown
+            button.client-menu__dropdown-btn(title='Экспорт')
+              span.client-menu__dropdown-btn-left
+                i.fas.fa-external-link-alt
+              span Экспорт
+              span.client-menu__dropdown-btn-right
+                i.fas.fa-chevron-down
+            .client-menu__dropdown-options-holder
+              ul
+                li
+                  a(href='#') действие 1
+                li
+                  a(href='#') действие 2
+                li
+                  a(href='#') действие 3
+                li
+                  a(href='#') действие 4
+                li
+                  a(href='#') действие 5
+                li
+                  a(href='#') действие 6
+                li
+                  a(href='#') действие 7
+        .client-info
+          .client-info__1
+            .client-info__1-wrapper
+              span.client-info__name Вася Пупкин
+              span.client-info__id id:
+                |
+                |
+                span 30632
+              strong.client-info__onoff-wrapper(id="isOnline50")
+                img.client-info__onoff-img(src='img/red-glossy-ball.jpg', alt='on/off')
+                span#onlineSpan50.client-info__onoff offline
+            .client-info__money 0.00$
+            .client-info__1-wrapper-2
+              span.client-info__phone Телефон:
+              span 37125298377
+              span.client-info__email Почта:
+              span test@test.test
+
+          .client-info__1-btns
+            form(method="get" action="http://localhost:49357/Customer/CustomerDetails")
+              input(type="text" placeholder="id for search" name="id")
+              input(type="submit" title="Search customer by Id" value="Search")
+            input.client-info__1-btn(onclick="EditCustomer(50)" type="button" value="Редактор")
+            input.client-info__1-btn(onclick="GetCalendar()" type="button" value="Создать напоминание")
+
+          hr(size="1")
+
+          .client-info__2
+            .client-info__column
+              p.client-info__column-header общая информация
+              span.client-info__value-wrapper
+                span.client-info__value-name Имя:
+                span.client-info__value sandis jablonskis
+
+                span.client-info__value-name Тип аккаунта:
+                span.client-info__value Mini
+
+                span.client-info__value-name Секция:
+                span.client-info__value quantum
+
+                span.client-info__value-name Адрес:
+                span.client-info__value Empty
+
+                span.client-info__value-name Город:
+                span.client-info__value Empty
+
+                span.client-info__value-name Область:
+                span.client-info__value Empty
+
+                span.client-info__value-name Страна:
+                span.client-info__value lv
+
+                span.client-info__value-name Телефон:
+                span.client-info__value 37125298377
+
+                span.client-info__value-name Мобильный:
+                span.client-info__value Empty
+
+                span.client-info__value-name Факс:
+                span.client-info__value Empty
+
+                span.client-info__value-name Язык:
+                span.client-info__value Russian
+
+                span.client-info__value-name Торговая группа:
+                span.client-info__value Empty
+            .client-info__column
+              p.client-info__column-header аккаунт
+              span.client-info__value-wrapper
+                span.client-info__value-name Имя:
+                span.client-info__value sandis jablonskis
+
+                span.client-info__value-name Тип аккаунта:
+                span.client-info__value Mini
+
+                span.client-info__value-name Секция:
+                span.client-info__value quantum
+
+                span.client-info__value-name Адрес:
+                span.client-info__value Empty
+
+                span.client-info__value-name Город:
+                span.client-info__value Empty
+
+                span.client-info__value-name Область:
+                span.client-info__value Empty
+
+                span.client-info__value-name Страна:
+                span.client-info__value lv
+
+                span.client-info__value-name Телефон:
+                span.client-info__value 37125298377
+
+                span.client-info__value-name Мобильный:
+                span.client-info__value Empty
+
+                span.client-info__value-name Факс:
+                span.client-info__value Empty
+
+                span.client-info__value-name Язык:
+                span.client-info__value Russian
+
+                span.client-info__value-name Торговая группа:
+                span.client-info__value Empty
+            .client-info__column
+              p.client-info__column-header финансовая информация
+              span.client-info__value-wrapper
+                span.client-info__value-name Имя:
+                span.client-info__value sandis jablonskis
+
+                span.client-info__value-name Тип аккаунта:
+                span.client-info__value Mini
+
+                span.client-info__value-name Секция:
+                span.client-info__value quantum
+
+                span.client-info__value-name Адрес:
+                span.client-info__value Empty
+
+                span.client-info__value-name Город:
+                span.client-info__value Empty
+
+                span.client-info__value-name Область:
+                span.client-info__value Empty
+
+                span.client-info__value-name Страна:
+                span.client-info__value lv
+
+                span.client-info__value-name Телефон:
+                span.client-info__value 37125298377
+
+                span.client-info__value-name Мобильный:
+                span.client-info__value Empty
+
+                span.client-info__value-name Факс:
+                span.client-info__value Empty
+
+                span.client-info__value-name Язык:
+                span.client-info__value Russian
+
+                span.client-info__value-name Торговая группа:
+                span.client-info__value Empty
+            .client-info__column
+              p.client-info__column-header брокер
+              span.client-info__value-wrapper
+                span.client-info__value-name Имя:
+                span.client-info__value sandis jablonskis
+
+                span.client-info__value-name Тип аккаунта:
+                span.client-info__value Mini
+
+                span.client-info__value-name Секция:
+                span.client-info__value quantum
+
+                span.client-info__value-name Адрес:
+                span.client-info__value Empty
+
+                span.client-info__value-name Город:
+                span.client-info__value Empty
+
+                span.client-info__value-name Область:
+                span.client-info__value Empty
+
+                span.client-info__value-name Страна:
+                span.client-info__value lv
+
+                span.client-info__value-name Телефон:
+                span.client-info__value 37125298377
+
+                span.client-info__value-name Мобильный:
+                span.client-info__value Empty
+
+                span.client-info__value-name Факс:
+                span.client-info__value Empty
+
+                span.client-info__value-name Язык:
+                span.client-info__value Russian
+
+                span.client-info__value-name Торговая группа:
+                span.client-info__value Empty
+        .client-note
+          button.client-note__new-note-btn Новая заметка
+          table.client-note__table
+            thead
+              tr
+                th Id
+                th ФИО брокера
+                th ФИО клиента
+                th Заголовок
+                th Дата
+                th Тело
+            tbody
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+              tr
+                td 1
+                td testmail0@gmail.com
+                td Имя0 Фамилия0
+                td 9999999990
+                td Толик Мудрый
+                td не верефицирован
+        .client-wrap
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            .table-doublewrapper
+              .table-wrapper
+                table.client-small-cards__table
+                  thead
+                    tr
+                      th thead
+                      th thead
+                      th thead
+                  tbody
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            .table-doublewrapper
+              .table-wrapper
+                table.client-small-cards__table
+                  thead
+                    tr
+                      th thead
+                      th thead
+                      th thead
+                  tbody
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+                    tr
+                      td lorem
+                      td lorem
+                      td lorem
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            table.client-small-cards__table
+              thead
+                tr
+                  th thead
+                  th thead
+                  th thead
+              tbody
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            table.client-small-cards__table
+              thead
+                tr
+                  th thead
+                  th thead
+                  th thead
+              tbody
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            table.client-small-cards__table
+              thead
+                tr
+                  th thead
+                  th thead
+                  th thead
+              tbody
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            table.client-small-cards__table
+              thead
+                tr
+                  th thead
+                  th thead
+                  th thead
+              tbody
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            table.client-small-cards__table
+              thead
+                tr
+                  th thead
+                  th thead
+                  th thead
+              tbody
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+          .client-small-cards
+            h4.client-small-cards__header
+              | Header
+              button.client-small-cards__btn
+                span.client-small-cards__btn-sumbol-wrapper
+                  i.fas.fa-arrows-alt
+            table.client-small-cards__table
+              thead
+                tr
+                  th thead
+                  th thead
+                  th thead
+              tbody
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+                tr
+                  td lorem
+                  td lorem
+                  td lorem
+      // /WORK AREA
+    // /MAIN SECTION
+
+    // FOOTER
+    .footer-wrapper
+      footer.footer
+    // /FOOTER

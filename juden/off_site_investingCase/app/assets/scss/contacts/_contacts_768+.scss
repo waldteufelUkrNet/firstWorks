@@ -1,0 +1,17 @@
+@media only screen and (min-width: 768px) {
+  .section1 {
+    &__grid {
+      grid-template-columns: 2fr 3fr;
+    }
+    &__subheader {
+      text-align: left;
+    }
+    &__p1 {
+      text-align: left;
+
+    }
+    &__p2 {
+      text-align: left;
+    }
+  }
+}

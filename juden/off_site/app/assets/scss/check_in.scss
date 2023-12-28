@@ -1,0 +1,43 @@
+// @import "variables";
+@import "fonts";
+@import "style_general";
+
+.s1-wrapper {
+	width: 100%;
+}
+.section1 {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 75px 15px 0px;
+  &__header {
+    font-family: rcb;
+    font-size: 26px;
+    text-align: center;
+    padding: 20px 0 10px;
+  }
+  &__subheader {
+    font-family: rcl;
+    font-size: 16px;
+    color: dodgerblue;
+    text-align: center;
+    padding: 10px 0 20px;
+  }
+  .info {
+    font-family: rcl;
+    font-size: 16px;
+    text-align: justify;
+    p {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@import "check_in/check_in_320+";
+
+//BEM-blocks
+// @import "../BEM-blocks/header/header.scss";
+// @import "../BEM-blocks/footer/footer.scss";
+// @import "../BEM-blocks/slick_money/slick_money.scss";
+// @import "../BEM-blocks/language_switcher/language_switcher.scss";
+// @import "../BEM-blocks/menu-btn/menu-btn.scss";
+// @import "../BEM-blocks/contacts/contacts.scss";

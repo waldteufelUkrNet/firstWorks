@@ -1,0 +1,244 @@
+@import "reset";
+//@import "variables";
+@import "fonts";
+//@import "size_info";
+//@import "style_general";
+//@import "style_320+";
+//@import "style_576+";
+//@import "style_768+";
+//@import "style_992+";
+//@import "style_1200+";
+//@import "style_1920+";
+
+.client-card {
+    font-family: rb;
+    -webkit-box-flex: 18px;
+    -webkit-flex: 18px;
+    -ms-flex: 18px;
+    flex: 18px;
+    text-transform: uppercase;
+    padding-top: 20px
+}
+
+.client-menu,
+.client-info,
+.client-note,
+.client-wrap {
+    font: 16px rcl;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid grey;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 15px
+}
+
+.client-menu {
+    display: grid;
+    grid-template-columns: 60px repeat(4, auto);
+    grid-column-gap: 10px;
+    position: relative;
+    height: 67px;
+}
+
+.client-menu__go-out-btn {
+    outline: 0;
+    cursor: pointer;
+    -webkit-align-self: start;
+    -ms-flex-item-align: start;
+    align-self: start;
+    padding-top: 6px;
+    padding-bottom: 6px
+}
+
+.client-menu__go-out-btn-sumbol-wrapper {
+    display: block;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.client-menu__dropdown {
+    position: relative
+}
+
+.client-menu__dropdown-btn {
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    position: relative
+}
+
+.client-menu__dropdown-btn-left {
+    position: absolute; z-index: 1111;
+    top: 50%;
+    left: 15px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+.client-menu__dropdown-btn-right {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+.client-menu__dropdown-options-holder {
+	  position: relative; z-index: 1122;
+	  left: 1px;
+    width: -webkit-calc(100% - 2px);
+    width: calc(100% - 2px);
+    border: 1px solid grey;
+    height: 0;
+    overflow: hidden;
+    display: none;
+    background-color: white;
+}
+
+.client-menu__dropdown-options-holder a {
+    display: block;
+    width: -webkit-calc(100% - 8px);
+    width: calc(100% - 8px);
+    margin: 4px;
+    border-bottom: 1px solid grey
+}
+
+.client-info__1 {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 15px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start
+}
+
+.client-info__1 span {
+    position: relative
+}
+
+.client-info__onoff-img {
+    width: 24px;
+    height: 24px
+}
+
+.client-info__2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly
+}
+
+.client-info__column-header {
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline
+}
+
+.client-info__value-wrapper {
+    display: block
+}
+
+.client-info__value-name {
+    display: inline-block;
+    min-width: 80px
+}
+
+.client-info__value {
+    color: DodgerBlue
+}
+
+.client-note__new-note-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    cursor: pointer
+}
+
+.client-note__table {
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid grey
+}
+
+.client-note__table th {
+    font-family: rb;
+    background-color: grey;
+    text-align: left
+}
+
+.client-note__table th,
+.client-note__table td {
+    padding: 6px
+}
+
+.client-note__table tr:nth-of-type(even) {
+    background-color: #d3d3d3
+}
+
+.client-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px
+}
+
+.client-small-cards {
+    padding: 10px;
+    border: 1px solid grey;
+    -webkit-border-radius: 6px;
+    border-radius: 6px
+}
+
+.client-small-cards__header {
+    font-family: rb;
+    padding: 6px;
+    position: relative
+}
+
+.client-small-cards__btn {
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+.client-small-cards__table {
+    font-size: 14px;
+    width: 100%
+}
+
+.client-small-cards__table th {
+    background-color: #d3d3d3;
+    text-align: left
+}
+
+.client-small-cards__table th,
+.client-small-cards__table td {
+    padding: 6px
+}
+.client-small-cards__table tr:hover {
+    background-color: lightgrey;
+}
+
+.table-doublewrapper {
+	height: 186px;
+	overflow: hidden;
+	position: relative;
+}
+.table-wrapper {
+	height: 186px;
+	width: calc( 100% + 20px);
+	overflow: auto;
+}

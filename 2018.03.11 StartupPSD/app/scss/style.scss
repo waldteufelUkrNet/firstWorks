@@ -1,0 +1,24 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "size_info";
+@import "style_general";
+
+
+//BEM-blocks
+@import "../BEM-blocks/_services-card";
+@import "../BEM-blocks/_team-member-card";
+@import "../BEM-blocks/_work-card";
+@import "../BEM-blocks/_blog-card";
+@import "../BEM-blocks/_contact-card";
+
+
+//@media-blocks
+@import "style_320+";
+@import "style_576+";
+@import "style_768+";
+@import "style_992+";
+@import "style_1200+";
+@import "style_1920+";
+
+

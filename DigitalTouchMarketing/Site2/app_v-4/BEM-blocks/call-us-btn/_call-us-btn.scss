@@ -1,0 +1,111 @@
+@media only screen and (min-width: 320px) {
+	.call-us-btn__positioning-wrapper {
+		position: fixed; z-index: 3333;
+		bottom: 3px; right: -200px;
+	}
+	.call-us-btn {
+		width: 200px;
+		text-align: center;
+		position: relative;
+		box-shadow: 0 0 10px grey;
+		background-color: rgba(255,255,255,.9);
+		&__girl {
+			height: auto;
+			width: 180px;    
+		}
+		&__header {
+			font-family: bb;
+			text-align: center;
+			padding: 10px 0;
+		}
+		&__link {
+			display: inline-block;
+			width: 80px;
+	    height: 80px;
+		}
+		&__img {
+	    width: 50px;
+	    height: 50px;
+		}
+		&__close {
+	    position: absolute;
+	    top: 0; right: 0;
+	    width: 30px;
+	    height: 30px;
+	    padding: 0;
+	    font-size: 20px;
+	    background-color: transparent;
+	    border: none;
+	    cursor: pointer;
+		}
+		&__reopen {
+			display: none;
+			width: 20px;
+			height: 60px;
+			position: absolute;
+			bottom: 0; left: -20px;
+			background-color: red;
+			color: white;
+			padding-top: 22px;
+			border: 1px solid transparent;
+			border-radius: 6px 0 0 6px;
+			cursor: pointer;
+		}
+	}
+}
+
+@media only screen and (min-width: 992px) {
+.call-us-btn__positioning-wrapper {
+	position: fixed; z-index: 3333;
+	bottom: 3px; right: -120px;
+}
+.call-us-btn {
+	width: 120px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 0 10px grey;
+	background-color: rgba(255,255,255,.9);
+	&__girl {
+		height: 163px;
+		width: 100px;    
+	}
+	&__header {
+		font-family: bb;
+		text-align: center;
+		padding: 10px 0;
+	}
+	&__link {
+		display: inline-block;
+		width: 50px;
+    height: 50px;
+	}
+	&__img {
+    width: 30px;
+    height: 30px;
+	}
+	&__close {
+    position: absolute;
+    top: 0; right: 0;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+	}
+	&__reopen {
+		display: none;
+		width: 20px;
+		height: 60px;
+		position: absolute;
+		bottom: 0; left: -20px;
+		background-color: red;
+		color: white;
+		padding-top: 22px;
+		border: 1px solid transparent;
+		border-radius: 6px 0 0 6px;
+		cursor: pointer;
+	}
+}
+}

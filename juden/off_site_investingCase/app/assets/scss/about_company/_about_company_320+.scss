@@ -1,0 +1,103 @@
+@media only screen and (min-width: 320px) {
+  .s1-wrapper {
+    width: 100%;
+  }
+  .section1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 75px 15px 0px;
+    &__header {
+      font-family: rcb;
+      font-size: 26px;
+      text-align: center;
+      padding: 20px 0 10px;
+    }
+    &__subheader {
+      font-family: rcl;
+      font-size: 16px;
+      color: dodgerblue;
+      text-align: center;
+      padding: 10px 0 20px;
+      line-height: 1.3em;
+    }
+  }
+
+  .s2-wrapper {
+    width: 100%;
+    background: linear-gradient(45deg, #149ccb, #000202);
+  }
+  .section2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    &__text {
+      font-family: rcl;
+      font-size: 18px;
+      line-height: 1.3em;
+      text-align: justify;
+      color: white;
+      order: 2;
+      p {
+        padding-bottom: 10px;
+      }
+    }
+    &__logo {
+      order: 1;
+      img {
+        width: 270px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .bold-text {
+      font-family: rcb;
+      font-size: 18px;
+    }
+  }
+
+  .s3-wrapper {
+    width: 100%;
+  }
+  .section3 {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 15px 0px;
+    &__header {
+      font-family: rcl;
+      font-size: 20px;
+      text-align: center;
+      .bold-text {
+      font-family: rb;
+      font-size: 18px;
+      }
+    }
+    &__subheader {
+      font-family: rcl;
+      font-size: 20px;
+      color: dodgerblue;
+      text-align: center;
+      padding: 10px 0 20px;
+      line-height: 1.3em;
+    }
+    &__list {
+      list-style: decimal inside;
+      font-family: rcb;
+      margin-bottom: 20px;
+
+    }
+    &__text {
+      font-family: rcl;
+      text-align: justify;
+      margin-bottom: 10px;
+      line-height: 1.3em;
+      .bold-text {
+        font-family: rb;
+        font-size: 16px;
+      }
+    }
+  }
+}

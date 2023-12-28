@@ -1,0 +1,61 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title Verification of the user
+
+    link(rel='icon', href='assets/img/logo-small.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/verification.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header_en.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header USER VERIFICATION
+          h5.section1__subheader The procedure for verifying the identity of the user.
+          .section1__grid
+            .section1__left-column: img(src="assets/img/pass.png", alt="pass.png" style='width: 180px')
+            .section1__right-column
+              .section1__grid-header What is required for verification?
+              .section1__grid-subheader Under the rules of the company, you must pass the verification of the account without fail, otherwise the account may be blocked.
+              .section1__block
+                .section1__block-head
+                  .section1__logo: i.far.fa-credit-card
+                  .section1__block-header When replenishing an account through a bank card
+                ol.section1__list
+                  li.section1__list-item Scan / photo cards on both sides, which you used to replenish the account on the platform, leaving the first and last 4 digits visible, the name of the card holder, the expiration date, the owner's signature.
+                  li.section1__list-item Document confirming identity: passport or ID card
+                  li.section1__list-item Document confirming the address of residence: utility bill, Internet bill, etc., not older than 3 months.
+                  li.section1__list-item Form of credit card authorization F-306
+                  li.section1__list-item Разрешение I-402
+
+      // /SECTION 1
+      include assets/BEM-blocks/contacts/contacts_en.pug
+      include assets/BEM-blocks/slick_money/slick_money.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer_en.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

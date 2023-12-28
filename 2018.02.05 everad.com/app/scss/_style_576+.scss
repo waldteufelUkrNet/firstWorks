@@ -1,0 +1,139 @@
+/* ↓↓↓ for 576px and more ↓↓↓ */
+@media only screen and (min-width: 576px) {
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 1 how-much ↓↓↓ */
+		.how-much {
+			min-height: 1560px;
+
+			.leaf {
+				left: 20px;
+				transform: translate(0%);
+			}
+
+			.hand {
+				top: 90px;
+				right: 10px;
+				transform: translate(0%);
+			}
+
+			h1 {
+				font-size: 60px;
+				padding-top: 140px;
+			}
+
+			.list {
+				width: 300px;
+			}
+
+			.bottle-with-shadow {
+				display: block;
+				position: absolute;
+				top: 520px;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			.sale {
+				top: 870px;
+			}
+
+			.numdercard-holder {
+				top: 1049px;
+			}
+
+			.form {
+				top: 1133px;
+			}
+		}
+		/* ↑↑↑ /SECTION 1 how-much ↑↑↑ */
+
+		/* ↓↓↓ SECTION 2 dialog ↓↓↓ */
+		.dialog {
+
+			h1 {
+				font-size: 48px;
+			}
+
+			p {
+				font-size: 22px;
+				padding: 0;
+			}
+
+			.question {
+				height: 260px;
+
+				span {
+					left: 40px;
+				}
+
+				h4 {
+					font-size: 24px;
+				}
+
+				button {
+										
+					&:first-of-type {
+							left: 15px;
+						transform: translate(0%);
+					}
+
+					&:last-of-type {
+						top: 131px;
+						right: 15px;
+						transform: translate(0%);
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 2 dialog ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 info ↓↓↓ */
+		.info {
+
+			h1 {
+				font-size: 48px;
+				line-height: 52px;
+				text-shadow: 0 0 10px white;
+			}
+		}
+		/* ↑↑↑ /SECTION 3 info ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 preference ↓↓↓ */
+		.preference {
+			min-height: 1460px;
+
+			h1 {
+				font-size: 48px;
+			}
+
+			.bottle {
+				display: block;
+				position: absolute;
+				top: 144px;
+				left: 50%;
+				transform: translate(-50%);
+				z-index: 2;
+			}
+
+			.card-holder {
+				width: 440px;
+				top: 660px;
+				right: calc(50% - 440px);
+				grid-template-columns: auto auto;
+			}
+		}
+		/* ↑↑↑ /SECTION 4 preference ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 doctor ↓↓↓ */
+		.doctor {
+
+			h1 {
+				font-size: 48px;
+			}
+		}
+		/* ↑↑↑ /SECTION 5 doctor ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

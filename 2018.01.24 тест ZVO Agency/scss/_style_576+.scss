@@ -1,0 +1,22 @@
+/* ↓↓↓ for 576px and more ↓↓↓ */
+@media only screen and (min-width: 576px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+  .header-wrapper {
+
+  	.header {
+      grid-template-columns: 145px auto 145px;
+	  }
+  }
+
+  .callback {
+  	&__button {
+      width: 145px;
+      height: 39px;
+      font-size: 16.5px;
+      padding-top: 2px;
+      margin-top: 0px;
+  	}
+  }
+	/* ↑↑↑ /HEADER ↑↑↑ */
+}

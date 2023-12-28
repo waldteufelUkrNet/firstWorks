@@ -1,0 +1,25 @@
+.counter-card {
+  width: 136px;
+  @media only screen and (min-width: 992px) {
+    width: 170px;
+  }
+  &__counter {
+    font-family: mt;
+    font-size: 48px;
+    color: white;
+    padding-top: 20px;
+  }
+  &__description {
+    font-family: ml;
+    font-size: 14px;
+    color: #c7b299;
+    text-transform: uppercase;
+    padding: 12px 0 28px;
+  }
+  &__line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,89 @@
+body {
+	background-color: grey;
+}
+
+
+.form-wrapper {
+  width: 320px;
+  //min-height: 240px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  background-color: #373535;
+  box-shadow: 0 0 12px white;
+  padding: 15px;
+  margin: 15px auto;
+  .popup-form {
+	  font-family: rcl;
+	  font-size: 14px;
+	  position: relative;
+    h4 {
+    	font-size: 22px;
+    	color: gold;
+    	text-align: center;
+    	text-decoration: underline;
+    	padding-bottom: 10px;
+    }
+	  label {
+	  	display: block;
+	  	height: 24px;
+	  	line-height: 24px;
+	  	position: relative;
+      color: white;
+	  }
+	  input,
+	  select {
+	  	height: 24px;
+	  	width: 100%;
+	  	margin: 10px 0;
+	  	outline: none;
+	    font-family: rcl;
+	    font-size: 14px;
+	    position: relative;
+	    border: none;
+	    &::placeholder {
+	    	opacity: 1;
+	    	color: black;
+	    }
+	  }
+	  input {
+	  	padding-left: 6px;
+	  }
+    button {
+    	display: inline-block;
+    	width: 45%;
+    	height: 30px;
+    	padding: 0 15px;
+    	border-radius: 6px;
+    	cursor: pointer;
+    	font-family: rcl;
+    	font-size: 14px;
+      color: white;
+      border: none;
+      transition: background-color .5s;
+      margin-top: 15px;
+      &:first-of-type {
+      	margin-right: 25px;
+      	background-color: DodgerBlue;
+      	&:hover {
+      		background-color: RoyalBlue;
+      	}
+      }
+      &:last-of-type {
+      	background-color: LimeGreen;
+      	&:hover {
+      		background-color: MediumSeaGreen;
+      	}
+      }
+    }
+	}
+	.validation-info {
+		display: block;
+		width: 100%;
+		height: 0px;
+		line-height: 24px;
+		background-color: #ffe5e5;
+		border-left: 6px solid red;
+		padding-left: 6px;
+		overflow: hidden;
+	}
+}

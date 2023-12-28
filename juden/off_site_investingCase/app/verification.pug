@@ -1,0 +1,61 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title Верификация пользователя
+
+    link(rel='icon', href='assets/img/logo-small.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/slick-theme.css')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='assets/css/verification.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+  body
+    //- include assets/BEM-blocks/size-info/size-info.pug
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      .s1-wrapper
+        section.section1
+          h1.section1__header ВЕРИФИКАЦИЯ ПОЛЬЗОВАТЕЛЯ
+          h5.section1__subheader Процедура подтверждения личности пользователя.
+          .section1__grid
+            .section1__left-column: img(src="assets/img/pass.png", alt="pass.png" style='width: 180px')
+            .section1__right-column
+              .section1__grid-header Что требуется для верификации?
+              .section1__grid-subheader По правилам компании вы должны пройти верификацию счета в обязательном порядке, в противном случае счет может быть заблокирован.
+              .section1__block
+                .section1__block-head
+                  .section1__logo: i.far.fa-credit-card
+                  .section1__block-header При пополнении счета через банковскую карту
+                ol.section1__list
+                  li.section1__list-item Скан/фото карты с двух сторон, которые вы использовали для пополнения счета на платформе, оставив видимыми первые и последние 4 цифры, имя владельца карты, срок годности, подпись владельца.
+                  li.section1__list-item Документ, подтверждающий личность: паспорт или ID карту
+                  li.section1__list-item Документ, подтверждающий адрес проживания: счет за коммунальные платежи, счет за интернет или др., не старше 3 месяцев.
+                  li.section1__list-item Форма авторизации кредитной карты Ф-306
+                  li.section1__list-item Разрешение I-402
+
+      // /SECTION 1
+      include assets/BEM-blocks/contacts/contacts.pug
+      include assets/BEM-blocks/slick_money/slick_money.pug
+    // /MAIN SECTION
+
+    // FOOTER
+    footer
+      include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='assets/libs/fontawesome-all.js')

@@ -1,0 +1,58 @@
+body {
+	font-family: rcl;
+}
+.sity-wrapper {
+	width: 440px;
+	margin: 20px auto;
+	border: 1px solid lightgrey;
+	padding: 6px 12px;
+}
+.storage-wrapper1,
+.tech-wrapper { border: 1px solid lightgrey;
+	margin: 10px auto;
+	padding: 6px;
+	.storage-wrapper2{
+		display: grid;
+	  grid-template-columns: repeat(8, 1fr);
+	}
+}
+.tech-wrapper {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 6px;
+}
+.fields-wrapper { border: 1px solid lightgrey;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: space-between;
+	align-content: space-between;
+	grid-gap: 10px;
+	.stoff {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		border: 1px solid lightskyblue;
+		align-self: center;
+		justify-self: center;
+		text-align: center;
+		border-radius: 6px;
+		font-size: 12px;
+	}
+	.holz{
+		background-color: Chartreuse;
+	}
+	.lehm{
+		background-color: Chocolate;
+	}
+	.eisen{
+		background-color: LightSteelBlue;
+	}
+	.getreide{
+		background-color: Gold;
+	}
+}
+.production-wrapper { border: 1px solid lightgrey;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-self: start;
+}

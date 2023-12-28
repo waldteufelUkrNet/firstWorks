@@ -1,0 +1,23 @@
+// ↓↓↓ BEM-blocks: language-switcher (start) ↓↓↓
+
+style
+  include language_switcher.css
+
+.language-switcher
+  .language-switcher__btn(title='изменить язык')
+    .language-switcher__btn-cover-for-click
+    img.language-switcher__btn-img(src="", alt="")
+    i.fas.fa-chevron-down
+  .language-switcher__panel
+    .language-switcher__triangle
+    a.language-switcher__language-item(data-lang='ru')
+      img.language-switcher__lang-img(src="assets/img/lang-ru.png", alt="lang-ru.png")
+      span.language-switcher__lang-name Русский
+    a.language-switcher__language-item(data-lang='en')
+      img.language-switcher__lang-img(src="assets/img/lang-en.png", alt="lang-en.png")
+      span.language-switcher__lang-name English
+
+script
+  include ../minjs/language_switcher/language_switcher.js
+
+// ↑↑↑ BEM-blocks: language-switcher (end) ↑↑↑

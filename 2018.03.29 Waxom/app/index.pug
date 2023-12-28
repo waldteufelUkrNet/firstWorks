@@ -1,0 +1,428 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='css/libs.min.css')
+
+    // js-libs (font awesome, slick, wow ...)
+    script(src='js/libs.min.js')
+
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/js.js', defer='')
+
+  body
+
+    // HEADER
+    .header-wrapper
+      header.header
+        // NAVIGATION
+        include BEM-blocks/nav-block/nav-block.pug
+        // /NAVIGATION
+
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+
+      // SECTION 1 slider
+      .s1-wrapper.s1-slick
+
+        .slick-item
+          .slick-item-cover
+          h2 Unique and Modern Design
+          h1 Portfolio PSD Template
+          h3 Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.
+          button.btn get started 
+
+        .slick-item
+          .slick-item-cover
+          h2 Unique and Modern Design
+          h1 Portfolio PSD Template
+          h3 Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.
+          button.btn get started 
+
+        .slick-item
+          .slick-item-cover
+          h2 Unique and Modern Design
+          h1 Portfolio PSD Template
+          h3 Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.
+          button.btn get started 
+
+        .slick-item
+          .slick-item-cover
+          h2 Unique and Modern Design
+          h1 Portfolio PSD Template
+          h3 Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.
+          button.btn get started 
+
+        .slick-item
+          .slick-item-cover
+          h2 Unique and Modern Design
+          h1 Portfolio PSD Template
+          h3 Nam liber tempor cum soluta nobis eleifend option congue nihil imper diet doming id quod mazim placerat facer possim assum.
+          button.btn get started 
+
+      // /SECTION 1
+
+      // SECTION 2 services
+      .s2-wrapper
+        section.s2
+
+          .services-card
+            img.services-card__img(
+                src="img/s2__wad.png"
+                alt="s2__wad.png")
+            img.services-card__img.services-card__img_hover(
+                src="img/s2__wad_hover.png"
+                alt="s2__wad_hover.png")
+            h4.services-card__header Web & App Design
+            p.services-card__info Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+            .services-card__line
+
+          .services-card
+            img.services-card__img(
+                src="img/s2__dev.png"
+                alt="s2__dev.png")
+            img.services-card__img.services-card__img_hover(
+                src="img/s2__dev_hover.png"
+                alt="s2__dev_hover.png")
+            h4.services-card__header Development
+            p.services-card__info Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
+            .services-card__line
+
+          .services-card
+            img.services-card__img(
+                src="img/s2__cust.png"
+                alt="s2__cust.png")
+            img.services-card__img.services-card__img_hover(
+                src="img/s2__cust_hover.png"
+                alt="s2__cust_hover.png")
+            h4.services-card__header Customization
+            p.services-card__info Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+            .services-card__line
+
+          .services-card
+            img.services-card__img(
+                src="img/s2__mark.png"
+                alt="s2__mark.png")
+            img.services-card__img.services-card__img_hover(
+                src="img/s2__mark_hover.png"
+                alt="s2__mark_hover.png")
+            h4.services-card__header Marketing
+            p.services-card__info Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+            .services-card__line
+      // /SECTION 2
+
+      // SECTION 3 ideas
+      .s3-wrapper
+        section.s3
+          h1.section-header Waxom is Realization of your Ideas.
+          h3.section-subheader Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+          img(src="img/s3-1.jpg" alt="s3-1.jpg")
+          img(src="img/s3-2.jpg" alt="s3-2.jpg")
+          img(src="img/s3-3.jpg" alt="s3-3.jpg")
+      // /SECTION 3
+
+      // SECTION 4 purchase
+      .s4-wrapper
+        section.s4
+          h1.s4__header
+            span Waxom
+            |  Multipurpose WordPress Theme
+          h3.s4__subheader Don't Forget to Rate the Template. Thanks so much!
+          button.btn.s4__btn Purchase Now
+      // /SECTION 4
+
+      // SECTION 5 projects
+      .s5-wrapper
+        section.s5#section5
+          h1.section-header Our Latest Projects.
+          h3.section-subheader Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+
+          ul.s5__section-nav
+            li: a.a-btn.s5__a-btn_margin.a-btn_activ(href="#section5" data-choice="all") All
+            li: a.a-btn.s5__a-btn_margin(href="#section5" data-choice="WebDesign") Web Design
+            li: a.a-btn.s5__a-btn_margin(href="#section5" data-choice="MobileApp") Mobile App
+            li: a.a-btn.s5__a-btn_margin(href="#section5" data-choice="Illustration") Illustration
+            li: a.a-btn.s5__a-btn_margin(href="#section5" data-choice="Photography") Photography
+
+          .s5__cards-holder
+
+            .project-card(data-choice="Photography")
+              img.project-card__img(src="img/s5-project-1.jpg" alt="project-1.jpg")
+              .project-card__cover
+              .project-card__icons-holder
+                a.project-card__icon(href="#"): i.fas.fa-link
+                a.project-card__icon(href="#"): i.fas.fa-search
+              .project-card__info
+                h4.project-card__h4 Claritas Etiam Processus
+                h5.project-card__h5 Photography, Nature
+
+            .project-card(data-choice="WebDesign")
+              img.project-card__img(src="img/s5-project-2.jpg" alt="project-1.jpg")
+              .project-card__cover
+              .project-card__icons-holder
+                a.project-card__icon(href="#"): i.fas.fa-link
+                a.project-card__icon(href="#"): i.fas.fa-search
+              .project-card__info
+                h4.project-card__h4 Quam Nutamus Farum
+                h5.project-card__h5 Graphic Design, Mock-Up
+
+            .project-card(data-choice="Photography")
+              img.project-card__img(src="img/s5-project-3.jpg" alt="project-1.jpg")
+              .project-card__cover
+              .project-card__icons-holder
+                a.project-card__icon(href="#"): i.fas.fa-link
+                a.project-card__icon(href="#"): i.fas.fa-search
+              .project-card__info
+                h4.project-card__h4 Usus Legentis Videntur
+                h5.project-card__h5 Photography, Holiday
+
+            .project-card(data-choice="Photography")
+              img.project-card__img(src="img/s5-project-4.jpg" alt="project-1.jpg")
+              .project-card__cover
+              .project-card__icons-holder
+                a.project-card__icon(href="#"): i.fas.fa-link
+                a.project-card__icon(href="#"): i.fas.fa-search
+              .project-card__info
+                h4.project-card__h4 Claritas Etiam Processus
+                h5.project-card__h5 Photography, Nature
+
+            .project-card(data-choice="WebDesign")
+              img.project-card__img(src="img/s5-project-5.jpg" alt="project-1.jpg")
+              .project-card__cover
+              .project-card__icons-holder
+                a.project-card__icon(href="#"): i.fas.fa-link
+                a.project-card__icon(href="#"): i.fas.fa-search
+              .project-card__info
+                h4.project-card__h4 Quam Nutamus Farum
+                h5.project-card__h5 Graphic Design, Mock-Up
+
+            .project-card(data-choice="Photography")
+              img.project-card__img(src="img/s5-project-6.jpg" alt="project-1.jpg")
+              .project-card__cover
+              .project-card__icons-holder
+                a.project-card__icon(href="#"): i.fas.fa-link
+                a.project-card__icon(href="#"): i.fas.fa-search
+              .project-card__info
+                h4.project-card__h4 Usus Legentis Videntur
+                h5.project-card__h5 Photography, Holiday
+
+          button.btn.s5__btn Load More
+      // /SECTION 5
+
+      // SECTION 6 video
+      .s6-wrapper.parallax-container
+        img.parallax-item(src="img/s6-parallax-image.jpg" alt="s6-parallax-image.jpg")
+        section.s6
+          .s6__video-btn
+            img(src="img/s6-video-button.png" alt="s6-video-button.png")
+          h1.s6__header Waxom Video Presentation
+          h3.s6__subheader Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
+          p.video-timer 03:26
+          .s6__video-holder
+            video.s6__video#s6__video(controls="")
+              source(src="video/movie.mp4", type="video/mp4")
+            button.s6__video-close
+              i.fas.fa-times
+      // /SECTION 6
+
+      // SECTION 7 devices
+      .s7-wrapper
+        section.s7
+          .s7__img-holder
+            img.s7__bg(src="img/s7-bg.png" alt="s7-bg.png")
+          .s7__content-holder
+            h1.s7__header Excellent for Mobile Devices.
+            p.s7__info Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl u aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            ul.s7__list
+              li Nam liber tempor cum soluta nobis eleifend option;
+              li Option congue nihil imperdiet doming id quod mazim placerat facer;
+              li Eodem modo typi, qui nunc nobis videntur parum futurum;
+              li Investigationes demonstraverunt lectores
+      // /SECTION 7
+
+      // SECTION 8 counters
+      .s8-wrapper
+        section.s8
+          .counter-card
+            img.counter-card__img(src="img/s8-counter-img-1.png" alt="s8-counter-img-1.png")
+            .counter-card__counter 3587
+            .counter-card__description Satisfied Clients
+            .counter-card__line
+
+          .counter-card
+            img.counter-card__img(src="img/s8-counter-img-2.png" alt="s8-counter-img-2.png")
+            .counter-card__counter 207
+            .counter-card__description Cups of coffee
+            .counter-card__line
+
+          .counter-card
+            img.counter-card__img(src="img/s8-counter-img-3.png" alt="s8-counter-img-3.png")
+            .counter-card__counter 2500
+            .counter-card__description Blog posts
+            .counter-card__line
+
+          .counter-card
+            img.counter-card__img(src="img/s8-counter-img-4.png" alt="s8-counter-img-4.png")
+            .counter-card__counter 873
+            .counter-card__description LIKES
+            .counter-card__line
+
+          .counter-card
+            img.counter-card__img(src="img/s8-counter-img-5.png" alt="s8-counter-img-5.png")
+            .counter-card__counter 900
+            .counter-card__description We launched
+            .counter-card__line
+      // /SECTION 8
+
+      // SECTION 9 posts
+      .s9-wrapper
+        section.s9
+          h1.section-header Recent Posts.
+          h3.section-subheader Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+
+          .s9-slick-wrapper
+            .s9-slick
+
+              .post-card.s9-slick__item-margin
+                img.post-card__img(src="img/s9-post-1.jpg" alt="img/s9-post-1.jpg")
+                .post-card__cover
+                .post-card__date 30
+                .post-card__month Sep.
+                h4.post-card__header Lorem ipsum dolor sit amet
+                p.post-card__text Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                a.post-card__more(href="#") Read More
+
+              .post-card.s9-slick__item-margin
+                img.post-card__img(src="img/s9-post-2.jpg" alt="img/s9-post-2.jpg")
+                .post-card__cover
+                .post-card__date 30
+                .post-card__month Sep.
+                h4.post-card__header Lorem ipsum dolor sit amet
+                p.post-card__text Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                a.post-card__more(href="#") Read More
+
+              .post-card.s9-slick__item-margin
+                img.post-card__img(src="img/s9-post-3.jpg" alt="img/s9-post-3.jpg")
+                .post-card__cover
+                .post-card__date 30
+                .post-card__month Sep.
+                h4.post-card__header Lorem ipsum dolor sit amet
+                p.post-card__text Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                a.post-card__more(href="#") Read More
+
+              .post-card.s9-slick__item-margin
+                img.post-card__img(src="img/s9-post-1.jpg" alt="img/s9-post-1.jpg")
+                .post-card__cover
+                .post-card__date 30
+                .post-card__month Sep.
+                h4.post-card__header Lorem ipsum dolor sit amet
+                p.post-card__text Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                a.post-card__more(href="#") Read More
+
+              .post-card.s9-slick__item-margin
+                img.post-card__img(src="img/s9-post-2.jpg" alt="img/s9-post-2.jpg")
+                .post-card__cover
+                .post-card__date 30
+                .post-card__month Sep.
+                h4.post-card__header Lorem ipsum dolor sit amet
+                p.post-card__text Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                a.post-card__more(href="#") Read More
+      // /SECTION 9
+
+      // SECTION 10 partners
+      .s10-wrapper.parallax-container2
+        img.parallax-item2(src="img/s10-bg.jpg" alt="s10-bg.jpg")
+        section.s10
+
+          a.partner-link(href="#")
+            img.partner-logo(src="img/s10-partner-1.png" alt="s10-partner-1.png")
+
+          a.partner-link(href="#")
+            img.partner-logo(src="img/s10-partner-2.png" alt="s10-partner-2.png")
+
+          a.partner-link(href="#")
+            img.partner-logo(src="img/s10-partner-3.png" alt="s10-partner-3.png")
+
+          a.partner-link(href="#")
+            img.partner-logo(src="img/s10-partner-4.png" alt="s10-partner-4.png")
+
+      // /SECTION 10
+
+    // /MAIN SECTION
+
+    // FOOTER
+    footer.footer
+      .footer-info-wrapper
+        .footer-info
+
+          .foo-i-col1
+            include BEM-blocks/logo-block/_logo-block.pug
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+            a.read-more(href="#") Read More
+
+          .foo-i-col2
+            h4.foo-i-col-header Recent Posts
+            .foo-post
+              p.foo-post__date September 08, 2015
+              p.foo-post__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            .foo-post
+              p.foo-post__date September 08, 2015
+              p.foo-post__text Diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            .foo-post
+              p.foo-post__date September 08, 2015
+              p.foo-post__text Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima
+
+          .foo-i-col3
+            h4.foo-i-col-header Our Twitter
+            .foo-twitt
+              p.foo-post__text
+                span @waxom
+                |  Cum soluta nobis eleifend option congue nihil imperdiet doming
+              p.foo-post__date 3 mins ago
+            .foo-twitt
+              p.foo-post__text Mirum est
+                | 
+                span #envato
+                |  notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+              p.foo-post__date 5 hours ago
+            .foo-twitt
+              p.foo-post__text Soluta nobis option
+                | 
+                span bit.ly/1Hniso7
+              p.foo-post__date 20 days ago
+
+          .foo-i-col4
+            h4.foo-i-col-header Dribbble Widget
+            .widget-container
+              a(href="#"): img(src="img/widget-1.jpg" alt="widget-1.jpg")
+              a(href="#"): img(src="img/widget-2.jpg" alt="widget-2.jpg")
+              a(href="#"): img(src="img/widget-3.jpg" alt="widget-3.jpg")
+              a(href="#"): img(src="img/widget-4.jpg" alt="widget-4.jpg")
+
+      .footer-copyright-wrapper
+        .footer-copyright
+
+          .foo-cr-left-column
+            span Copyright © 2015
+              | 
+              a(href="#") Waxom
+            span: a(href="#") Privacy Policy
+            span: a(href="#") FAQ
+            span: a(href="#") Support
+
+          .foo-cr-right-column
+            span Designed by
+              | 
+              a(href="#") ThemeFire
+            span Only on
+              | 
+              a(href="#") Envato Market
+    // /FOOTER

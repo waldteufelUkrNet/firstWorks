@@ -1,0 +1,47 @@
+.politics-cover {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	position: fixed; z-index: 3322;
+	top: 0; left: 0;
+	opacity: 0;
+	display: none;
+}
+.private-politics {
+	position: fixed; z-index: 3333;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 768px;
+	max-height: 90vh;
+	background-color: white;
+	text-align: justify;
+	padding: 15px;
+	font-family: rr;
+	font-size: 12px;
+	overflow: auto;
+	&__header {
+		font-family: rb;
+	}
+	&__text {
+		padding-bottom: 6px;
+	}
+	&__close_btn1 {
+		width: 20px;
+		height: 20px;
+		padding: 0;
+		position: absolute;
+		top: 4px; right: 4px;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+	&__close_btn2 {
+		height: 30px;
+		border: none;
+		border-radius: 3px;
+		background: linear-gradient(white, DodgerBlue);
+		margin: 10px 0;
+		cursor: pointer;
+	}
+}

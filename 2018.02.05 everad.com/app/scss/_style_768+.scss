@@ -1,0 +1,188 @@
+/* ↓↓↓ for 768px and more ↓↓↓ */
+@media only screen and (min-width: 768px) {
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 1 how-much ↓↓↓ */
+		.how-much {
+			min-height: 745px;
+
+			.logo {
+				left: 15px;
+				transform: translate(0%);
+			}
+
+			.leaf {
+				top: 31px;
+				left: 305px;
+			}
+
+			.hand {
+				top: 31px;
+				left: 515px;
+			}
+
+			h1 {
+				padding-top: 80px;
+				text-align: left;
+			}
+
+			h4 {
+				width: 330px;
+				padding: 20px 0 11px 0;
+				text-align: left;
+			}
+			
+			.list {
+				left: 0;
+			}
+
+			.bottle-with-shadow {
+				position: relative;
+				top: 0px;
+				left: 0px;
+				transform: translate(0%);
+				margin: 150px 0 0 29px;
+			}
+
+			.sale {
+				top: 220px;
+				right: 15px;
+				transform: translate(0%);
+			}
+
+			.numdercard-holder {
+				top: 399px;
+				right: 15px;
+				transform: translate(0%);
+			}
+
+			.form {
+				top: 483px;
+				right: 15px;
+				transform: translate(0%);
+			}
+		}
+		/* ↑↑↑ /SECTION 1 how-much ↑↑↑ */
+
+		/* ↓↓↓ SECTION 2 dialog ↓↓↓ */
+		.dialog {
+
+			.question {
+				width: 640px;
+
+				span {
+					left: 114px;
+				}
+
+				h4 {
+					padding-left: 189px;
+				}
+
+				button {
+					
+					&:first-of-type {
+						left: 60px;
+					}
+
+					&:last-of-type {
+						right: 60px;
+					}
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 2 dialog ↑↑↑ */
+
+		/* ↓↓↓ SECTION 3 info ↓↓↓ */
+		.info {
+			min-height: 392px;
+			background: white url("../img/bg-s3.png") right top;
+			background-repeat: no-repeat;
+			padding: 20px 100px 0 20px;
+
+			h1 {
+				text-align: left;
+			}
+
+			p {
+				padding-right: 280px;
+				text-align: left;
+			}
+
+		}
+		/* ↑↑↑ /SECTION 3 info ↑↑↑ */
+
+		/* ↓↓↓ SECTION 4 preference ↓↓↓ */
+		.preference {
+			min-height: 940px;
+
+			.bottle {
+				left: -50px;
+				transform: translate(0%);
+			}
+
+			.bg-s4 {
+				display: block;
+				position: absolute;
+				top: 340px;
+				left: -60px;
+				z-index: 1;
+			}
+
+			.card-holder {
+
+				top: 140px;
+				right: 0px;
+				transform: translate(0%);
+			}
+		}
+		/* ↑↑↑ /SECTION 4 preference ↑↑↑ */
+
+		/* ↓↓↓ SECTION 5 doctor ↓↓↓ */
+		.doctor {
+			min-height: 443px;
+			background: white url("../img/bg-s5.png") right top;
+			background-repeat: no-repeat;
+			border-radius: 9px;
+			padding: 20px 370px 0 15px;
+
+			h1 {
+				font-family: ptsnb;
+				font-size: 48px;
+				text-transform: uppercase;
+				padding-bottom: 10px;
+				text-align: left;
+			}
+
+			p {
+				font-family: ptsr;
+				font-size: 14px;
+				color: rgb(38,38,38);
+				line-height: 21px;
+				padding-bottom: 5px;
+				text-align: left;
+				width: 370px;
+
+				&:last-of-type {
+					font-family: ptsbi;
+					padding-top: 14px;
+					text-align: left;
+				}
+			}
+			
+			img {
+				display: block;
+				position: absolute;
+				top: 362px;
+				left: 260px;
+			}
+		}
+		/* ↑↑↑ /SECTION 5 doctor ↑↑↑ */
+	}
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+	.footer {}
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

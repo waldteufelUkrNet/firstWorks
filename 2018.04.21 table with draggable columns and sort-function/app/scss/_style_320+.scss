@@ -1,0 +1,99 @@
+/* ↓↓↓ for 320px and more ↓↓↓ */
+@media only screen and (min-width: 320px) {
+
+	.table-wrapper {
+	}
+
+	.some-table {
+	  border: 1px solid black;
+    margin: 50px auto;
+    position: relative;
+    th, td {
+    	height: 26px;
+    	display: inline-block;
+			overflow: hidden;
+    	padding: 5px 10px;
+    }
+    thead {
+    	position: relative;
+    }
+    thead tr {
+    	font-family: cb;
+    	background: linear-gradient(to right, MidnightBlue, DarkSlateBlue, DarkSlateBlue);
+    	color: white;
+    	&:nth-of-type(2) {
+    		background: black;
+    	}
+    }
+    tfoot {
+    	font-family: c;
+    	background: linear-gradient(to right, MidnightBlue, DarkSlateBlue, DarkSlateBlue);
+    	color: white;
+    }
+    tbody tr {
+    	font-family: ci;
+    	&:nth-of-type(odd) {
+    		background: linear-gradient(to right, DarkMagenta, CornflowerBlue, CornflowerBlue);
+    		color: white;
+    	}
+    	&:nth-of-type(even) {
+    		background: linear-gradient(to right, DarkOrange, Gold, Gold);
+    	}
+	  }
+		
+		/* ↓↓↓ columns width ↓↓↓ */
+		tr th:nth-of-type(1),
+		tr td:nth-of-type(1) {
+			width: 200px;
+		}
+
+		tr th:nth-of-type(2),
+		tr td:nth-of-type(2) {
+			width: 200px;
+		}
+
+		tr th:nth-of-type(3),
+		tr td:nth-of-type(3) {
+			width: 200px;
+		}
+		/* ↑↑↑ /columns width ↑↑↑ */
+
+		tr th:nth-of-type(4),
+		tr th:nth-of-type(5),
+		tr td:nth-of-type(4),
+		tr td:nth-of-type(5) {
+			width: 0px;
+			padding: 0;
+		}
+
+	  &__btn {
+	  	min-width: 60px;
+	  	font-family: ci;
+	  	font-size: 14px;
+	  	position: absolute;
+	  	top: 12px; left: calc(50% + 270px);
+	  	transform: translate(-50%);
+	  	background: linear-gradient(to right, DarkMagenta, CornflowerBlue, CornflowerBlue);
+    		color: white;
+    	border: none;
+    	padding: 4px 6px;
+    	cursor: pointer;
+	  }
+
+	  &__sort-btn {
+	  	position: relative;
+	  	width: 16px;
+	  	height: 16px;
+	  	margin: 2px 6px;
+	  	padding: 0;
+	  	background-color: transparent;
+	  	border: 1px solid orange;
+	  	border-radius: 50%;
+	  	cursor: pointer;
+	  	color: orange;
+	  	font-size: 12px;
+	  	outline: none;
+	  }
+	}
+
+}

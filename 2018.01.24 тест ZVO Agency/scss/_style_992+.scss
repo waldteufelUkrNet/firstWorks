@@ -1,0 +1,59 @@
+/* ↓↓↓ for 992px and more ↓↓↓ */
+@media only screen and (min-width: 992px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+
+	.navigation {
+  	&__menu {
+  		li {
+        &:nth-of-type(-n+2) a {
+          padding: 0 25px 0 15px;
+        }
+  			& a {
+          font-size: 21px;
+          padding: 0 15px 0 15px;
+  				&:hover {
+  				}
+  			}
+  		}
+  	}
+  	&__arrow {
+      padding-top: 20px;
+  	}
+    &__submenu {
+      li {
+        & a {
+          width: 200px;
+        }
+        &:nth-of-type(2) {
+        }
+        &:nth-of-type(3) {
+        }
+      }
+    }
+  }
+
+  .callback {
+  	&__button {
+  	}
+  }
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	
+  .card-holder {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    &__card {
+			&:nth-of-type(5),
+			&:nth-of-type(7) {
+				background-color: rgb(135,135,135);
+			}
+			&:nth-of-type(6),
+			&:nth-of-type(8) {
+				background-color: rgb(15,15,15);
+			}
+  	}
+  }
+
+	/* ↑↑↑ /MAIN PART ↑↑↑ */
+}

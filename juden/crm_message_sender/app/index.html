@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waldteufel@ukr.net</title>
+    <link rel="icon" href="img/wehrwolf.jpg">
+    <!-- css-libs (font awesome, slick, wow ...)-->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- js-libs (font awesome, slick, wow ...)-->
+    <script src="js/jquery3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script defer="" src="js/fontawesome-all.min.js"></script>
+    <!-- project stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <script src="js/layout.js" defer=""></script>
+    <!-- page stylesheet and js-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/message-sender.js" defer=""></script>
+  </head>
+  <body>
+    <!-- ↓↓↓ HEADER (start) ↓↓↓-->
+    <div class="header-wrapper">
+      <header class="header">
+        <!-- ↓↓↓ NAVIGATION-->
+        <nav class="navigation"><a class="company-logo">© New Trade Company</a>
+          <ul class="nav-ul-1">
+            <li><span id="nav-datetimer"></span></li>
+            <li><a href="#"><img src="img/calender.png" alt="img/calender.png" style="height: 36px"></a></li>
+            <li><a href="#"><img src="img/messageBell.png" alt="img/messageBell.png"></a></li>
+          </ul>
+          <ul class="nav-ul-2">
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#"><img src="img/ru.png" alt="img/ru.png" style="height: 28px"></a></li>
+            <li><a href="#"><img src="img/en.png" alt="img/en.png" style="height: 28px"></a></li>
+          </ul>
+        </nav>
+        <!-- /NAVIGATION-->
+      </header>
+    </div>
+    <!-- ↑↑↑ /HEADER (end) ↑↑↑-->
+    <!-- ↓↓↓ MAIN SECTION (start) ↓↓↓-->
+    <main class="main">
+      <!-- ↓↓↓ ASIDE MENU (start) ↓↓↓-->
+      <aside class="aside">
+        <div class="accordion-wrapper">
+          <ul class="accordion">
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-users"></i>Сustomers</a></li>
+            <li><a href="#"><i class="fas fa-bookmark"></i>Tickets</a></li>
+            <li><a href="#"><i class="far fa-bookmark"></i>Transactions</a></li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-link"></i>Communications<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Новое уведомление</a></li>
+                <li><a href="#">История уведомлений</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="far fa-copy"></i>Orders</a></li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-chart-line"></i>Analytics<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Analytics1</a></li>
+                <li><a href="#">Analytics2</a></li>
+                <li><a href="#">Analytics3</a></li>
+              </ul>
+            </li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="far fa-file-alt"></i>Logs<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Logs1</a></li>
+                <li><a href="#">Logs2</a></li>
+                <li><a href="#">Logs3</a></li>
+              </ul>
+            </li>
+            <li><a class="toggle" href="javascript:void(0);"><i class="fas fa-cogs"></i>Settings<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+              <ul class="inner">
+                <li><a href="#">Settings Тестовая таблица</a></li>
+                <li><a href="#">Settings2</a></li>
+                <li><a class="toggle" href="javascript:void(0);">Admin<span class="submenu-indicator"><i class="fas fa-plus"></i></span></a>
+                  <ul class="inner">
+                    <li><a href="#">Регистрация сотрудника</a></li>
+                    <li><a href="#">Смена пароля сотруднику</a></li>
+                    <li><a href="#">Admin3</a></li>
+                    <li><a href="#">Admin4</a></li>
+                    <li><a href="#"><i class="fas fa-briefcase"></i>Employees</a></li>
+                    <li><a href="#"><i class="far fa-flag"></i>Company</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- ↑↑↑ /ASIDE MENU (end) ↑↑↑-->
+      <!-- ↓↓↓ WORK AREA (start) ↓↓↓-->
+      <div class="work-area">
+        <h1 class="message-sender__form-header">Write multimessage</h1>
+        <form class="message-sender" method="get">
+          <div class="message-sender__checkbox-wrapper">
+            <div class="message-sender__checkbox-item">
+              <div class="message-sender__checkbox-btns-holder">
+                <h5 class="message-sender__checkbox-item-header">Sales</h5>
+                <button class="message-sender__checkbox-btns message-sender__checkbox-btns-check">check all</button>
+                <button class="message-sender__checkbox-btns message-sender__checkbox-btns-uncheck">uncheck all</button>
+              </div>
+              <div class="message-sender__checkbox-holder">
+                <ul class="message-sender__checkbox-list">
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Аарон"> Аарон
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Мойша"> Мойша
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="ІзраЇль"> Ізраїль
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Авель"> Авель
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Авраам"> Авраам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Давид"> Давид
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Єремія"> Єремія
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Захарія"> Захарія
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Мануїл"> Мануїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Хірам"> Хірам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Моїсей"> Моїсей
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Натан"> Натан
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Томас"> Томас
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Соломон"> Соломон
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ной"> Ной
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Адам"> Адам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Савелій"> Савелій
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Гавриїл"> Гавриїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ісая"> Ісая
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Йосип"> Йосип
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ісаак"> Ісаак
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Самуїл"> Самуїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Савватій"> Савватій
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Зеєв"> Зеєв
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Яків"> Яків
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ованес"> Ованес
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Єлисей"> Єлисей
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Менахем"> Менахем
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Іуда"> Іуда
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Веніамін"> Веніамін
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="message-sender__checkbox-item">
+              <div class="message-sender__checkbox-btns-holder">
+                <h5 class="message-sender__checkbox-item-header">Retentions</h5>
+                <button class="message-sender__checkbox-btns message-sender__checkbox-btns-check">check all</button>
+                <button class="message-sender__checkbox-btns message-sender__checkbox-btns-uncheck">uncheck all</button>
+              </div>
+              <div class="message-sender__checkbox-holder">
+                <ul class="message-sender__checkbox-list">
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Аарон"> Аарон
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Мойша"> Мойша
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="ІзраЇль"> Ізраїль
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Авель"> Авель
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Авраам"> Авраам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Давид"> Давид
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Єремія"> Єремія
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Захарія"> Захарія
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Мануїл"> Мануїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Хірам"> Хірам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Моїсей"> Моїсей
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Натан"> Натан
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Томас"> Томас
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Соломон"> Соломон
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ной"> Ной
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Адам"> Адам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Савелій"> Савелій
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Гавриїл"> Гавриїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ісая"> Ісая
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Йосип"> Йосип
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ісаак"> Ісаак
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Самуїл"> Самуїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Савватій"> Савватій
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Зеєв"> Зеєв
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Яків"> Яків
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ованес"> Ованес
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Єлисей"> Єлисей
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Менахем"> Менахем
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Іуда"> Іуда
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Веніамін"> Веніамін
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="message-sender__checkbox-item">
+              <div class="message-sender__checkbox-btns-holder">
+                <h5 class="message-sender__checkbox-item-header">Others</h5>
+                <button class="message-sender__checkbox-btns message-sender__checkbox-btns-check">check all</button>
+                <button class="message-sender__checkbox-btns message-sender__checkbox-btns-uncheck">uncheck all</button>
+              </div>
+              <div class="message-sender__checkbox-holder">
+                <ul class="message-sender__checkbox-list">
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Аарон"> Аарон
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Мойша"> Мойша
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="ІзраЇль"> Ізраїль
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Авель"> Авель
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Авраам"> Авраам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Давид"> Давид
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Єремія"> Єремія
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Захарія"> Захарія
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Мануїл"> Мануїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Хірам"> Хірам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Моїсей"> Моїсей
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Натан"> Натан
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Томас"> Томас
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Соломон"> Соломон
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ной"> Ной
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Адам"> Адам
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Савелій"> Савелій
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Гавриїл"> Гавриїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ісая"> Ісая
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Йосип"> Йосип
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ісаак"> Ісаак
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Самуїл"> Самуїл
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Савватій"> Савватій
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Зеєв"> Зеєв
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Яків"> Яків
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Ованес"> Ованес
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Єлисей"> Єлисей
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Менахем"> Менахем
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Іуда"> Іуда
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="message-sender__checkbox" type="checkbox" name="message-recipient" value="Веніамін"> Веніамін
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="message-sender__message-wrapper">
+            <input class="message-sender__subject" type="text" placeholder="subject" name="subject">
+            <textarea class="message-sender__message-body" name="message"></textarea>
+          </div>
+          <div class="message-sender__form-btns-wrapper">
+            <button class="message-sender__reset" type="reset">reset all</button>
+            <button class="message-sender__submit" type="submit">submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- ↑↑↑ /WORK AREA (end) ↑↑↑-->
+    </main>
+    <!-- ↑↑↑ /MAIN SECTION (end) ↑↑↑-->
+  </body>
+</html>

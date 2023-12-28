@@ -1,0 +1,133 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='css/libs.min.css')
+    // js-libs (font awesome, slick, wow ...)
+    script(defer='', src='js/libs.min.js')
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/js.js', defer='')
+  body
+    // HEADER
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1 purchase
+      .s1-wrapper
+        section.section1
+          h1.section-header Оформление заказа
+          .s1-grid
+            .form-holder
+              .container
+                ul.nav.nav-tabs
+                  li.nav-item
+                    a.nav-link.active(data-toggle="tab" href="#menu1"): span Я новый покупатель
+                  li.nav-item
+                    a.nav-link(data-toggle="tab" href="#menu2"): span Я зарегистрированный покупатель
+                .tab-content
+                  .tab-pane.active.container(id="menu1")
+
+                    form.new-customer-form(name="new-customer-form" action="#" method="get")
+
+                      .new-customer-form__receiver
+                        h5.new-customer-form__subheader Получатель заказа
+
+                        label(for="person-name") Имя и фамилия
+                        input(type="text" id="person-name" name="person-name")
+                        br
+
+                        label(for="person-phone") Телефон
+                        input(type="text" id="person-phone" name="person-phone")
+                        br
+
+                        label(for="person-sity") Город
+                        input(type="text" id="person-sity" name="person-sity" placeholder="Киев")
+                        br
+
+                        label(for="person-email") Эл. почта
+                        input(type="text" id="person-email" name="person-email" placeholder="user@mail.com")
+                        br
+
+                        a.new-customer-form__more-info(href="#demo" data-toggle="collapse") Добавить комментарий к заказу
+                        .new-customer-form__textarea.collapse#demo
+                          textarea
+                        br
+
+                      .new-customer-form__logistics
+                        label(for="person-sity") Доставка
+                        select(id="person-sity" name="sity")
+                          option(value="new-post") «Новая почта» — 25 грн.
+                          option(value="ukr-post") «Укрпошта» — 15 грн.
+                        br
+
+                        label(for="person-adress") Адрес склада
+                        select(id="person-adress" name="adress")
+                          option(value="1") Львов, Отделение №8 (до 30 кг): ул. Гетьмана И. Мазепы, 37
+                          option(value="2") Киев, Отделение №1 (до 30 кг): ул. Гетьмана И. Мазепы, 12
+                        br
+
+                      .new-customer-form__pay
+                        label(for="person-pay") Оплата
+                        select(id="person-pay" name="pay")
+                          option(value="1") наложеный платёж
+                          option(value="2") натурой
+                        br
+
+                      button.new-customer-form__btn Оформить заказ
+
+                  .tab-pane.container(id="menu2")
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda praesentium quia, voluptatum error id magnam magni sapiente est dolor tempora porro aperiam esse odit, ullam qui numquam? Excepturi libero quisquam quam voluptatum. Veniam laudantium officia dignissimos assumenda dicta dolores perspiciatis fugit excepturi, quaerat voluptatem distinctio ab aliquid maiores, sed itaque doloremque. Neque, rerum sint perspiciatis unde, ratione, consequuntur doloremque ut quidem aut hic recusandae dolore dolorum soluta, tempora ipsam in suscipit beatae earum id! Velit sit aperiam quam facilis dolor iure vitae, quibusdam nesciunt eaque veniam enim, hic minima quasi eligendi aspernatur eos officia odio sint. Libero expedita ut doloribus nemo unde, incidunt voluptatem sit quisquam amet dignissimos odio obcaecati nesciunt odit minus ad cum at dolores debitis consequatur animi, quos neque repudiandae, nostrum earum. Tempora blanditiis assumenda beatae, officiis quis quos, quidem corrupti facere temporibus inventore distinctio numquam recusandae quisquam quod mollitia molestias aliquid dolores eligendi sint doloribus reprehenderit in et pariatur. Placeat ad magni fuga accusamus vero dignissimos ex impedit officiis ipsam maiores quia praesentium voluptas inventore nemo, mollitia nihil temporibus tempore enim necessitatibus vel. Enim reprehenderit fuga fugiat excepturi, possimus, a voluptatibus eum iure consequuntur reiciendis unde corporis voluptatum autem mollitia assumenda ad ducimus adipisci aliquam et.
+
+            .wares-holder
+              h4.wares-holder__header Ваш заказ
+              .wares-holder__body
+
+                .wares-card
+                  img.wares-card__img(src="img/nikon.png" alt="img/nikon.png")
+                  a.wares-card__header: span Цифровий фотоапарат Nikon D5100 kit
+                    br
+                    | (18-55 VR)
+                  p.wares-card__price-line
+                    span.wares-card__price-line-left
+                      span.wares-card__price 6 568
+                      |  грн. ×
+                      |  
+                      span.wares-card__amount 1
+                      |  шт.
+                      |  
+                    span.wares-card__price-line-right.clearfix
+                      span.wares-card__multi-prise 6 568
+                      |  грн.
+
+                .wares-card
+                  img.wares-card__img(src="img/apple.png" alt="img/apple.png")
+                  a.wares-card__header: span MP3-плеер Apple iPod Touch 5Gen
+                    br
+                    | 32Gb blue
+                  p.wares-card__price-line
+                    span.wares-card__price-line-left
+                      span.wares-card__price 3 689
+                      |  грн. ×
+                      |  
+                      span.wares-card__amount 1
+                      |  шт.
+                      |  
+                    span.wares-card__price-line-right.clearfix
+                      span.wares-card__multi-prise 3 689
+                      |  грн.
+
+              .wares-holder__footer
+                  span.total_prise 9 769,15
+                  | 
+                  span грн.
+      // /SECTION 1
+    // /MAIN SECTION
+
+    // FOOTER
+    // /FOOTER

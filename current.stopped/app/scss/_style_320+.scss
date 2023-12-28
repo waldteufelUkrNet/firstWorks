@@ -1,0 +1,108 @@
+/* ↓↓↓ for 320px and more ↓↓↓ */
+@media only screen and (min-width: 320px) {
+
+	/* ↓↓↓ HEADER ↓↓↓ */
+	.header {
+		background: url("../img/bg.jpg") center top no-repeat;
+		min-height: 554px;
+		.navbar {
+			max-width: 1920px;
+			height: 57px;
+			margin: 0 auto;
+			padding-left: 217px;
+			background-color: #1a5f73;
+			border-bottom: 1px solid #a1a1a1;
+			.navbar-brand { flex-grow: 6;
+				font-family: rt;
+				font-size: 23px;
+				color: white;
+				text-transform: uppercase;
+			}
+			.form-inline { flex-grow: 28;
+				.input-group {
+					width: 846px;
+					height: 35px;
+					position: relative;
+					top: -3px;
+					.input-group-prepend {
+						.dropdown {
+							height: 35px;
+							button {
+								height: 35px;
+								background-color: white;
+								border-radius: 0;
+								img {
+									padding-right: 10px;
+								}
+							}
+						}
+						.dropdown .show {
+							outline: 1px solid transparent;
+						}
+					}
+					input {
+						border: none;
+						height: 35px;
+					}
+					.input-group-append {
+						button {
+							height: 35px;
+							background-color: white;
+							color: #303139;
+							border-radius: 0;
+						}
+					}
+				}
+			}
+			.navbar-nav { flex-grow: 1;
+				.nav-item {
+					&:not(:last-of-type) {
+						margin-right: 20px;
+					}
+					position: relative;
+					.nav-link {
+						display: block;
+						position: relative;
+						top: 50%;
+						transform: translate(0, -50%);
+						
+						.badge {
+							display: block;
+							position: absolute;
+							top: -4px; right: -4px;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* ↑↑↑ /HEADER ↑↑↑ */
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+		/* ↓↓↓ SECTION 1 ↓↓↓ */
+		.section1 {
+			max-width: 1023px;
+			height: 500px;
+			margin: 0 auto;
+			border: 1px dotted red;
+			position: relative;
+			top: -228px; left: -27px;
+			h1 {
+				font-family: rl;
+				font-size: 40px;
+				color: white;
+			}
+			h5 {
+				font-family: rl;
+				font-size: 14px;
+				color: white;
+			}
+		}
+		/* ↑↑↑ /SECTION 1 ↑↑↑ */
+	}
+
+	/* ↓↓↓ FOOTER ↓↓↓ */
+
+	/* ↑↑↑ /FOOTER ↑↑↑ */
+}

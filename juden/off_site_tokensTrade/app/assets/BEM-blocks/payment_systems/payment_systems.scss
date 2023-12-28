@@ -1,0 +1,25 @@
+.payment_systems-wrapper {
+    width                   : 100%;
+  }
+
+  .payment_systems {
+    max-width               : 1920px;
+    margin                  : 0 auto;
+    padding                 : 50px 0;
+    display                 : flex;
+    justify-content         : center;
+    flex-wrap               : wrap;
+    &__img {
+      margin-bottom         : 30px;
+    }
+  }
+
+@media only screen and (min-width: 768px) {
+  .payment_systems {
+    flex-wrap               : nowrap;
+    justify-content         : space-between;
+    &__img {
+      margin-bottom         : 0px;
+    }
+  }
+}

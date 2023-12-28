@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Trading</title>
+
+</head>
+
+<body>
+<style>
+
+</style>
+<div id="goldinvestbroker"></div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.min.js"></script>
+<script src="//static.tgi-it.com/version.php"></script>
+<script type="text/javascript">
+
+    (function (document, window, callbacks) {
+
+
+
+        (window[callbacks] = window[callbacks] || []).push(function () {
+            try {
+                new tgi.App({ id: 1, containerId: 'goldinvestbroker', staticUrl: STATIC_URL, apiUrl: API_URL, marketUrl: MARKET_DATA_URL, settings: SETTINGS, version: CRC});
+            } catch (e) {
+                console.error(e);
+            }
+        });
+
+        /* Insert script */
+        var after = document.getElementsByTagName("script")[0],
+            script = document.createElement("script"),
+            func = function () {
+                after.parentNode.insertBefore(script, after);
+            };
+
+        var STATIC_URL = '//static.tgi-it.com';
+        var API_URL = '//backend.goldeninvestbroker.com/api';
+        var MARKET_DATA_URL = '//proxy.tgi-it.com/api/old';
+
+        var SETTINGS = {"language":"ru","theme": "dark", 'terms': '/', 'links': [{'href': "//goldeninvestbroker.com", 'text': 'Home'}]};
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = STATIC_URL + "/loader.js?v=" + CRC;
+
+        if (window.opera == "[object Opera]") {
+            document.addEventListener("DOMContentLoaded", func, false);
+        } else {
+            func();
+        }
+
+    })(document, window, "tgi_callbacks");
+
+</script>
+
+
+
+</body>
+
+</html>

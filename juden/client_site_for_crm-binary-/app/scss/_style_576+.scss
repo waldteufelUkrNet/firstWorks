@@ -1,0 +1,76 @@
+@media screen and (min-width: 576px) {
+// @media screen and (min-width: 576px) and (min-height:660px) {
+  /* ↓↓↓ MAIN PART ↓↓↓ */
+  .main {
+    /* ↓↓↓ SECTION 1 (work area) ↓↓↓ */
+    .work_area {
+      padding                    : 10px;
+      .graphic-header {
+        height                   : 42px;
+        flex-wrap                : nowrap;
+        .currency-logo-holder {
+          min-width              : 150px;
+          justify-content        : start;
+          h2 {
+            font-size            : 20px;
+            padding-left         : 10px
+          }
+        }
+        .timer-buttons-ul {
+          width                  : 160px;
+          .timer-buttons-li {
+            margin               : 0 3px 3px 0;
+          }
+        }
+      }
+    }
+    #container {
+      height                     : calc(100% - 260px);
+    }
+
+    .slider-area {
+      bottom                     : 70px;
+    }
+    .navigation {
+      height             : 60px;
+      &__btn {
+        height           : 60px;
+        line-height      : 58px;
+      }
+      &__body {
+        height               : 180px;
+        padding              : 15px;
+        grid-template-columns: 1fr 1fr;
+      }
+      &__items {
+        font-size        : 16px;
+        padding          : 13px;
+        padding          : 0 20px;
+        svg {
+          display        : block;
+        }
+      }
+    }
+    /* ↑↑↑ /SECTION 1 (work area) ↑↑↑ */
+
+    /* ↓↓↓ SECTION 2 (left column) ↓↓↓ */
+    .left-column {
+      height                     : calc(100% - 241px);
+      .wares-slider {
+        &__item {
+           height                 : calc(100vh - 300px);
+        }
+      }
+    }
+    /* ↑↑↑ /SECTION 2 (left column) ↑↑↑ */
+
+    /* ↓↓↓ SECTION 3 (right column) ↓↓↓ */
+    .right-column {
+      height                    : calc(100% - 241px);
+      .work-field-wrapper {
+        max-height              : calc(100vh - 300px);
+      }
+    }
+    /* ↑↑↑ /SECTION 3 (right column) ↑↑↑ */
+  }
+}

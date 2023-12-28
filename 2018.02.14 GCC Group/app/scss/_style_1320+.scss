@@ -1,0 +1,25 @@
+/* ↓↓↓ for 1320px and more ↓↓↓ */
+@media only screen and (min-width: 1320px) {
+
+
+	/* ↓↓↓ MAIN PART ↓↓↓ */
+	.main {
+
+		/* ↓↓↓ SECTION 6 ↓↓↓ */
+		.s6-wrapper {
+			.section6 {
+				overflow: visible;
+				.slick2 {
+					width: 1200px;
+					.slick-prev {
+						left: -45px;
+					}
+			    .slick-next {
+			    	right: -45px;
+			    }
+				}
+			}
+		}
+		/* ↑↑↑ /SECTION 6 ↑↑↑ */
+	}
+}
